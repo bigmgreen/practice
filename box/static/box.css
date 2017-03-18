@@ -1,0 +1,324 @@
+html,
+body {
+    font-size: 14px;
+    font-family: 'microsoft YaHei';
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 800px;
+    min-height: 600px;
+    background-color: #f2f4f4;
+    text-shadow: 0 2px 2px rgba(217, 173, 130, 0.78);
+}
+
+article {
+    height: 100%;
+    width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 10px rgba(217, 173, 130, 0.27), inset 0 0 20px rgba(217, 173, 130, 0.27);
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/*	正常盒子与怪异盒子对比  start	*/
+
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+    line-height: 4;
+}
+
+.box-mode {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+}
+
+.box {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 290px;
+    height: 290px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.sub-box {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    border: 20px solid rgba(217, 173, 130, 0.78);
+    padding: 20px;
+    background-color: rgba(216, 217, 130, 0.68);
+    display: inline-block;
+    background-image: url(./img/bgi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-origin: content-box;
+    -webkit-transition: padding 1s, border-width 1s;
+    transition: padding 1s, border-width 1s;
+    width: 150px;
+    height: 150px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.sub-box:hover {
+    padding: 40px;
+    border-width: 30px;
+}
+
+.ie-box {
+    width: 230px;
+    height: 230px;
+    box-sizing: border-box;
+}
+
+.standard-box:after,
+.ie-box:after {
+    content: 'padding';
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.standard-box:before,
+.ie-box:before {
+    content: 'border';
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+
+/*	正常盒子与怪异盒子对比  end	*/
+
+
+/*	 弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏  start	*/
+
+ul,
+li,
+ul > li:first-child {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+.flex-box {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.flex-box-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-box-row li {
+    background-color: rgba(216, 217, 130, 0.5);
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 150px;
+    margin-left: 20px;
+}
+
+.flex-box-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 200px;
+}
+
+.flex-box-column li {
+    background-color: rgba(216, 217, 130, 0.5);
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.flex-box-order {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-box-order li {
+    background-color: rgba(216, 217, 130, 0.5);
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 150px;
+    margin: 0 20px;
+}
+
+.flex-box-order li:first-child {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.flex-box-order li:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    margin: 0;
+}
+
+.flex-box-order li:last-child {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.flex-box li:hover {
+    -webkit-transform: rotate(5deg) scale(1.1);
+    transform: rotate(5deg) scale(1.1);
+}
+
+.column {
+    padding: 20px;
+    -webkit-columns: 200px 3;
+    -moz-columns: 200px 3;
+    columns: 200px 3;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    -webkit-column-rule: 10px solid rgba(217, 173, 130, 0.78);
+    -moz-column-rule: 10px solid rgba(217, 173, 130, 0.78);
+    column-rule: 10px solid rgba(217, 173, 130, 0.78);
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance;
+    height: 300px;
+}
+
+.column-span {
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+    column-break-before: always;
+}
+
+.column .column-span {
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+.column .column-span:hover {
+    text-shadow: 0 2px 5px rgb(220, 147, 76);
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+
+.column p:hover {
+    text-shadow: 0 2px 5px rgb(220, 147, 76);
+}
+
+
+/*	 弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏  end	*/
+
+
+/*	 旧版弹性盒子居中布局  start	*/
+
+.old-flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    height: 300px;
+    background-color: rgba(216, 217, 130, 0.5);
+    margin-bottom: 20px;
+}
+
+.old-flex-box div {
+    width: 150px;
+    padding: 70px 0;
+    text-align: center;
+    background-color: rgba(217, 173, 130, 0.78);
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+.old-flex-box div:hover {
+    -webkit-transform: rotate(5deg) scale(1.1);
+    transform: rotate(5deg) scale(1.1);
+}
+
+
+/*	 旧版弹性盒子居中布局  end	*/

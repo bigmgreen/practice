@@ -1,0 +1,67 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 0;
+    overflow: hidden;
+}
+
+article > div {
+    width: 100px;
+    height: 100px;
+}
+
+.top {
+    background-color: #326d97;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px 10px #ddd;
+}
+
+.left {
+    background-color: #542872;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: -10px 0 10px 10px #ddd;
+}
+
+.middle {
+    background-color: #c4c3c6;
+    display: inline-block;
+    position: relative;
+    margin: 3px;
+    vertical-align: middle;
+    box-shadow: inset 0 -3px 4px 2px #aaa;
+}
+
+.icon {
+    background-image: url('./img/dog.ico');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    margin-left: -32px;
+    top: 50%;
+    left: 50%;
+}
+
+.right {
+    background-color: #319e34;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 10px 0 10px 10px #ddd;
+}
+
+.bottom {
+    background-color: #8b1c2b;
+    margin: 0 auto;
+    box-shadow: 0 0 10px 10px #ddd;
+}

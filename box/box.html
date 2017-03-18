@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>实战盒子模型与弹性盒模型</title>
+    <link rel="stylesheet" href="./static/box.css" />
+</head>
+
+<body>
+    <!-- 主体  start -->
+    <article>
+        <!-- 标题 -->
+        <header>
+            <h2>实战盒子模型与弹性盒模型</h2>
+        </header>
+        <!-- 正常盒子与怪异盒子对比  start -->
+        <section>
+            <header>
+                <h3>1.正常盒子与怪异盒子对比（鼠标滑过会看到效果）</h3>
+            </header>
+            <div class="box-mode">
+                <div class="box">
+                    <div class="sub-box standard-box">标准盒子模型</div>
+                </div>
+                <div class="box">
+                    <div class="sub-box ie-box">怪异盒子模型</div>
+                </div>
+            </div>
+        </section>
+        <!-- 正常盒子与怪异盒子对比  end -->
+        <!-- 弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏  start -->
+        <section>
+            <header>
+                <h3>2.弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏</h3>
+            </header>
+            <div>
+                <ul class="flex-box flex-box-row">
+                    <li></li>
+                    <li>flex-direction: row;</li>
+                    <li></li>
+                </ul>
+                <ul class="flex-box flex-box-column">
+                    <li></li>
+                    <li>flex-direction: column;</li>
+                    <li></li>
+                </ul>
+                <ul class="flex-box flex-box-order">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>order</li>
+                </ul>
+                <div class="column">
+                    <p>This module describes multi-column layout in CSS. By using functionality described in this document, style sheets can declare that the content of an element is to be laid out in multiple columns.
+                    </p>
+                    <p class="column-span">On the Web, tables have also been used to describe multi-column layouts. The main benefit of using CSS-based columns is flexibility; content can flow from one column to another, and the number of columns can vary depending on the size of the viewport. Removing presentation table markup from documents allows them to more easily be presented on various output devices including speech synthesizers and small mobile devices.
+                    </p>
+                    <p>On the Web, tables have also been used to describe multi-column layouts. The main benefit of using CSS-based columns is flexibility; content can flow from one column to another, and the number of columns can vary depending on the size of the viewport. Removing presentation table markup from documents allows them to more easily be presented on various output devices including speech synthesizers and small mobile devices.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- 弹性盒子水平分栏，垂直分栏，排序(flex)，cloumn分栏  end -->
+        <!-- 旧版弹性盒子居中布局  start -->
+        <section>
+            <header>
+                <h3>3.旧版弹性盒子居中布局</h3>
+            </header>
+            <div class="old-flex-box">
+                <div>旧版弹性盒子</div>
+            </div>
+        </section>
+        <!-- 旧版弹性盒子居中布局  end -->
+    </article>
+    <!-- 主体  end -->
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>课程表</title>
+    <style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-family: 'microsoft YaHei';
+        background-color: #D0D0C2;
+        color: #333;
+    }
+    
+    table {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 3px #656557 solid;
+        width: 770px;
+        text-align: center;
+        border-spacing: 0;
+        border-collapse: collapse;
+        font-weight: bold;
+    }
+    
+    caption {
+        font-size: 25px;
+        height: 66px;
+        line-height: 66px;
+    }
+    
+    th,
+    td {
+        height: 66px;
+        font-size: 21px;
+        border: 2px solid #888d7d;
+    }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>极客学院课程表</caption>
+        <thead>
+            <tr>
+                <th colspan="2" width="28%">时间</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4" width="14%">上午</td>
+                <td>1</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>数学</td>
+            </tr>
+            <tr>
+                <td colspan="7">休息</td>
+            </tr>
+            <tr>
+                <td rowspan="2" width="14%">下午</td>
+                <td>5</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>物理</td>
+                <td>地理</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>物理</td>
+                <td>地理</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
