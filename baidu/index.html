@@ -1,13 +1,36 @@
+<!--[if lt IE 9]> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<![endif]-->
+<!--[if gte IE 9]>
+    <!DOCTYPE html>
+<![endif]-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="./firebug/build/firebug-lite.js"></script>
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>百度一下，你就知道</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./static/index.css" />
+    <!--[if lt IE 9]> 
+        <script src="static/html5.min.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+        <link rel="stylesheet" href="./static/ie6.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="./static/ie7.css" />
+    <![endif]-->
+
+    <!--[if lt IE 7]> 
+        <script src="static/old-ie.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -22,10 +45,10 @@
                 <a href="#">视频</a>
                 <a href="#">贴吧</a>
                 <a href="#">登录</a>
-                <div class="bdpfmenu-wrap">
+                <div id="bdpfmenuWrap" class="bdpfmenu-wrap">
                     <a href="#">设置</a>
                     <!-- 设置浮动菜单开始 -->
-                    <div class="bdpfmenu">
+                    <div id="bdpfmenu" class="bdpfmenu">
                         <span class="cart"></span>
                         <a href="#">搜索设置</a>
                         <a href="#">高级搜索</a>
@@ -35,16 +58,16 @@
                     <!-- 设置浮动菜单结束 -->
                 </div>
                 <div class="right-menu-wrap">
-                    <a>更多产品</a>
+                    <a id="morePro" class="more">更多产品</a>
                     <!-- 更多产品浮动菜单开始 -->
-                    <div class="right-menu">
-                        <a>更多产品</a>
-                        <a href="#"><span class="bgi"></span>音乐</a>
-                        <a href="#"><span class="bgi"></span>图片</a>
-                        <a href="#"><span class="bgi"></span>知道</a>
-                        <a href="#"><span class="bgi"></span>文库</a>
-                        <a href="#"><span class="bgi"></span>风云榜</a>
-                        <a href="#">全部产品&gt;&gt;</a>
+                    <div id="rightMenu" class="right-menu">
+                        <a class="more-hover">更多产品</a>
+                        <a href="#"><span class="bgi music-bgi"></span>音乐</a>
+                        <a href="#"><span class="bgi img-bgi"></span>图片</a>
+                        <a href="#"><span class="bgi know-bgi"></span>知道</a>
+                        <a href="#"><span class="bgi doc-bgi"></span>文库</a>
+                        <a href="#"><span class="bgi chart-bgi"></span>风云榜</a>
+                        <a href="#" class="last-right-menu-item">全部产品&gt;&gt;</a>
                     </div>
                     <!-- 更多产品浮动菜单结束 -->
                 </div>
@@ -56,9 +79,9 @@
             <img hidefocus="true" src="./static/img/bd_logo1.png" width="270" height="129" />
             <form action="/">
                 <div class="input">
-                    <input type="text" required />
+                    <input class="content" type="text" required />
                     <span class="soutu-btn"></span>
-                    <input type="submit" value="百度一下" />
+                    <input class="submit" type="submit" value="百度一下" />
                 </div>
             </form>
         </article>

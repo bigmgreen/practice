@@ -1,0 +1,171 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'microsoft YaHei';
+    min-width: 600px;
+    min-height: 600px;
+}
+
+article {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: #eee;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+/*   魔方样式  start	*/
+
+.cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -150px;
+    transform-style: preserve-3d;
+    animation: cube 20s infinite linear;
+}
+
+.cube:hover li {
+    transform: rotate3D(1, 1, 1, 45deg);
+    animation: cube 20s infinite linear;
+}
+
+.cube:hover .one {
+    transform: translateZ(200px);
+}
+
+.cube:hover .two {
+    transform: translateZ(-200px);
+}
+
+.cube:hover .three {
+    transform: rotateX(90deg) translateZ(-200px);
+}
+
+.cube:hover .four {
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+.cube:hover .five {
+    transform: rotateY(90deg) translateZ(-200px);
+}
+
+.cube:hover .six {
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+}
+
+ul li {
+    width: 100px;
+    height: 100px;
+    background-color: #00f;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    transition: transform .5s;
+}
+
+.one {
+    transform: translateZ(150px);
+}
+
+.one li {
+    background: linear-gradient(to right, #14ff09, #0a8d4c, #fcff0a);
+}
+
+.two {
+    transform: translateZ(-150px);
+}
+
+.two li {
+    background: linear-gradient(to left, #14ff09, #fcff0a, #0a8d4c);
+}
+
+.three {
+    transform: rotateX(90deg) translateZ(-150px);
+}
+
+.three li {
+    background: linear-gradient(to top, #0a8d4c, #14ff09, #fcff0a);
+}
+
+.four {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.four li {
+    background: linear-gradient(to bottom, #0a8d4c, #fcff0a, #14ff09);
+}
+
+.five {
+    transform: rotateY(90deg) translateZ(-150px);
+}
+
+.five li {
+    background: linear-gradient(to left bottom, #fcff0a, #0a8d4c, #14ff09);
+}
+
+.six {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.six li {
+    background: linear-gradient(to top right, #fcff0a, #14ff09, #0a8d4c);
+}
+
+
+/*   魔方样式  end	*/
+
+
+/*	 动画  start	*/
+
+@keyframes cube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+/*	 动画  end	*/

@@ -56,21 +56,22 @@ article {
     position: relative;
 }
 
-.input [type='text'] {
+.input .content {
     width: 572px;
     height: 32px;
+    line-height: 32px;
     border: 1px solid #b6b6b6;
     padding-left: 8px;
     outline: none;
     margin-left: -58px;
 }
 
-.input [type='text']:focus,
-.input [type='text']:active {
+.input .content:focus,
+.input .content:active {
     border-color: #4791ff;
 }
 
-.input [type='submit'] {
+.input .submit {
     width: 100px;
     height: 36px;
     color: #fff;
@@ -80,14 +81,13 @@ article {
     border: 0;
     outline: medium;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: -6px;
     cursor: pointer;
 }
 
-.input [type='submit']:hover {
+.input .submit:hover {
     background: #317ef3;
-    border-bottom: 1px solid #2868c8;
     box-shadow: 1px 1px 1px #ccc;
 }
 
@@ -203,13 +203,13 @@ footer p a {
 .bdpfmenu a {
     display: block;
     text-align: left;
-    padding: 0 9px;
-    line-height: 26px;
+    padding: 7px 9px;
+    line-height: 1;
     text-decoration: none;
     color: #333;
     margin: 0;
     position: relative;
-    z-index: 2
+    z-index: 2;
 }
 
 .bdpfmenu a:hover {
@@ -255,7 +255,7 @@ footer p a {
     display: block;
 }
 
-.right-menu-wrap >a {
+.right-menu-wrap .more {
     display: inline-block;
     cursor: default;
     right: 10px;
@@ -278,6 +278,7 @@ footer p a {
     position: fixed;
     width: 85px;
     min-height: 600px;
+    height: 100%;
     border-left: 1px solid #e7e7e7;
     background-color: #f9f9f9;
     overflow: hidden;
@@ -312,29 +313,29 @@ footer p a {
     margin: -40px auto 0;
 }
 
-.right-menu a:nth-child(2) .bgi {
+.right-menu .music-bgi {
     background-position: -72px 0;
     width: 40px;
     height: 40px;
 }
 
-.right-menu a:nth-child(3) .bgi {
+.right-menu .img-bgi {
     background-position: -112px 0;
 }
 
-.right-menu a:nth-child(4) .bgi {
+.right-menu .know-bgi {
     background-position: -36px 0;
 }
 
-.right-menu a:nth-child(5) .bgi {
+.right-menu .doc-bgi {
     background-position: -148px 0;
 }
 
-.right-menu a:nth-child(6) .bgi {
+.right-menu .chart-bgi {
     background-position: -184px 0;
 }
 
-.right-menu a:last-child {
+.right-menu .last-right-menu-item {
     padding-top: 0;
     border-bottom: 0 none;
     margin-top: 15px;
@@ -347,7 +348,7 @@ footer p a {
     color: #333;
 }
 
-.right-menu a:first-child {
+.right-menu .more-hover {
     color: #333;
     text-align: center;
     width: 66px;
