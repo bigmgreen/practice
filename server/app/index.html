@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test 302</title>
+</head>
+<body>
+    <button id="test301" type="button">发送301</button>
+    <button id="test302" type="button">发送302</button>
+    <script src="//apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#test301').click(function () {
+                $.ajax({
+                    url: '/test301'
+                }).done(function (data, msg) {
+                    console.log(data, msg, 0)
+                }).fail(function (data, msg) {
+                    console.log(data, msg, 1)
+                });
+            });
+            $('#test302').click(function () {
+                $.ajax({
+                    url: '/test302'
+                }).done(function (data, msg) {
+                    console.log(data, msg, 0)
+                }).fail(function (data, msg) {
+                    console.log(data, msg, 1)
+                });
+            });
+        });
+    </script>
+</body>
+</html>
