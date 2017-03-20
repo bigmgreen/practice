@@ -1,0 +1,149 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+article {
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(238, 238, 238, .6);
+    box-shadow: 0 0 20px #51cc73;
+}
+
+.head {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 6px solid;
+    background-color: #000;
+    border-radius: 50%;
+    top: 120px;
+    left: 130px;
+}
+
+.head:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: rgb(239, 197, 155);
+    width: 280px;
+    height: 250px;
+    top: 53px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+.bow {}
+
+.left-ear {
+        width: 100px;
+    height: 140px;
+    position: absolute;
+    border: 30px solid;
+    border-radius: 50%;
+    top: -24px;
+    left: -76px;
+    background-color: rgb(239, 197, 155);
+    z-index: -2;
+}
+
+.right-ear {
+        width: 100px;
+    height: 140px;
+    position: absolute;
+    border: 30px solid;
+    border-radius: 50%;
+    top: -24px;
+    left: 255px;
+    background-color: rgb(239, 197, 155);
+    z-index: -2;
+}
+
+.left-eye {
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50%;
+    top: 126px;
+    left: 95px;
+    background-color: #000;
+    transform: rotate(-20deg);
+    z-index: 2;
+}
+
+.right-eye {
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50%;
+    top: 121px;
+    left: 210px;
+    background-color: #000;
+    transform: rotate(17deg);
+    z-index: 2;
+}
+
+.nose {
+    position: absolute;
+    top: 216px;
+    z-index: 9;
+    left: 153px;
+}
+
+.nose:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 23px;
+    position: absolute;
+    left: 40px;
+    transform: scale(1, 0.8);
+}
+
+.nose:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 23px;
+    left: -34px;
+    transform: scale(1, 0.8);
+}
+
+.mouth {
+    position: absolute;
+    width: 460px;
+    height: 170px;
+    background-color: rgb(239, 197, 155);
+    border-radius: 460px/160px;
+    top: 250px;
+    left: -62px;
+}
+
+.mouth:after {
+    content: '';
+    background-color: rgb(234, 30, 79);
+    width: 400px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 32px;
+    border-radius: 100%/92px;
+    z-index: 3;
+}
