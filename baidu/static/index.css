@@ -7,6 +7,9 @@ body {
     height: 100%;
 }
 
+
+/*   总容器   */
+
 .container {
     min-width: 810px;
     min-height: 600px;
@@ -20,6 +23,16 @@ a {
     line-height: 24px;
     margin-left: 17px;
 }
+
+article {
+    width: 640px;
+    padding-top: 9%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*   页面导航  start   */
 
 nav {
     z-index: 2;
@@ -43,12 +56,11 @@ nav >a:nth-child(7) {
     font-weight: normal;
 }
 
-article {
-    width: 640px;
-    padding-top: 9%;
-    text-align: center;
-    margin: 0 auto;
-}
+
+/*   页面导航  end   */
+
+
+/*   搜索框   start   */
 
 .input {
     white-space: nowrap;
@@ -107,11 +119,46 @@ article {
     background-position: 0 -20px;
 }
 
+
+/*   搜索框   end   */
+
+
+/*   底部  start   */
+
+footer {
+    text-align: center;
+    height: 160px;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #666;
+}
+
+footer a {
+    color: #999;
+    font-weight: normal;
+}
+
+footer p {
+    margin: 0;
+    color: #999;
+}
+
+footer p a {
+    margin-left: 0;
+}
+
 .qrcode-img {
     width: 60px;
     height: 60px;
     display: inline-block;
     background: url(./img/zbios_efde696.png) 0 0 no-repeat;
+}
+
+.qrcode-text {
+    margin-bottom: 20px;
 }
 
 .c-icon {
@@ -132,38 +179,15 @@ article {
     background-position: -623px -96px;
 }
 
-footer {
-    text-align: center;
-    height: 160px;
-    position: absolute;
-    bottom: 35px;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    color: #666;
-}
-
-.qrcode-text {
-    margin-bottom: 20px;
-}
-
-footer a {
-    color: #999;
-    font-weight: normal;
-}
-
-footer p {
-    margin: 0;
-    color: #999;
-}
-
-footer p a {
-    margin-left: 0;
-}
-
 .ml {
     margin-left: 15px;
 }
+
+
+/*   底部  end   */
+
+
+/*   设置菜单  start   */
 
 .bdpfmenu-wrap {
     display: inline;
@@ -245,6 +269,12 @@ footer p a {
     top: -10px;
     left: 27px;
 }
+
+
+/*   设置菜单  end   */
+
+
+/*   更多产品菜单  start   */
 
 .right-menu-wrap {
     position: relative;
@@ -363,3 +393,6 @@ footer p a {
     text-decoration: none;
     background: none;
 }
+
+
+/*   更多产品菜单  end   */
