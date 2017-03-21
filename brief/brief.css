@@ -4,6 +4,8 @@ body {
     margin: 0;
     min-width: 600px;
     min-height: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 article {
@@ -15,8 +17,6 @@ article {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-color: rgba(238, 238, 238, .6);
-    box-shadow: 0 0 20px #51cc73;
 }
 
 .head {
@@ -42,32 +42,101 @@ article {
     border-radius: 50%;
 }
 
-.bow {}
+/*	蝴蝶结  start 	*/
+.bow {
+    position: absolute;
+    width: 270px;
+    height: 120px;
+    transform: rotate(-29deg);
+    z-index: 2;
+    top: -27px;
+    left: -77px;
+    animation: bow 4s infinite;
+}
 
+.bow:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(234, 30, 79);
+    border: 6px solid;
+    border-radius: 50% 54% 58% 60%;
+    transform: skewX(12deg);
+}
+
+.bow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(234, 30, 79);
+    border: 6px solid;
+    border-radius: 50% 54% 58% 60%;
+    transform: skewX(12deg) rotate(-220deg);
+    top: 9px;
+    left: 140px;
+}
+
+.bow i {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 4px;
+    top: 53px;
+    left: 76px;
+    z-index: 1;
+}
+
+.bow i:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    background-color: rgb(234, 30, 79);
+    top: -25px;
+    left: 20px;
+    z-index: 2;
+    border-radius: 50%;
+    transform: skew(-13deg);
+    border: 4px solid;
+}
+/*	蝴蝶结  end	*/
+
+/*	耳朵 start  */
 .left-ear {
-        width: 100px;
+    width: 100px;
     height: 140px;
     position: absolute;
     border: 30px solid;
     border-radius: 50%;
-    top: -24px;
+    top: 31px;
     left: -76px;
     background-color: rgb(239, 197, 155);
     z-index: -2;
+    transform: rotate(-25deg);
 }
 
 .right-ear {
-        width: 100px;
+    width: 100px;
     height: 140px;
     position: absolute;
     border: 30px solid;
     border-radius: 50%;
-    top: -24px;
+    top: 28px;
     left: 255px;
     background-color: rgb(239, 197, 155);
     z-index: -2;
+    transform: rotate(34deg);
 }
+/*	耳朵 end  */
 
+/*	眼睛  start 	*/
 .left-eye {
     width: 40px;
     height: 60px;
@@ -78,6 +147,32 @@ article {
     background-color: #000;
     transform: rotate(-20deg);
     z-index: 2;
+}
+
+.left-eye:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    top: 8px;
+    left: 4px;
+    transform: rotate(37deg);
+}
+
+.left-eye:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    top: 5px;
+    left: -7px;
+    transform: rotate(38deg);
 }
 
 .right-eye {
@@ -92,6 +187,34 @@ article {
     z-index: 2;
 }
 
+.right-eye:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    top: 10px;
+    left: 9px;
+    transform: rotate(138deg);
+}
+
+.right-eye:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    top: 7px;
+    left: 18px;
+    transform: rotate(138deg);
+}
+/*	眼睛  end	*/
+
+/*	鼻子  start	*/
 .nose {
     position: absolute;
     top: 216px;
@@ -124,7 +247,9 @@ article {
     left: -34px;
     transform: scale(1, 0.8);
 }
+/*	鼻子  end	*/
 
+/*	嘴巴  start  */
 .mouth {
     position: absolute;
     width: 460px;
@@ -142,8 +267,22 @@ article {
     height: 80px;
     display: block;
     position: absolute;
-    top: 44px;
+    top: 54px;
     left: 32px;
-    border-radius: 100%/92px;
+    border-radius: 50%;
     z-index: 3;
+}
+/*	嘴巴  end  */
+
+/*  蝴蝶结动画  */
+@keyframes bow {
+    0% {
+        transform: rotate(-29deg);
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+    100% {
+        transform: rotate(-29deg);
+    }
 }
