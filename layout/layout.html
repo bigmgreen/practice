@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +8,55 @@
     <title>双飞翼布局</title>
     <link rel="stylesheet" href="layout.css" />
 </head>
+
 <body>
+    <!-- 主体内容  start -->
     <article>
         <header>
+            <!-- 标题 -->
             <h3>双飞翼布局应用</h3>
         </header>
-        <div class="middle"></div>
-        <div class="left"></div>
-        <div class="right"></div>
+        <!-- 页面主内容  start -->
+        <div class="middle">
+            <div class="inner">
+                <strong>一、圣杯布局</strong>
+                <p>它可以由现有的技术来实现，所以找到一种最优的实现方法就好像寻找难以捉摸的圣杯一样。 双飞翼布局是一种灵活的布局，始于淘宝UED。如果把三栏布局比作一只大鸟，可以把main看成是鸟的身体，sub和extra则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀移动到适当的地方。是对圣杯布局的一种改良。</p>
+                <p>圣杯布局的问题： 因为我们外部使用的 div 的 width是设置为100%的，如果不是100%的给其加上 padding 的话就会将整个宽度撑大影响到其他界面，而且如果使用这种方式的话左右 div 必须设置为 relative，过于局限。</p>
+                <strong>二、双飞翼布局</strong>
+                <p>为了快速加载主体内容，我们在布局时候可以把最重要的放在最前面。</p>
+                <p>首先，我们需要把这三列都浮动起来，即：</p>
+                <p>.main,.left,.right { float:left; height:200px; }</p>
+                <p>说明：这里的高度是我自己设置的，在实际布局中可以根据需要来定，他们可以任意设置自己的高度。</p>
+                <p>主体main的宽度要自适应，那么可以先设置为100%，然后随便上个背景色与”翼“做区分 </p>
+                <p>.main { width:100%; background:#ace; }</p>
+                <p>接下来便是”翼“的设置了</p>
+                <p>左边： </p>
+                <p>.left { width:20%; background:#eee; }</p>
+                <p>右边： </p>
+                <p>.right { width:30%; background:#ddd; }</p>
+                <p>基本样式已设置完成，但预览页面你会发现并没有达到预期的效果。。。</p>
+                <p>那么接下来，我们应该怎么做呢？ </p>
+                <p>大家可以回想一下margin的用法，对于其负值有很奇妙的用法（这里不多做说明，文章最后我会推荐一些相关文章，感兴趣的童鞋可以看看），而在这里，关键也是运用margin负值才得以实现效果。</p>
+                <p>回到题目中，想要left居左，那么我们可以设置 margin-left:-100%; 即：</p>
+                <p>.left { width:20%; background:#eee; margin-left:-100%; } </p>
+                <p>说明：这里的100%为main的宽度，相当于是把left给左移了，刚好实现左边与main的对齐。</p>
+                <p>对于right居右问题，也是类似可以设置margin-left:30%; 即：</p>
+                <p>.right { width:30%; background:#ddd; margin-left:-30%; } </p>
+                <p>说明：这里的30%为right自身的宽度，相当于是自己向左移了自身的一个宽度，刚好实现右边与main的对齐。</p>
+                <p>这时，整个布局看起来像是完成了，其实还剩关键的一步，即main的位置该如何设置？目前，他的左边及右边部分元素是会被left/right挡住的，所以我们还必须在main里面再添加一个div(class="mainIn")，设置margin:0 30% 0 20%;，把两边内容给挤开，这样才是完美的效果。</p>
+                <p>延伸：对于这种方法，同时也可以随便调换他们的位置，你只需要控制他们的位移即可，都是成功的，这点大家可以做个尝试。</p>
+                <p>大致思路是这样的，本文就介绍到这里了。</p>
+            </div>
+        </div>
+        <!-- 页面主内容  end -->
+        <!-- 页面左侧内容 start -->
+        <div class="left">双飞翼布局是一种灵活的布局，始于淘宝 UED。如果把三栏布局比作一只大鸟，可以把 main 看成是鸟的身体，sub 和extra 则是鸟的翅膀。这个布局的实现思路是，先把最重要的身体部分放好，然后再将翅膀移动到适当的地方。是对圣杯布局的一种改良。双飞翼布局让三列布局和两列布局更加有灵动性，更好的完善了 DIV+CSS 常见的布局。</div>
+        <!-- 页面左侧内容  end -->
+        <!-- 页面右侧内容  start -->
+        <div class="right">优点： 实现了内容与布局的分离，即Any-Order Columns. main部分是自适应宽度的，很容易在定宽布局和流体布局中切换。 任何一栏都可以是最高栏，不会出问题。 需要的hack非常少（就一个针对ie6的清除浮动hack:_zoom: 1;） 在浏览器上的兼容性非常好，IE5.5以上都支持。</div>
+        <!-- 页面右侧内容  end -->
     </article>
+    <!-- 主体内容  start -->
 </body>
+
 </html>
