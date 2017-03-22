@@ -1,0 +1,10 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 600px;
+    min-height: 600px;
+    width: 100%;
+    height: 100%;
+    font-size: 'microsoft YaHei';
+}
