@@ -1,0 +1,542 @@
+@media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        background-color: #f8f8f8;
+    }
+    .pc {
+        display: none;
+    }
+    .container {
+        min-width: inherit;
+        min-height: inherit;
+        position: relative;
+        height: inherit;
+    }
+    article {
+        width: 100%;
+        padding-top: 0;
+        text-align: center;
+        margin: auto;
+    }
+    .h5 {
+        display: block !important;
+        width: 100%;
+        overflow: hidden;
+    }
+    footer {
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .input {
+        margin: 10px 16px 0;
+    }
+    .input .content {
+        border-radius: 2px;
+        margin: 0;
+        width: 100%;
+        padding: 7px 42px 7px 6px;
+        height: 45px;
+        line-height: 28px;
+        resize: none;
+        box-sizing: border-box;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .input [type="submit"] {
+        width: 82px;
+        height: 45px;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background: #38f;
+        border: 0;
+        outline: medium;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        border-radius: 0 4px 4px 0;
+        box-sizing: border-box;
+    }
+}
+
+
+/*   工具类  start	*/
+
+.h5 {
+    display: none;
+}
+
+.hot-icon:after {
+    content: 'hot';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #ed5353;
+    color: #fff;
+    width: 22px;
+    text-align: center;
+    line-height: 13px;
+}
+
+.baidu-icon {
+    background-image: url(static/img/w_icon2.png) !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/*   工具类  end	*/
+
+
+/*	 顶部样式 start	*/
+
+.userinfo-wrap {
+    position: relative;
+    height: 35px;
+    margin-bottom: 9px;
+}
+
+.user-img {
+    background-image: url(static/img/user-img.jpg);
+    background-color: #000;
+    background-size: 25px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    float: right;
+    border-radius: 50%;
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+
+.weather-wrap {
+    position: relative;
+}
+
+.weather {
+    position: relative;
+    float: left;
+    padding: 10px;
+    top: -2px;
+}
+
+.weather-num {
+    font-size: 29px;
+    color: #999;
+    padding-left: 4px;
+    padding-right: 3px;
+    font-weight: 300;
+    position: relative;
+    top: -4px;
+    left: -8px;
+}
+
+.weather-num sup {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 50%;
+    top: 3px;
+    right: -8px;
+    box-sizing: border-box;
+}
+
+.weather-status {
+    position: absolute;
+    padding-right: 2px;
+    display: block;
+    top: 10px;
+    right: -22px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    color: #999;
+}
+
+.icon-down {
+    border-right: 2px solid #b6b7ba;
+    border-bottom: 2px solid #b6b7ba;
+    font: 20px/1 icons;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 24px;
+    left: 130px;
+    z-index: 10;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+#weather:checked + .icon-down {
+    top: 22px;
+    right: 20px;
+    left: inherit;
+    width: 12px;
+    height: 12px;
+    border-width: 4px;
+    border-color: #fff;
+    border-radius: 2px;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    transition: transform .5s, -webkit-transform .5s;
+    z-index: 12;
+}
+
+#weather:checked + .icon-down + .weather-detail {
+    display: block;
+    height: 267px;
+}
+
+.weather-detail {
+    background-image: url(static/img/weather2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 267px;
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 1s;
+    transition: height 1s;
+    position: relative;
+    z-index: 11;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.weather-detail > div {
+    padding: 16px;
+}
+
+.weather-location {
+    background-image: url(static/img/location.png);
+    background-repeat: no-repeat;
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.weather-detail-temperature {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.weather-detail-temperature b {
+    font-size: 63px;
+    font-weight: normal;
+}
+
+.weather-detail-temperature sup {
+    font-size: 30px;
+    position: relative;
+    top: -5px;
+}
+
+.icon-weather-open {
+    background-image: url(static/img/sunday.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 54px;
+    height: 45px;
+    margin: 0 10px;
+}
+
+.weather-detail-sky {
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.weather-detail-sky a {
+    display: block;
+    float: right;
+    line-height: 18px;
+    width: 57px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.weather-detail-forecast {
+    padding: 9px 0 8px 0;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.weather-detail-forecast li {
+    float: left;
+    width: 25%;
+}
+
+.weather-detail-forecast span {
+    display: block;
+}
+
+.icon-weather-daily {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url(static/img/sunday.png);
+    background-repeat: no-repeat;
+    margin: 10px auto;
+}
+
+
+/*	 顶部样式 end	*/
+
+
+/*	 导航  start 	*/
+
+.h5 .nav {
+    overflow: hidden;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 0;
+}
+
+.h5 .nav li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 40px;
+}
+
+.h5 .nav a {
+    display: block;
+    height: 13px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 13px;
+    line-height: 1;
+    color: #999;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.ns-icon {
+    background: url(static/img/swipe-icon.png) no-repeat;
+    background-size: 22px auto;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto 5px;
+}
+
+.ns-focus {
+    background-position: 0 -286px;
+}
+
+.ns-news {
+    background-position: 0 -418px;
+}
+
+.ns-novel {
+    background-position: 0 -352px;
+}
+
+.ns-video {
+    background-position: 0 -484px;
+}
+
+.ns-life {
+    background-position: 0 -440px;
+}
+
+.ns-map {
+    background-position: 0 -330px;
+}
+
+
+/*	 导航  end 	*/
+
+
+/*	新闻版块  start	*/
+
+.new-item {
+    background-color: #fff;
+}
+
+.new-item-one,
+.new-item-three {
+    margin: 0 16px;
+    padding: 16px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-item-one img {
+    float: left;
+}
+
+.new-item-one h3 {
+    margin: 0 0 0 34%;
+    position: absolute;
+    top: 30%;
+    font-weight: normal;
+    text-align: left;
+}
+
+.new-item-one a,
+.new-item-three a {
+    line-height: inherit;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.new-item-one strong {
+    font-weight: normal;
+    color: #333;
+    font-size: 18px;
+    line-height: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.new-item-one strong+span {
+    margin-right: 8px;
+    font-size: 13px;
+    color: #999;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.src-icon-rec {
+    margin-right: 8px;
+    display: inline-block;
+    color: #f13f40;
+    border: 1px solid #efb9b9;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    font-size: 12px;
+    padding: 1px 2px 1px 2px;
+    line-height: 1;
+}
+
+.new-item-three {
+    border-top: 1px solid #f0f0f0;
+}
+
+.new-item-three img {
+    float: left;
+}
+
+.new-item-three h3 {
+    font-weight: normal;
+    text-align: left;
+    color: #333;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+}
+
+
+/*	新闻版块  end	*/
+
+
+/*	底部样式 start	*/
+
+.h5-foot-link {
+    margin: 0 28px;
+}
+
+.h5-foot-link li {
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+}
+
+.h5-foot-link a {
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    display: block;
+    padding-left: 25px;
+    font-size: 13px;
+    color: #555;
+    background: none no-repeat 0 center;
+    background-size: 23px 23px;
+    text-decoration: none;
+    line-height: 33px;
+    margin-left: 0;
+}
+
+.h5-foot-link>a {
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding: 6px 0 0;
+    color: #999;
+}
+
+.h5-foot-link>a:first-child {
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 95px;
+    line-height: 34px;
+    color: #666;
+    font-size: 13px;
+}
+
+.icon-feedback {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(static/img/rewrite.png) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+
+
+/*	底部样式 end	*/
+
+
+/*	加载元素样式  */
+
+.bottom-load-before {
+    line-height: 12px;
+    padding-top: 24px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+    height: 58px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    background: #fff;
+    margin-top: 10px;
+}

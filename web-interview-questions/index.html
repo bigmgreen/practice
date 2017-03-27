@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>前端面试题</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- 主体  start -->
+    <article>
+        <!-- 页面标题 -->
+        <header>
+            <h1>前端面试题</h1>
+        </header>
+        <!-- 试题列表 -->
+        <ol>
+            <li>
+                <h3>请解释一下什么是“语义化的 HTML”？</h3>
+                <p>
+                    1.用正确的标签做正确的事情；
+                    <br />2.html语义化让页面的内容结构化，结构更清晰；
+                    <br />3.PDA、手机等设备可能无法像普通电脑的浏览器一样来渲染网页（通常是因为这些设备对CSS的支持较弱）；
+                    <br />4.搜索引擎的爬虫也依赖于标记来确定上下文和各个关键字的权重；
+                    <br />5.你的页面是否对爬虫容易理解非常重要,因为爬虫很大程度上会忽略用于表现的标记,而只注重语义标记；
+                    <br />6.便于团队开发和维护；
+                </p>
+            </li>
+            <li>
+                <h3>doctype（文档类型）的作用是什么？你知道多少种文档类型？</h3>
+                <p>
+                    1.此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范；
+                    <br />2.该标签可声明三种 DTD 类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档；
+                    <br />3.HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset；
+                    <br />4.XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset；
+                    <br />5.Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks （包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页；
+                </p>
+            </li>
+            <li>
+                <h3>解释下浮动和它的工作原理？</h3>
+                <p>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留；</p>
+            </li>
+            <li>
+                <h3>在书写高效 CSS 时会有哪些问题需要考虑</h3>
+                <p>
+                    1.样式是：从右向左的解析一个选择器；
+                    <br />2.ID最快，Universal最慢 有四种类型的key selector，解析速度由快到慢依次是：ID、class、tag和universal；
+                    <br />3.不要tag-qualify （永远不要这样做 ul#main-navigation { } ID已经是唯一的，不需要Tag来标识，这样做会让选择器变慢。）；
+                    <br />4.后代选择器最糟糕（换句话说，下面这个选择器是很低效的： html body ul li a { }）；
+                    <br />5.想清楚你为什么这样写；
+                    <br />6.CSS3的效率问题（CSS3选择器（比如 :nth-child）能够漂亮的定位我们想要的元素，又能保证我们的CSS整洁易读。但是这些神奇的选择器会浪费很多的浏览器资源。）；
+                    <br />7.我们知道#ID速度是最快的，那么我们都用ID，是不是很快。但是我们不应该为了效率而牺牲可读性和可维护性；
+                </p>
+            </li>
+            <li>
+                <h3>行内元素有哪些?块级元素有哪些?CSS的盒模型？</h3>
+                <p>
+                    1.块级元素：div p h1 h2 h3 h4 form ul等；
+                    <br />2.行内元素: a b br i span input select等；
+                    <br />3.Css盒模型:内容，border ,margin，padding；
+                </p>
+            </li>
+            <li>
+                <h3>img标签上title与alt属性的区别是什么？</h3>
+                <p>Alt当图片不显示是用文字代表；Title为该属性提供信息；</p>
+            </li>
+            <li>
+                <h3>清除浮动的几种方式，各自的优缺点</h3>
+                <p>
+                    1.使用空标签清除浮动 clear:both；
+                    <br />2.使用overflow:auto(空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE)；
+                    <br />3.是用afert伪元素清除浮动(用于非IE浏览器)；
+                </p>
+            </li>
+            <li>
+                <h3>如何清除img标签和其他元素之间的空隙？</h3>
+                <p>
+                    1.设置display属性为：block；
+                    <br />2.在其父元素设置font-size为：0；
+                </p>
+            </li>
+            <li>
+                <h3>HTML5 存储类型有什么区别？</h3>
+                <p>
+                    1.localStorage 用于持久化的本地存储，数据永远不会过期，关闭浏览器也不会丢失；
+                    <br />2.sessionStorage 同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储；
+                </p>
+            </li>
+            <li>
+                <h3>页面导入样式时，使用link和@import有什么区别？</h3>
+                <p>
+                    1.link属于XHTML标签，而@import是css提供的；
+                    <br />2.页面被加载时，link会同时被加载，而@import引用的css会等到页面被加载完再加载；
+                    <br />3.@import只在IE5以上才能识别，而link是XHTML标签，无兼容问题；
+                    <br />4.link方式的样式的权重高于@import的权重；
+                </p>
+            </li>
+            <li>
+                <h3>介绍一下 CSS 的盒子模型？</h3>
+                <p>
+                    1.有两种，IE 盒子模型、标准 W3C 盒子模型； IE 的 content 部分包含了 border 和 padding；
+                    <br />2.盒模型：内容（content）、填充（padding）、边界（margin）、边框（border）；
+                </p>
+            </li>
+            <li>
+                <h3>简述一下src与href的区别？</h3>
+                <p>
+                    1.href 是指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，用于超链接；
+                    <br />2.src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部；
+                </p>
+            </li>
+            <li>
+                <h3>浏览器的内核分别是什么?</h3>
+                <p>
+                    <br />1.E: trident内核；
+                    <br />2.Firefox：gecko内核；
+                    <br />3.Safari：webkit内核；
+                    <br />4.Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核；
+                    <br />5.Chrome：Blink(基于webkit，Google与Opera Software共同开发)；
+                </p>
+            </li>
+            <li>
+                <h3>button在form里如果不写type属性，这时候type属性值是什么？</h3>
+                <p>type="submit"；</p>
+            </li>
+            <li>
+                <h3>响应式和自适应的区别是什么？</h3>
+                <p>
+                    响应式是根据不同的屏幕尺寸显示不同的布局，自适应是等比例显示相同布局；
+                </p>
+            </li>
+            <li>
+                <h3>如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？</h3>
+                <p>
+                    1.display:none;的缺陷 搜索引擎可能认为被隐藏的文字属于垃圾信息而被忽略，屏幕阅读器（是为视觉上有障碍的人设计的读取屏幕内容的程序）会忽略被隐藏的文字；
+                    <br />2. visibility: hidden ;的缺陷 这个大家应该比较熟悉就是隐藏的内容会占据他所应该占据物理空间；
+                    <br />3.overflow:hidden;一个比较合理的方法 .text-hidden { display:block;/*统一转化为块级元素*/ overflow: hidden; width: 0; height: 0; } 就像上面的一段CSS所展示的方法，将宽度和高度设定为0，然后超过部分隐藏，就会弥补上述一、二方法中的缺陷，也达到了隐藏内容的目的；
+                </p>
+            </li>
+            <li>
+                <h3>position: absolute;是相对于定位容器左上角的border还是padding定位？</h3>
+                <p>border属性；</p>
+            </li>
+            <li>
+                <h3>简述bfc的实现方式</h3>
+                <p>
+                    1.浮动元素（float: left | right）；
+                    <br />2.绝对定位元素（position: absolute | fixed）；
+                    <br />3.行内块元素（display: inline-block）；
+                    <br />4.表格的单元格（display: table-cells，TD、TH）；
+                    <br />5.表格的标题（display: table-captions，CAPTION）；
+                    <br />6.overflow：hidden；
+                </p>
+            </li>
+            <li>
+                <h3>rem和em的区别</h3>
+                <p>
+                    rem是相对于html元素的字体大小计算的，em是相对于使用em单位的元素的字体大小计算的；
+                </p>
+            </li>
+            <li>
+                <h3>页面存在多个h1标签会对页面造成什么影响？</h3>
+                <p>理论上不能出现多个，一个页面只能出现一次，次数多了就会造成权重分散；</p>
+            </li>
+        </ol>
+    </article>
+    <!-- 主体  end -->
+</body>
+
+</html>
