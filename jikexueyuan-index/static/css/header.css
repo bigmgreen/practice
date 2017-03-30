@@ -1,0 +1,17 @@
+.tips {
+    position: relative;
+    z-index: 10;
+    color: gray;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
+    padding: 10px 30px 10px 10px;
+    background: #fff9df;
+    border: 1px solid #f1e5b3;
+}
+
+.tips a {
+    color: gray;
+    display: inline-block;
+    text-decoration: none;
+}

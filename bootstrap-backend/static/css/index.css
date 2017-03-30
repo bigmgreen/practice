@@ -15,11 +15,31 @@ body {
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
 }
+
 .hand:hover {
-	opacity: .5;
+    opacity: .5;
 }
+
 .index-item {
-    margin-bottom: 5px;
     display: block;
     text-decoration: none !important;
 }
+
+
+/*	 覆盖左菜单  start	*/
+
+#accordion .panel {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+#accordion .panel+.panel {
+    margin-top: 0;
+}
+
+.glyphicon {
+    margin-right: .8em;
+}
+
+
+/*	 覆盖左菜单  end	*/
