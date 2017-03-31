@@ -1,27 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<title>极客学院首页</title>
-    <link rel="stylesheet" href="static/css/reset.css" />
-    <link rel="stylesheet" href="static/css/base.css" />
-    <link rel="stylesheet" href="static/css/header.css" />
-    <link rel="stylesheet" href="static/css/footer.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <meta charset="UTF-8"/>
+    <title>极客学院首页</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/base.css"/>
+    <link rel="stylesheet" href="static/css/header.css"/>
+    <link rel="stylesheet" href="static/css/footer.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
 </head>
 <body>
-	<article>
-        <!--    头部  start    -->
-        <header>
-            <div class="tips">
-                <a href="#" target="_blank">感恩三周年，极客节签到送极客币、免费送书、VIP买一送一、职业学院5折优惠，快乐享不停！
+<article>
+    <!--    头部  start    -->
+    <header>
+        <!--   活动信息   -->
+        <div class="tips">
+            <a href="#" target="_blank">感恩三周年，极客节签到送极客币、免费送书、VIP买一送一、职业学院5折优惠，快乐享不停！
+            </a>
+        </div>
+        <!--    导航栏    -->
+        <div class="header">
+            <div class="wrap">
+                <!--    logo    -->
+                <a href="#" class="logo"><img src="./static/img/header/logo.png" width="109" alt="极客学院logo"></a>
+                <!--     导航 start   -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#" class="active">首页</a></li>
+                        <li>
+                            <a>职业学院</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu">
+                                <h3>前端学院</h3>
+                                <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
+                                <a href="#"><i class="wechat-icon"></i>微信小程序工程师</a>
+                                <h3>后端学院</h3>
+                                <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+                                <a href="#"><i class="go-icon"></i>Go语言工程师</a>
+                                <a href="#"><i class="php-icon"></i>PHP工程师</a>
+                                <a href="#"><i class="java-icon"></i>Java Web工程师</a>
+                                <h3>移动学院</h3>
+                                <a href="#"><i class="android-icon"></i>Android工程师</a>
+                                <a href="#"><i class="ios-icon"></i>iOS工程师</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>会员课程</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu vip-lesson">
+                                <a href="#"><i class="kck-icon"></i>课程库<span>2500+</span></a>
+                                <a href="#"><i class="zyljt-icon"></i>职业路径图<span>9</span></a>
+                                <a href="#"><i class="zstxt-icon"></i>知识体系图<span>24</span></a>
+                                <a href="#"><i class="xlkc-icon"></i>系列课程<span>101</span></a>
+                                <a href="#"><i class="kcbq-icon"></i>课程标签<span>4000+</span></a>
+                                <a href="#"><i class="vip-icon"></i>VIP会员购买<span>30/月  260/年</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>极客社区</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu vip-lesson">
+                                <a href="#"><i class="jswd-icon"></i>技术问答<span>20000+</span></a>
+                                <a href="#"><i class="wiki-icon"></i>Wiki<span>351</span></a>
+                                <a href="#"><i class="sq-icon"></i>社群<span>7000+</span></a>
+                                <a href="#"><i class="zygx-icon"></i>资源下载<span>3000+</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--     导航 end   -->
+                <!--     搜索 start   -->
+                <div class="search-box">
+                    <label for="webSearch"><span class="search-icon"></span></label>
+                    <input type="checkbox" id="webSearch"/>
+                    <div class="search-wrap">
+                        <label for="webSearch"><i class="close-icon" id="close-btn"></i></label>
+                        <i class="search-icon" id="search-btn"></i>
+                        <input placeholder="搜索课程、问答或Wiki"/>
+                        <div class="tag-box">
+                            <a href="#">Android</a>
+                            <a href="#">iOS</a>
+                            <a href="#">HTML5</a>
+                        </div>
+                    </div>
+                    <span class="app-icon">
+                        <span class="app-download triangle">
+                            <img src="./static/img/header/head-rwm.png"/>
+                        </span>
+                    </span>
+                    <div class="user-online">
+                        <a href="#">
+                            <img src="./static/img/header/10k2z6zvd5xc3.jpeg" alt="用戶头像">
+                        </a>
+                        <i class="year-vip-icon"></i>
+                        <dl class="user-online-menu triangle">
+                            <dd>
+                                <a href="#" class="authenticated-vip"></a>
+                                <a href="#" class="year-vip"></a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon learn-icon"></i>学习中心</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon user-icon"></i>个人主页</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon msg-icon"></i>消息通知<em class="unread-num">&nbsp;</em></a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon account-icon"></i>账号设置</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon logout-icon"></i>退出登录</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--     搜索 end   -->
+            </div>
+        </div>
+    </header>
+    <!--    头部  end    -->
+    <footer>
+        <div id="footer" class="mar-t50">
+            <div class=" jkinfor-block">
+                <div class="jkinfor cf">
+                    <div class="jk-logo">
+                        <img src="./static/img/footer/jk-logo-footer.png">
+                        <p>极客学院，编程是一种信仰！</p>
+                    </div>
+                    <dl>
+                        <dt>职业学院</dt>
+                        <dd><a target="_blank" href="#">Web前端工程师</a></dd>
+                        <dd><a target="_blank" href="#">Python Web工程师</a></dd>
+                        <dd><a target="_blank" href="#">Go语言工程师</a></dd>
+                        <dd><a target="_blank" href="#">Android学院</a></dd>
+                        <dd><a target="_blank" href="#">iOS工程师</a></dd>
+                        <dd><a target="_blank" href="#">微信小程序工程师</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>会员课程</dt>
+                        <dd><a target="_blank" href="#">课程库</a></dd>
+                        <dd><a target="_blank" href="#">知识体系图</a></dd>
+                        <dd><a target="_blank" href="#">职业路径图</a></dd>
+                        <dd><a target="_blank" href="#">系列课程</a></dd>
+                        <dd><a target="_blank" href="#">课程标签</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>极客社区</dt>
+                        <dd><a target="_blank" href="#">技术问答</a></dd>
+                        <dd><a target="_blank" href="#">Wiki</a></dd>
+                        <dd><a target="_blank" href="#">资源下载</a></dd>
+                        <dd><a target="_blank" href="#">社群</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>其他</dt>
+                        <dd><a target="_blank" href="#">关于我们</a></dd>
+                        <dd><a target="_blank" href="#">加入我们</a></dd>
+                        <dd><a target="_blank" href="#">讲师合作</a></dd>
+                        <dd><a target="_blank" href="#">联系我们</a></dd>
+                        <dd><a target="_blank" href="#">友情链接</a></dd>
+                    </dl>
+
+                    <div class="jk-down">
+                        <p class="hot-tel">服务热线:400-678-8266</p>
+                        <div class="downCon down-ios">
+                            <img src="./static/img/footer/app.png" class="twoCode" alt="下载二维码"> iPhone
+                        </div>
+                        <div class="downCon down-and">
+                            <img src="./static/img/footer/app.png" class="twoCode" alt="下载二维码"> Android
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1000 copyright">
+                <span>Copyright © 2013-2017&nbsp;</span>
+                <strong><a href="#" target="_blank">jikexueyuan.com</a></strong>
+                <span>All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210</span>
+                <a href="#" target="_blank" class="down-wechat"></a>
+                <a href="#" target="_blank" class="down-sina"></a>
+                <a style="display:block; margin: 15px auto 0" href="#" target="_blank">
+                    <img src="./static/img/footer/cert.png" width=60/>
                 </a>
             </div>
-            <div class="header">
-
-            </div>
-        </header>
-        <!--    头部  end    -->
-    </article>
+        </div>
+    </footer>
+</article>
 </body>
 </html>

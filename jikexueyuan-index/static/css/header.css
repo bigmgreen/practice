@@ -6,12 +6,507 @@
     line-height: 1.4;
     text-align: center;
     padding: 10px 30px 10px 10px;
-    background: #fff9df;
+    background-color: rgb(248, 110, 31);
     border: 1px solid #f1e5b3;
 }
 
 .tips a {
-    color: gray;
+    color: #fff;
     display: inline-block;
     text-decoration: none;
 }
+
+.header {
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+
+.logo {
+    width: 109px;
+    display: inline-block;
+    margin-right: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    float: left;
+    padding-top: 9px;
+}
+
+.nav a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.nav li:hover a,
+.nav a.active {
+    color: rgb(53, 181, 88);
+}
+
+.arrow-icon {
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 2px 2px;
+    transition: transform .5s linear;
+    position: relative;
+    left: 4px;
+}
+
+.nav li:hover .arrow-icon {
+    border-color: #35b558;
+    transition: transform .5s linear;
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -ms-transform: rotate(405deg);
+    transform: rotate(405deg);
+}
+
+.nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+}
+
+.nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+}
+
+.search-box {
+    float: right;
+    text-align: right;
+    width: 200px;
+    margin-right: 10px;
+    height: 60px;
+    position: relative;
+}
+
+.search-icon {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+    background: url(../img/header/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+
+.search-icon:hover {
+    background-image: url(../img/header/search-icon2.png);
+}
+
+.app-icon {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+    background: url(../img/header/app-icon.png) 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+}
+
+.app-icon:hover {
+    background-image: url(../img/header/app-icon2.png);
+}
+
+.app-icon:hover .app-download {
+    display: block;
+    opacity: 1;
+    -moz-animation: list-show 0.8s ease normal;
+    -webkit-animation: list-show 0.8s ease normal;
+    animation: list-show 0.8s ease normal;
+}
+
+.app-icon:hover .triangle:after {
+    display: block;
+    top: -9px;
+    left: 52px;
+}
+
+.app-download {
+    display: none;
+    opacity: 0;
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 60px;
+    right: 5px;
+}
+
+.app-download img {
+    width: 100%;
+}
+
+.user-online {
+    height: 60px !important;
+    width: 25px !important;
+    position: relative;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.user-online img {
+    width: 25px;
+    height: 25px;
+    margin-top: 13px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.year-vip-icon {
+    background: url(../img/header/allicon2.png) -1px -32px no-repeat;
+    background-size: 64px 64px;
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+}
+
+.user-online-menu {
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 60px;
+    right: -10px;
+}
+
+.user-online:hover .user-online-menu {
+    display: block;
+    opacity: 1;
+    -moz-animation: list-show 0.8s ease normal;
+    -webkit-animation: list-show 0.8s ease normal;
+    animation: list-show 0.8s ease normal;
+}
+
+.user-online:hover .triangle:after {
+    display: block;
+    top: -8px;
+    right: 10px;
+}
+
+.user-online-menu dd:hover {
+    background-color: #f5f5f5;
+}
+
+.user-online-menu dd {
+    text-align: left;
+    font-size: 12px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.user-online-menu a {
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+
+a.authenticated-vip {
+    background-image: url(../img/header/allvipicon.png);
+    background-size: 306px 16px;
+    display: inline-block;
+    width: 45px;
+    height: 14px;
+    background-position: -191px -1px;
+    margin-right: 10px;
+}
+
+a.year-vip {
+    background-image: url(../img/header/allvipicon.png);
+    background-size: 306px 16px;
+    display: inline-block;
+    width: 45px;
+    height: 14px;
+    background-position: -143px -1px;
+}
+
+.user-online-menu .icon {
+    background-image: url(../img/header/allicon2.png);
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.learn-icon {
+    background-position: -16px -15px;
+}
+
+.user-icon {
+    background-position: -45px -1px;
+}
+
+.msg-icon {
+    background-position: -16px -30px;
+}
+
+.unread-num {
+    padding-left: 10px;
+}
+
+.account-icon {
+    background-position: -30px -1px;
+}
+
+.logout-icon {
+    background-position: -16px -1px;
+}
+
+.sub-menu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+}
+
+.sub-menu h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.sub-menu a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    white-space: normal;
+}
+
+.sub-menu i {
+    background: url(//e.jikexueyuan.com/headerandfooter/images/allicon.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: relative;
+    top: 3px;}
+
+.sub-menu .python-icon,
+.sub-menu .go-icon,
+.sub-menu .php-icon,
+.sub-menu .java-icon,
+.sub-menu .ios-icon,
+.sub-menu .wechat-icon {
+    background: url(../img/header/allicon4.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+}
+
+.sub-menu span {
+    color: #bbb;
+    float: right;
+}
+
+.nav li:hover .sub-menu a {
+    color: #666;
+}
+
+.sub-menu a:hover {
+    color: rgb(53, 181, 88) !important;
+}
+
+.nav li:hover .sub-menu {
+    display: block;
+    opacity: 1;
+    animation: list-show 0.8s ease normal;
+    -moz-animation: list-show 0.8s ease normal;
+    -webkit-animation: list-show 0.8s ease normal;
+}
+.vip-lesson {
+    padding: 10px 0;
+}
+.sub-menu.vip-lesson a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+
+.sub-menu.vip-lesson a:hover {
+    background: #fafafa;
+    color: #35b558;
+}
+
+.sub-menu .web-icon{
+    background-position: -15px -27px;
+}
+.sub-menu .wechat-icon{
+    background-position: -2px -60px;
+}
+.sub-menu .python-icon{
+    background-position: -2px -2px;
+}
+.sub-menu .go-icon{
+    background-position: -2px -38px;
+}
+.sub-menu .php-icon{
+    background-position: -2px -21px;
+}
+.sub-menu .java-icon{
+    background-position: -2px -104px;
+}
+.sub-menu .android-icon{
+    background-position: -45px -14px;
+}
+.sub-menu .ios-icon{
+    background-position: -2px -82px;
+}
+.sub-menu .kck-icon{
+    background-position: 0 -13px;
+}
+.sub-menu .zyljt-icon{
+    background-position: -45px 0;
+}
+.sub-menu .zstxt-icon{
+    background-position: -30px -13px;
+}
+.sub-menu .xlkc-icon{
+    background: url("../img/header/xlkc2.png") 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+.sub-menu .kcbq-icon{
+    background-position: -15px -13px;
+}
+.sub-menu .vip-icon{
+    background-position: -16px 0;
+}
+.sub-menu .jswd-icon{
+    background-position: 0 -27px;
+}
+.sub-menu .wiki-icon{
+    background-position: -29px -27px;
+}
+.sub-menu .sq-icon{
+    background-position: 0 2px;
+}
+.sub-menu .zygx-icon{
+    background-position: -30px 0;
+}
+
+/*     搜索框特效  start     */
+
+#webSearch {
+    position: absolute;
+    z-index: -1;
+}
+
+#webSearch:checked + .search-wrap {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    display: block!important;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    -moz-animation: scale-run 0.8s ease normal;
+    -webkit-animation: scale-run 0.8s ease normal;
+    animation: scale-run 0.8s ease normal;
+}
+.search-wrap {
+    display: none;
+    transform: scale(0.1, 1);
+    -moz-transform: scale(0.1, 1);
+    opacity: 0;
+    height: 59px;
+    line-height: 59px;
+    width: 850px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: -10px;
+    white-space: normal;
+    text-align: left;
+}
+
+.search-wrap .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(//e.jikexueyuan.com/headerandfooter/images/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+
+.search-wrap .search-icon {
+    background: url(//e.jikexueyuan.com/headerandfooter/images/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+.search-wrap input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-wrap .tag-box {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+.search-wrap .tag-box a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+/*     搜索框特效  end     */
