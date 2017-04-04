@@ -26,7 +26,7 @@
 
 /*   关于我   start   */
 .about {
-    width: 30%;
+    width: 576px;
     margin: 0 auto;
     text-align: left;
 }
@@ -41,7 +41,7 @@
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
     display: flex;
-    width: 30%;
+    width: 576px;
     margin: 20px auto;
 }
 .about-title li {
@@ -55,10 +55,107 @@
 }
 /*   关于我   end   */
 
+/*    经历  start      */
+.fp-controlArrow.fp-prev {
+    left: 50px;
+}
+.fp-controlArrow.fp-next {
+    right: 50px;
+}
+
+.experience-wrap {
+    position: relative;
+    width: 900px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+}
+
+.experience {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 40px 10px 40px 0;
+    padding-top: 15px;
+    padding-left: 15px;
+    text-align: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 200px;
+    box-shadow: 1px 1px 5px rgba(148, 147, 181, 0.64);
+    transition: background-color .5s, box-shadow .5s;
+}
+.experience:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 5px rgba(148, 147, 181, 1);
+    transition: background-color .5s, box-shadow .5s;
+}
+.experience:hover dt,
+.experience:hover dd{
+    color: rgba(20, 16, 33, 1);
+    transition: color .5s;
+}
+
+.experience dt {
+    color: rgba(20, 16, 33, 0.48);
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    transition: color;
+}
+.experience dd{
+    color: rgba(20, 16, 33, 0.69);
+    line-height: 1.3;
+    transition: color;
+}
+/*    经历  end      */
+
+/*    项目经验  start  */
+/*    项目经验  end  */
+.project-experience {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    width: 380px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    text-align: left;
+    margin: 20px 20px 0;
+    height: 200px;
+    box-shadow: 1px 1px 20px rgba(183, 176, 180, 0.64);
+    transition: background-color .5s, box-shadow .5s;
+}
+.project-experience:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 5px rgba(148, 147, 181, 1);
+    transition: background-color .5s, box-shadow .5s;
+}
+.project-experience:hover dt,
+.project-experience:hover dd{
+    color: rgba(20, 16, 33, 1);
+    transition: color .5s;
+}
+
+.project-experience dt {
+    color: rgba(20, 16, 33, 0.48);
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    transition: color;
+}
+.project-experience dd{
+    color: rgba(20, 16, 33, 0.69);
+    line-height: 1.3;
+    transition: color;
+    word-break: break-all;
+}
 /*   技能  start   */
 
 .skills{
-    width: 40%;
+    width: 768px;
     margin: 0 auto;
     text-align: left;
 }
@@ -117,8 +214,11 @@ li,
 
 .text-tip {
     color: rgba(255, 255, 255, 0.4) !important;
+    margin: 0 auto;
+    white-space: nowrap;
     margin-top: 30px;
     font-size: 18px;
+    width: 40%;
 }
 
 .link {
@@ -140,5 +240,12 @@ li,
     font-size: 30px !important;
     display: inline-block;
 }
-
+.text-tip input {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    border: 0 none;
+    outline: 0 none;
+    font-size: 25px;
+    width: 238px;
+}
 /*   联系我   end   */
