@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>个人简历</title>
+    <title>张勋求职web前端工程师简历</title>
     <link rel="stylesheet" href="./static/lib/font/iconfont.css"/>
     <link rel="stylesheet" href="./static/css/animate.min.css"/>
     <link rel="stylesheet" href="./static/lib/fullpage/jquery.fullpage.min.css"/>
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./static/css/index.css"/>
 </head>
 <body>
+<!--    logo    -->
 <header>
     <a href="#"
        class="logo"><img
@@ -21,7 +22,8 @@
             src="./static/img/logo.jpeg" alt="我的头像"/></a>
 </header>
 <div id="fullPage">
-    <div class="section">
+    <!--    基本信息  start    -->
+    <div class="section active">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
                 <img class="user-img animated"
@@ -29,18 +31,23 @@
                      data-animate="bounce"
                      src="./static/img/user.jpg"
                      alt="大青山的头像">
+                <p data-init="fadeInRightBig"
+                   data-animate
+                   class="animated"><em>张勋</em>是个工作<b id="year"></b>年靠谱的web前端工程师</p>
+                <p data-init="fadeInLeftBig"
+                   data-animate
+                   class="animated">bigmgreen@163.com</p>
+                <p data-init="fadeInRightBig"
+                   data-animate
+                   class="animated">183-8101-2869</p>
                 <p data-init="fadeInLeftBig"
                    data-animate
                    class="animated">要得到某样东西,最可靠的办法是让自己配得上它</p>
-                <p data-init="fadeInRightBig"
-                   data-animate
-                   class="animated">靠谱的web前端工程师</p>
-                <p data-init="fadeInRightBig"
-                   data-animate
-                   class="animated">bigmgreen@163.com</p>
             </div>
         </div>
     </div>
+    <!--    基本信息  end    -->
+    <!--    关于我  start    -->
     <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
@@ -50,6 +57,10 @@
                         data-init="zoomIn"
                         data-animate="bounce"
                     ><i class="iconfont icon-nan"></i><span>男</span></li>
+                    <li class="animated"
+                        data-init="zoomIn"
+                        data-animate="bounce"
+                    ><i class="iconfont icon-iconperson"></i><span>25</span></li>
                     <li class="animated"
                         data-init="zoomInDown"
                         data-animate="bounce"
@@ -66,28 +77,33 @@
                 <ul class="about">
                     <li class="animated"
                         data-init="lightSpeedIn"
-                        data-animate>致力于打造自动化，高效，简洁，轻量级前端工作栈（至今）
+                        data-animate>（2016-至 今）致力于打造自动化，高效，简洁，轻量级前端工作栈
                     </li>
                     <li class="animated"
                         data-init="fadeInLeftBig"
-                        data-animate>正式进入前端领域，来到北京发展（2015-2016）
+                        data-animate>（2015-2016）正式进入前端领域，来到北京发展
                     </li>
                     <li class="animated"
                         data-init="lightSpeedIn"
-                        data-animate>应公司需要开始自学前端，并应用到工作中（2014-2015）
+                        data-animate>（2014-2015）应公司需要开始自学前端，并应用到工作中
                     </li>
                     <li class="animated"
                         data-init="fadeInLeftBig"
-                        data-animate>软件工程专业，毕业后从事Java web开发（2014）
+                        data-animate>（2011-2014）毕业于<a
+                            target="_blank"
+                            href="http://www.scetc.net/2014/0917/c2294a28074/page.htm">四川工程职业技术学院</a>软件工程专业，毕业后从事Java
+                        web开发
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <!--    关于我  end    -->
+    <!--    工作内容   start    -->
     <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
-                <h3 class="title">我的经历</h3>
+                <h3 class="title">工作内容</h3>
                 <div class="experience-wrap">
                     <div data-init="zoomInDown"
                          data-animate
@@ -147,7 +163,9 @@
             </div>
         </div>
     </div>
-    <div class="section active">
+    <!--    工作内容   end    -->
+    <!--    项目经验   start    -->
+    <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
                 <h3 class="title">项目经验</h3>
@@ -155,7 +173,7 @@
                     <a href="https://github.com/bigmgreen/p2p-react-webpack-es6-nodejs"
                        target="_blank">
                         <dl class="project-experience animated" data-init="zoomInLeft"
-                       data-animate>
+                            data-animate>
                             <dt>react重构公司产品-前后端分离</dt>
                             <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目</dd>
                             <dd>负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，开发文档编写，测试服务器搭建，代码规范制定</dd>
@@ -164,7 +182,7 @@
                     <a href="https://www.mjsfax.com"
                        target="_blank">
                         <dl class="project-experience animated" data-init="zoomInRight"
-                       data-animate>
+                            data-animate>
                             <dt>民金所</dt>
                             <dd>民金所，全称北京民金所金融信息服务有限公司，是泛海控股旗下民生金服板块的互联网财富管理平台，注册资本10亿元人民币，总部位于北京东长安街民生金融中心</dd>
                             <dd>负责全站前端开发</dd>
@@ -173,7 +191,7 @@
                     <a href="https://www.tianjs.com/"
                        target="_blank">
                         <dl class="project-experience animated" data-init="zoomInUp"
-                       data-animate>
+                            data-animate>
                             <dt>天安金交中心</dt>
                             <dd>
                                 天安金交中心，全称“天安（贵州省）互联网金融资产交易中心股份有限公司”，是天安财产保险股份有限公司的战略合作伙伴。2015年11月在贵州省人民政府的大力支持下注册成立，注册资本金1亿元
@@ -185,6 +203,8 @@
             </div>
         </div>
     </div>
+    <!--    项目经验   end    -->
+    <!--    技能   start    -->
     <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
@@ -222,6 +242,8 @@
             </div>
         </div>
     </div>
+    <!--    技能   end    -->
+    <!--    社交   start    -->
     <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
@@ -289,49 +311,12 @@
             </div>
         </div>
     </div>
+    <!--    社交   end    -->
 </div>
-
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/jquery/jquery.easings.min.js"></script>
 <script src="static/lib/fullpage/scrolloverflow.min.js"></script>
 <script src="static/lib/fullpage/jquery.fullpage.min.js"></script>
-<script>
-    $(function () {
-        $('#fullPage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#a29971', '#87b0a5', '#4d5e8f'],
-            scrollingSpeed: 300,
-            navigation: true,
-            navigationPosition: 'right',
-            onLeave: function (index, nextIndex, direction) {
-                $(this).find('[data-animate]').map(function () {
-                    console.log(this)
-                    $(this).removeClass($(this).data('init'));
-                });
-
-                var relate = null;
-                if (direction == 'down') {
-                    relate = $(this).next();
-                } else {
-                    relate = $(this).prev();
-                }
-
-                relate.find('[data-animate]').map(function () {
-                    $(this).addClass($(this).data('init'));
-                });
-            }
-        });
-
-        $('[data-animate]').hover(function () {
-            $(this).removeClass($(this).data('init')).addClass($(this).data('animate'));
-        }, function () {
-            $(this).removeClass($(this).data('animate'));
-        });
-
-        $('.section').first().find('[data-animate]').map(function () {
-            $(this).addClass($(this).data('init'));
-        });
-
-    });
-</script>
+<script src="static/js/index.js"></script>
 </body>
 

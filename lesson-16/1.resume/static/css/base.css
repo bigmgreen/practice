@@ -61,11 +61,6 @@ sub {
     vertical-align: middle;
 }
 
-i,
-em {
-    font-style: normal
-}
-
 /*   reset   end   */
 
 /*    左浮动  右浮动  start   */
