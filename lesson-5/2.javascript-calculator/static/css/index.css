@@ -1,45 +1,263 @@
-/*	 页面基本样式	*/
+/*   计算机样式  start  */
+.calculator-wrap {
+    min-height: 800px;
+    width: 500px;
+    margin: 85px auto 30px;
+    box-shadow: 0 0 5px #ddd;
+    position: relative;
+    background-color: #1c2e37;
+    user-select: none;
+}
 
-html,
-body {
-    padding: 0;
-    margin: 0;
-    font: 12px arial;
-    color: #333;
+.calculator {
     width: 100%;
-    height: 100%;
 }
 
-.hand {
-    cursor: pointer;
-    -webkit-transition: opacity .5s;
-    transition: opacity .5s;
-}
-
-.hand:hover {
-    opacity: .5;
-}
-
-.index-item {
+.expression,
+.result {
     display: block;
-    text-decoration: none !important;
+    height: 87px;
+    line-height: 87px;
+    text-align: right;
+    padding-right: 20px;
+    user-select: initial;
 }
 
+.expression::selection,
+.result::selection {
+    background: #35b558;
+    color: #fff;
+}
 
-/*	 覆盖左菜单  start	*/
+.expression {
+    font-size: 40px;
+    color: #3fb5de;
+}
 
-#accordion .panel {
-    margin-bottom: 0;
+.result {
+    font-size: 20px;
+}
+
+tr:nth-child(1) td,
+tr td:nth-child(4) {
+    color: #fff;
+    background-color: #3fb5de;
+    border-color: #2187b2;
+}
+
+td {
+    color: #35454d;
+    background-color: #f1f4f3;
+    text-align: center;
+    height: 125px;
+    width: 125px;
+    border: 1px solid #b3b8b7;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+}
+
+td:active {
+    opacity: .7;
+}
+
+/*   计算机样式  end  */
+
+/*   计算机图标  start   */
+
+td [class^=calculator-] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator-clear:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 23px;
+    position: absolute;
+    background-color: #3fb5de;
+    top: 9px;
+    right: 0;
+}
+
+.calculator-clear:after {
+    content: '';
+    width: 30px;
+    height: 42px;
+    border: 3px solid;
+    display: block;
+    border-radius: 50%;
+}
+
+td .calculator-del {
+    width: 36px;
+    height: 30px;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    left: 68px;
+}
+
+.calculator-del:before {
+    content: '';
+    display: block;
+    color: #fff;
+    font-style: normal;
+    border: 3px solid;
+    top: 2px;
+    position: absolute;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
     border-radius: 0;
+    border-right: none;
+    border-top: none;
+    background-color: #3fb5de;
 }
 
-#accordion .panel+.panel {
-    margin-top: 0;
+.calculator-del:after {
+    content: 'x';
+    display: block;
+    color: #fff;
+    font-style: normal;
+    font-size: 20px;
+    top: -3px;
+    position: absolute;
+    left: 10px;
 }
 
-.glyphicon {
-    margin-right: .8em;
+.calculator-remainders {
+    width: 40px;
+    height: 4px;
+    left: 44px !important;
+    display: block;
+    background-color: #fff;
+    transform: rotate(-45deg) !important;
 }
 
+.calculator-remainders:after,
+.calculator-remainders:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid;
+    top: -18px;
+    left: 15px;
+}
 
-/*	 覆盖左菜单  end	*/
+.calculator-remainders:before {
+    top: 14px;
+}
+
+.calculator-div {
+    width: 40px;
+    height: 4px;
+    display: block;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.calculator-div:after,
+.calculator-div:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -17px;
+    left: 17px;
+}
+
+.calculator-div:before {
+    top: 17px;
+}
+
+td .calculator-multiplication {
+    left: 42px;
+}
+
+.calculator-multiplication:after,
+.calculator-multiplication:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    display: block;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.calculator-multiplication:before {
+    transform: rotate(-45deg);
+}
+
+td .calculator-subtraction {
+    left: 42px;
+}
+
+.calculator-subtraction:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    display: block;
+    background-color: #fff;
+}
+
+td .calculator-add {
+    left: 42px;
+}
+
+.calculator-add:after,
+.calculator-add:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    display: block;
+    background-color: #fff;
+}
+
+.calculator-add:after {
+    transform: rotate(90deg);
+}
+
+.calculator-dot:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #555;
+    display: block;
+    position: absolute;
+}
+
+td .calculator-equal {
+    top: 56px;
+    left: 50px;
+}
+
+.calculator-equal:after,
+.calculator-equal:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    display: block;
+    background-color: #58a8c2;
+}
+
+.calculator-equal:before {
+    top: 15px;
+}
+
+/*   计算机图标  end   */

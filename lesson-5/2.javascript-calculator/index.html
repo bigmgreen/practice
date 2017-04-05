@@ -1,16 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>用JS开发简易计算器</title>
-    <link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="static/css/reset.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
 </head>
 <body>
-
+<!--    页面主体   start    -->
+<article>
+    <!--    页面头部  start    -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button"
+                            class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">任务5</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <p class="navbar-text">2.用JS开发简易计算器</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--    页面头部  end    -->
+    <!--    内容  start    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="calculator-wrap">
+                    <span id="expression" class="expression"></span>
+                    <output id="result" class="result"></output>
+                    <table id="calculator" class="calculator">
+                        <tr>
+                            <td data-value="clear"><i class="calculator-clear"></i></td>
+                            <td data-value="del"><i class="calculator-del"></i></td>
+                            <td data-value="%"><i class="calculator-remainders"></i></td>
+                            <td data-value="/"><i class="calculator-div"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-value="7">7</td>
+                            <td data-value="8">8</td>
+                            <td data-value="9">9</td>
+                            <td data-value="*"><i class="calculator-multiplication"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-value="4">4</td>
+                            <td data-value="5">5</td>
+                            <td data-value="6">6</td>
+                            <td data-value="-"><i class="calculator-subtraction"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-value="1">1</td>
+                            <td data-value="2">2</td>
+                            <td data-value="3">3</td>
+                            <td data-value="+" rowspan="2"><i class="calculator-add"></i></td>
+                        </tr>
+                        <tr>
+                            <td data-value="."><i class="calculator-dot"></i></td>
+                            <td data-value="0">0</td>
+                            <td data-value="="><i class="calculator-equal"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    内容  end    -->
+    <footer>
+        <p class="text-center">&copy; Web前端工程师就业班48期1班 - 我的就业班 - 极客学院</p>
+    </footer>
+</article>
+<!--    页面主体   end    -->
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
