@@ -26,29 +26,27 @@ var Calculator = {
             case 'del':
                 this._del();
                 break;
-            default: {
-                if (this.stack.join('').length <= 18) {
-                    this._push(param);
-                }
-            }
+            default:
+                this._push(param);
         }
     },
     /*
      * 计数
      * */
     _push: function (param) {
+
         if (this.stack[0] === '' || (this.stack[1] === '' && this.stack[2] === '' && '+-*/%'.indexOf(param) === -1)) {
-            if (this.stack[0].toString().length <= 1 && param === '.') {
-                this.stack[0] = this.stack[0] + param;
-            } else {
-                this.stack[0] += param;
-                this.stack[0] = parseFloat(this.stack[0]);
+            var value_1 = this.stack[0] + param;
+            if (/^-?\d+\.?\d*$/.test(value_1)) {
+                this.stack[0] = value_1;
             }
         } else if (this.stack[0] !== '' && '+-*/%'.indexOf(param) > -1) {
             this.stack[1] = param;
         } else if (this.stack[2] === '' || (this.stack[1] !== '' && this.stack[0] !== '' && '+-*/%'.indexOf(param) === -1)) {
-            this.stack[2] += param;
-            this.stack[2] = parseFloat(this.stack[2]);
+            var value_2 = this.stack[2] + param;
+            if (/^-?\d+\.?\d*$/.test(value_2)) {
+                this.stack[2] = value_2;
+            }
         }
         this._render(param);
     },
@@ -73,34 +71,6 @@ var Calculator = {
         }
         console.log(this.stack)
     },
-    // /*
-    //  * 计数
-    //  * */
-    // _push: function (param) {
-    //
-    //     if (this.stack.join('').length <= 18) {
-    //         this.expression.innerHTML += param;
-    //         if (param === '=') {
-    //             try {
-    //
-    //                 if (this.stack.length === 0) {
-    //                     return;
-    //                 }
-    //
-    //                 var value = parseFloat(eval(this.stack.join('')));
-    //                 this.stack = [];
-    //                 this.stack.push(value);
-    //                 this.expression.innerHTML = value;
-    //                 this.result.innerHTML = value;
-    //             } catch (e) {
-    //                 this._clear();
-    //             }
-    //         } else {
-    //             this.stack.push(param);
-    //         }
-    //         console.log(this.stack)
-    //     }
-    // },
     /*
      * 删除一个字符
      * */

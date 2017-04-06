@@ -1,16 +1,100 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>JS找到数组中出现次数最多的字母，并给出个数和每一个所在的位置</title>
-    <link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="static/css/reset.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
 </head>
 <body>
-
+<!--    页面主体   start    -->
+<article>
+    <!--    页面头部  start    -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button"
+                            class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">任务5</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <p class="navbar-text">3.JS找到数组中出现次数最多的字母，并给出个数和每一个所在的位置</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--    页面头部  end    -->
+    <!--    内容  start    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrap text-center">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="string">字符串</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="string" placeholder="请输入字符串" value="axbdmakmpja" autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="mark">查找字符</label>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" id="mark"
+                                       placeholder="请输入要查找的字符">
+                            </div>
+                        </div>
+                        <button id="findBtn" type="button" class="btn btn-success">开始查找</button>
+                        <div class="col-md-offset-2">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">字符串转换后的数组:</label>
+                                <div class="col-md-9 text-left">
+                                    <p id="toArray" class="form-control-static"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">出现次数最多的字母:</label>
+                                <div class="col-md-6 text-left">
+                                    <p id="mostLetter" class="form-control-static"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">出现的总次数:</label>
+                                <div class="col-md-6 text-left">
+                                    <p id="totalCount" class="form-control-static"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">索引下标:</label>
+                                <div class="col-md-6 text-left">
+                                    <p id="index" class="form-control-static"></p>
+                                    <span class="help-block">出现次数最多的这个字母每一个所在的位置</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    内容  end    -->
+    <footer>
+        <p class="text-center">&copy; Web前端工程师就业班48期1班 - 我的就业班 - 极客学院</p>
+    </footer>
+</article>
+<!--    页面主体   end    -->
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
