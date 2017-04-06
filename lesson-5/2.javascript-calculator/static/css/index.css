@@ -7,6 +7,7 @@
     position: relative;
     background-color: #1c2e37;
     user-select: none;
+    transform: scale(.7);
 }
 
 .calculator {

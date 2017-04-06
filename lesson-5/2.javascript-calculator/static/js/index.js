@@ -41,7 +41,12 @@ var Calculator = {
                 this.stack[0] = value_1;
             }
         } else if (this.stack[0] !== '' && '+-*/%'.indexOf(param) > -1) {
+
+            if (this.stack[1] !== '') {
+                this._calculate();
+            }
             this.stack[1] = param;
+
         } else if (this.stack[2] === '' || (this.stack[1] !== '' && this.stack[0] !== '' && '+-*/%'.indexOf(param) === -1)) {
             var value_2 = this.stack[2] + param;
             if (/^-?\d+\.?\d*$/.test(value_2)) {
@@ -54,22 +59,59 @@ var Calculator = {
      * 显示
      * */
     _render: function (param) {
+        this.stack[0] = this._formatNUmber(this.stack[0]);
+        this.stack[2] && (this.stack[2] = this._formatNUmber(this.stack[2]));
         this.expression.innerHTML = this.stack.join('');
-
         if (param === '=') {
-            try {
-                var value = parseFloat(eval(this.stack.join('')));
+            this._calculate();
+        }
+
+        console.log(this.stack);
+    },
+    /*
+     * 格式化数字
+     * 0
+     * 0.
+     * 0.0
+     * */
+    _formatNUmber: function (num) {
+        if (num) {
+            num = num + '';
+            var index = num.lastIndexOf('.');
+            if (index === num.length - 1) {
+                return parseFloat(num) + '.';
+            } else if ((index < num.length - 1) && (index > -1)) {
+                return num;
+            } else {
+                return parseFloat(num);
+            }
+        }
+        return '';
+    },
+    /*
+     * 计算
+     * */
+    _calculate: function () {
+        try {
+            if (this.stack[0] !== '' && this.stack[1] !== '' && this.stack[2] !== '') {
+                if (this.stack[2] == 0 && this.stack[1] === '/') {
+                    this.result.innerHTML = '出错';
+                    return;
+                }
+                this.stack[0] = parseFloat(this.stack[0]);
+                this.stack[2] = parseFloat(this.stack[2]);
+                var value = parseFloat(eval(this.stack.join('')).toFixed(16));
                 if (isNaN(value)) {
                     value = 0;
                 }
                 this.stack = [value, '', ''];
                 this.expression.innerHTML = value;
                 this.result.innerHTML = value;
-            } catch (e) {
-                this._clear();
             }
+        } catch (e) {
+            this._clear();
+            console.log(e.message);
         }
-        console.log(this.stack)
     },
     /*
      * 删除一个字符
