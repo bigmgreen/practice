@@ -6,8 +6,6 @@ $(function () {
     (function (doc) {
         /*  字符串    */
         var str = doc.getElementById('string');
-        /*  查找字符    */
-        var mark = doc.getElementById('mark');
         /*  开始查找按钮    */
         var findBtn = doc.getElementById('findBtn');
         /*  字符串转换后的数组    */
@@ -18,23 +16,27 @@ $(function () {
         var totalCount = doc.getElementById('totalCount');
         /*  索引下标    */
         var index = doc.getElementById('index');
+        /*  错误提示    */
+        var alertDanger = doc.getElementById('alertDanger');
 
-        /*     函数调用，获取字符串相关信息，并把数据显示到页面上   start     */
+        /*     函数调用，获取字符串相关信息，并把数据显示到页面上      */
+        run();
+        /*   添加事件    */
+        findBtn.addEventListener('click', run);
 
-        var info = getStringInfo(str.value);
-        toArrayText.innerHTML = info.toArrayText;
-        mostLetter.innerHTML = info.mostLetter;
-        totalCount.innerHTML = info.totalCount;
-        index.innerHTML = info.index;
-
-        /*     函数调用，获取字符串相关信息，并把数据显示到页面上   end     */
-
-
-        /*   添加按钮事件   start   */
-
-
-
-        /*   添加按钮事件   end   */
+        /*   处理显示函数   */
+        function run() {
+            if (str.value) {
+                alertDanger.style.display = 'none';
+            } else  {
+                alertDanger.style.display = 'block';
+            }
+            var info = getStringInfo(str.value);
+            toArrayText.innerHTML = info.toArrayText;
+            mostLetter.innerHTML = info.mostLetter;
+            totalCount.innerHTML = info.totalCount;
+            index.innerHTML = info.index;
+        }
     })(document);
 
 });
@@ -94,15 +96,15 @@ function getStringInfo(str) {
     });
     //出现次数最多的字母
     var totalCount = printInfo.map(function (item) {
-        return item.count;
+        return item.name + '[' + item.count + ']';
     });
     //索引下标
     var index = printInfo.map(function (item) {
-        return item.index;
+        return item.name +'['+ item.index + ']';
     });
 
     return {
-        toArrayText: '[' + arr.join() + ']',
+        toArrayText: arr.join() !== '' ? '[' + arr.join() + ']' : '',
         mostLetter: mostLetter.join(),
         totalCount: totalCount,
         index: index

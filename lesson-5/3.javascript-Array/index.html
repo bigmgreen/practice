@@ -40,20 +40,22 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="wrap text-center">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" onsubmit="return false;">
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="string">字符串</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="string" placeholder="请输入字符串" value="axbdmakmpja" autofocus>
+                                <input type="text"
+                                       class="form-control"
+                                       id="string"
+                                       placeholder="请输入字符串"
+                                       value="axbdmakmpja"
+                                       required
+                                       autofocus>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-3 control-label" for="mark">查找字符</label>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" id="mark"
-                                       placeholder="请输入要查找的字符">
-                            </div>
-                        </div>
+                        <!--    错误提示    -->
+                        <p id="alertDanger" class="alert alert-danger text-center" role="alert">输入的分数不合法，请输入0~100的分数</p>
+                        <!--    函数切换   start    -->
                         <button id="findBtn" type="button" class="btn btn-success">开始查找</button>
                         <div class="col-md-offset-2">
                             <div class="form-group">

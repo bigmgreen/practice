@@ -12,7 +12,7 @@ $(function () {
             e = e || window.event;
             e.preventDefault();
 
-            if (isNaN(score.value) || (score.value < 0 ) || ( score.value > 100)) {
+            if (!score.value || isNaN(score.value) || (score.value < 0 ) || ( score.value > 100)) {
                 alertDanger.style.display = 'block';
                 alertInfo.style.display = 'none';
             } else {
