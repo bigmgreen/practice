@@ -14,3 +14,4 @@
 备注：
 1.test.html 模仿了csrf操作->模拟删除第一个新闻（id=0）；
 2.由于使用的东西较多，没有上传node_modules，下载压缩包执行命令：npm install 或者 cnpm install；
+3.后台登录账号为：admin/admin

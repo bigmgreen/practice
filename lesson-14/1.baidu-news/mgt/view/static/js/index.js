@@ -207,7 +207,7 @@ $(function () {
     $('#addSave').click(function () {
         var form = app.addModal.find('form');
         if (app.validate(form)) {
-            $.post('/add', form.serialize() + '&type=' + app.type).done(function (data) {
+            $.post('/add', form.serialize() + '&type=' + app.type + '&token=' + $._token).done(function (data) {
                 if (data === true) {
                     app.msgFn('添加成功');
                     form[0].reset();
@@ -258,7 +258,7 @@ $(function () {
         modal.find('[data-update-save]').click(function () {
             var form = modal.find('form');
             if (app.validate(form)) {
-                $.post('/update', form.serialize() + '&type=' + app.type + '&id=' + id).done(function (data) {
+                $.post('/update', form.serialize() + '&type=' + app.type + '&id=' + id + '&token=' + $._token).done(function (data) {
                     if (data === true) {
                         app.msgFn('编辑成功');
                         form[0].reset();
