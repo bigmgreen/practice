@@ -1,0 +1,531 @@
+/*   页面导航  start   */
+
+header {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+nav {
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav > a {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 19px;
+    color: #555;
+    text-decoration: underline;
+    outline: none;
+    display: inline-block;
+    text-shadow: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #555555;
+}
+
+nav > a:nth-child(7) {
+    font-weight: normal;
+}
+
+/*   页面导航  end   */
+
+/*   设置菜单  start   */
+
+.bdpfmenu-wrap {
+    display: inline;
+    position: relative;
+}
+
+.bdpfmenu-wrap a {
+    font-weight: normal;
+}
+
+.bdpfmenu-wrap:hover .bdpfmenu {
+    display: block;
+}
+
+.bdpfmenu-wrap:hover:after {
+    content: ' ';
+    position: absolute;
+    width: 70px;
+    height: 17px;
+    left: -2px;
+    top: 12px;
+}
+
+.bdpfmenu {
+    width: 70px;
+    border: 1px solid #d1d1d1;
+    position: absolute;
+    z-index: 302;
+    -o-box-shadow: 1px 1px 5px #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    background-color: #fff;
+    left: -3px;
+    top: 26px;
+    display: none;
+}
+
+.bdpfmenu a {
+    display: block;
+    text-align: left;
+    padding: 7px 9px;
+    line-height: 1;
+    text-decoration: none;
+    color: #333;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.bdpfmenu a:hover {
+    background: #38f;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cart {
+    position: relative;
+    z-index: 1;
+}
+
+.cart:after {
+    content: ' ';
+    position: absolute;
+    border-top: 0;
+    border-bottom: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: -8px;
+    left: 27px;
+}
+
+.cart:before {
+    content: ' ';
+    position: absolute;
+    border-top: 0;
+    border-bottom: 10px solid #d1d1d1;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: -10px;
+    left: 27px;
+}
+
+/*   设置菜单  end   */
+
+/*   更多产品菜单  start   */
+
+.right-menu-wrap {
+    position: relative;
+    display: inline;
+}
+
+.right-menu-wrap:hover .right-menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s;
+}
+
+.right-menu-wrap .more {
+    display: inline-block;
+    cursor: default;
+    right: 0;
+    float: right;
+    margin-left: 24px;
+    margin-right: 2px;
+    font-weight: normal;
+    width: 84px;
+    height: 32px;
+    line-height: 32px;
+    color: white;
+    background: #398bfb;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #398bfb;
+    text-decoration: none;
+}
+
+.right-menu {
+    position: fixed;
+    width: 85px;
+    min-height: 600px;
+    height: 100%;
+    border-left: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+}
+
+.right-menu a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: normal;
+    padding-top: 48px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.right-menu a .bgi {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../img/header/bdbri_icons_0a62ce1.png');
+    background-repeat: no-repeat;
+    margin: -40px auto 0;
+}
+
+.right-menu .music-bgi {
+    background-position: -72px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.right-menu .img-bgi {
+    background-position: -112px 0;
+}
+
+.right-menu .know-bgi {
+    background-position: -36px 0;
+}
+
+.right-menu .doc-bgi {
+    background-position: -148px 0;
+}
+
+.right-menu .chart-bgi {
+    background-position: -184px 0;
+}
+
+.right-menu .last-right-menu-item {
+    padding-top: 0;
+    border-bottom: 0 none;
+    margin-top: 15px;
+    text-decoration: underline;
+    background: none;
+}
+
+.right-menu a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.right-menu .more-hover {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 33px;
+    line-height: 33px;
+    padding-top: 0;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+    box-sizing: content-box;
+    text-decoration: none;
+    background: none;
+}
+
+/*   更多产品菜单  end   */
+
+/*   头部左边  start   */
+
+.nav-left {
+    float: left;
+    position: relative;
+    margin-right: 19px;
+    outline: none;
+    display: inline-block;
+    text-shadow: none;
+}
+
+.weather {
+    display: inline-block;
+}
+
+.nav-left a {
+    font-weight: normal;
+    color: #555;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.weather a {
+    text-decoration: none;
+    margin-right: -15px;
+    white-space: nowrap;
+}
+
+.weather span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.weather b {
+    color: #badc00;
+    font-weight: bold;
+}
+
+.weather .weather-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-image: url(../img/header/a2.png);
+}
+
+/*   头部左边  end   */
+
+/*     天气浮动框   start     */
+.weather:hover .weather-mod {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+.weather-mod {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 585px;
+    z-index: 500;
+    height: 201px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    -moz-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.072);
+    -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.072);
+    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.072);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3');
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.weather-mod .cart {
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.weather-title {
+    height: 40px;
+    width: 547px;
+    margin: 0 19px;
+    border-bottom: #efefef 1px solid;
+}
+
+.weather-title span {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 12px;
+    float: left;
+}
+
+.weather-title span:first-child {
+    color: #666;
+}
+
+.weather-title span:first-child + span {
+    color: #999;
+    margin-left: 6px;
+}
+
+.weather-title .lunar-sevenday {
+    margin-left: 18px;
+}
+
+.weather-title .lunar-sevenday a {
+    color: #0079f4;
+    margin: 0;
+}
+
+.weather-title > a {
+    color: #666;
+    width: 40px;
+    cursor: pointer;
+    text-align: right;
+    line-height: 40px;
+    background: url(../img/header/load_ext_spis_65c74648.png) no-repeat -36px -88px;
+    background-position: -36px -89px !important;
+    margin: 0;
+}
+
+.weather-body {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.weather-body li:first-child {
+    width: 161px;
+}
+
+.weather-body li:first-child p {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.weather-body li a {
+    display: block;
+    height: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.weather-body li a p:first-child {
+    height: 34px;
+    line-height: 34px;
+    width: 100%;
+}
+
+.weather-body p {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+}
+
+.weather-body li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: left;
+    width: 105px;
+    overflow: hidden;
+}
+
+/*     天气浮动框   end     */
+
+/*     消息弹框   start */
+.msg-box {
+    display: inline-block;
+    position: relative;
+}
+
+.msg-box:hover .baidu-msg {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.baidu-msg {
+    opacity: 0;
+    transition: opacity .5s;
+    visibility: hidden;
+    position: absolute;
+    top: 34px;
+    left: -124px;
+    font-size: 12px;
+    color: #333;
+    width: 278px;
+    z-index: 999;
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    background: #fff;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+}
+
+.no-msg-tip {
+    height: 88px;
+    line-height: 88px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(177, 177, 177, .20);
+    text-align: center;
+}
+
+.no-msg-btns {
+    height: 28px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-left: 50px;
+}
+
+.msg-btn {
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    display: inline;
+    width: 82px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    text-align: center;
+    background: #bcbcbc;
+    position: relative;
+    font-size: 12px !important;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+a.msg-btn {
+    color: #ffffff;
+    text-decoration: none;
+    background: #389cff;
+}
+
+span.msg-btn:after {
+    content: '';
+    font-size: 0;
+    width: 12px;
+    height: 9px;
+    background: url(../img/header/msg_bg_d75a3e82.png) no-repeat 0 0;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+
+a.msg-btn:after {
+    content: '';
+    width: 12px;
+    height: 10px !important;
+    background: url(../img/header/msg_bg_d75a3e82.png) no-repeat -15px 0;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+
+.baidu-msg .cart {
+    left: 120px;
+}
+
+/*     消息弹框   end */
+
+/*   代码在火狐上的修正   */
+@-moz-document url-prefix() {
+    .bdpfmenu .cart,
+    .baidu-msg .cart {
+        top: 10px;
+    }
+}
