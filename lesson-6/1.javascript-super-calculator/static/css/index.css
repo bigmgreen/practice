@@ -1,0 +1,175 @@
+/*   计算机样式  start  */
+
+.calculator-wrap {
+    width: 344px;
+    margin: 85px auto 30px;
+    box-shadow: 0 0 5px #ddd;
+    position: relative;
+    background-color: #1c2e37;
+    user-select: none;
+}
+
+.calculator {
+    width: 100%;
+}
+
+.expression,
+.result {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    text-align: right;
+    padding-right: 20px;
+    user-select: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.expression::selection,
+.result::selection {
+    background: #35b558;
+    color: #fff;
+}
+
+.expression {
+    font-size: 40px;
+    color: #3fb5de;
+}
+
+.result {
+    font-size: 20px;
+}
+
+td.text-info {
+    color: #fff;
+    background-color: #3fb5de;
+    border-color: #2187b2;
+}
+
+td {
+    color: #35454d;
+    background-color: #f1f4f3;
+    text-align: center;
+    height: 85px;
+    width: 25%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: normal;
+    position: relative;
+}
+
+td:active {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    opacity: .7;
+}
+
+/*   计算机样式  end  */
+
+/*   计算机图标  start   */
+
+.calculator-icon {
+    display: block;
+    width: 100%;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.calculator-icon-clear {
+    background-image: url(../img/clear.png);
+}
+
+.calculator-icon-del {
+    background-image: url(../img/del.png);
+}
+
+.calculator-icon-remainders {
+    background-image: url(../img/remainders.png);
+}
+
+.calculator-icon-div {
+    background-image: url(../img/div.png);
+}
+
+.calculator-icon-multiplication {
+    background-image: url(../img/multiplication.png);
+}
+
+.calculator-icon-subtraction {
+    background-image: url(../img/subtraction.png);
+}
+
+.calculator-icon-add {
+    background-image: url(../img/add.png);
+}
+
+.calculator-icon-equal {
+    background-image: url(../img/equal.png);
+}
+
+.calculator-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #555;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+/*   计算机图标  end   */
+
+/*   计算机显示切换  start   */
+.super-sin,
+.super-cos,
+.super-tan,
+.super-log,
+.super-sqrt {
+    display: none;
+}
+
+.super .calculator-wrap {
+    width: 426px;
+}
+.super .calculator-wrap td{
+    width: 20%;
+}
+
+.super .super-sin,
+.super .super-cos,
+.super .super-tan,
+.super .super-log,
+.super .super-sqrt {
+    display: table-cell;
+}
+
+.turn-on-off {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    right: -20px;
+    box-shadow: 3px 1px 3px #ddd;
+    background-color: #eeeeee;
+}
+
+.turn-on-off span {
+    width: 20px;
+    height: 60px;
+    background-color: #3fb5de;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+    border-left: 0 none;
+}
+
+.turn-on-off span.active,
+.turn-on-off span:active {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    opacity: .7;
+}
+
+/*   计算机显示切换  end   */

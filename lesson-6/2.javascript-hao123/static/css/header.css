@@ -1,0 +1,183 @@
+/*   顶部基础样式    */
+.header {
+    border-bottom: 1px solid #ccc;
+    background-color: #fcfcfc;
+}
+
+.top {
+    height: 60px;
+    font-size: 12px;
+    line-height: 22px;
+    clear: both;
+    position: relative;
+    z-index: 996;
+}
+
+.top li {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 60px;
+}
+
+.top li:hover {
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+.top a {
+    color: #999;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 60px;
+    position: relative;
+}
+
+.top .weather {
+    margin-left: 40px;
+}
+
+.top .weather a:first-child + a {
+    margin-left: 48px;
+}
+
+.top .date {
+    margin-left: 24px;
+}
+
+.top .week {
+    margin-left: 10px;
+}
+
+.top .week a:first-child + a {
+    margin: 0 20px 0 15px;
+}
+
+.top .user {
+    width: 100px;
+    padding-left: 35px !important;
+    position: relative;
+}
+
+.top .star {
+    width: 20px;
+    height: 60px;
+    margin-left: 10px;
+    background-image: url(../img/index_widthlg.png);
+    background-repeat: no-repeat;
+    background-position: -40px -110px;
+    position: absolute;
+    left: -32px;
+}
+
+.top .pull-right li {
+    padding: 0 8px;
+}
+
+.top .news {
+    color: #0aa770;
+}
+
+/*    天气图标  start     */
+.weather-city-arrow {
+    width: 9px;
+    height: 6px;
+    background: url(../img/index_widthlg.png) no-repeat -52px -97px;
+    margin-left: 4px;
+    vertical-align: middle;
+    position: absolute;
+    display: block;
+    top: 28px;
+    right: -10px;
+}
+
+.weather-info-icon {
+    line-height: 60px;
+    vertical-align: middle;
+    width: 26px;
+    height: 60px;
+    background-position: 0 14px;
+    position: absolute;
+    left: -30px;
+    background-repeat: no-repeat;
+    background-image: url(../img/a2.png);
+}
+
+.weather-link-icon {
+    vertical-align: top;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 25px;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background: url(../img/index_widthlg.png) no-repeat -342px -251px;
+}
+
+/*    天气图标  end     */
+
+/*    用户下拉框  start      */
+.top .user:hover .user-menu {
+    display: block;
+}
+
+.user-menu {
+    display: none;
+    width: 103px;
+    position: absolute;
+    top: 60px;
+    height: 90px;
+    overflow: hidden;
+    z-index: 1000;
+    background: #f7f7f7;
+    left: 2px;
+}
+
+.user-menu li {
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    width: 100%;
+}
+
+.user-menu li:hover {
+    background: #f1f1f1;
+}
+
+.user-menu a {
+    line-height: 30px;
+    padding-left: 22px;
+}
+
+.user-menu .vip {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'simsun';
+}
+
+.gift {
+    background-image: url(../img/index_icon.png);
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    background-position: -554px -1612px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+.red-icon {
+    width: 8px;
+    height: 8px;
+    background-image: url(../img/new_index_icon.png);
+    background-position: -30px -100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4px;
+    margin-left: 1px;
+}
+
+/*    用户下拉框  end      */
