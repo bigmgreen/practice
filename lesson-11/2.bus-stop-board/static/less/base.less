@@ -1,0 +1,40 @@
+@baseColor: #c73d3a;
+@nameColor: #3b5f46;
+@fontColor: #333;
+@font-size: 14px;
+.m0-p0() {
+  margin: 0;
+  padding: 0;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-shadow(@x:0,@y:0,@rang:10px,@deep:10px,@color:#eee) {
+  -moz-box-shadow: @x @y @rang @deep @color;
+  -webkit-box-shadow: @x @y @rang @deep @color;
+  box-shadow: @x @y @rang @deep @color;
+}
+
+.box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content() {
+  content: '';
+  display: block;
+}
+.cart() {
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 12px solid transparent;
+  border-left: 30px solid #ab2539;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+}

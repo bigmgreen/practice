@@ -1,0 +1,150 @@
+@import "base";
+
+html,
+body {
+  .m0-p0;
+  font-family: 'microsoft YaHei';
+  font-size: @font-size;
+  min-width: 600px;
+  min-height: 800px;
+  color: @fontColor;
+}
+
+ul,
+li {
+  .m0-p0;
+  list-style: none;
+}
+
+h3,
+p {
+  .m0-p0;
+}
+
+article {
+  width: 400px;
+  margin: 30px auto;
+  overflow: hidden;
+  .border-radius(30px);
+  border: 1px solid #ddd;
+  .box-shadow;
+  .box-sizing;
+}
+
+section {
+  margin: 10px 0;
+}
+
+.board-title {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  line-height: 40px;
+  font-size: @font-size * 1.5;
+}
+
+.board-content {
+  background-color: @nameColor;
+  font-size: 0;
+  padding: 0 10px 10px;
+  text-align: center;
+}
+
+.board-content li {
+  font-size: @font-size;
+  color: #fff;
+  display: inline-block;
+  width: 1em;
+  word-wrap: break-word;
+  vertical-align: top;
+  text-align: center;
+}
+
+.board-footer {
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  height: 40px;
+  padding-top: 14px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.board-footer:after {
+  .content;
+  background-color: @baseColor;
+  width: 90%;
+  height: 5px;
+  position: absolute;
+  left: 18px;
+  top: 40px;
+}
+
+.board-footer:before {
+  .content;
+  .cart;
+  position: absolute;
+  right: 0;
+  top: 33px;
+  transform: skewX(30deg);
+}
+
+.board-num {
+  float: left;
+  text-align: right;
+}
+
+.board-num b {
+  font-size: @font-size*3;
+  color: #fff;
+  display: block;
+  width: 140px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: @baseColor;
+}
+
+.board-num span {
+  font-size: @font-size*.8;
+  font-weight: bold;
+}
+
+.board-location {
+  padding-left: 180px;
+  text-align: center;
+  position: relative;
+}
+
+.board-name {
+  color: @baseColor;
+  font-size: @font-size*1.5;
+  letter-spacing: 5px;
+  margin-top: 4px;
+}
+
+.board-location-name {
+  color: @nameColor;
+  font-weight: bold;
+  font-size: @font-size*1.1;
+  float: left;
+  width: 100px;
+}
+
+.board-location-name span {
+  font-weight: normal;
+  font-size: @font-size*.8;
+}
+
+.line {
+  display: block;
+  width: 10px;
+  background-color: @nameColor;
+  height: 1px;
+  float: left;
+  position: relative;
+  top: 10px;
+}
+
+.clear {
+  overflow: hidden;
+}

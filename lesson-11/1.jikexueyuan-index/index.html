@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>极客学院IT在线教育平台-中国专业的IT职业在线教育平台</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="static/lib/swiper-3.4.2/css/swiper.min.css"/>
+    <link rel="stylesheet" href="static/css/reset.css"/>
+    <link rel="stylesheet" href="static/css/base.css"/>
+    <link rel="stylesheet" href="static/css/header.css"/>
+    <link rel="stylesheet" href="static/css/footer.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+<body>
+<!--     主页面   start    -->
+<article>
+    <!--    头部  start    -->
+    <header>
+        <!--   活动信息   -->
+        <div class="tips">
+            <a href="#" target="_blank">感恩三周年，极客节签到送极客币、免费送书、VIP买一送一、职业学院5折优惠，快乐享不停！
+            </a>
+        </div>
+        <!--    导航栏    -->
+        <div class="header">
+            <div class="wrap">
+                <!--    logo    -->
+                <a href="#" class="logo"><img src="./static/img/header/logo.png" width="109" alt="极客学院logo"></a>
+                <!--     导航 start   -->
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#" class="active">首页</a></li>
+                        <li>
+                            <a>职业学院</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu">
+                                <h3>前端学院</h3>
+                                <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
+                                <a href="#"><i class="wechat-icon"></i>微信小程序工程师</a>
+                                <h3>后端学院</h3>
+                                <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+                                <a href="#"><i class="go-icon"></i>Go语言工程师</a>
+                                <a href="#"><i class="php-icon"></i>PHP工程师</a>
+                                <a href="#"><i class="java-icon"></i>Java Web工程师</a>
+                                <h3>移动学院</h3>
+                                <a href="#"><i class="android-icon"></i>Android工程师</a>
+                                <a href="#"><i class="ios-icon"></i>iOS工程师</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>会员课程</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu vip-lesson">
+                                <a href="#"><i class="kck-icon"></i>课程库<span>2500+</span></a>
+                                <a href="#"><i class="zyljt-icon"></i>职业路径图<span>9</span></a>
+                                <a href="#"><i class="zstxt-icon"></i>知识体系图<span>24</span></a>
+                                <a href="#"><i class="xlkc-icon"></i>系列课程<span>101</span></a>
+                                <a href="#"><i class="kcbq-icon"></i>课程标签<span>4000+</span></a>
+                                <a href="#"><i class="vip-icon"></i>VIP会员购买<span>30/月  260/年</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a>极客社区</a>
+                            <i class="arrow-icon"></i>
+                            <div class="sub-menu vip-lesson">
+                                <a href="#"><i class="jswd-icon"></i>技术问答<span>20000+</span></a>
+                                <a href="#"><i class="wiki-icon"></i>Wiki<span>351</span></a>
+                                <a href="#"><i class="sq-icon"></i>社群<span>7000+</span></a>
+                                <a href="#"><i class="zygx-icon"></i>资源下载<span>3000+</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--     导航 end   -->
+                <!--     搜索 start   -->
+                <div class="search-box">
+                    <label for="webSearch"><span class="search-icon"></span></label>
+                    <input type="checkbox" id="webSearch"/>
+                    <div class="search-wrap">
+                        <label for="webSearch"><i class="close-icon"></i></label>
+                        <i class="search-icon" id="search-btn"></i>
+                        <input placeholder="搜索课程、问答或Wiki"/>
+                        <div class="tag-box">
+                            <a href="#">Android</a>
+                            <a href="#">iOS</a>
+                            <a href="#">HTML5</a>
+                        </div>
+                    </div>
+                    <span class="app-icon">
+                        <span class="app-download triangle">
+                            <img src="./static/img/header/head-rwm.png"/>
+                        </span>
+                    </span>
+                    <div class="user-online">
+                        <a href="#">
+                            <img src="./static/img/header/10k2z6zvd5xc3.jpeg" alt="用戶头像">
+                        </a>
+                        <i class="year-vip-icon"></i>
+                        <dl class="user-online-menu triangle">
+                            <dd>
+                                <a href="#" class="authenticated-vip"></a>
+                                <a href="#" class="year-vip"></a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon learn-icon"></i>学习中心</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon user-icon"></i>个人主页</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon msg-icon"></i>消息通知<em class="unread-num">&nbsp;</em></a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon account-icon"></i>账号设置</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><i class="icon logout-icon"></i>退出登录</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--     搜索 end   -->
+            </div>
+        </div>
+    </header>
+    <!--    头部  end    -->
+
+    <!--  banner  start      -->
+    <section class="banner clear wrap section">
+        <div class="banner-container">
+            <span id="bannerArrowLeft" class="banner-arrow-left"></span>
+            <span id="bannerArrowRight" class="banner-arrow-right"></span>
+            <div class="swiper-wrapper">
+                <a href="#" target="_blank" class="swiper-slide"
+                   style=" background: url(./static/img/index/58cf3a2e8bb9f.jpg) center center no-repeat rgb(245, 245, 245);">
+                </a>
+                <a href="#" target="_blank" s="swiper-slide"
+                   style=" background: url(./static/img/index/58d10cdbc91a5.jpg) center center no-repeat rgb(245, 245, 245);">
+                </a>
+                <a href="#" target="_blank" class="swiper-slide"
+                   style=" background: url(./static/img/index/58d38b837e67c.jpg) center center no-repeat rgb(245, 245, 245);">
+                </a>
+                <a href="#" target="_blank" class="swiper-slide"
+                   style=" background: url(./static/img/index/58d39cf08ae82.png) center center no-repeat rgb(245, 245, 245);">
+                </a>
+                <a href="#" target="_blank" class="swiper-slide"
+                   style=" background: url(./static/img/index/58573b737d2db.jpg) center center no-repeat rgb(245, 245, 245);">
+                </a>
+                <a href="#" target="_blank" class="swiper-slide"
+                   style=" background: url(./static/img/index/58573bd1eb3fc.jpg) center center no-repeat rgb(245, 245, 245);">
+                </a>
+            </div>
+            <div class="banner-pagination"></div>
+        </div>
+        <div class="user-login">
+            <div class="user-info">
+                <a href="#">
+                    <img src="./static/img/index/10k2z6zvd5xc3.jpeg"/>
+                </a>
+                <span class="user-name">zxover1</span>
+                <p class="user-status">
+                    <a href="#" class="cert-status">已认证</a>
+                    <a href="#" class="vip-status">VIP</a>
+                </p>
+            </div>
+            <a href="#" class="hover-btn">我的学习中心</a>
+        </div>
+        <div class="activity">
+            <a href="#" target="_blank">
+                <img src="./static/img/index/0f000PsREsjPbrLlS0L0D6.jpg" height="160" width="240"/>
+            </a>
+        </div>
+    </section>
+    <!--  banner  end      -->
+
+    <!--  线上就业班   start  -->
+    <section class="online wrap section">
+        <header>
+            <h3 class="section-title">线上就业班</h3>
+        </header>
+        <a href="#" class="shadow web" target="_blank"><strong>WEB大前端工程师就业班</strong></a>
+        <a href="#" class="shadow php" target="_blank"><strong>PHP工程师就业班</strong></a>
+        <a href="#" class="shadow java-web" target="_blank"><strong>Java Web工程师就业班</strong></a>
+        <a href="#" class="shadow ui" target="_blank"><strong>UI/UX设计师就业班</strong></a>
+        <a href="#" class="recruit shadow" target="_blank">
+            <img src="./static/img/index/0f0002RrkUoEEKPVBi6BAf.jpg" height="160" width="240">
+        </a>
+    </section>
+    <!--  线上就业班   end  -->
+
+    <!--  专业精品课   start  -->
+    <section class="excellent-course wrap section">
+        <header>
+            <h3 class="section-title">专业精品课</h3>
+        </header>
+        <ul class="clear">
+            <li>
+                <a class="shadow" href="#" target="_blank">
+                    <img src="./static/img/index/5bcfcebe-7296-4264-b8f5-fa607ccf6b43.jpg">
+                    <div class="course-wrap">
+                        <p class="course-title">Android架构模式详解之MVC/MVP/MVVM</p>
+                        <p class="course-info">4小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                        <span class="course-price">149.00</span>
+                        <span class="course-original-price">¥299.00</span>
+                        <span class="course-num">42人学习</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="shadow" href="#" target="_blank">
+                    <img src="./static/img/index/d5b02c9c-fc55-4220-99c7-9033fc9c9eed.jpg">
+                    <div class="course-wrap">
+                        <p class="course-title">开发自己的影评小程序</p>
+                        <p class="course-info">10小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                        <span class="course-price">199.00</span>
+                        <span class="course-original-price">¥299.00</span>
+                        <span class="course-num">30人学习</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="shadow" href="#" target="_blank">
+                    <img src="./static/img/index/401c1254-71e1-4a1b-8767-98760edc1778.jpg">
+                    <div class="course-wrap">
+                        <p class="course-title">Python利器，超凡蜘蛛带你“爬”世界</p>
+                        <p class="course-info">18小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                        <span class="course-price">349.00</span>
+                        <span class="course-original-price">¥499.00</span>
+                        <span class="course-num">246人学习</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="shadow" href="#" target="_blank">
+                    <img src="./static/img/index/42fcb286-5390-4c5e-8b16-2d821e4ae1b6.jpg">
+                    <div class="course-wrap">
+                        <p class="course-title">JavaScript 编程技巧与实战</p>
+                        <p class="course-info">8小时&nbsp;&nbsp;|&nbsp;&nbsp;1门课</p>
+                        <span class="course-price">79.00</span>
+                        <span class="course-original-price">¥129.00</span>
+                        <span class="course-num">53人学习</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--  专业精品课   end  -->
+
+    <!--  线下培训专区   start  -->
+    <section class="offline wrap section">
+        <header>
+            <h3 class="section-title">线下培训专区</h3>
+        </header>
+        <ul class="clear">
+            <li>
+                <a href="#" target="_blank"><span></span>前端开发工程师 未来薪资领航者<i></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>20人小班教学，全力打造前端经营<i></i></a>
+            </li>
+            <li class="offline-desc">
+                <a href="#" target="_blank">
+                    <p>0基础就业班</p>
+                    <p>极客</p>
+                    <strong>大牛程序员</strong>
+                    <p>0基础，保就业</p>
+                    <i></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>100%保就业，月薪8000起<i></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>0基础120天 冲击年薪20万<i></i></a>
+            </li>
+        </ul>
+        <ul class="clear devil">
+            <li>
+                <a href="#" target="_blank"><span></span>学习前导课 提升入学可能<i></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>全栈web前端工程师 极客培优品牌<i></i></a>
+            </li>
+            <li class="offline-desc">
+                <a href="#" target="_blank">
+                    <p>高强度就业班</p>
+                    <p>极客</p>
+                    <strong>魔鬼程序员</strong>
+                    <p>高端班，免学费</p>
+                    <i></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>报名考核入口 抢占魔鬼名额<i></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank"><span></span>高端培优课程 考核免费入读<i></i></a>
+            </li>
+        </ul>
+    </section>
+    <!--  线下培训专区   end  -->
+
+    <!--  职业学院   start  -->
+    <section class="major wrap section">
+        <header>
+            <h3 class="section-title">职业学院</h3>
+        </header>
+        <ul class="clear">
+            <li class="web">
+                <a target="_self" href="#">
+                    <img src="./static/img/index/bgweb_054d9d5.jpg">
+                    <i></i>
+                    <span>Web 前端工程师</span>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="#">
+                    <img src="./static/img/index/bgpython_c21a999.jpg">
+                    <i></i>
+                    <span class="python">Python Web 工程师</span>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="#">
+                    <img src="./static/img/index/bggo_6ac4e5b.jpg">
+                    <i></i>
+                    <span class="go">GO 语言工程师</span>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="#">
+                    <img src="./static/img/index/bgios_cadb5b0.jpg">
+                    <i></i>
+                    <span class="ios">iOS 工程师</span>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="#">
+                    <img src="./static/img/index/bgwechat_2357330.jpg">
+                    <i></i>
+                    <span class="more">微信小程序工程师</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--  职业学院   end  -->
+
+    <!--  会员课程   start  -->
+    <section class="vip wrap section">
+        <header>
+            <h3 class="section-title">会员课程</h3>
+        </header>
+        <ul class="clear">
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/1_android_d6730f3.png">
+                    <p>Android</p>
+                    <span>90门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/2_iOS_5e77ff4.png">
+                    <p>iOS</p>
+                    <span>51门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/3_swift_79f5d60.png">
+                    <p>Swift语言</p>
+                    <span>11门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/4_html5_9ab5f1c.png">
+                    <p>HTML5开发</p>
+                    <span>116门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/5_javascript_83e4b7f.png">
+                    <p>JavaScript</p>
+                    <span>90门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/6_js_c56bccc.png">
+                    <p>Node.js</p>
+                    <span>90门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/7_c_07f10c0.png">
+                    <p>C语言</p>
+                    <span>17门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/8_java_89b7c2c.png">
+                    <p>Java语言</p>
+                    <span>17门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/9_php_d5fcdb8.png">
+                    <p>PHP语言</p>
+                    <span>23门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/10_javaweb_26f34e5.png">
+                    <p>JavaWeb</p>
+                    <span>64门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/11_Python_d253c3e.png">
+                    <p>Python</p>
+                    <span>38门课程</span>
+                </a>
+            </li>
+            <li class="shadow">
+                <a href="#">
+                    <img src="./static/img/index/12_cocos2d_037cd04.png">
+                    <p>Cocos2d-x游戏开发</p>
+                    <span>89门课程</span>
+                </a>
+            </li>
+        </ul>
+        <a class="hover-btn" target="_blank" href="#">全部会员课程</a>
+    </section>
+    <!--  会员课程   end  -->
+
+    <!--   学员故事   start   -->
+    <section class="story wrap section">
+        <header>
+            <h3 class="section-title">学员故事</h3>
+        </header>
+        <div class="story-wrap">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>从房地产营销策划转行前端工程师。努力并不是为了证明自己多厉害，只是对自己生活方式的一种选择，每个人都可以通过自己的努力，去决定自己生活的样子。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-1-avatar.jpg">
+                                    <b>朱华宇</b>
+                                    <span>入职 极客学院</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>从浑浑噩噩的自动化专业学生，到大三暑假进入研究院实习。当时努力克服的那些困难，都成了现在自己的资本和财富。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-2-avatar.jpg">
+                                    <b>黄文俊</b>
+                                    <span>入职 深圳北斗技术应用研究院</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>Android
+                                        7期1班学员，本科化学，毕业后考入北航研究生。学编程过程中感觉杂乱无章，想系统学习。看了视频感觉不错，就报名学习。目前入职2个多月，今后还要长期驻扎极客学院。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-3-avatar.jpg">
+                                    <b>刘盘风</b>
+                                    <span>入职 中软北京科技有限公司</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>
+                                        爆炸力学硕士转安卓开发，回顾自己从爆炸力学走向代码世界的历程，感触良多。庆幸自己没有留在研究所，程序员不断学习不断进步的感觉更有意义。稳定绝不代表停滞，历练才是我们的财富。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-4-avatar.jpg">
+                                    <b>张少龙</b>
+                                    <span>入职 北京中航智科技</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>
+                                        美女程序媛，从运维转岗到前端开发工程师。工作上的变化只是一部分，遇到极客学院更重要的是让我知道了自己的潜力，不被未来的不确定性吓倒，相信有目标，肯努力就可以得到想要的生活。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-5-avatar.jpg">
+                                    <b>杨帆</b>
+                                    <span>入职 深圳IBM</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <div class="story-content">
+                                    <p>Web大前端工程师就业班五期 03 班学员，某 985 大学信息与计算科学 2016 届毕业生，2 个月完成 16
+                                        个任务，被同班同学称为「大神」。2016 年拿到毕业证书的同时也拿到了 15K 高薪的 offer。</p>
+                                </div>
+                                <div class="story-info">
+                                    <img src="./static/img/index/student-6-avatar.jpg">
+                                    <b>路昕宇</b>
+                                    <span>入职 浪弯融科科技公司</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="story-pagination"></div>
+    </section>
+    <!--   学员故事   end   -->
+
+    <!--  合作伙伴   start  -->
+    <section class="partner wrap section">
+        <header>
+            <h3 class="section-title">合作企业</h3>
+        </header>
+        <ul class="clear">
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+            <li class="shadow"><a target="_blank" href="#"></a></li>
+        </ul>
+        <a class="hover-btn" target="_blank" href="#">更多合作企业</a>
+    </section>
+    <!--  合作伙伴   end  -->
+
+    <!--    底部  end    -->
+    <footer class="footer">
+        <div class="footer-nav wrap clear">
+            <div class="footer-logo">
+                <img src="./static/img/footer/jk-logo-footer.png">
+                <p>极客学院，编程是一种信仰！</p>
+            </div>
+            <dl>
+                <dt>职业学院</dt>
+                <dd><a target="_blank" href="#">Web前端工程师</a></dd>
+                <dd><a target="_blank" href="#">Python Web工程师</a></dd>
+                <dd><a target="_blank" href="#">Go语言工程师</a></dd>
+                <dd><a target="_blank" href="#">Android学院</a></dd>
+                <dd><a target="_blank" href="#">iOS工程师</a></dd>
+                <dd><a target="_blank" href="#">微信小程序工程师</a></dd>
+            </dl>
+            <dl>
+                <dt>会员课程</dt>
+                <dd><a target="_blank" href="#">课程库</a></dd>
+                <dd><a target="_blank" href="#">知识体系图</a></dd>
+                <dd><a target="_blank" href="#">职业路径图</a></dd>
+                <dd><a target="_blank" href="#">系列课程</a></dd>
+                <dd><a target="_blank" href="#">课程标签</a></dd>
+            </dl>
+            <dl>
+                <dt>极客社区</dt>
+                <dd><a target="_blank" href="#">技术问答</a></dd>
+                <dd><a target="_blank" href="#">Wiki</a></dd>
+                <dd><a target="_blank" href="#">资源下载</a></dd>
+                <dd><a target="_blank" href="#">社群</a></dd>
+            </dl>
+            <dl>
+                <dt>其他</dt>
+                <dd><a target="_blank" href="#">关于我们</a></dd>
+                <dd><a target="_blank" href="#">加入我们</a></dd>
+                <dd><a target="_blank" href="#">讲师合作</a></dd>
+                <dd><a target="_blank" href="#">联系我们</a></dd>
+                <dd><a target="_blank" href="#">友情链接</a></dd>
+            </dl>
+
+            <div class="code-down">
+                <p class="hot-tel">服务热线:400-678-8266</p>
+                <div class="code-down-icon down-ios">
+                    <img src="./static/img/footer/app.png" class="twoCode" alt="下载二维码"> iPhone
+                </div>
+                <div class="code-down-icon down-android">
+                    <img src="./static/img/footer/app.png" class="twoCode" alt="下载二维码"> Android
+                </div>
+            </div>
+        </div>
+        <div class="wrap copyright">
+            <span>Copyright © 2013-2017&nbsp;</span>
+            <strong><a href="#" target="_blank">jikexueyuan.com</a></strong>
+            <span>All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210</span>
+            <a href="#" target="_blank" class="down-wechat"></a>
+            <a href="#" target="_blank" class="down-sina"></a>
+            <a class="cert" href="#" target="_blank">
+                <img src="./static/img/footer/cert.png" width=60/>
+            </a>
+        </div>
+    </footer>
+    <!--    底部  end    -->
+</article>
+<!--     主页面   end    -->
+<!--     活动入口  start   -->
+<div>
+    <input id="adLayerInput" class="close-input" type="checkbox"/>
+    <div class="ad-layer">
+        <label for="adLayerInput"><i class="close"></i></label>
+        <a href="#" target="_blank">
+            <img src="./static/img/index/0f000nNRGPSU8BbxhKqEV6.gif" height="200" width="110"/>
+        </a>
+    </div>
+</div>
+<!--     活动入口  end   -->
+<!--     回到顶部组件   start   -->
+<div class="go-top-wrap">
+    <a class="go-top" id="goTop" href="javascript:void(0);"></a>
+    <a href="#" target="_blank">
+        <span class="app-download-left">
+            <span class="app-download-code"></span>
+        </span>
+    </a>
+</div>
+<!--     回到顶部组件   end   -->
+<script src="static/lib/swiper-3.4.2/js/swiper.min.js"></script>
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/throttle/throttle.js"></script>
+<script src="static/js/index.js"></script>
+</body>
+</html>
