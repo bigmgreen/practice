@@ -1,0 +1,398 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font: 12px arial;
+    color: #333;
+    height: 100%;
+}
+
+
+/*   总容器   */
+
+.container {
+    min-width: 810px;
+    min-height: 600px;
+    position: relative;
+    height: 100%;
+}
+
+a {
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 17px;
+}
+
+article {
+    width: 640px;
+    padding-top: 9%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*   页面导航  start   */
+
+nav {
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px;
+    padding-right: 10px;
+}
+
+nav a {
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #00c;
+}
+
+nav >a:nth-child(7) {
+    font-weight: normal;
+}
+
+
+/*   页面导航  end   */
+
+
+/*   搜索框   start   */
+
+.input {
+    white-space: nowrap;
+    margin-top: 22px;
+    position: relative;
+}
+
+.input .content {
+    width: 572px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #b6b6b6;
+    padding-left: 8px;
+    outline: none;
+    margin-left: -58px;
+}
+
+.input .content:focus,
+.input .content:active {
+    border-color: #4791ff;
+}
+
+.input .submit {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: 0;
+    outline: medium;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    cursor: pointer;
+}
+
+.input .submit:hover {
+    background: #317ef3;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.soutu-btn {
+    z-index: 1;
+    position: absolute;
+    right: 106px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    background: #fff url(./img/camera_new_5606e8f.png) no-repeat;
+    cursor: pointer;
+}
+
+.soutu-btn:hover {
+    background-position: 0 -20px;
+}
+
+
+/*   搜索框   end   */
+
+
+/*   底部  start   */
+
+footer {
+    text-align: center;
+    height: 160px;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #666;
+}
+
+footer a {
+    color: #999;
+    font-weight: normal;
+}
+
+footer p {
+    margin: 0;
+    color: #999;
+}
+
+footer p a {
+    margin-left: 0;
+}
+
+.qrcode-img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(./img/zbios_efde696.png) 0 0 no-repeat;
+}
+
+.qrcode-text {
+    margin-bottom: 20px;
+}
+
+.c-icon {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+    background: url(./img/icons_5859e57.png) no-repeat;
+}
+
+.c-icon-icrlogo {
+    background-position: -600px -96px;
+}
+
+.c-icon-jgwablogo {
+    background-position: -623px -96px;
+}
+
+.ml {
+    margin-left: 15px;
+}
+
+
+/*   底部  end   */
+
+
+/*   设置菜单  start   */
+
+.bdpfmenu-wrap {
+    display: inline;
+    position: relative;
+}
+
+.bdpfmenu-wrap a {
+    font-weight: normal;
+}
+
+.bdpfmenu-wrap:hover .bdpfmenu {
+    display: block;
+}
+
+.bdpfmenu-wrap:hover:after {
+    content: ' ';
+    position: absolute;
+    width: 70px;
+    height: 17px;
+    left: -2px;
+    top: 12px;
+}
+
+.bdpfmenu {
+    width: 70px;
+    border: 1px solid #d1d1d1;
+    position: absolute;
+    z-index: 302;
+    -o-box-shadow: 1px 1px 5px #d1d1d1;
+    box-shadow: 1px 1px 5px #d1d1d1;
+    background-color: #fff;
+    left: -3px;
+    top: 26px;
+    display: none;
+}
+
+.bdpfmenu a {
+    display: block;
+    text-align: left;
+    padding: 7px 9px;
+    line-height: 1;
+    text-decoration: none;
+    color: #333;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.bdpfmenu a:hover {
+    background: #38f;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cart {
+    position: relative;
+    z-index: 1;
+}
+
+.cart:after {
+    content: ' ';
+    position: absolute;
+    border-top: 0;
+    border-bottom: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: -8px;
+    left: 27px;
+}
+
+.cart:before {
+    content: ' ';
+    position: absolute;
+    position: absolute;
+    border-top: 0;
+    border-bottom: 10px solid #d1d1d1;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: -10px;
+    left: 27px;
+}
+
+
+/*   设置菜单  end   */
+
+
+/*   更多产品菜单  start   */
+
+.right-menu-wrap {
+    position: relative;
+    display: inline;
+}
+
+.right-menu-wrap:hover .right-menu {
+    display: block;
+}
+
+.right-menu-wrap .more {
+    display: inline-block;
+    cursor: default;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    float: right;
+    color: #fff;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-left: 24px;
+    margin-right: 2px;
+    font-weight: normal;
+}
+
+.right-menu {
+    position: fixed;
+    width: 85px;
+    min-height: 600px;
+    height: 100%;
+    border-left: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.right-menu a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: normal;
+    padding-top: 48px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.right-menu a .bgi {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url('./img/bdbri_icons_0a62ce1.png');
+    background-repeat: no-repeat;
+    margin: -40px auto 0;
+}
+
+.right-menu .music-bgi {
+    background-position: -72px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.right-menu .img-bgi {
+    background-position: -112px 0;
+}
+
+.right-menu .know-bgi {
+    background-position: -36px 0;
+}
+
+.right-menu .doc-bgi {
+    background-position: -148px 0;
+}
+
+.right-menu .chart-bgi {
+    background-position: -184px 0;
+}
+
+.right-menu .last-right-menu-item {
+    padding-top: 0;
+    border-bottom: 0 none;
+    margin-top: 15px;
+    text-decoration: underline;
+    background: none;
+}
+
+.right-menu a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.right-menu .more-hover {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: #f0f0f0 1px solid;
+    font-size: 13px;
+    cursor: default;
+    box-sizing: content-box;
+    text-decoration: none;
+    background: none;
+}
+
+
+/*   更多产品菜单  end   */

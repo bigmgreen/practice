@@ -1,0 +1,60 @@
+/*   ie6 相关hack   */
+*html nav {
+    width: 480px;
+    right: 24px;
+}
+
+*html .qrcode-text {
+    padding: 4px 0;
+}
+
+*html .right-menu-wrap {
+    top: -25px;
+}
+
+*html .right-menu-wrap .more {
+    position: relative;
+    right: -24px;
+    white-space: nowrap;
+}
+
+*html .right-menu a {
+    height: auto;
+}
+
+*html .input .content {
+    width: 571px;
+    margin-top: -1px;
+}
+
+*html .right-menu-wrap {
+    display: block;
+}
+
+*html .right-menu {
+    position: absolute;
+    overflow: auto;
+    top: -16px;
+    right: -24px;
+}
+
+*html .cart {
+    background-image: url(img/ie-cart.jpg);
+    background-position: center 81%;
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 40px;
+    top: -34px;
+    margin-bottom: -40px;
+    position: absolute;
+}
+
+*html .soutu-btn {
+    background-image: url(img/ie-camera.png);
+    top: 18px;
+}
+
+*html .input {
+    margin-bottom: 300px;
+}
