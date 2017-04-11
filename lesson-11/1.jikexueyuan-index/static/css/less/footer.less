@@ -1,0 +1,127 @@
+.footer {
+  margin-top: 50px !important;
+  border-top: 1px solid @footerBorderColor;
+  background: @whiteBgc;
+
+  /*   底部导航  start   */
+  .footer-nav {
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 1px solid @footerBorderColor;
+    padding-left: 224px;
+    padding-top: 25px;
+    .box-sizing;
+  }
+  .footer-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+    img {
+      .w-h(109px, 40px);
+      display: block;
+    }
+    p {
+      font-size: 12px;
+      color: @textGray;
+      margin-top: 20px;
+    }
+  }
+  dl {
+    width: 135px;
+    color: @textGray;
+    float: left;
+  }
+  dt {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  dd a {
+    font-size: 12px;
+    line-height: 30px;
+    color: #999999;
+    &:hover {
+      color: @selectColor;
+    }
+  }
+  .code-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+    .hot-tel {
+      color: @textGray;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .code-down-icon {
+      position: relative;
+      display: inline-block;
+      .w-h(140px,30px);
+      border: 1px solid #eeeeee;
+      margin-bottom: 10px;
+      line-height: 30px;
+      color: @textGray;
+      font-size: 13px;
+      padding-left: 40px;
+      cursor: pointer;
+      img {
+        .w-h(115px,153px);
+        position: absolute;
+        top: -157px;
+        left: 12px;
+        z-index: 2;
+        display: none;
+      }
+      &:hover img {
+        display: block;
+      }
+      &.down-android {
+        background: url(../../img/footer/icon-down-and.png) no-repeat 0 0;
+        background-size: 30px 30px;
+      }
+      &.down-ios {
+        background: url(../../img/footer/icon-down-ios.png) no-repeat 0 0;
+        background-size: 30px 30px;
+      }
+    }
+  }
+  /*   底部导航  end   */
+
+  /*   底部  start   */
+  .copyright {
+    font-size: 12px;
+    color: @textGray;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+    strong {
+      font-weight: 400;
+    }
+    a {
+      color: @textGray;
+      &.down-wechat {
+        float: right;
+        .w-h(20px, 15px);
+        background: url(../../img/footer/icon-down-wechat.png) no-repeat 0 0;
+        background-size: 18px 15px;
+      }
+      &.down-sina {
+        float: right;
+        .w-h(20px, 15px);
+        margin-right: 10px;
+        background: url(../../img/footer/icon-down-sina.png) no-repeat 0 0;
+        background-size: 20px 15px;
+      }
+    }
+    .cert {
+      display: block;
+      margin: 15px auto 0;
+    }
+  }
+  /*   底部  end   */
+}

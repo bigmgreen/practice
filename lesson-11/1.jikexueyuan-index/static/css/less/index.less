@@ -1,0 +1,771 @@
+@import "variable";
+@import "reset";
+@import "base";
+@import "header";
+@import "footer";
+
+/*  banner  start    */
+.banner {
+  margin-top: 20px;
+  .banner-container {
+    cursor: -webkit-grab;
+    .w-h(750px, 330px);
+    background: @bodyBgc;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    .banner-arrow-left {
+      .banner-arrow();
+      left: 0;
+    }
+    .banner-arrow-right {
+      .banner-arrow();
+      right: 0;
+      .rotate(180deg);
+    }
+    .swiper-slide {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 330px !important;
+    }
+  }
+  .banner-pagination {
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    text-align: center;
+    z-index: 800;
+    .w-h(100%, 0);
+    cursor: pointer;
+    .swiper-pagination-bullet {
+      border-radius: 0;
+      display: inline-block;
+      margin-right: 2px;
+      text-align: center;
+      .w-h(8px, 8px);
+      background: @whiteBgc;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .swiper-pagination-bullet-active {
+      .w-h(8px, 16px);
+      background: @selectColor;
+      position: relative;
+      top: -4px;
+    }
+  }
+  .activity {
+    float: left;
+    .w-h(240px, 160px);
+    margin-top: 10px;
+    overflow: hidden;
+  }
+}
+
+/*  banner  end    */
+
+/*  用户登录   start */
+.user-login {
+  float: left;
+  .w-h(240px, 160px);
+  border: 1px solid @borderColor;
+  background: @whiteBgc;
+  box-sizing: border-box;
+  padding: 26px 29px 24px;
+  img {
+    float: left;
+    .w-h(57px, 57px);
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .user-info {
+    height: 57px;
+    .user-name {
+      float: left;
+      font-size: 12px;
+      color: @textColor;
+      line-height: 16px;
+      .w-h(108px, 16px);
+      margin-top: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .user-status {
+      float: left;
+      font-size: 12px;
+      color: @textColor;
+      line-height: 16px;
+      .w-h(108px, 16px);
+      margin-top: 10px;
+      .cert-status {
+        display: inline-block;
+        width: 50px;
+        height: 15px;
+        .w-h(50px, 15px);
+        background: @certColor;
+        color: @whiteBgc;
+        text-align: center;
+        border-radius: 8px;
+        margin-right: 5px;
+      }
+      .vip-status {
+        display: inline-block;
+        .w-h(40px, 15px);
+        background: @vipColor;
+        color: @whiteBgc;
+        text-align: center;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+/*  用户登录 end */
+
+/*   线上就业班   start   */
+
+.online {
+  overflow: hidden;
+  position: relative;
+  a {
+    float: left;
+    font-size: 0;
+    .w-h(370px, 75px);
+    background: @whiteBgc;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-left: 120px;
+    line-height: 75px;
+    &.web {
+      background: url(../../img/index/jiuye-web03_b78e3f6.png) no-repeat center center / 370px 75px;
+    }
+
+    &.php {
+      background: url(../../img/index/jiuye-php03_8cdf521.png) no-repeat center center / 370px 75px;
+    }
+
+    &.java-web {
+      background: url(../../img/index/jiuye-java03_302dbd8.png) no-repeat center center / 370px 75px;
+    }
+
+    &.ui {
+      background: url(../../img/index/jiuye-ux03_45d7813.png) no-repeat center center / 370px 75px;
+    }
+  }
+  strong {
+    color: @whiteBgc;
+    font-size: 15px;
+    line-height: 75px;
+    text-align: center;
+    font-weight: normal;
+    display: block;
+  }
+
+  .recruit {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    .w-h(240px, 16px);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*   线上就业班   end   */
+
+/*   专业精品课    start   */
+
+.excellent-course {
+  overflow: inherit;
+  li {
+    box-sizing: border-box;
+    float: left;
+    .w-h(235px,100%);
+    margin-left: 20px;
+    border: 1px solid @borderColor;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+  }
+
+  img {
+    .w-h(100%,155px);
+  }
+
+  .course-wrap {
+    padding: 14px;
+    height: 113px;
+    position: relative;
+    background: @whiteBgc;
+  }
+
+  .course-title {
+    .w-h(100%,36px);
+    overflow: hidden;
+    font-size: 12px;
+    color: @textColor;
+    line-height: 18px;
+  }
+
+  .course-info {
+    margin-top: 6px;
+    color: @textColor;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+  }
+
+  .course-price {
+    float: left;
+    font-size: 18px;
+    color: @coursePriceColor;
+    vertical-align: bottom;
+    margin-right: 5px;
+    margin-top: 8px;
+    &:after {
+      content: "¥";
+      font-size: 14px;
+      margin-right: 3px;
+    }
+  }
+  .course-original-price {
+    float: left;
+    font-size: 12px;
+    color: @textColor;
+    margin-top: 14px;
+    text-decoration: line-through;
+    vertical-align: bottom;
+  }
+
+  .course-num {
+    display: inline-block;
+    height: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    color: @textColor;
+    font-size: 12px;
+  }
+}
+
+/*   专业精品课    end   */
+
+/*   线下培训专区    start   */
+.offline {
+  height: 616px;
+  a {
+    position: relative;
+    display: block;
+    .w-h(100%, 100%);
+    color: @whiteBgc;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 35px;
+    span {
+      display: block;
+      width: 27px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    i {
+      display: inline-block;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0;
+      transition: opacity .8s;
+    }
+  }
+  li {
+    float: left;
+    position: relative;
+    .w-h(261px, 139px);
+    &:nth-child(1) span {
+      .offline-item(33px, '../../img/index/daniu-01_60f2744.png');
+    }
+
+    &:nth-child(2) span {
+      .offline-item(33px, '../../img/index/daniu-02_6973cd3.png');
+    }
+
+    &:nth-child(4) span {
+      .offline-item(27px, '../../img/index/daniu-03_d854a5e.png');
+    }
+
+    &:nth-child(5) span {
+      .offline-item(26px, '../../img/index/daniu-04_fa62646.png');
+    }
+    &:hover i {
+      opacity: .2;
+    }
+    &.offline-desc {
+      float: right;
+      .w-h(478px, 278px);
+      background: url(../../img/index/daniu-bg_0221743.png) center center no-repeat;
+      background-size: cover;
+      a {
+        padding-top: 40px;
+      }
+      p{
+        &:first-child {
+          position: absolute;
+          right: 0;
+          top: 0;
+          .w-h(100px, 37px);
+          line-height: 37px;
+          text-align: center;
+          background-image: linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+        }
+        &:nth-child(2) {
+          font-size: 37px;
+          margin-bottom: 10px;
+          margin-top: 27px;
+        }
+      }
+      strong {
+        font-size: 40px;
+        margin-bottom: 12px;
+        display: block;
+        line-height: 52px;
+        font-weight: 500;
+        &+ p {
+          font-size: 26px;
+        }
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(5) {
+      background: #7C839A;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      background: #62687F;
+    }
+  }
+}
+
+.offline .devil {
+  margin-top: 20px;
+  li {
+    float: right;
+    &:nth-child(1),
+    &:nth-child(5){
+      background: #EB313E;
+    }
+    &:nth-child(2),
+    &:nth-child(4){
+      background: #F64450;
+    }
+    &:nth-child(3) {
+      float: left;
+      background: url(../../img/index/mogui-bg_ee9827b.png) center center no-repeat;
+      background-size: 480px 278px;
+    }
+  }
+  .offline-desc p:first-child {
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(-90deg, #000 0, rgba(216, 216, 216, 0) 100%);
+  }
+}
+
+/*   线下培训专区    end   */
+
+/*   职业学院    start   */
+.major {
+  height: 310px;
+  li {
+    float: left;
+    .w-h(240px,130px);
+    margin-left: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    &:hover i {
+      opacity: .2;
+    }
+    a {
+      display: inline-block;
+      .w-h(100%,100%);
+      img {
+        display: inline-block;
+        .w-h(240px,130px);
+      }
+      span {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .w-h(100%,100%);
+        text-align: center;
+        color: @whiteBgc;
+        font-size: 14px;
+        padding-top: 88px;
+      }
+      i {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .w-h(100%,100%);
+        background: #000;
+        opacity: 0;
+        transition: opacity .8s;
+      }
+      .python {
+        background: url(../../img/index/cpython_5ed9df4.png) no-repeat center 31px;
+        background-size: 36px 36px;
+      }
+
+      .go {
+        background: url(../../img/index/cgo_e66208d.png) no-repeat center 33px;
+        background-size: 36px 29px;
+      }
+
+      .ios {
+        background: url(../../img/index/cios_dc0ca8e.png) no-repeat center 36px;
+        background-size: 32px 36px;
+      }
+
+      .more {
+        background: url(../../img/index/cwechat_624099d.png) no-repeat center 40px;
+        background-size: 40px 33px;
+      }
+    }
+  }
+  .web {
+    .w-h(500px,270px);
+    margin-left: 0;
+    img {
+      .w-h(500px,270px);
+    }
+    span {
+      padding-top: 180px;
+      font-size: 20px;
+      background: url(../../img/index/cweb_2d70d0b.png) no-repeat center 70px;
+      background-size: 55px 84px;
+    }
+  }
+}
+
+/*   职业学院    end   */
+
+/*   会员课程   start   */
+.vip {
+  height: 420px;
+  li {
+    float: left;
+    .w-h(158px,150px);
+    border: 1px solid @borderColor;
+    background: @whiteBgc;
+    margin-right: 10px;
+    transition: box-shadow .5s;
+    &:nth-child(6),
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(n+7) {
+      margin-top: 10px;
+    }
+    a {
+      display: block;
+      height: 100%;
+      text-align: center;
+      img {
+        display: inline-block;
+        .w-h(55px,55px);
+        margin-top: 25px;
+      }
+      p {
+        font-size: 12px;
+        color: @textColor;
+        height: 22px;
+        line-height: 22px;
+      }
+      span {
+        display: block;
+        font-size: 12px;
+        color: #35b558;
+        height: 22px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+/*   会员课程   end   */
+
+/*   学员故事   start   */
+.story {
+  height: 260px;
+  position: relative;
+}
+
+.story-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: -webkit-grab;
+}
+
+.story-wrap .swiper-slide {
+  position: relative;
+  text-align: center;
+  float: left;
+  background: @bodyBgc !important;
+}
+
+.story-wrap .swiper-slide ul {
+  height: 200px;
+  width: 100%;
+}
+
+.story-wrap .swiper-slide li {
+  float: left;
+  width: 320px;
+  height: 200px;
+  position: relative;
+  margin-right: 20px;
+  -moz-transition: box-shadow .5s;
+  -webkit-transition: box-shadow .5s;
+  -o-transition: box-shadow .5s;
+  transition: box-shadow .5s;
+}
+
+.story-wrap .swiper-slide li:last-child {
+  margin-right: 0;
+}
+
+.story-wrap .swiper-slide a {
+  display: block;
+  height: 100%;
+}
+
+.story-wrap .story-content {
+  width: 100%;
+  height: 121px;
+  border: 1px solid @borderColor;
+  background: @whiteBgc;
+  position: relative;
+}
+
+.story-wrap .story-content p {
+  height: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  color: @textColor;
+  line-height: 20px;
+  padding: 20px 25px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.story-wrap .story-content p:before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  background: url(../../img/index/storyicon_4a5e270.png) no-repeat center;
+  background-size: 14px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.story-wrap .story-content p:after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  background: url(../../img/index/storyicon_4a5e270.png) no-repeat center;
+  background-size: 14px 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+.story-wrap .story-info {
+  height: 80px;
+  padding-left: 95px;
+  padding-top: 28px;
+  position: relative;
+}
+
+.story-wrap .story-info img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid @borderColor;
+}
+
+.story-wrap .story-info b {
+  font-size: 12px;
+  color: @textColor;
+  height: 24px;
+  line-height: 24px;
+  text-align: left;
+  display: block;
+  font-weight: normal;
+}
+
+.story-wrap .story-info span {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  color: @textColor;
+  font-size: 12px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.story-wrap .story-content:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 12px solid @borderColor;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  bottom: -12px;
+  left: 46px;
+}
+
+.story-wrap .story-content:after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid @whiteBgc;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  left: 47px;
+}
+
+.story .story-pagination {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  text-align: center;
+  width: 100%;
+  z-index: 800;
+  height: 0;
+  cursor: pointer;
+}
+
+.story-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.story-pagination .swiper-pagination-bullet {
+  border-radius: 0;
+  display: inline-block;
+  margin-right: 8px;
+  text-align: center;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.story-pagination .swiper-pagination-bullet-active {
+  height: 8px;
+  width: 16px;
+  background: #35b558;
+}
+
+/*   学员故事   end   */
+
+/*   合作伙伴   start   */
+.partner {
+  height: 240px;
+  li {
+    float: left;
+    .w-h(150px, 50px);
+    border: 1px solid @borderColor;
+    background: @whiteBgc;
+    margin-right: 20px;
+    transition: box-shadow .5s;
+    &:nth-child(6),
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-child(n+7) {
+      margin-top: 20px;
+    }
+    a {
+      display: block;
+      height: 100%;
+    }
+    &:nth-child(1) a {
+      background: url(../../img/index/p_microsoft_82f9a9a.png) no-repeat center;
+    }
+
+    &:nth-child(2) a {
+      background: url(../../img/index/p_tencent_47175aa.png) no-repeat center;
+    }
+
+    &:nth-child(3) a {
+      background: url(../../img/index/p_qcloud_ab76cc7.png) no-repeat center;
+    }
+
+    &:nth-child(4) a {
+      background: url(../../img/index/p_qualcomm_362a472.png) no-repeat center;
+    }
+
+    &:nth-child(5) a {
+      background: url(../../img/index/p_cocos_2a0a8f3.png) no-repeat center;
+    }
+
+    &:nth-child(6) a {
+      background: url(../../img/index/p_amd_f9f0c7f.png) no-repeat center;
+    }
+
+    &:nth-child(7) a {
+      background: url(../../img/index/p_xunfei_d1cd670.png) no-repeat center;
+    }
+
+    &:nth-child(8) a {
+      background: url(../../img/index/p_tuling_3ec6ea2.png) no-repeat center;
+    }
+
+    &:nth-child(9) a {
+      background: url(../../img/index/p_tingyun_c2752df.png) no-repeat center;
+    }
+
+    &:nth-child(10) a {
+      background: url(../../img/index/p_juhe_25bbedf.png) no-repeat center;
+    }
+
+    &:nth-child(11) a {
+      background: url(../../img/index/p_bootstrap_d0a74f3.png) no-repeat center;
+    }
+
+    &:nth-child(12) a {
+      background: url(../../img/index/p_cloudstack_6ecabb3.png) no-repeat center;
+    }
+  }
+}
+/*   合作伙伴   end   */

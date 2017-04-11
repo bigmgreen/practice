@@ -1,0 +1,215 @@
+/*    文本选中颜色  */
+::selection {
+  background: @selectColor;
+  color: @whiteBgc;
+}
+
+/*    公共容器      */
+.wrap {
+  width: @width;
+  margin: 0 auto;
+  min-width: @width;
+}
+
+/*   清除浮动   */
+.clear:after {
+  content: '';
+  display: block;
+  overflow: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+}
+
+/*   小三角   */
+.triangle:after {
+  content: '';
+  .rotate(45deg);
+  display: none;
+  position: absolute;
+  .w-h(15px, 15px);
+  border-top: 1px solid #ececec;
+  border-left: 1px solid #ececec;
+  background: @whiteBgc;
+}
+
+/*    周年活动   start   */
+.ad-layer {
+  z-index: 999;
+  position: fixed;
+  left: 50%;
+  .w-h(98px, 200px);
+  margin-left: 515px;
+  margin-bottom: -100px;
+  bottom: 50%;
+  background: transparent;
+  overflow: hidden;
+  a {
+    position: relative;
+    left: -12px;
+  }
+  .close {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .w-h(15px, 15px);
+    background: rgb(211, 211, 211);
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      z-index: 999;
+      position: absolute;
+      top: 7px;
+      left: 3px;
+      .w-h(10px, 1px);
+      background: @whiteBgc;
+      .rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      z-index: 999;
+      position: absolute;
+      top: 7px;
+      right: 2px;
+      .w-h(10px, 1px);
+      background: @whiteBgc;
+      .rotate(-45deg);
+    }
+  }
+}
+
+.close-input {
+  position: absolute;
+  &:checked + .ad-layer {
+    display: none;
+  }
+}
+
+/*    周年活动   end   */
+
+/*   回到顶部  start   */
+.go-top-wrap {
+  position: fixed;
+  left: 50%;
+  margin-left: 510px;
+  bottom: 50px;
+  width: 34px;
+  text-align: center;
+  z-index: 2000;
+
+  .app-download-left {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../../img/index/phone-1.png) center center no-repeat;
+    background-size: 12px 24px;
+    .w-h(34px, 35px);
+    border-bottom: 1px solid #e0e0e0;
+
+    &:hover .app-download-code {
+      display: block;
+    }
+  }
+
+  .app-download-code {
+    background: url(../../img/index/appewm.png) center center no-repeat;
+    background-size: 100%;
+    .w-h(126px, 159px);
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+  }
+
+  .go-top {
+    display: block;
+    background: url(../../img/index/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    .w-h(34px, 34px);
+
+    &:hover {
+      background: url(../../img/index/gotop2.jpg) 0 0 no-repeat;
+      background-position: 0 0;
+      background-size: 34px 103px;
+    }
+  }
+}
+
+/*   回到顶部  end   */
+
+/*   导航动画   */
+@keyframes list-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*   搜索框动画   */
+@keyframes scale-run {
+  0% {
+    .opacity-scale(0,.1,1);
+  }
+  100% {
+    .opacity-scale(1,1,1);
+  }
+}
+
+/*     元素块      */
+.section {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/*     块标题     */
+.section-title {
+  font-size: 18px;
+  color: @textColor;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+/*    渐变块   start  */
+.shadow {
+  transition: box-shadow .5s;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    .gui-on;
+  }
+}
+
+/*    渐变块   end  */
+
+/*    渐变按钮  start      */
+.hover-btn {
+  display: inline-block;
+  margin-top: 38px;
+  line-height: 30px;
+  border: 1px solid @selectColor !important;
+  border-radius: 2px;
+  .w-h(120px, 32px);
+  font-size: @baseFont;
+  color: @selectColor;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  margin-left: -60px;
+  transition: background .8s;
+  &:hover {
+    background: @selectColor;
+    color: @whiteBgc;
+  }
+}
+
+/*    渐变按钮  end      */

@@ -1,0 +1,466 @@
+/*   活动信息  start   */
+.tips {
+  position: relative;
+  z-index: 10;
+  color: gray;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px 30px 10px 10px;
+  background-color: rgb(248, 110, 31);
+  border: 1px solid #f1e5b3;
+  a {
+    color: @whiteBgc;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+/*   活动信息  end   */
+
+/*   logo  start   */
+.header {
+  height: 60px;
+  border-bottom: 1px solid #ececec;
+  background: @whiteBgc;
+  .logo {
+    .w-h(109px, 60px);
+    display: inline-block;
+    margin-right: 60px;
+    .box-sizing;
+    float: left;
+    padding-top: 9px;
+  }
+}
+
+/*   logo  end   */
+
+/*   导航  start   */
+.nav {
+  height: 60px;
+  display: inline-block;
+  float: left;
+  li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    &:hover {
+      .arrow-icon {
+        border-color: #35b558;
+        transition: transform .5s linear;
+        -webkit-transform: rotate(405deg);
+        -moz-transform: rotate(405deg);
+        -ms-transform: rotate(405deg);
+        transform: rotate(405deg);
+      }
+      .sub-menu {
+        display: block;
+        opacity: 1;
+        animation: list-show 0.8s ease normal;
+        a {
+          color: @textColor;
+        }
+      }
+    }
+    .arrow-icon {
+      .w-h(8px, 8px);
+      border-top: 1px solid #c1c1c1;
+      border-left: 1px solid #c1c1c1;
+      display: inline-block;
+      .rotate(-135deg);
+      transform-origin: 2px 2px;
+      transition: transform .5s linear;
+      position: relative;
+      left: 4px;
+    }
+  }
+  a {
+    color: @navAColor;
+    text-decoration: none;
+  }
+  li:hover a,
+  &.active {
+    color: rgb(53, 181, 88);
+  }
+}
+
+/*   导航  end   */
+
+/*  搜索框  start  */
+.search-box {
+  float: right;
+  text-align: right;
+  .w-h(200px, 60px);
+  margin-right: 10px;
+  position: relative;
+  .search-icon {
+    .search-box-icon('../../img/header/search-icon.png');
+    &:hover {
+      background-image: url(../../img/header/search-icon2.png);
+    }
+  }
+}
+
+/*  搜索框  end  */
+
+/*  app  下载   start  */
+.app-icon {
+  .search-box-icon('../../img/header/app-icon.png');
+  .app-download {
+    display: none;
+    opacity: 0;
+    background: @whiteBgc;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 60px;
+    right: 5px;
+    img {
+      width: 100%;
+    }
+  }
+  &:hover {
+    background-image: url(../../img/header/app-icon2.png);
+    .app-download {
+      display: block;
+      opacity: 1;
+      animation: list-show 0.8s ease normal;
+    }
+    .triangle:after {
+      display: block;
+      top: -9px;
+      left: 52px;
+    }
+  }
+}
+
+/*  app  下载   end  */
+
+/*  登录信息   start  */
+.user-online {
+  .w-h(25px, 60px) !important;
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
+  img {
+    .w-h(25px, 25px);
+    margin-top: 13px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+  }
+  .year-vip-icon {
+    background: url(../../img/header/allicon2.png) -1px -32px no-repeat;
+    background-size: 64px 64px;
+    .w-h(13px, 13px);
+    margin-right: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+  }
+
+  .user-online-menu {
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: @whiteBgc;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 60px;
+    right: -10px;
+    dd {
+      text-align: left;
+      font-size: 12px;
+      line-height: 35px;
+      vertical-align: middle;
+      margin: 0;
+      padding-left: 10px;
+      &:hover {
+        background-color: @bodyBgc;
+      }
+    }
+    a {
+      color: #666;
+      height: 35px;
+      line-height: 35px;
+      display: block;
+      &.authenticated-vip {
+        background-image: url(../../img/header/allvipicon.png);
+        background-size: 306px 16px;
+        display: inline-block;
+        width: 45px;
+        height: 14px;
+        background-position: -191px -1px;
+        margin-right: 10px;
+      }
+
+      &.year-vip {
+        background-image: url(../../img/header/allvipicon.png);
+        background-size: 306px 16px;
+        display: inline-block;
+        width: 45px;
+        height: 14px;
+        background-position: -143px -1px;
+      }
+    }
+    .icon {
+      background-image: url(../../img/header/allicon2.png);
+      background-repeat: no-repeat;
+      background-size: 64px 64px;
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+  &:hover {
+    .user-online-menu {
+      display: block;
+      opacity: 1;
+      -moz-animation: list-show 0.8s ease normal;
+      -webkit-animation: list-show 0.8s ease normal;
+      animation: list-show 0.8s ease normal;
+    }
+    .triangle:after {
+      display: block;
+      top: -8px;
+      right: 10px;
+    }
+  }
+  .learn-icon {
+    background-position: -16px -15px;
+  }
+
+  .user-icon {
+    background-position: -45px -1px;
+  }
+
+  .msg-icon {
+    background-position: -16px -30px;
+  }
+
+  .unread-num {
+    padding-left: 10px;
+  }
+
+  .account-icon {
+    background-position: -30px -1px;
+  }
+
+  .logout-icon {
+    background-position: -16px -1px;
+  }
+}
+
+/*  登录信息   end  */
+
+/*  子导航   start  */
+.sub-menu {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  top: 60px;
+  left: 0;
+  background: @whiteBgc;
+  font-size: 12px;
+  color: #666;
+  width: 280px;
+  h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+  }
+  a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    white-space: normal;
+    &:hover {
+      color: @selectColor !important;
+    }
+  }
+  i {
+    background: url(../../img/header/allicon.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px !important;
+    position: relative;
+    top: 3px;
+  }
+  .python-icon,
+  .go-icon,
+  .php-icon,
+  .java-icon,
+  .ios-icon,
+  .wechat-icon {
+    background: url(../../img/header/allicon4.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+  }
+  span {
+    color: #bbb;
+    float: right;
+  }
+  &.vip-lesson {
+    padding: 10px 0;
+    a {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      color: #666;
+      &:hover {
+        background: #fafafa;
+        color: #35b558;
+      }
+    }
+  }
+  .web-icon {
+    background-position: -15px -27px;
+  }
+  .wechat-icon {
+    background-position: -2px -60px;
+  }
+  .python-icon {
+    background-position: -2px -2px;
+  }
+  .go-icon {
+    background-position: -2px -38px;
+  }
+  .php-icon {
+    background-position: -2px -21px;
+  }
+  .java-icon {
+    background-position: -2px -104px;
+  }
+  .android-icon {
+    background-position: -45px -14px;
+  }
+  .ios-icon {
+    background-position: -2px -82px;
+  }
+  .kck-icon {
+    background-position: 0 -13px;
+  }
+  .zyljt-icon {
+    background-position: -45px 0;
+  }
+  .zstxt-icon {
+    background-position: -30px -13px;
+  }
+  .kcbq-icon {
+    background-position: -15px -13px;
+  }
+  .vip-icon {
+    background-position: -16px 0;
+  }
+  .jswd-icon {
+    background-position: 0 -27px;
+  }
+  .wiki-icon {
+    background-position: -29px -27px;
+  }
+  .sq-icon {
+    background-position: 0 2px;
+  }
+  .zygx-icon {
+    background-position: -30px 0;
+  }
+  .xlkc-icon {
+    background: url("../../img/header/xlkc2.png") 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+  }
+}
+
+/*  子导航   end  */
+
+/*     搜索框特效  start     */
+
+#webSearch {
+  position: absolute;
+  z-index: -1;
+  &:checked + .search-wrap {
+    transform-origin: right center;
+    display: block !important;
+    .scale(1, 1) !important;
+    opacity: 1 !important;
+    animation: scale-run 0.8s ease normal;
+  }
+}
+
+.search-wrap {
+  display: none;
+  .scale(0.1, 1);
+  opacity: 0;
+  line-height: 59px;
+  .w-h(850px, 59px);
+  background: @whiteBgc;
+  position: absolute;
+  z-index: 11000;
+  top: 0;
+  right: -10px;
+  white-space: normal;
+  text-align: left;
+  .close-icon {
+    .w-h(15px, 15px);
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(../../img/header/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+  }
+  .search-icon {
+    background: url(../../img/header/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    .w-h(17px, 17px);
+    display: inline-block;
+    position: relative;
+    top: 4px;
+  }
+  input {
+    .w-h(400px, 40px);
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .tag-box {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+  }
+  .tag-box a {
+    font-size: 12px;
+    color: @textGray;
+    background: @bodyBgc;
+    padding: 3px 5px;
+    margin-left: 10px;
+  }
+}
+
+/*     搜索框特效  end     */
