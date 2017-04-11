@@ -6,6 +6,7 @@ var clean = require('gulp-clean');
 var autoPreFixer = require('gulp-autoprefixer');
 var replace = require('gulp-replace');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify  = require('gulp-uglify');
 
 /**
  * less编译
@@ -23,6 +24,16 @@ gulp.task('less', ['clean'], function () {
         .pipe(cssMin())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('static/css'));
+});
+
+/*
+* js压缩合并
+* */
+gulp.task('js', function () {
+    return gulp.src(['static/lib/swiper-3.4.2/js/swiper.min.js', 'static/lib/jquery/jquery.min.js', 'static/lib/throttle/throttle.js', 'static/js/index.js'])
+        .pipe(uglify())
+        .pipe(concat('index.min.js'))
+        .pipe(gulp.dest('static/js'));
 });
 
 /**
@@ -43,4 +54,4 @@ gulp.task('watch', function () {
 /**
  * 默认任务设置
  */
-gulp.task('default', ['less']);
+gulp.task('default', ['less', 'js']);

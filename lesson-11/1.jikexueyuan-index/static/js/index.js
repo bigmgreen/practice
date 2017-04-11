@@ -12,6 +12,15 @@ $(function () {
                 top.fadeIn(500);
             }
         }));
+        top.click(function () {
+            if ($(window).scrollTop() <= 10) {
+                return false;
+            }
+            $("body,html").animate({
+                scrollTop: 0
+            }, 200);
+            return false;
+        });
     })();
 
     /*
