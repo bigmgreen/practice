@@ -1,0 +1,37 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font: 14px 'microsoft YaHei';
+    -webkit-font-smoothing: antialiased;
+    background-color: #f7f7f7;
+}
+
+p,
+li,
+ul,
+dd,
+dt,
+dl{
+    padding: 0;
+    margin: 0;
+}
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+    text-decoration: none;
+}

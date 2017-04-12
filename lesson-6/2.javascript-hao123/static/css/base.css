@@ -1,0 +1,139 @@
+/*    文本选中颜色  */
+::selection {
+    background: #35b558;
+    color: #fff;
+}
+
+/*    公共容器      */
+.wrap {
+    width: 1190px;
+    margin: 0 auto;
+    min-width: 1190px;
+}
+
+/*   清除浮动   */
+.clear:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+/*   浮动  start   */
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+/*   浮动  end   */
+
+/*    渐变块   start  */
+.shadow {
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+    transition: box-shadow .5s;
+}
+
+.shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+/*    渐变块   end  */
+
+/*    渐变按钮  start      */
+.hover-btn {
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558 !important;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+    transition: background .8s;
+}
+
+.hover-btn:hover {
+    background: #35b558;
+    color: #fff;
+}
+
+/*    渐变按钮  end      */
+
+/*   文本居中   */
+.text-center {
+    text-align: center;
+}
+
+/*   泡泡样式  */
+.hot-pop-icon {
+    background-image: url(../img/bubble.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 34px;
+    height: 30px;
+    top: 1px;
+    font-size: 12px;
+    word-wrap: break-word;
+    padding-top: 2px;
+    padding-left: 7px;
+    line-height: 12px;
+    color: #ff3c00;
+    font-style: normal;
+    white-space: normal;
+}
+
+/*   文本绿色   */
+.text-theme {
+    color: #0aa770 !important;
+}
+
+/*   小号文本   */
+.text-sm {
+    font-size: 12px;
+}
+
+/*   字样   */
+.hot-text {
+    padding-left: 18px;
+    height: 32px;
+    line-height: 32px;
+    background: url(../img/a55b64dd8f2d691850aec5365ab9f20c.gif) no-repeat 0 7px;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 10px;
+}
+
+/*   广告字样   */
+.ad-icon {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
+    width: 27px;
+    height: 16px;
+    background: url(../img/new_index_icon.png) no-repeat -82px -21px;
+    z-index: 20;
+}

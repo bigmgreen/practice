@@ -1,0 +1,124 @@
+/*   侧边栏样式   */
+
+aside {
+    width: 278px;
+}
+
+.aside-section {
+    border: 1px solid #cecece;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 5px 0;
+    position: relative;
+}
+
+.aside-section li {
+    font-weight: bold;
+    color: #999999;
+    margin-bottom: 6px;
+}
+
+.aside-section li > span {
+    padding-left: 35px;
+    padding-top: 6px;
+    display: inline-block;
+    width: 9.7em;
+}
+
+.aside-section a:hover {
+    text-decoration: underline;
+    color: #F50;
+}
+
+.aside-section a {
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+    margin: 0 5px;
+    position: relative;
+}
+
+.news-list.aside-section > a {
+    position: static;
+}
+
+.aside-section img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.news-list {
+    padding-top: 100px;
+}
+
+.news-list li a {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.dot-icon {
+    display: block;
+    position: absolute;
+    background: #cecece;
+    width: 4px;
+    height: 4px;
+    top: 11px;
+    left: 5px;
+    border-radius: 2px;
+}
+
+.side-sm-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../img/index_menus_widthlg.png) no-repeat;
+    left: -22px;
+}
+
+.tv {
+    background-position: -20px -81px;
+}
+
+.game {
+    background-position: -19px -301px;
+}
+
+.movie {
+    background-position: -20px -160px;
+}
+
+.comic {
+    background-position: -20px -381px;
+}
+
+.toutiao {
+    background-position: -20px -100px;
+}
+
+.travel {
+    background-position: -20px -261px;
+}
+
+.caipiao {
+    background-position: -20px -21px;
+}
+
+.gaoxiao {
+    background-position: -20px -121px;
+}
+
+.tuan {
+    background-position: -20px -281px;
+}
+
+.music {
+    background-position: -20px -362px;
+}

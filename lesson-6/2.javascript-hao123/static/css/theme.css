@@ -1,0 +1,174 @@
+/*   绿色主题   start   */
+.theme-green .nav-main a.active,
+.theme-green.nav-main a.active:hover {
+    color: #fff;
+    background-color: #0aa770;
+}
+
+.theme-green .nav {
+    border: solid 1px #84d7ba;
+    background-color: #fcfcfc;
+    border-top: 2px solid #099e6a;
+    font-size: 0;
+    margin: 10px 0;
+}
+
+.theme-green .main .item.active {
+    border: 1px solid #84d7ba;
+    padding-right: 0;
+}
+
+.theme-green .main a.text-theme {
+    color: #0aa770 !important;
+}
+
+.theme-green .hot-news .hot-icon-num.active {
+    background-color: #0aa770;
+    color: #ffffff;
+}
+
+.theme-green .nav-sub span {
+    display: block;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #0aa770;
+    font-size: 14px;
+}
+
+.theme-green .top .news {
+    color: #0aa770;
+}
+
+/*   绿色主题   end   */
+
+/*   粉色主题   start   */
+.theme-pink .top .news {
+    color: #d47c7c;
+}
+
+.theme-pink .nav-sub span {
+    display: block;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #d47c7c;
+    font-size: 14px;
+}
+
+.theme-pink .hot-news .hot-icon-num.active {
+    background-color: #d47c7c;
+    color: #ffffff;
+}
+
+.theme-pink .nav-main a.active,
+.theme-pink .nav-main a.active:hover {
+    color: #fff;
+    background-color: #d47c7c;
+}
+
+.theme-pink .nav {
+    border: solid 1px #d47c7c;
+    background-color: #fcfcfc;
+    border-top: 2px solid #d47c7c;
+    font-size: 0;
+    margin: 10px 0;
+}
+
+.theme-pink .main .item.active {
+    border: 1px solid #d47c7c;
+    padding-right: 0;
+}
+
+.theme-pink .main a.text-theme {
+    color: #d47c7c !important;
+}
+
+/*   粉色主题   end   */
+
+/*   紫色主题   start   */
+.theme-violet .top .news {
+    color: #897cd4;
+}
+
+.theme-violet .nav-sub span {
+    display: block;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #897cd4;
+    font-size: 14px;
+}
+
+.theme-violet .hot-news .hot-icon-num.active {
+    background-color: #897cd4;
+    color: #ffffff;
+}
+
+.theme-violet .nav-main a.active,
+.theme-violet .nav-main a.active:hover {
+    color: #fff;
+    background-color: #897cd4;
+}
+
+.theme-violet .nav {
+    border: solid 1px #897cd4;
+    background-color: #fcfcfc;
+    border-top: 2px solid #897cd4;
+    font-size: 0;
+    margin: 10px 0;
+}
+
+.theme-violet .main .item.active {
+    border: 1px solid #897cd4;
+    padding-right: 0;
+}
+
+.theme-violet .main a.text-theme {
+    color: #897cd4 !important;
+}
+
+/*   紫色主题   end   */
+/*   淡黄色主题   start   */
+.theme-yellow .top .news {
+    color: #d0d47c;
+}
+
+.theme-yellow .nav-sub span {
+    display: block;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #d0d47c;
+    font-size: 14px;
+}
+
+.theme-yellow .hot-news .hot-icon-num.active {
+    background-color: #d0d47c;
+    color: #ffffff;
+}
+
+.theme-yellow .nav-main a.active,
+.theme-yellow .nav-main a.active:hover {
+    color: #fff;
+    background-color: #d0d47c;
+}
+
+.theme-yellow .nav {
+    border: solid 1px #d0d47c;
+    background-color: #fcfcfc;
+    border-top: 2px solid #d0d47c;
+    font-size: 0;
+    margin: 10px 0;
+}
+
+.theme-yellow .main .item.active {
+    border: 1px solid #d0d47c;
+    padding-right: 0;
+}
+
+.theme-yellow .main a.text-theme {
+    color: #d0d47c !important;
+}
+
+/*   淡黄色主题   end   */
