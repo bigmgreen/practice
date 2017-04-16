@@ -11,23 +11,14 @@
             //设置默认值
             opt = $.extend({
                 width: 190
-                , url: ''
-                , target: null
-                , className: null
-                , parentNodeSpace: 0
-                , parentNodeTop: 0
-                , topGap: 10
+                , url: ''//请求地址
+                , target: null//图片容器
+                , className: null//图片class
+                , parentNodeSpace: 0//图片容器左右padding
+                , parentNodeTop: 0//图片容器上下padding
+                , topGap: 10//图片容器上padding
+                , marginLeft: 0//图片的marginLeft
             }, opt);
-
-            /**
-             * 获取一行能放多少个
-             * @param parentNodeSpace  父元素的padding或者margin
-             * @param width 图片宽度
-             * @returns {number}
-             */
-            function getCount(parentNodeSpace, width) {
-                return Math.floor(($(doc).width() - parentNodeSpace * 2) / width);
-            }
 
             /**
              * 模拟JQuery GET获取数据
@@ -36,7 +27,7 @@
              * @param fn 回调函数
              */
             function getData(url, param, fn) {
-                param.pageNumber = param.pageNumber || 1;
+                opt.pageNumber = param.pageNumber || 1;
                 var i = 0;
                 var arr = [];
                 while (i <= param.count) {
@@ -45,62 +36,84 @@
                 }
                 fn && fn({
                     imgSrcArray: arr,
-                    pageNumber: ++param.pageNumber
+                    pageNumber: ++opt.pageNumber
                 });
             }
 
             //存放图片高度的数组
             var _imgArr = [];
-            //渲染
+
+            /**
+             * 计算图片位置
+             */
             function render() {
-                var count = getCount(opt.parentNodeSpace, opt.width);
-                $('[data-img]').each(function (index) {
-                    var height = $(this).height();
-                    if (index < count) {
-                        _imgArr[index] = height;
+                var count = Math.floor(($('body').width() - opt.parentNodeSpace * 2) / opt.width);
+                _imgArr = [];
+                for (var i = 0; i < count; i++) {
+                    _imgArr.push(0);
+                }
+                $('[data-img]').each(function (index, item) {
+                    var minHeight = Math.min.apply(null, _imgArr);
+                    var minIndex = $.inArray(minHeight, _imgArr);
+                    var left = 0;
+                    var top = 0;
+
+                    if (index === 0) {
+                        top = opt.parentNodeTop + opt.topGap;
+                        left = opt.parentNodeSpace;
+                    } else if (index > 0 && index < count) {
+                        top = opt.parentNodeTop + opt.topGap;
+                        left = $('[data-img]').eq(index - 1).position().left + opt.marginLeft + opt.width;
                     } else {
-                        var minHeight = Math.min.apply(null, _imgArr);
-                        var minIndex = $.inArray(minHeight, _imgArr);
-                        $(this).css({
-                            "position": "absolute",
-                            "top": minHeight + opt.parentNodeTop + opt.topGap,
-                            "left": $('[data-img]').eq(minIndex).position().left
-                        });
-                        _imgArr[minIndex] += $(this).height() + opt.topGap;
+                        top = minHeight + opt.parentNodeTop + opt.topGap;
+                        left = $('[data-img]').eq(minIndex).position().left;
                     }
+                    $(this).css({
+                        "position": "absolute",
+                        "top": top,
+                        "left": left
+                    });
+                    _imgArr[minIndex] += $(item).height() + opt.topGap;
                 });
             }
 
             /**
-             * 页面初始化
-             * @param fn 回调
+             * 获取数据并渲染图片
              */
-            function show(fn) {
+            function show() {
                 getData(opt.url, {
-                    count: getCount(opt.parentNodeSpace, opt.width)
+                    count: Math.floor(($(doc).width() - opt.parentNodeSpace * 2) / opt.width),
+                    pageNumber: opt.pageNumber
                 }, function (data) {
+                    //把图片添加到页面上
                     $(opt.target).append($.map(data.imgSrcArray, function (item) {
                         return '<img data-img class="' + opt.className + '" src="' + item + '" width="' + opt.width + '" />';
                     }));
-                    fn && fn();
+                    //开始计算图片位置
+                    render()
                 });
 
+                /**
+                 * 当图片不够一屏幕时继续获取数据并渲染图片
+                 */
                 setTimeout(function () {
                     if (Math.max.apply(null, _imgArr) < innerHeight) {
-                        show(render);
+                        show();
                     }
                 }, 500);
             }
 
-            show(function () {
-                $(window).load(function () {
-                    render();
-                });
-            });
+            /**
+             * 开始渲染
+             */
+            show();
 
             return {
+                /**
+                 * 用于外部连续加载图片
+                 */
                 load: function () {
-                    show(render);
+                    show();
                 }
             };
         }

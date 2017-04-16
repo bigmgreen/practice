@@ -1,0 +1,269 @@
+/*    文本选中颜色  */
+::selection {
+    background: #35b558;
+    color: #fff;
+}
+
+/*    公共容器      */
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+
+/*   左浮动   */
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+/*   右浮动   */
+
+/*   清除浮动   */
+.clear:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+/*   小三角   */
+.triangle:after {
+    content: '';
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    background: #fff;
+}
+
+/*    周年活动   start   */
+.ad-layer {
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    width: 98px;
+    height: 200px;
+    margin-left: 515px;
+    margin-bottom: -100px;
+    bottom: 50%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.ad-layer a {
+    position: relative;
+    left: -12px;
+}
+
+.ad-layer .close {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.ad-layer .close:before {
+    content: '';
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.ad-layer .close:after {
+    content: '';
+    display: inline-block;
+    z-index: 999;
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+
+.close-input:checked + .ad-layer {
+    display: none;
+}
+
+.close-input {
+    position: absolute;
+}
+
+/*    周年活动   end   */
+
+/*   回到顶部  start   */
+.go-top-wrap {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+}
+
+.go-top-wrap .app-download-left {
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/common/phone-1.png) center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.go-top-wrap .app-download-left:hover {
+    background: #f7f7f7 url(../img/common/phone-2.png) center center no-repeat;
+    background-size: 12px 24px;
+}
+
+.go-top-wrap .app-download-left:hover .app-download-code {
+    display: block;
+}
+
+.go-top-wrap .app-download-code {
+    background: url(../img/common/appewm.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+
+.go-top {
+    display: block;
+    background: url(../img/common/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+}
+
+.go-top:hover {
+    background: url(../img/common/gotop2.jpg) 0 0 no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: 34px 103px;
+    -moz-background-size: 34px 103px;
+    background-size: 34px 103px;
+}
+
+/*   回到顶部  end   */
+
+/*   导航动画   */
+@keyframes list-show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*   搜索框动画   */
+@keyframes scale-run {
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/*     元素块      */
+.section {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*     块标题     */
+.section-title {
+    font-size: 18px;
+    color: #555;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+
+/*    渐变块   start  */
+.shadow {
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+    transition: box-shadow .5s;
+}
+
+.shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+/*    渐变块   end  */
+
+/*    渐变按钮  start      */
+.hover-btn {
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558 !important;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+    transition: background .8s;
+}
+
+.hover-btn:hover {
+    background: #35b558;
+    color: #fff;
+}
+
+/*    渐变按钮  end      */
+
+/*    设置页面所有的a标签hover颜色  */
+.main a:hover {
+    color: #35b558;
+}

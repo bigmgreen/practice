@@ -20,6 +20,7 @@ $(function () {
         , className: 'item'
         , parentNodeSpace: 74
         , parentNodeTop: 30
+        , marginLeft: 10
     });
 
     /*
@@ -38,9 +39,6 @@ $(function () {
      * 窗口尺寸监听
      * */
     $(window).resize(debounce(function () {
-        /*
-         * TODO 缩小时会出问题  图片排列混乱
-         * */
         waterFallFlow.load();
         /*
          * 背景动画启动
