@@ -5,6 +5,7 @@ body {
     font: 14px 'microsoft YaHei';
     -webkit-font-smoothing: antialiased;
     background-color: #f5f5f5;
+    min-width: 1000px;
 }
 li,
 ul{
@@ -42,4 +43,8 @@ a:visited {
 
 address, cite, dfn, em, i, var {
     font-style: normal;
+}
+
+img {
+    border: 0 none;
 }

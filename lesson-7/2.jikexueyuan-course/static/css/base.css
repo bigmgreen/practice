@@ -265,5 +265,5 @@
 
 /*    设置页面所有的a标签hover颜色  */
 .main a:hover {
-    color: #35b558;
+    color: #35b558 !important;
 }

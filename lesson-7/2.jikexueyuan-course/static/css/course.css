@@ -145,18 +145,18 @@
     width: 14px;
     height: 14px;
     vertical-align: middle;
-    background: url(https://s1.jikexueyuan.com/course/images/preview-icon_2ae2eb9.png) no-repeat 0 0;
+    background: url(../img/course/preview-icon_2ae2eb9.png) no-repeat 0 0;
 }
 
 .sort .block-icon .icon {
     width: 14px;
-    background: url(https://s1.jikexueyuan.com/course/images/icon-kuai_3c1a8cf.png) no-repeat 0 0;
+    background: url(../img/course/icon-kuai_3c1a8cf.png) no-repeat 0 0;
     background-size: 14px;
 }
 
 .sort .list-icon .icon {
     width: 19px;
-    background: url(https://s1.jikexueyuan.com/course/images/icon-list_6d9f87f.png) no-repeat center;
+    background: url(../img/course/icon-list_6d9f87f.png) no-repeat center;
     background-size: 16px 12px;
 }
 
@@ -261,6 +261,7 @@
 
 .lesson-list {
     margin-top: 15px;
+    width: 789px;
 }
 
 .lesson-list li {
@@ -304,7 +305,7 @@
     margin-left: -25px;
     top: 50%;
     margin-top: -25px;
-    background: url(https://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
+    background: url(../img/course/player_icon_5c67475.png) 0 0 no-repeat;
     cursor: pointer;
     background-size: 50px 50px;
 }
@@ -315,16 +316,18 @@
     left: 10px;
     width: 16px;
     height: 16px;
-    background: url(https://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
+    background: url(../img/course/shoucang-1_76dc56f.png);
     background-size: 16px 16px;
     z-index: 101;
     cursor: pointer;
     display: none;
 }
+
 .lesson-list .lesson-collection:hover {
-    background: url(https://s1.jikexueyuan.com/common/images/shoucang-2_3d597dc.png);
+    background: url(../img/course/shoucang-2_3d597dc.png);
     background-size: 16px 16px;
 }
+
 .lesson-list .lesson-info {
     padding: 10px;
     position: relative;
@@ -342,6 +345,7 @@
     height: 36px;
     overflow: hidden;
 }
+
 .lesson-list .lesson-info-title a {
     color: #333;
     font-weight: normal;
@@ -401,7 +405,7 @@
 }
 
 .lesson-list .time-and-icon .time-icon {
-    background: url(https://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    background: url(../img/course/clok_a413ecf.png) 0 0 no-repeat;
     width: 14px;
     height: 14px;
     display: block;
@@ -410,8 +414,8 @@
     background-size: 14px 14px;
 }
 
-.lesson-list .time-and-icon .level-icon {
-    background: url(https://s1.jikexueyuan.com/common/images/tow-ji_ec2b553.png) 0 0 no-repeat;
+.lesson-list .time-and-icon .level-icon-2 {
+    background: url(../img/course/tow-ji_ec2b553.png) 0 0 no-repeat;
     background-size: 14px 14px;
     width: 14px;
     height: 14px;
@@ -427,6 +431,7 @@
 .lesson-list .time-and-icon dl dd {
     font-size: 12px;
 }
+
 .lesson-list .time-and-icon dl dd:first-child {
     margin-bottom: 12px;
 }
@@ -437,3 +442,166 @@
 }
 
 /*   块展示  end   */
+
+/*   列表展示  start   */
+.lesson-list2 li {
+    height: 100px;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 13px;
+}
+
+.lesson-list2 .lesson-img-box {
+    width: 185px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+
+.lesson-list2 .lesson-collection {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/course/shoucang-1_76dc56f.png);
+    background-size: 16px 16px;
+    z-index: 101;
+    cursor: pointer;
+    display: none;
+}
+
+.lesson-list2 .lesson-collection:hover {
+    background: url(../img/course/shoucang-2_3d597dc.png);
+    background-size: 16px 16px;
+}
+
+.lesson-list2 .lesson-img-box .lesson-img {
+    width: 185px;
+    height: 100px;
+}
+
+.lesson-list2 .lesson-play {
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.lesson-list2 .lesson-play .player-icon {
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(../img/course/player_icon_5c67475.png) no-repeat;
+    background-size: 50px 50px;
+    cursor: pointer;
+}
+
+.lesson-list2 .lesson-info {
+    position: relative;
+    height: 100px !important;
+    width: 566px !important;
+    float: left;
+}
+
+.lesson-list2 .lesson-info-title {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    line-height: 21px;
+}
+
+.lesson-list2 .lesson-info-title a {
+    color: #333;
+    font-weight: normal;
+}
+
+.lesson-list2 p {
+    color: gray !important;
+    font-size: 12px !important;
+    opacity: 1 !important;
+    line-height: 18px !important;
+    overflow: hidden !important;
+    margin-bottom: 10px !important;
+    height: 36px !important;
+}
+
+.time-and-icon {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+
+.time-and-icon .time-icon {
+    background: url(../img/course/icon_7f8b929.png) 0 -72px no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.time-and-icon .level-icon-2 {
+    background: url(../img/course/tow-ji_ec2b553.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.lesson-list2 .lesson-icon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -75px;
+}
+
+.lesson-list2 .learn-number {
+    float: right;
+}
+
+.lesson-list2 .lesson-icon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    background-size: 16px 16px;
+    -webkit-background-size: 16px 16px;
+}
+
+.time-and-icon .level-icon-1 {
+    background: url(../img/course/one-ji_1731712.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.time-and-icon .level-icon-3 {
+    background: url(../img/course/three-ji_b588ab1.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+/*   列表展示  end   */

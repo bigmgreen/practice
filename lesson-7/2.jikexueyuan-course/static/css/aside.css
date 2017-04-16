@@ -22,7 +22,7 @@ aside > dl {
     display: block;
     width: 15px;
     height: 15px;
-    background: url(https://s1.jikexueyuan.com/common/images/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+    background: url(../img/aside/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
     position: absolute;
     margin-left: -20px;
     margin-top: 14px;
@@ -36,7 +36,7 @@ aside a.aside-item {
     width: 208px;
     height: 37px;
     border-bottom: 1px solid #f5f5f5;
-    background: url(https://s1.jikexueyuan.com/common/images/icon-more_cd68622.png) 186px center no-repeat;
+    background: url(../img/aside/icon-more_cd68622.png) 186px center no-repeat;
     background-size: 6px 10px;
     padding-left: 32px;
     display: block;
@@ -92,7 +92,7 @@ aside a.aside-item:hover:after {
 
 .aside-links a:hover {
     color: #35b558;
-    background: #fafafa url(https://s1.jikexueyuan.com/common/images/img-seeall_b965178.png) no-repeat 160px center;
+    background: #fafafa url(../img/aside/img-seeall_b965178.png) no-repeat 160px center;
     background-size: 40px 10px;
 }
 
@@ -105,22 +105,22 @@ aside a.aside-item:hover:after {
 }
 
 .aside-links .icon-zylj {
-    background: url(https://s1.jikexueyuan.com/common/images/icon-zylj_6ee6dac.png) no-repeat left center;
+    background: url(../img/aside/icon-zylj_6ee6dac.png) no-repeat left center;
     background-size: 15px 14px;
 }
 
 .aside-links .icon-zstx {
-    background: url(https://s1.jikexueyuan.com/common/images/icon-zstx_a1ae096.png) no-repeat left center;
+    background: url(../img/aside/icon-zstx_a1ae096.png) no-repeat left center;
     background-size: 15px 12.5px;
 }
 
 .aside-links .icon-xlkc {
-    background: url(https://s1.jikexueyuan.com/common/images/icon-xlkc_2e47588.png) no-repeat left center;
+    background: url(../img/aside/icon-xlkc_2e47588.png) no-repeat left center;
     background-size: 14px 14px;
 }
 
 .aside-links .icon-kcbq {
-    background: url(https://s1.jikexueyuan.com/common/images/icon-kcbq_65534c2.png) no-repeat left center;
+    background: url(../img/aside/icon-kcbq_65534c2.png) no-repeat left center;
     background-size: 15px 13px;
 }
 
