@@ -159,15 +159,16 @@
 
 .go-top {
     display: block;
-    background: url(../img/common/gotop.jpg) 0 0 no-repeat;
+    background-image: url(../img/common/gotop.jpg);
+    background-repeat: no-repeat;
     background-size: 34px 103px;
     width: 34px;
     height: 34px;
 }
 
 .go-top:hover {
-    background: url(../img/common/gotop2.jpg) 0 0 no-repeat;
-    background-position: 0 0;
+    background-image: url(../img/common/gotop2.jpg);
+    background-repeat: no-repeat;
     -webkit-background-size: 34px 103px;
     -moz-background-size: 34px 103px;
     background-size: 34px 103px;

@@ -7,9 +7,10 @@ function throttle(fn, interval) {
     return function () {
         if (!canRun) return;
         canRun = false;
+        var that = this;
         setTimeout(function () {
-            fn.apply(this, arguments);
+            fn.apply(that, arguments);
             canRun = true;
-        }.bind(this), interval);
+        }, interval);
     };
 }

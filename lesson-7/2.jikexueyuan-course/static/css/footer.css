@@ -34,23 +34,28 @@
     color: #999;
     margin-top: 20px;
 }
+
 .footer dl {
     width: 135px;
     color: #808080;
     float: left;
 }
+
 .footer dt {
     font-size: 14px;
     line-height: 30px;
 }
+
 .footer dd a {
     font-size: 12px;
     line-height: 30px;
     color: #999999;
 }
+
 .footer dd a:hover {
     color: #35b558;
 }
+
 .code-down {
     position: absolute;
     right: 0;
@@ -79,6 +84,7 @@
     padding-left: 40px;
     cursor: pointer;
 }
+
 .code-down-icon img {
     width: 115px;
     height: 153px;
@@ -88,17 +94,21 @@
     z-index: 2;
     display: none;
 }
+
 .code-down-icon:hover img {
     display: block;
 }
+
 .code-down .down-android {
-    background: url(../img/footer/icon-down-and.png)no-repeat 0 0;
+    background: url(../img/footer/icon-down-and.png) no-repeat 0 0;
     background-size: 30px 30px;
 }
+
 .code-down .down-ios {
-    background: url(../img/footer/icon-down-ios.png)no-repeat 0 0;
+    background: url(../img/footer/icon-down-ios.png) no-repeat 0 0;
     background-size: 30px 30px;
 }
+
 /*   底部导航  end   */
 
 /*   底部  start   */

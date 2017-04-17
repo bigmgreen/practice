@@ -22,7 +22,10 @@ aside > dl {
     display: block;
     width: 15px;
     height: 15px;
-    background: url(../img/aside/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+    background-image: url(../img/aside/icon-course-curr_0743c98.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 15px 15px;
+    background-size: 15px 15px;
     position: absolute;
     margin-left: -20px;
     margin-top: 14px;
@@ -92,7 +95,10 @@ aside a.aside-item:hover:after {
 
 .aside-links a:hover {
     color: #35b558;
-    background: #fafafa url(../img/aside/img-seeall_b965178.png) no-repeat 160px center;
+    background-color: #fafafa;
+    background-image: url(../img/aside/img-seeall_b965178.png);
+    background-repeat: no-repeat;
+    background-position: 160px center;
     background-size: 40px 10px;
 }
 
