@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>极客学院IT在线教育平台-中国专业的IT职业在线教育平台</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="static/css/reset.css"/>
@@ -17,7 +17,7 @@
     <script src="static/lib/html5/html5.min.js"></script>
     <![endif]-->
     <!--[if IE 8]>
-    <link rel="stylesheet" href="./static/css/ie8.css" />
+    <link rel="stylesheet" href="./static/css/ie8.css"/>
     <![endif]-->
 </head>
 
@@ -79,12 +79,12 @@
                 <!--     导航 end   -->
                 <!--     搜索 start   -->
                 <div class="search-box">
-                    <label for="webSearch"><span class="search-icon"></span></label>
+                    <label for="webSearch"><span id="searchBox" class="search-icon"></span></label>
                     <input type="checkbox" id="webSearch"/>
-                    <div class="search-wrap">
+                    <div id="searchWrap" class="search-wrap">
                         <label for="webSearch"><i class="close-icon"></i></label>
                         <i class="search-icon" id="search-btn"></i>
-                        <input placeholder="搜索课程、问答或Wiki"/>
+                        <input id="searchContent" placeholder="搜索课程、问答或Wiki"/>
                         <div class="tag-box">
                             <a href="#">Android</a>
                             <a href="#">iOS</a>
@@ -1627,7 +1627,7 @@
 <div>
     <input id="adLayerInput" class="close-input" type="checkbox"/>
     <div class="ad-layer">
-        <label for="adLayerInput"><i class="close"></i></label>
+        <label for="adLayerInput"><i id="closeAd" class="close"></i></label>
         <a href="#" target="_blank">
             <img src="static/img/common/0f000nNRGPSU8BbxhKqEV6.gif" height="200" width="110"/>
         </a>
@@ -1646,7 +1646,11 @@
 <!--     回到顶部组件   end   -->
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/throttle/throttle.js"></script>
+<script src="static/lib/storage/storage.js"></script>
 <script src="static/js/course.js"></script>
+<!--[if IE 8]>
+<script src="static/js/ie8.js"></script>
+<![endif]-->
 </body>
 
 </html>

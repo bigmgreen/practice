@@ -26,28 +26,47 @@
 }
 
 .arrow-icon {
-    width: 8px;
-    height: 8px;
-    border-top: 1px solid #c1c1c1;
-    border-left: 1px solid #c1c1c1;
     display: inline-block;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    transform-origin: 2px 2px;
-    transition: transform .5s linear;
     position: relative;
     left: 4px;
+    top: -1px;
+    transition: transform .5s linear;
+}
+
+.arrow-icon:after,
+.arrow-icon:before {
+
+    display: block;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    border: 5px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: gray;
+    content: " ";
+}
+
+.arrow-icon:after {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    border-width: 4px;
+    border-bottom-width: 0;
+    border-top-color: #fff;
 }
 
 .nav li:hover .arrow-icon {
-    border-color: #35b558;
     transition: transform .5s linear;
-    -webkit-transform: rotate(405deg);
-    -moz-transform: rotate(405deg);
-    -ms-transform: rotate(405deg);
-    transform: rotate(405deg);
+    -webkit-transform: rotate(540deg);
+    -moz-transform: rotate(540deg);
+    -ms-transform: rotate(540deg);
+    transform: rotate(540deg);
+}
+
+.nav li:hover .arrow-icon:before {
+    border-top-color: #35b558;
 }
 
 .nav {
@@ -84,7 +103,7 @@
     cursor: pointer;
     background: url(../img/header/search-icon.png) 0 0 no-repeat;
     background-size: 17px 17px;
-    background-position: 0, 0;
+    background-position: 0 center;
 }
 
 .search-icon:hover {

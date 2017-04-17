@@ -23,6 +23,13 @@ $(function () {
         });
     })();
 
+    /*   读取上一次保持的列表展示信息   */
+    (function () {
+        if (getStorage('lessonList') == 'lesson-list2') {
+            $('#lessonList').removeClass('lesson-list').addClass('lesson-list2');
+        }
+    })();
+
     /*   课程列表切换   */
     $('[data-class]').click(function () {
         var name = '';
@@ -36,10 +43,12 @@ $(function () {
             list.find('.learn-number').hide();
             list.find('.level').hide();
             list.removeClass('lesson-list2').addClass('lesson-list');
+            setStorage('lessonList', 'lesson-list');
         } else {
             list.find('.learn-number').show();
             list.find('.level').show();
             list.removeClass('lesson-list').addClass('lesson-list2');
+            setStorage('lessonList', 'lesson-list2');
         }
     });
 

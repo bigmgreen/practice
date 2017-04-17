@@ -293,6 +293,7 @@
     left: 0;
     top: 0;
     opacity: 0;
+    filter: Alpha(opacity=0);
 }
 
 .lesson-list .lesson-play .player-icon {
@@ -491,6 +492,7 @@
     left: 0;
     top: 0;
     opacity: 0;
+    filter: Alpha(opacity=0);
 }
 
 .lesson-list2 .lesson-play .player-icon {
