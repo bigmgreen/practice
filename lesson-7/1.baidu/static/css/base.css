@@ -1,0 +1,46 @@
+/*     reset      */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font: 12px arial;
+    color: #333;
+    min-width: 890px;
+}
+
+/*   总容器   */
+
+.container {
+    min-width: 950px;
+    min-height: 600px;
+    position: relative;
+}
+
+a {
+    color: #333;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 17px;
+}
+
+article {
+    text-align: center;
+    padding-top: 50px;
+}
+
+article form {
+    width: 640px;
+    margin: 0 auto;
+}
+
+/*    左浮动  右浮动  start   */
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+/*    左浮动  右浮动  end   */

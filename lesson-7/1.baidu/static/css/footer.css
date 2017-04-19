@@ -1,0 +1,62 @@
+/*   底部  start   */
+
+footer {
+    text-align: center;
+    height: 160px;
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #666;
+}
+
+footer a {
+    color: #999;
+    font-weight: normal;
+}
+
+footer p {
+    margin: 0;
+    color: #999;
+}
+
+footer p a {
+    margin-left: 0;
+}
+
+.qrcode-img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/header/zbios_efde696.png) 0 0 no-repeat;
+}
+
+.qrcode-text {
+    margin-bottom: 20px;
+}
+
+.c-icon {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+    background: url(../img/header/icons_5859e57.png) no-repeat;
+}
+
+.c-icon-icrlogo {
+    background-position: -600px -96px;
+}
+
+.c-icon-jgwablogo {
+    background-position: -623px -96px;
+}
+
+.ml {
+    margin-left: 15px;
+}
+
+
+/*   底部  end   */

@@ -111,6 +111,7 @@
 
 .close-input {
     position: absolute;
+    left: -9999px;
 }
 
 /*    周年活动   end   */

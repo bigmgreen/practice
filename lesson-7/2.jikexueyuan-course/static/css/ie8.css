@@ -45,3 +45,11 @@
 #searchContent {
     color: #808080;
 }
+
+.footer-nav.wrap {
+    min-width: inherit;
+}
+
+.user-online {
+    top: -60px;;
+}
