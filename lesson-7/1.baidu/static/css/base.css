@@ -22,6 +22,12 @@ a {
     line-height: 24px;
     margin-left: 17px;
 }
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 article {
     text-align: center;
@@ -44,3 +50,13 @@ article form {
 }
 
 /*    左浮动  右浮动  end   */
+
+/*   清除浮动   */
+.clear:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}

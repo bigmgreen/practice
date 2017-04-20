@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,6 +8,7 @@
     <title>百度一下，你就知道</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="static/css/base.css"/>
+    <link rel="stylesheet" href="static/css/skin.css"/>
     <link rel="stylesheet" href="static/css/footer.css"/>
     <link rel="stylesheet" href="static/css/header.css"/>
     <link rel="stylesheet" href="static/css/index.css"/>
@@ -76,11 +78,11 @@
                 <div class="weather-mod">
                     <span class="cart"></span>
                     <div class="weather-title">
-                        <span class="pull-left">
+                            <span class="pull-left">
                             <span>04月19日</span>
                             <span>农历 三月廿三</span>
                             <span class="lunar-sevenday"><a target="_blank" href="#">未来七天天气</a></span>
-                        </span>
+                            </span>
                         <a href="#" class="pull-right">设置</a>
                     </div>
                     <ul class="weather-body">
@@ -133,8 +135,18 @@
                 </div>
             </div>
             <a href="#">宝箱</a>
-            <a href="#">换肤</a>
-            <a href="#">消息</a>
+            <a href="#" id="showSkin">换肤</a>
+            <div class="msg-box">
+                <a href="#">消息</a>
+                <div class="baidu-msg">
+                    <span class="cart"></span>
+                    <p class="no-msg-tip">您目前没有新消息</p>
+                    <div class="no-msg-btns">
+                        <span class="msg-btn">清空消息</span>
+                        <a href="#" class="msg-btn" target="_blank">消息设置</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <!-- 头部结束 -->
@@ -171,7 +183,116 @@
     </footer>
     <!-- 底部结束 -->
 </div>
-
+<!--    皮肤  start    -->
+<div id="skin" class="skin">
+    <div class="skin-wrap">
+        <div class="s-skin-header">
+            <ul class="s-skin-nav">
+                <li><span class="skinnav-nav-name">热门</span></li>
+                <li class="active"><span class="skinnav-nav-name">游戏</span></li>
+                <li><span class="skinnav-nav-name">卡通</span></li>
+                <li><span class="skinnav-nav-name">女神降临</span></li>
+                <li><span class="skinnav-nav-name">明星</span></li>
+                <li><span class="skinnav-nav-name">风景</span></li>
+                <li><span class="skinnav-nav-name">简约</span></li>
+                <li><span class="skinnav-nav-name">小清新</span></li>
+                <li>
+                    <div class="nav-vertial-border">|</div>
+                </li>
+                <li><span class="skinnav-nav-name">自定义</span></li>
+                <li><span class="skinnav-nav-name">最近使用</span></li>
+            </ul>
+            <div class="pull-right">
+                <div id="opacity" class="opacity">
+                    <span>背景透明度</span>
+                    <span class="opacity-line">
+                        <span class="opacity-slide">
+                            <span class="opacity-val">80%</span>
+                        </span>
+                    </span>
+                    <b><sup></sup>不使用换肤</b>
+                </div>
+                <a id="skinClose" href="#" class="skin-close"><i class="direction-icon"></i>收起</a>
+            </div>
+        </div>
+    </div>
+    <div class="s-skin-body">
+        <div class="skin-wrap">
+            <ul class="skin-item">
+                <li><a href="#" class="active">冒险岛2</a></li>
+                <li><a href="#">守望先锋</a></li>
+                <li><a href="#">魔兽世界</a></li>
+                <li><a href="#">炉石传说</a></li>
+                <li><a href="#">风暴英雄</a></li>
+                <li><a href="#">暗黑破坏神Ⅲ</a></li>
+                <li><a href="#">星际争霸II</a></li>
+            </ul>
+            <div class="clear">
+                <div class="pull-left">
+                    <div class="skins">
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/847.jpg"
+                             class="skin-img skin-img-1" width="195" height="119"
+                             src="./static/img/skin/847.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/850.jpg"
+                             class="skin-img skin-img-2" width="97" height="59"
+                             src="./static/img/skin/850.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/853.jpg"
+                             class="skin-img skin-img-3" width="97" height="59"
+                             src="./static/img/skin/853.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/854.jpg"
+                             class="skin-img skin-img-4" width="97" height="59"
+                             src="./static/img/skin/854.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/856.jpg"
+                             class="skin-img skin-img-5" width="97" height="59"
+                             src="./static/img/skin/856.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/851.jpg"
+                             class="skin-img skin-img-6" width="97" height="59"
+                             src="./static/img/skin/851.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/855.jpg"
+                             class="skin-img skin-img-7" width="195" height="119"
+                             src="./static/img/skin/855.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/857.jpg"
+                             class="skin-img skin-img-8" width="97" height="59"
+                             src="./static/img/skin/857.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/848.jpg"
+                             class="skin-img skin-img-9" width="97" height="59"
+                             src="./static/img/skin/848.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/849.jpg"
+                             class="skin-img skin-img-10" width="97" height="59"
+                             src="./static/img/skin/849.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/852.jpg"
+                             class="skin-img skin-img-11" width="97" height="59"
+                             src="./static/img/skin/852.jpg"/>
+                        <img data-skin-img
+                             data-src="./static/img/skin/bg/858.jpg"
+                             class="skin-img skin-img-12" width="97" height="59"
+                             src="./static/img/skin/858.jpg"/>
+                    </div>
+                    <span class="skin-turn">开启自动换肤</span>
+                </div>
+                <div class="pull-right">
+                    <div class="skin-preview-wrap">
+                        <img id="skinPreviewImg" class="skin-preview-img"/>
+                        <div id="skinPreview" class="skin-preview"></div>
+                    </div>
+                    <p class="preview-title">背景皮肤效果预览</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    皮肤  end    -->
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/storage/storage.js"></script>
 <script src="static/lib/throttle/throttle.js"></script>

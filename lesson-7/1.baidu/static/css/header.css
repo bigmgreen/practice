@@ -235,9 +235,9 @@ nav > a:nth-child(7) {
     color: #333;
     text-align: center;
     width: 66px;
-    height: 43px;
-    line-height: 43px;
-    padding-top: 9px;
+    height: 33px;
+    line-height: 33px;
+    padding-top: 0;
     margin: 0 auto;
     border-bottom: #f0f0f0 1px solid;
     font-size: 13px;
@@ -299,9 +299,9 @@ nav > a:nth-child(7) {
 /*   头部左边  end   */
 
 /*     天气浮动框   start     */
-.weather:hover .weather-mod{
+.weather:hover .weather-mod {
     visibility: visible;
-    opacity:1;
+    opacity: 1;
     transition: opacity 2s;
 }
 
@@ -425,3 +425,99 @@ nav > a:nth-child(7) {
 }
 
 /*     天气浮动框   end     */
+
+/*     消息弹框   start */
+.msg-box {
+    display: inline-block;
+    position: relative;
+}
+
+.msg-box:hover .baidu-msg {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.baidu-msg {
+    opacity: 0;
+    transition: opacity .5s;
+    visibility: hidden;
+    position: absolute;
+    top: 34px;
+    left: -124px;
+    font-size: 12px;
+    color: #333;
+    width: 278px;
+    z-index: 999;
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    background: #fff;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+}
+
+.no-msg-tip {
+    height: 88px;
+    line-height: 88px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(177, 177, 177, .20);
+    text-align: center;
+}
+
+.no-msg-btns {
+    height: 28px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-left: 50px;
+}
+
+.msg-btn {
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    display: inline;
+    width: 82px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    text-align: center;
+    background: #bcbcbc;
+    position: relative;
+    font-size: 12px !important;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+a.msg-btn {
+    color: #ffffff;
+    text-decoration: none;
+    background: #389cff;
+}
+
+span.msg-btn:after {
+    content: '';
+    font-size: 0;
+    width: 12px;
+    height: 9px;
+    background: url(../img/header/msg_bg_d75a3e82.png) no-repeat 0 0;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+
+a.msg-btn:after {
+    content: '';
+    width: 12px;
+    height: 10px !important;
+    background: url(../img/header/msg_bg_d75a3e82.png) no-repeat -15px 0;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+
+.baidu-msg .cart {
+    left: 120px;
+}
+
+/*     消息弹框   end */
