@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<div class="container">
+<div id="container" class="container">
     <!-- 头部开始 -->
     <header>
         <nav>
@@ -160,6 +160,7 @@
                 <input class="submit" type="submit" value="百度一下"/>
             </div>
         </form>
+        <div id="main"></div>
     </article>
     <!-- 主体结束 -->
     <!-- 底部开始 -->
@@ -205,12 +206,12 @@
             <div class="pull-right">
                 <div id="opacity" class="opacity">
                     <span>背景透明度</span>
-                    <span class="opacity-line">
-                        <span class="opacity-slide">
-                            <span class="opacity-val">80%</span>
+                    <span id="opacityLine" class="opacity-line">
+                        <span id="opacitySlide" class="opacity-slide">
+                            <span id="opacityVal" class="opacity-val">80%</span>
                         </span>
                     </span>
-                    <b><sup></sup>不使用换肤</b>
+                    <b id="closeSkin"><sup></sup>不使用换肤</b>
                 </div>
                 <a id="skinClose" href="#" class="skin-close"><i class="direction-icon"></i>收起</a>
             </div>
@@ -229,55 +230,43 @@
             </ul>
             <div class="clear">
                 <div class="pull-left">
-                    <div class="skins">
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/847.jpg"
-                             class="skin-img skin-img-1" width="195" height="119"
-                             src="./static/img/skin/847.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/850.jpg"
-                             class="skin-img skin-img-2" width="97" height="59"
-                             src="./static/img/skin/850.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/853.jpg"
-                             class="skin-img skin-img-3" width="97" height="59"
-                             src="./static/img/skin/853.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/854.jpg"
-                             class="skin-img skin-img-4" width="97" height="59"
-                             src="./static/img/skin/854.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/856.jpg"
-                             class="skin-img skin-img-5" width="97" height="59"
-                             src="./static/img/skin/856.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/851.jpg"
-                             class="skin-img skin-img-6" width="97" height="59"
-                             src="./static/img/skin/851.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/855.jpg"
-                             class="skin-img skin-img-7" width="195" height="119"
-                             src="./static/img/skin/855.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/857.jpg"
-                             class="skin-img skin-img-8" width="97" height="59"
-                             src="./static/img/skin/857.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/848.jpg"
-                             class="skin-img skin-img-9" width="97" height="59"
-                             src="./static/img/skin/848.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/849.jpg"
-                             class="skin-img skin-img-10" width="97" height="59"
-                             src="./static/img/skin/849.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/852.jpg"
-                             class="skin-img skin-img-11" width="97" height="59"
-                             src="./static/img/skin/852.jpg"/>
-                        <img data-skin-img
-                             data-src="./static/img/skin/bg/858.jpg"
-                             class="skin-img skin-img-12" width="97" height="59"
-                             src="./static/img/skin/858.jpg"/>
+                    <div id="skins" class="skins">
+                        <div class="skin-img skin-img-1">
+                            <img data-skin-img data-src="./static/img/skin/bg/847.jpg" width="195" height="119" src="./static/img/skin/847.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-2">
+                            <img data-skin-img data-src="./static/img/skin/bg/850.jpg" width="97" height="59" src="./static/img/skin/850.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-3">
+                            <img data-skin-img data-src="./static/img/skin/bg/853.jpg" width="97" height="59" src="./static/img/skin/853.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-4">
+                            <img data-skin-img data-src="./static/img/skin/bg/854.jpg" width="97" height="59" src="./static/img/skin/854.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-5">
+                            <img data-skin-img data-src="./static/img/skin/bg/856.jpg" width="97" height="59" src="./static/img/skin/856.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-6">
+                            <img data-skin-img data-src="./static/img/skin/bg/851.jpg" width="97" height="59" src="./static/img/skin/851.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-7">
+                            <img data-skin-img data-src="./static/img/skin/bg/855.jpg" width="195" height="119" src="./static/img/skin/855.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-8">
+                            <img data-skin-img data-src="./static/img/skin/bg/857.jpg" width="97" height="59" src="./static/img/skin/857.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-9">
+                            <img data-skin-img data-src="./static/img/skin/bg/848.jpg" width="97" height="59" src="./static/img/skin/848.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-10">
+                            <img data-skin-img data-src="./static/img/skin/bg/849.jpg" width="97" height="59" src="./static/img/skin/849.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-11">
+                            <img data-skin-img data-src="./static/img/skin/bg/852.jpg" width="97" height="59" src="./static/img/skin/852.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-12">
+                            <img data-skin-img data-src="./static/img/skin/bg/858.jpg" width="97" height="59" src="./static/img/skin/858.jpg"/>
+                        </div>
                     </div>
                     <span class="skin-turn">开启自动换肤</span>
                 </div>
@@ -292,6 +281,7 @@
         </div>
     </div>
 </div>
+<div id="skinBg" class="skin-bg"></div>
 <!--    皮肤  end    -->
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/storage/storage.js"></script>

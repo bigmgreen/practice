@@ -1,7 +1,6 @@
 .skin {
     position: fixed;
-    /*top: -500px;*/
-    top: 0;
+    top: -500px;
     transition: top .5s ease;
     left: 0;
     width: 100%;
@@ -88,6 +87,7 @@
 .opacity b {
     font-weight: normal;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .opacity-line {
@@ -198,10 +198,12 @@ a.skin-close {
     height: 178px;
     position: relative;
 }
+
 .skins .skin-img:hover {
     opacity: .7;
     transition: opacity .5s;
 }
+
 .skins .skin-img {
     display: block;
     position: absolute;
@@ -210,6 +212,10 @@ a.skin-close {
     cursor: pointer;
     opacity: 1;
     transition: opacity .5s;
+}
+
+.skins .skin-img img {
+    display: block;
 }
 
 .skins .skin-img-1 {
@@ -266,17 +272,20 @@ a.skin-close {
     top: 120px;
     left: 490px;
 }
+
 .skin-preview-wrap {
     width: 264px;
     height: 180px;
     position: relative;
 }
+
 .skin-preview {
     background: url(../img/skin/skin_preview_05c7c9e3.png) no-repeat -1000px -1000px;
     background-position: -275px 0;
     width: inherit;
     height: inherit;
 }
+
 .skin-preview-img {
     position: absolute;
     bottom: 0;
@@ -285,6 +294,7 @@ a.skin-close {
     width: 100%;
     z-index: -1;
 }
+
 .skin-turn:hover {
     color: #3388ff;
 }
@@ -337,4 +347,20 @@ a.skin-close {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /*   皮肤主体  end  */
+
+/*   选中样式  start   */
+
+.skin-img.selected:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/skin/skin_icon_png24_62d35ae7.png) no-repeat -1000px -1000px;
+    background-position: -180px 0;
+}
+
+/*   选中样式  end   */
