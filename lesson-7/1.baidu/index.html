@@ -152,21 +152,257 @@
     <!-- 头部结束 -->
     <!-- 主体开始 -->
     <article>
-        <img src="static/img/header/bd_logo1.png" width="270" height="129"/>
-        <form action="/">
-            <div class="input">
-                <input class="content" type="text" required/>
-                <span class="soutu-btn"></span>
-                <input class="submit" type="submit" value="百度一下"/>
+        <div class="baidu-logo"></div>
+        <div class="form-wrap">
+            <div id="searchWrap" class="">
+                <form action="/">
+                    <a href="#" class="icon-baidu"><img
+                            src="./static/img/index/logo_top_ca79a146.png"
+                            width="100" alt="logo"></a>
+                    <div class="input">
+                        <input class="content" type="text" required/>
+                        <span class="soutu-btn"></span>
+                        <input class="submit" type="submit" value="百度一下"/>
+                    </div>
+                </form>
             </div>
-        </form>
-        <div id="main"></div>
+        </div>
+        <div id="main" class="main">
+            <ul class="tab-nav">
+                <li class="active" data-tab="#myFocus"><i class="my-icon"></i>我的关注</li>
+                <li data-tab="#myIntro">推荐</li>
+                <li data-tab="#myNav">导航</li>
+                <li data-tab="#myVideo">视频</li>
+                <li data-tab="#myBuy">购物</li>
+            </ul>
+            <div class="tab-content">
+                <div id="myFocus" class="tab-item">
+                    <dl class="my-focus close">
+                        <dt id="myFocusSwitch"><i class="my-cart"></i>我的导航<span>（17）</span></dt>
+                        <dd>
+                            <span>综合</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95496.png" alt="新浪" height="16" width="16"
+                                             class="nav-icon">新浪</a>
+                            <a href="#"><img src="./static/img/index/my-focus/6000.png?3" alt="歌词网" height="16"
+                                             width="16" class="nav-icon">歌词网</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="百度云" height="16" width="16"
+                                             class="nav-icon">百度云</a>
+                        </dd>
+                        <dd>
+                            <span>贴吧</span>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="百度云" height="16" width="16"
+                                             class="nav-icon">李毅吧</a>
+                            <a href="#" title="四川工程职业技术学院"><img src="./static/img/index/my-focus/2556.png?3"
+                                                                alt="四川工程职业技术学院吧" height="16" width="16"
+                                                                class="nav-icon">四川工程职...</a>
+                        </dd>
+                        <dd>
+                            <span>体育</span>
+                            <a href="#"><img src="./static/img/index/my-focus/10677.png" alt="直播吧" height="16"
+                                             width="16" class="nav-icon">直播吧</a>
+                            <a href="#"><img src="./static/img/index/my-focus/10677.png" alt="直播吧" height="16"
+                                             width="16" class="nav-icon">nba直播吧</a>
+                        </dd>
+                        <dd>
+                            <span>影视</span>
+                            <a href="#"><img src="./static/img/index/my-focus/6000.png?3" alt="浙江卫视直播" height="16"
+                                             width="16" class="nav-icon">浙江卫视直播</a>
+                            <a href="#"><img src="./static/img/index/my-focus/94836.png" alt="浙江卫视" height="16"
+                                             width="16" class="nav-icon">浙江卫视</a>
+                            <a href="#"><img src="./static/img/index/my-focus/95533.png" alt="乐视网" height="16"
+                                             width="16" class="nav-icon">乐视网</a>
+                        </dd>
+                        <dd>
+                            <span>未分类</span>
+                            <a href="#"><img src="./static/img/index/my-focus/81407.png" alt="铁路客服中心" height="16"
+                                             width="16" class="nav-icon">铁路客服中心</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="网盘" height="16" width="16"
+                                             class="nav-icon">网盘</a>
+                        </dd>
+                        <dd>
+                            <span>游戏</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95577.png" alt="DNF官网" height="16"
+                                             width="16" class="nav-icon">DNF官网</a>
+                            <a href="#"><img src="./static/img/index/my-focus/95619.png" alt="3366小游戏" height="16"
+                                             width="16" class="nav-icon">3366小游戏</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7276.png" alt="彩色砖块" height="16"
+                                             width="16" class="nav-icon">彩色砖块</a>
+                        </dd>
+                        <dd>
+                            <span>音乐</span>
+                            <a href="#"><img src="./static/img/index/my-focus/80647.png" alt="我99伴奏翻唱" height="16"
+                                             width="16" class="nav-icon">我99伴奏翻唱</a>
+                        </dd>
+                        <dd>
+                            <span>购物</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95487.png" alt="淘宝网" height="16"
+                                             width="16" class="nav-icon">淘宝</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div id="myIntro" class="tab-item">
+                    <div class="my-intro">
+                        <div class="tips-content">
+                            <p><span class="tips-title"><i class="tips-icon"></i>以下信息根据您的兴趣推荐</span></p>
+                            <div class="tips-list">
+                                <div class="tips-item">
+                                    <img src="./static/img/index/my-intro/4.JPEG"
+                                         height="119" width="179">
+                                    <div class="tips-text">
+                                        <a href="#">24省份公务员联考今日举行 多地表态严查雷同作弊</a>
+                                        <div class="tips-from">
+                                            <a href="#">参考消息</a>
+                                            <span>04-22 00:13</span>
+                                            <span class="hot-point">热点</span>
+                                        </div>
+                                    </div>
+                                    <span class="tips-del"></span>
+                                </div>
+                                <div class="tips-item">
+                                    <img class="s-news-img" src="./static/img/index/my-intro/2.JPEG" height="119" width="179">
+                                    <div class="tips-text">
+                                        <a href="#">被埋没的“武林高手”，李连杰单挑不是他对手，拒绝好莱坞辱华角色</a>
+                                        <div class="tips-from">
+                                            <a href="#"> 健康网 </a>
+                                            <span>04-20 15:47</span>
+                                            <span class="hot-point">热点</span>
+                                        </div>
+                                    </div>
+                                    <span class="tips-del"></span>
+                                </div>
+                                <div class="tips-item">
+                                    <img class="s-news-img" src="./static/img/index/my-intro/3.JPEG" height="119" width="179">
+                                    <div class="tips-text">
+                                        <a href="#">台退将怒怼蔡当局：绝对反抗到底 军人不害怕牺牲</a>
+                                        <div class="tips-from">
+                                            <a href="#">参考消息</a>
+                                            <span>04-22 00:13</span>
+                                        </div>
+                                    </div>
+                                    <span class="tips-del"></span>
+                                </div>
+                                <div class="tips-item">
+                                    <img class="s-news-img" src="./static/img/index/my-intro/1.PNG" height="119" width="179">
+                                    <div class="tips-text">
+                                        <a href="#">重磅！《特工皇妃楚乔传》先导片引全球粉丝狂欢</a>
+                                        <div class="tips-from">
+                                            <a href="#"> 中国娱乐网 </a>
+                                            <span>04-22 00:13</span>
+                                            <span class="hot-point">热点</span>
+                                        </div>
+                                    </div>
+                                    <span class="tips-del"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <dl class="live-hot">
+                            <dt>
+                                <a href="#">实时热点</a>
+                                <a href="#" class="pull-right hot-refresh-icon"><span></span>换一换</a>
+                            </dt>
+                            <dd>
+                                <a href="#">最重女减肥500斤<span class="new-identity"></span></a>
+                                <a href="#">冯小树被罚4.99亿<span class="new-identity"></span></a>
+                                <a href="#">情侣被甩客在高速<span class="new-identity"></span></a>
+                                <a href="#">毒跑道仍在使用<span class="new-identity"></span></a>
+                                <a href="#">女子被前男友凌辱</a>
+                                <a href="#">医院被曝存矮窗口</a>
+                                <a href="#">女子战胜白血病</a>
+                                <a href="#">野外捡19斤乌龟</a>
+                                <a href="#">郑州公园叫停尬舞</a>
+                                <a href="#">扮皮卡丘乞讨救女</a>
+                                <a href="#">王思聪吐槽鹿晗</a>
+                                <a href="#">捡到钻戒顺手扔了</a>
+                                <a href="#">孕妇被男友骗积蓄</a>
+                                <a href="#">刘德华坐轮椅宣传</a>
+                                <a href="#">54岁叶童秀性感</a>
+                                <a href="#">带学生ktv上课</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div id="myNav" class="tab-item">
+                    <dl class="my-nav">
+                        <dt>猜你喜欢</dt>
+                        <dd class="no-mt">
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/9483.png?1">
+                                百度糯米
+                                <span>最高返利50.25%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95541.png">
+                                京东商城
+                                <span>最高返利80.00%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95780.png">
+                                1号店
+                                <span>最高返利75.60%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95537.png?99">
+                                苏宁易购
+                                <span>最高返利22.68%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95693.png">
+                                唯品会
+                                <span>最高返利7.00%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95517.png">
+                                当当网
+                                <span>最高返利75.00%</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="./static/img/index/my-nav/8850.png">爱康网</a>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/6000.png?3">csdn下载</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"
+                                             title="datetimepicker">datetime...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7617.png"
+                                             title="Apple - iTunes - 立刻下载 iTunes">Apple - iT...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3">盘多多</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"
+                                             title="jQuery插件库">jQuery插...</a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png"
+                                             title="如何在linux系统中设置静态ip地址">如何在lin...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/95541.png">装机大师</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png">百度云</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3">PDF书</a>
+                            <a href="#"><img src="./static/img/index/my-nav/95570.png">腾讯视频</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png">star法则</a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/6000.png?3">github</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3">bootstrap</a>
+                            <a href="#"><img src="./static/img/index/my-nav/10677.png">直播吧</a>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/8510.png">Google香港</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png">百度VIP</a>
+                            <a href="#"><img src="./static/img/index/my-nav/9321.png">微软商店</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div id="myVideo" class="tab-item">4</div>
+                <div id="myBuy" class="tab-item">5</div>
+            </div>
+        </div>
     </article>
     <!-- 主体结束 -->
     <!-- 底部开始 -->
     <footer>
-        <i class="qrcode-img"></i>
-        <div class="qrcode-text"><b>手机百度</b></div>
         <div>
             <a href="#">把百度设为主页</a>
             <a href="#">关于百度</a>
@@ -232,40 +468,52 @@
                 <div class="pull-left">
                     <div id="skins" class="skins">
                         <div class="skin-img skin-img-1">
-                            <img data-skin-img data-src="./static/img/skin/bg/847.jpg" width="195" height="119" src="./static/img/skin/847.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/847.jpg" width="195" height="119"
+                                 src="./static/img/skin/847.jpg"/>
                         </div>
                         <div class="skin-img skin-img-2">
-                            <img data-skin-img data-src="./static/img/skin/bg/850.jpg" width="97" height="59" src="./static/img/skin/850.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/850.jpg" width="97" height="59"
+                                 src="./static/img/skin/850.jpg"/>
                         </div>
                         <div class="skin-img skin-img-3">
-                            <img data-skin-img data-src="./static/img/skin/bg/853.jpg" width="97" height="59" src="./static/img/skin/853.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/853.jpg" width="97" height="59"
+                                 src="./static/img/skin/853.jpg"/>
                         </div>
                         <div class="skin-img skin-img-4">
-                            <img data-skin-img data-src="./static/img/skin/bg/854.jpg" width="97" height="59" src="./static/img/skin/854.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/854.jpg" width="97" height="59"
+                                 src="./static/img/skin/854.jpg"/>
                         </div>
                         <div class="skin-img skin-img-5">
-                            <img data-skin-img data-src="./static/img/skin/bg/856.jpg" width="97" height="59" src="./static/img/skin/856.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/856.jpg" width="97" height="59"
+                                 src="./static/img/skin/856.jpg"/>
                         </div>
                         <div class="skin-img skin-img-6">
-                            <img data-skin-img data-src="./static/img/skin/bg/851.jpg" width="97" height="59" src="./static/img/skin/851.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/851.jpg" width="97" height="59"
+                                 src="./static/img/skin/851.jpg"/>
                         </div>
                         <div class="skin-img skin-img-7">
-                            <img data-skin-img data-src="./static/img/skin/bg/855.jpg" width="195" height="119" src="./static/img/skin/855.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/855.jpg" width="195" height="119"
+                                 src="./static/img/skin/855.jpg"/>
                         </div>
                         <div class="skin-img skin-img-8">
-                            <img data-skin-img data-src="./static/img/skin/bg/857.jpg" width="97" height="59" src="./static/img/skin/857.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/857.jpg" width="97" height="59"
+                                 src="./static/img/skin/857.jpg"/>
                         </div>
                         <div class="skin-img skin-img-9">
-                            <img data-skin-img data-src="./static/img/skin/bg/848.jpg" width="97" height="59" src="./static/img/skin/848.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/848.jpg" width="97" height="59"
+                                 src="./static/img/skin/848.jpg"/>
                         </div>
                         <div class="skin-img skin-img-10">
-                            <img data-skin-img data-src="./static/img/skin/bg/849.jpg" width="97" height="59" src="./static/img/skin/849.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/849.jpg" width="97" height="59"
+                                 src="./static/img/skin/849.jpg"/>
                         </div>
                         <div class="skin-img skin-img-11">
-                            <img data-skin-img data-src="./static/img/skin/bg/852.jpg" width="97" height="59" src="./static/img/skin/852.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/852.jpg" width="97" height="59"
+                                 src="./static/img/skin/852.jpg"/>
                         </div>
                         <div class="skin-img skin-img-12">
-                            <img data-skin-img data-src="./static/img/skin/bg/858.jpg" width="97" height="59" src="./static/img/skin/858.jpg"/>
+                            <img data-skin-img data-src="./static/img/skin/bg/858.jpg" width="97" height="59"
+                                 src="./static/img/skin/858.jpg"/>
                         </div>
                     </div>
                     <span class="skin-turn">开启自动换肤</span>
@@ -283,6 +531,14 @@
 </div>
 <div id="skinBg" class="skin-bg"></div>
 <!--    皮肤  end    -->
+<!--    回到顶部  start    -->
+
+<div id="goTop" class="go-top">
+    <i class="go-top-icon"></i>
+    <span class="go-top-text">回到顶部</span>
+</div>
+
+<!--    回到顶部  end    -->
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/storage/storage.js"></script>
 <script src="static/lib/throttle/throttle.js"></script>

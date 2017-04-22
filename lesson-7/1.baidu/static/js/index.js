@@ -1,4 +1,43 @@
 $(function () {
+
+    /*
+     * 滚动到一定位置固定搜索框
+     * */
+    (function () {
+        var box = $('#searchWrap');
+        $(window).scroll(throttle(function () {
+            if ($(this).scrollTop() >= 210) {
+                box.addClass('active');
+            } else {
+                box.removeClass('active');
+            }
+        }, 66));
+    })();
+
+    /*
+     * 回到顶部
+     */
+    (function () {
+        var top = $('#goTop');
+        top.hide();
+        $(window).scroll(throttle(function () {
+            if ($(this).scrollTop() <= 10) {
+                top.fadeOut(500);
+            } else {
+                top.fadeIn(500);
+            }
+        }));
+        top.click(function () {
+            if ($(window).scrollTop() <= 10) {
+                return false;
+            }
+            $("body,html").animate({
+                scrollTop: 0
+            }, 200);
+            return false;
+        });
+    })();
+
     /*
      * 皮肤相关操作
      * */
@@ -23,6 +62,7 @@ $(function () {
                 skinPreviewImg.attr('src', selected.attr('src'));
                 selected.parent().addClass('selected');
                 opacity.css('visibility', 'visible');
+                $('body').addClass('set-skin');
             }
         })();
 
@@ -34,6 +74,7 @@ $(function () {
             skinBg.css('background-image', "url(" + src + ")");
             skins.find('.selected').removeClass('selected');
             $(this).parent().addClass('selected');
+            $('body').addClass('set-skin');
             setStorage('baidu_skin_src', src + '=' + $(this).parent().index());
         }).hover(function () {
             skinPreviewImg.attr('src', $(this).attr('src'));
@@ -60,6 +101,7 @@ $(function () {
             $('#main').css('opacity', 1);
             $('#opacityVal').html('100%');
             $('#opacitySlide').css('left', 80);
+            $('body').removeClass('set-skin');
         });
 
         //开启皮肤
@@ -148,4 +190,22 @@ $(function () {
             }
         });
     })(document);
+
+    /*
+     * tab切换
+     * */
+    $('[data-tab]').click(function () {
+        var old = $(this).siblings('.active');
+        old.removeClass('active');
+        $(old.data('tab')).removeClass('active');
+        $(this).addClass('active');
+        $($(this).data('tab')).addClass('active');
+    });
+
+    /*
+    * 我的关注隐藏显示
+    * */
+    $('#myFocusSwitch').click(function () {
+        $(this).parent().toggleClass('close');
+    });
 });

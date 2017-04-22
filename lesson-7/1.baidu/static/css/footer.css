@@ -2,11 +2,8 @@
 
 footer {
     text-align: center;
-    height: 160px;
-    position: absolute;
-    bottom: 35px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     overflow: hidden;
     color: #666;
 }
@@ -23,17 +20,6 @@ footer p {
 
 footer p a {
     margin-left: 0;
-}
-
-.qrcode-img {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    background: url(../img/header/zbios_efde696.png) 0 0 no-repeat;
-}
-
-.qrcode-text {
-    margin-bottom: 20px;
 }
 
 .c-icon {

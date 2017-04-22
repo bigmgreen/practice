@@ -364,3 +364,53 @@ a.skin-close {
 }
 
 /*   选中样式  end   */
+
+/*   body元素设置皮肤后的显示   start  */
+
+.set-skin header {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid transparent;
+    background-image: linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+}
+
+.set-skin nav > a,
+.set-skin footer a,
+.set-skin footer p,
+.set-skin nav > a:hover,
+.set-skin .bdpfmenu-wrap > a,
+.set-skin .nav-left > a,
+.set-skin .weather > a,
+.set-skin .msg-box > a {
+    color: #ffffff;
+}
+
+.set-skin .input .submit {
+    color: #000000;
+    background-color: #e8e8e8;
+}
+
+.set-skin .baidu-logo {
+    background-image: url(../img/skin/logo_white_fe6da1ec.png);
+}
+
+.set-skin .input .submit:hover {
+    background: #e8e8e8;
+    box-shadow: none;
+}
+
+.set-skin .go-top-icon {
+    background-position: -39px -9px;
+}
+
+.set-skin .go-top {
+    border: 0 none;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.set-skin .go-top-text {
+    color: #ffffff;
+}
+
+/*   body元素设置皮肤后的显示   end  */
