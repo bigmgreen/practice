@@ -98,7 +98,7 @@ $(function () {
             skinPreview.css('background-position', '-275px 0');
             setStorage('baidu_skin_src', '');
             setStorage('baidu_opacity', 80);
-            $('#main').css('opacity', 1);
+            $('#main').css('background-color', 'rgba(255,255,255,1)');
             $('#opacityVal').html('100%');
             $('#opacitySlide').css('left', 80);
             $('body').removeClass('set-skin');
@@ -130,7 +130,11 @@ $(function () {
                     this.step = document.getElementById(option.scroll);
                 }
                 this.max = option.max || 0;
-                this.value = (option.value > option.max ? option.max : option.value) || 0;
+                if (option.value == '') {
+                    this.value = option.max;
+                } else {
+                    this.value = (option.value > option.max ? option.max : option.value) || 0;
+                }
 
                 option.init && option.init(this.value);
 
@@ -173,12 +177,10 @@ $(function () {
                 , value: getStorage('baidu_opacity')
                 , max: 80
                 , fn: function (pos) {
-                    //TODO 只透明新闻模块
-                    $('#main').css('opacity', pos / 80);
+                    $('#main').css('background-color', 'rgba(255,255,255,' + pos / 80 + ')');
                 }
                 , init: function (pos) {
-                    //TODO 只透明新闻模块
-                    $('#main').css('opacity', pos / 80);
+                    $('#main').css('background-color', 'rgba(255,255,255,' + pos / 80 + ')');
                 }
             });
         })();
@@ -194,18 +196,68 @@ $(function () {
     /*
      * tab切换
      * */
-    $('[data-tab]').click(function () {
-        var old = $(this).siblings('.active');
-        old.removeClass('active');
-        $(old.data('tab')).removeClass('active');
-        $(this).addClass('active');
-        $($(this).data('tab')).addClass('active');
-    });
+    (function () {
+        var more = $('#loadMore');
+        $('[data-tab]').click(function (e) {
+            var old = $(this).siblings('.active');
+            old.removeClass('active');
+            $(old.data('tab')).removeClass('active');
+            $(this).addClass('active');
+            $($(this).data('tab')).addClass('active');
+            setStorage('baidu_tab', '[data-tab=' + $(this).data('tab') + ']');
+
+            var tab = $(this).data('tab');
+            if (tab != '#myNav' && tab != '#myFocus') {
+                more.fadeIn();
+            } else {
+                more.hide();
+            }
+
+        });
+
+        var tab = getStorage('baidu_tab');
+        if (tab) {
+            $(tab).trigger('click');
+        }
+    })();
 
     /*
-    * 我的关注隐藏显示
-    * */
+     * 我的关注隐藏显示
+     * */
     $('#myFocusSwitch').click(function () {
         $(this).parent().toggleClass('close');
     });
+
+    /*
+     * 滚动加载更多
+     * */
+    (function () {
+        function load() {
+            var tab = $('[data-tab]').parent().find('.active').data('tab');
+            if (tab != '#myNav' && tab != '#myFocus') {
+                var jquery_tab = $(tab);
+                if (tab == '#myIntro') {
+                    jquery_tab.find('.tips-list').append(jquery_tab.find('[data-content]').first().html());
+                } else if (tab == '#myVideo') {
+                    jquery_tab.find('.my-video').append(jquery_tab.find('[data-content]').first().html());
+                } else {
+                    jquery_tab.find('.my-buy').append(jquery_tab.find('[data-content]').first().html());
+                }
+            }
+        }
+
+        $('#loadMore').click(load);
+
+        /*
+         * 滚动监听
+         * */
+        $(window).scroll(throttle(function () {
+            var scrollTop = $(this).scrollTop();
+            var scrollHeight = $(document).height();
+            var windowHeight = $(this).height();
+            if (scrollTop + windowHeight == scrollHeight) {
+                load();
+            }
+        }));
+    })();
 });

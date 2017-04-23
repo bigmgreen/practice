@@ -111,7 +111,6 @@ nav > a:nth-child(7) {
 .cart:before {
     content: ' ';
     position: absolute;
-    position: absolute;
     border-top: 0;
     border-bottom: 10px solid #d1d1d1;
     border-left: 6px solid transparent;
@@ -275,6 +274,7 @@ nav > a:nth-child(7) {
 .weather a {
     text-decoration: none;
     margin-right: -15px;
+    white-space: nowrap;
 }
 
 .weather span {
@@ -521,3 +521,11 @@ a.msg-btn:after {
 }
 
 /*     消息弹框   end */
+
+/*   代码在火狐上的修正   */
+@-moz-document url-prefix() {
+    .bdpfmenu .cart,
+    .baidu-msg .cart {
+        top: 10px;
+    }
+}

@@ -6,6 +6,10 @@ body {
     font: 12px arial;
     color: #333;
     min-width: 890px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /*   总容器   */
@@ -113,3 +117,26 @@ article form {
 }
 
 /*   回到顶部  end   */
+
+/*   下滚加载  start   */
+
+.s-more-bar {
+    width: 190px;
+    height: 45px;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #999;
+    text-align: center;
+    padding-bottom: 30px;
+    display: none;
+}
+.s-more-bar .rect {
+    height: 18px;
+    width: 34px;
+    font-size: 0;
+    display: block;
+    margin: 10px auto 0 auto;
+    border: 0;
+    background: url(../img/index/card_setts_fdb17359.png) no-repeat -1px -36px;
+}
+/*   下滚加载  end   */

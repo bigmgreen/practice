@@ -413,4 +413,21 @@ a.skin-close {
     color: #ffffff;
 }
 
+.set-skin .tab-nav li.active,
+.set-skin .tab-nav li:hover {
+    background-color: rgba(179, 182, 187, .3) !important;
+}
+
+.set-skin .s-more-bar {
+    color: #fff;
+}
+
+.set-skin .s-more-bar .rect {
+    background-position: -107px -22px;
+}
+
+.set-skin .tips-title {
+    background-color: inherit;
+}
+
 /*   body元素设置皮肤后的显示   end  */
