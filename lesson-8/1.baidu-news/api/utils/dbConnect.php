@@ -13,7 +13,7 @@ if (!$link) {
 function getAll($pageNumber)
 {
     $pageNumber = $pageNumber * $GLOBALS['pageSize'];
-    $sql = 'SELECT * FROM news_list order by id desc LIMIT ' . $pageNumber . ',' . $GLOBALS['pageSize'];
+    $sql = 'SELECT * FROM news_list WHERE status = 0 order by id desc LIMIT ' . $pageNumber . ',' . $GLOBALS['pageSize'];
     return mysqli_query($GLOBALS['link'], $sql);
 }
 
@@ -26,7 +26,7 @@ function getAll($pageNumber)
 function getNewsByType($type, $pageNumber)
 {
     $pageNumber = $pageNumber * $GLOBALS['pageSize'];
-    $sql = 'SELECT * FROM news_list WHERE TYPE =' . $type . ' order by id desc LIMIT ' . $pageNumber . ',' . $GLOBALS['pageSize'];
+    $sql = 'SELECT * FROM news_list WHERE status = 0 AND TYPE =' . $type . ' order by id desc LIMIT ' . $pageNumber . ',' . $GLOBALS['pageSize'];
     return mysqli_query($GLOBALS['link'], $sql);
 }
 
@@ -52,7 +52,7 @@ function getTotalByType($type)
 {
     $sql = 'SELECT COUNT(*) FROM news_list';
     if ($type != 0) {
-        $sql = $sql . ' WHERE TYPE=' . $type;
+        $sql = $sql . ' WHERE status = 0 AND TYPE=' . $type;
     }
 
     $result = mysqli_query($GLOBALS['link'], $sql);
@@ -70,6 +70,70 @@ function getTotalByType($type)
 function add($title, $imgSrc, $date, $type, $from)
 {
     $sql = 'INSERT INTO `news_list`(`title`, `imgSrc`, `date`, `type`, `from`) VALUES ("' . $title . '","' . $imgSrc . '","' . $date . '","' . $type . '","' . $from . '")';
+    return mysqli_query($GLOBALS['link'], $sql);
+}
+
+/**
+ * 编辑一条数据
+ * @param $id
+ * @param $title
+ * @param $imgSrc
+ * @param $date
+ * @param $type
+ * @param $from
+ */
+function update($id, $title, $imgSrc, $date, $type, $from)
+{
+    $sql = 'UPDATE `news_list` SET `title`="' . $title . '",`imgSrc`="' . $imgSrc . '",`date`="' . $date . '",`type`="' . $type . '",`from`="' . $from . '" WHERE id=' . $id;
+    return mysqli_query($GLOBALS['link'], $sql);
+}
+
+/**
+ * 编辑一条数据通过类型和id
+ * @param $id
+ * @param $title
+ * @param $imgSrc
+ * @param $date
+ * @param $type
+ * @param $from
+ */
+function updateById($id, $title, $imgSrc, $date, $from)
+{
+    $sql = 'UPDATE `news_list` SET `title`="' . $title . '",`imgSrc`="' . $imgSrc . '",`date`="' . $date . '",`from`="' . $from . '" WHERE id=' . $id;
+    return mysqli_query($GLOBALS['link'], $sql);
+}
+
+/**
+ * 按照id删除某个记录
+ * @return bool|mysqli_result
+ */
+function del($id)
+{
+    $sql = 'UPDATE `news_list` SET `status`=1' . ' WHERE id=' . $id;
+    return mysqli_query($GLOBALS['link'], $sql);
+}
+
+/**
+ * 按照id删除某个记录
+ * @param $id
+ * @return bool|mysqli_result
+ */
+function recovery($id)
+{
+    $sql = 'UPDATE `news_list` SET `status`=0' . ' WHERE id=' . $id;
+    return mysqli_query($GLOBALS['link'], $sql);
+}
+
+/**
+ * 获取回收站的数据
+ * @param $type
+ * @param $pageNumber
+ * @return bool|mysqli_result
+ */
+function getDelNewsByType($pageNumber)
+{
+    $pageNumber = $pageNumber * $GLOBALS['pageSize'];
+    $sql = 'SELECT * FROM news_list WHERE status = 1 order by id desc LIMIT ' . $pageNumber . ',' . $GLOBALS['pageSize'];
     return mysqli_query($GLOBALS['link'], $sql);
 }
 

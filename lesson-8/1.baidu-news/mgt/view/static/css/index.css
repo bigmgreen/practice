@@ -66,7 +66,9 @@ td, th {
     text-align: center;
     vertical-align: middle !important;
 }
-
+td .text-muted {
+    margin: 0 !important;
+}
 /*   表格样式  end   */
 
 /*   加载动画   start   */
@@ -133,3 +135,17 @@ td, th {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+/*   提示信息  start   */
+
+#msg {
+    display: none;
+    position: fixed;
+    width: 30%;
+    text-align: center;
+    top: 16%;
+    left: 38%;
+    z-index: 9999999;
+}
+
+/*   提示信息  end   */

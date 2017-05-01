@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title>首页</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="static/lib/bootstrap/css/bootstrap.min.css"/>
@@ -98,6 +98,11 @@
                             <h4 class="panel-title button"><span class="glyphicon glyphicon-align-right"></span>生活</h4>
                         </div>
                     </div>
+                    <div data-type="-1" data-text="回收站" class="panel panel-default">
+                        <div class="panel-heading hand">
+                            <h4 class="panel-title button"><span class="glyphicon glyphicon-trash"></span>回收站</h4>
+                        </div>
+                    </div>
                 </div>
                 <!-- 左菜单  end -->
             </div>
@@ -109,7 +114,8 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <a id="pageTitle" href="#"></a>
-                                <a data-toggle="modal" data-target="#addModal" class="pull-right"><i class="glyphicon glyphicon-plus"></i></a>
+                                <a data-toggle="modal" data-target="#addModal" class="pull-right"><i
+                                        class="glyphicon glyphicon-plus"></i></a>
                             </h3>
                         </div>
                         <div id="main" class="panel-body"></div>
@@ -139,17 +145,29 @@
                 <td>{{index @index ../currentPage}}</td>
                 <td title="{{title}}"><span data-text-hidden class="text-hidden">{{title}}</span></td>
                 <td title="{{imgSrc}}"><span data-text-hidden class="text-hidden">{{imgSrc}}</span></td>
-                <td>{{date}}</td>
+                <td>{{formatDate date}}</td>
                 <td>{{from}}</td>
+                {{#bool status 0}}
                 <td>
-                    <button type="button" class="btn btn-primary">编辑</button>
-                    <button type="button" class="btn btn-danger">删除</button>
+                    <button data-update data-id="{{id}}" type="button" class="btn btn-primary">编辑</button>
+                    <button data-del data-id="{{id}}" type="button" class="btn btn-danger">删除</button>
                 </td>
+                {{else}}
+                <td>
+                    <button data-on data-id="{{id}}" type="button" class="btn btn-primary">恢复</button>
+                </td>
+                {{/bool}}
             </tr>
             {{/each}}
+            {{#unless list.length}}
+                <tr>
+                    <td colspan="6"><p class="text-muted">没有数据！</p></td>
+                </tr>
+            {{/unless}}
             </tbody>
         </table>
     </div>
+    {{#if totalPage}}
     <div class="pull-right">
         <ul class="pagination">
 
@@ -161,11 +179,11 @@
 
             {{#each totalPage}}
 
-                {{#bool ../currentPage @index}}
-                <li data-page="{{@index}}" class="active"><a href="#">{{addOne @index}}</a></li>
-                {{else}}
-                <li data-page="{{@index}}"><a href="#">{{addOne @index}}</a></li>
-                {{/bool}}
+            {{#bool ../currentPage @index}}
+            <li data-page="{{@index}}" class="active"><a href="#">{{addOne @index}}</a></li>
+            {{else}}
+            <li data-page="{{@index}}"><a href="#">{{addOne @index}}</a></li>
+            {{/bool}}
 
             {{/each}}
 
@@ -177,23 +195,72 @@
 
         </ul>
     </div>
+    {{/if}}
 </script>
 
 <!--   弹框模板     -->
 <script id="modalTemplate" type="text/x-handlebars-template">
-    <div class="modal fade" id="myModal">
+    <div class="modal fade" data-update-modal>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title">编辑</h4>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="update_title" class="col-sm-2 control-label">标题</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       id="update_title"
+                                       name="title"
+                                       value="{{title}}"
+                                       placeholder="标题不能为空"/>
+                                <span class="text-danger">标题不能为空</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="update_imgSrc" class="col-sm-2 control-label">图片地址</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       id="update_imgSrc"
+                                       name="imgSrc"
+                                       value="{{imgSrc}}"
+                                       placeholder="图片地址不能为空"/>
+                                <span class="text-danger">图片地址不能为空</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="update_date" class="col-sm-2 control-label">日期</label>
+                            <div class="col-sm-10">
+                                <input type="date"
+                                       class="form-control"
+                                       id="update_date"
+                                       name="date"
+                                       value="{{formatDate date}}"
+                                       placeholder="日期不能为空"/>
+                                <span class="text-danger">日期不能为空</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="update_from" class="col-sm-2 control-label">来源</label>
+                            <div class="col-sm-10">
+                                <input type="text"
+                                       class="form-control"
+                                       id="update_from"
+                                       name="from"
+                                       value="{{from}}"
+                                       placeholder="来源不能为空"/>
+                                <span class="text-danger">来源不能为空</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button data-update-save type="button" class="btn btn-primary">保存</button>
                 </div>
             </div>
         </div>
@@ -212,28 +279,28 @@
                     <div class="form-group">
                         <label for="title" class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="title" name="title" placeholder="标题不能为空">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="标题不能为空"/>
                             <span class="text-danger">标题不能为空</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="imgSrc" class="col-sm-2 control-label">图片地址</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="imgSrc" name="imgSrc" placeholder="图片地址不能为空">
+                            <input type="text" class="form-control" id="imgSrc" name="imgSrc" placeholder="图片地址不能为空"/>
                             <span class="text-danger">图片地址不能为空</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="date" class="col-sm-2 control-label">日期</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" id="date" name="date" placeholder="日期不能为空">
+                            <input type="date" class="form-control" id="date" name="date" placeholder="日期不能为空"/>
                             <span class="text-danger">日期不能为空</span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="from" class="col-sm-2 control-label">来源</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="from" name="from" placeholder="来源不能为空">
+                            <input type="text" class="form-control" id="from" name="from" placeholder="来源不能为空"/>
                             <span class="text-danger">来源不能为空</span>
                         </div>
                     </div>
@@ -246,10 +313,45 @@
     </div>
 </div>
 
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">删除</h4>
+            </div>
+            <div class="modal-body">确定删除这个新闻？</div>
+            <div class="modal-footer">
+                <button type="button" id="delSave" class="btn btn-primary">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="onModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">恢复</h4>
+            </div>
+            <div class="modal-body">确定恢复这个新闻？</div>
+            <div class="modal-footer">
+                <button type="button" id="onSave" class="btn btn-primary">恢复</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="msg" class="center-block">
+    <div class="alert alert-warning alert-dismissible">
+        <strong>操作成功!</strong>
+    </div>
+</div>
 <!-- 主内容  end -->
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="static/lib/tools/tools.js"></script>
+<script src="static/lib/storage/storage.js"></script>
 <script src="static/lib/handlebars/handlebars.min.js"></script>
 <script src="static/js/index.js"></script>
 </body>

@@ -137,7 +137,7 @@ $(function () {
         var scrollHeight = $(document).height();
         var windowHeight = $(this).height();
         if (scrollTop + windowHeight === scrollHeight) {
-            QueryData.load();
+            QueryData.load(QueryData.type);
         }
     }));
 });
