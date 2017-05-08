@@ -1,0 +1,16 @@
+{
+  "name": "1.baidu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fis-conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fis-optimizer-html-minifier": "0.0.9",
+    "fis3-packager-deps-pack": "^0.1.2",
+    "fis3-postpackager-loader": "^2.1.4"
+  }
+}
