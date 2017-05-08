@@ -31,13 +31,13 @@ canvas {
     opacity: .5;
     cursor: pointer;
     transition: opacity .5s, transform .5s;
-    transform-origin: 0 0;
+    transform-origin: 50% 0;
 }
 
 .item:hover {
     transition: opacity .5s, transform .5s;
     opacity: 1;
     transform: scale(1.5);
-    transform-origin: 0 0;
+    transform-origin: 50% 0;
     z-index: 10;
 }

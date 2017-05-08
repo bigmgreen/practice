@@ -1,0 +1,433 @@
+.skin {
+    position: fixed;
+    top: -500px;
+    transition: top .5s ease;
+    left: 0;
+    width: 100%;
+    height: 309px;
+    background: #fff;
+    z-index: 1113;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .07);
+}
+
+.skin-wrap {
+    width: 911px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*   皮肤头部  start   */
+.s-skin-header {
+    height: 46px;
+}
+
+.s-skin-nav {
+    height: 46px;
+    float: left;
+}
+
+.s-skin-nav li {
+    cursor: pointer;
+    height: 46px;
+    padding: 0 8px;
+    font-size: 13px;
+    float: left;
+    background: none;
+    transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -webkit-transition: background 500ms;
+}
+
+.s-skin-nav li.active,
+.s-skin-nav li:hover {
+    background: #389cff;
+    transition: background 500ms;
+    -moz-transition: background 500ms;
+    -o-transition: background 500ms;
+    -webkit-transition: background 500ms;
+}
+
+.s-skin-nav li.active .skinnav-nav-name,
+.s-skin-nav li:hover .skinnav-nav-name {
+    color: #ffffff;
+}
+
+.s-skin-nav .skinnav-nav-name {
+    display: inline-block;
+    margin-top: 19px;
+    color: #666666;
+}
+
+.nav-vertial-border {
+    margin-top: 20px;
+    height: 15px;
+    width: 1px;
+    overflow: hidden;
+    background: #dedede;
+    zoom: 1;
+}
+
+/*   皮肤头部  end   */
+
+/*   透明度   start   */
+
+.opacity {
+    color: #666;
+    width: 280px;
+    height: 46px;
+    padding-top: 19px;
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.opacity b {
+    font-weight: normal;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.opacity-line {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    margin: 0 6px;
+    height: 4px;
+    border-top: 1px solid #e1e1e1;
+    background: #f2f2f2;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.opacity-slide {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.opacity-val {
+    position: relative;
+    top: -18px;
+    left: -5px;
+}
+
+.opacity b sup {
+    width: 14px;
+    height: 13px;
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+    vertical-align: middle;
+    background: url(../img/skin/skin_icon_82b6ef5b.png) no-repeat -1000px -1000px;
+    background-position: -24px -176px;
+
+}
+
+a.skin-close {
+    cursor: pointer;
+    width: 40px;
+    margin-left: 25px;
+    color: #0079f5;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.direction-icon {
+    margin-right: 2px;
+    background: url(../img/skin/skin_icon_82b6ef5b.png) no-repeat -44px -175px;
+    width: 11px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+/*   透明度   end   */
+
+/*   皮肤主体  start  */
+.s-skin-body {
+    border-top: 1px #e3e3e3 solid;
+    border-bottom: 1px #e3e3e3 solid;
+    height: 261px;
+}
+
+.skin-item {
+    font-size: 0;
+}
+
+.skin-item li {
+    display: inline-block;
+
+}
+
+.skin-item a:hover,
+.skin-item a.active {
+    color: #0079f5;
+}
+
+.skin-item a {
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    font-size: 13px;
+    color: #666;
+    padding: 0 9px;
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.skins {
+    width: 583px;
+    height: 178px;
+    position: relative;
+}
+
+.skins .skin-img:hover {
+    opacity: .7;
+    transition: opacity .5s;
+}
+
+.skins .skin-img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.skins .skin-img img {
+    display: block;
+}
+
+.skins .skin-img-1 {
+    left: 0;
+}
+
+.skins .skin-img-2 {
+    left: 196px;
+}
+
+.skins .skin-img-3 {
+    left: 294px;
+}
+
+.skins .skin-img-4 {
+    left: 392px;
+}
+
+.skins .skin-img-5 {
+    left: 490px;
+}
+
+.skins .skin-img-6 {
+    top: 60px;
+    left: 196px;
+}
+
+.skins .skin-img-7 {
+    top: 60px;
+    left: 294px;
+}
+
+.skins .skin-img-8 {
+    top: 60px;
+    left: 490px;
+}
+
+.skins .skin-img-9 {
+    top: 120px;
+    left: 0;
+}
+
+.skins .skin-img-10 {
+    top: 120px;
+    left: 98px;
+}
+
+.skins .skin-img-11 {
+    top: 120px;
+    left: 196px;
+}
+
+.skins .skin-img-12 {
+    top: 120px;
+    left: 490px;
+}
+
+.skin-preview-wrap {
+    width: 264px;
+    height: 180px;
+    position: relative;
+}
+
+.skin-preview {
+    background: url(../img/skin/skin_preview_05c7c9e3.png) no-repeat -1000px -1000px;
+    background-position: -275px 0;
+    width: inherit;
+    height: inherit;
+}
+
+.skin-preview-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: -1;
+}
+
+.skin-turn:hover {
+    color: #3388ff;
+}
+
+.skin-turn {
+    width: 115px;
+    height: 33px;
+    line-height: 33px;
+    color: #666;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 22px;
+}
+
+.skin-turn:hover:after {
+    border: 1px solid #3388ff;
+}
+
+.skin-turn:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.preview-title {
+    float: right;
+    margin-right: 0;
+    margin-top: 7px;
+    text-align: center;
+    width: 262px;
+    font-size: 12px;
+    color: #666;
+}
+
+.skin-bg {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 1000px;
+    z-index: -10;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*   皮肤主体  end  */
+
+/*   选中样式  start   */
+
+.skin-img.selected:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/skin/skin_icon_png24_62d35ae7.png) no-repeat -1000px -1000px;
+    background-position: -180px 0;
+}
+
+/*   选中样式  end   */
+
+/*   body元素设置皮肤后的显示   start  */
+
+.set-skin header {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid transparent;
+    background-image: linear-gradient(rgba(15, 25, 50, .3) 0, rgba(15, 25, 50, .3) 100%);
+}
+
+.set-skin nav > a,
+.set-skin footer a,
+.set-skin footer p,
+.set-skin nav > a:hover,
+.set-skin .bdpfmenu-wrap > a,
+.set-skin .nav-left > a,
+.set-skin .weather > a,
+.set-skin .msg-box > a {
+    color: #ffffff;
+}
+
+.set-skin .input .submit {
+    color: #000000;
+    background-color: #e8e8e8;
+}
+
+.set-skin .baidu-logo {
+    background-image: url(../img/skin/logo_white_fe6da1ec.png);
+}
+
+.set-skin .input .submit:hover {
+    background: #e8e8e8;
+    box-shadow: none;
+}
+
+.set-skin .go-top-icon {
+    background-position: -39px -9px;
+}
+
+.set-skin .go-top {
+    border: 0 none;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.set-skin .go-top-text {
+    color: #ffffff;
+}
+
+.set-skin .tab-nav li.active,
+.set-skin .tab-nav li:hover {
+    background-color: rgba(179, 182, 187, .3) !important;
+}
+
+.set-skin .s-more-bar {
+    color: #fff;
+}
+
+.set-skin .s-more-bar .rect {
+    background-position: -107px -22px;
+}
+
+.set-skin .tips-title {
+    background-color: inherit;
+}
+
+/*   body元素设置皮肤后的显示   end  */

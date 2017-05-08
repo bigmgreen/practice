@@ -1,0 +1,246 @@
+/*   头部  start   */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.top {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #5dabf0;
+    position: relative;
+    z-index: 100;
+    background: #3e98f0 url(../img/bg-news-logo_344ce44.png) no-repeat;
+    background-position: center 10px;
+    background-size: 65px auto;
+    font-size: 0;
+}
+
+.top .top-icon {
+    width: 34px;
+    height: 48px;
+    background: url(../img/icon-bg_6e9bc53.png) no-repeat;
+    background-size: 40px 500px;
+    display: inline-block;
+}
+
+.top .top-baidu {
+    background-position: center 6px;
+    margin-left: 8px;
+}
+
+.top .top-user {
+    background-position: center -461px;
+    margin-left: 10px;
+}
+
+.top .top-search {
+    background-position: center -105px;
+    margin-right: 8px;
+}
+
+.top .top-add {
+    background-position: center -160px;
+    margin-right: 10px;
+}
+
+.nav {
+    background-color: #3e98f0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.nav-links {
+    background-image: url(../img/webbg_46aa018.png);
+    background-size: 10px;
+    background-repeat: repeat;
+    background-position: top left;
+    padding: 0 7px;
+    font-size: 0;
+}
+
+.nav-links li {
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-links a {
+    white-space: nowrap;
+    height: .4rem;
+    line-height: .41rem;
+    color: #c2daf8;
+    font-size: .16rem;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.nav-links .active a {
+    color: #fff !important;
+    border-bottom: 2px solid #fff !important;
+    height: 38px !important;
+    box-sizing: content-box;
+}
+
+/*   头部  end   */
+
+/*   主体  start   */
+
+main {
+    padding-top: 128px;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    padding: 8.5px 0 10px;
+    margin: 0 17px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 0;
+}
+
+.item:after {
+    content: '';
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+    border-bottom: 1px solid #eaeaea;
+    -webkit-transform: scale(0.333);
+    transform: scale(0.333);
+    width: 300%;
+}
+
+.item-img {
+    width: 33.33%;
+    height: 1rem;
+    display: inline-block;
+    margin-left: 0;
+    background-color: #F4F7F9;
+    vertical-align: top;
+}
+
+.item-content {
+    width: 66.66%;
+    padding-left: 14px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: inherit;
+    vertical-align: top;
+}
+
+.item-title {
+    font-size: .18rem;
+    line-height: .26rem;
+    color: #333;
+    max-height: .52rem;
+    overflow: hidden;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.item-date {
+    color: #999;
+    font-size: .13rem;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.item-from {
+
+    text-align: center;
+    font-weight: 400;
+    border-radius: 2px;
+    line-height: 10px;
+    padding: 1px;
+    font-size: 12px;
+    box-sizing: content-box;
+
+    border: 1px solid #efb9b9;
+    color: #ef3f41;
+}
+
+/*   主体  end   */
+
+/*    回到顶部   */
+.go-top-trigger {
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    z-index: 10;
+    right: 13px;
+    bottom: 132px;
+    position: fixed;
+    background: url(../img/go-top_b1fff84.png) no-repeat;
+    background-size: 52px auto;
+    -webkit-background-size: 52px auto;
+    background-position: right center;
+}
+
+/*   加载动画   start   */
+
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+}
+
+.spinner:after,
+.spinner:before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #67CF22;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -.25rem;
+    margin-left: -.25rem;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.spinner:before {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+/*   加载动画   end   */
+
+/*   没有更多数据样式   */
+.empty {
+    line-height: .5rem;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

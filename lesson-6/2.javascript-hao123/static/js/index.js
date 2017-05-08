@@ -27,7 +27,7 @@ window.onload = function () {
                 var str = '';
                 decodeURIComponent(document.cookie).split(';').forEach(function (item) {
                     var arr = item.split('=');
-                    if (arr[0] === theme) {
+                    if (arr[0] === 'hao123_theme') {
                         str = arr[1];
                     }
                 });

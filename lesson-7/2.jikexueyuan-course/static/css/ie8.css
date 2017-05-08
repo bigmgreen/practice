@@ -1,0 +1,55 @@
+/*
+页面在ie8浏览器上的一些修正
+*/
+.sub-menu .wechat-icon {
+    background-position: -2px -50px;
+}
+
+.sub-menu .go-icon {
+    background-position: -2px -30px;
+}
+
+.sub-menu .php-icon {
+    background-position: -2px -16px;
+}
+
+.sub-menu .java-icon {
+    background-position: -2px -90px;
+}
+
+.sub-menu .ios-icon {
+    background-position: -2px -72px;
+}
+
+.triangle:after {
+    display: none !important;
+}
+
+.ad-layer .close {
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: url("../img/header/close-icon.png") no-repeat;
+    cursor: pointer;
+}
+
+.ad-layer .close:after,
+.ad-layer .close:before {
+    display: none;
+}
+
+#searchContent {
+    color: #808080;
+}
+
+.footer-nav.wrap {
+    min-width: inherit;
+}
+
+.user-online {
+    top: -60px;;
+}

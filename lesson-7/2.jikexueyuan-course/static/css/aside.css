@@ -1,0 +1,191 @@
+aside {
+    float: left;
+    width: 210px;
+    background-color: #fff;
+}
+
+aside > dl {
+    border: 1px solid #35b558;
+    position: relative;
+}
+
+.aside-title {
+    height: 45px;
+    padding: 0 32px;
+    border-bottom: 1px solid #eee;
+    line-height: 45px;
+    color: #35b558;
+    display: block;
+}
+
+.icon-courses {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/aside/icon-course-curr_0743c98.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 15px 15px;
+    background-size: 15px 15px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 14px;
+}
+
+aside a.aside-item {
+    font-size: 12px;
+    color: #666666;
+    line-height: 36px;
+    cursor: pointer;
+    width: 208px;
+    height: 37px;
+    border-bottom: 1px solid #f5f5f5;
+    background: url(../img/aside/icon-more_cd68622.png) 186px center no-repeat;
+    background-size: 6px 10px;
+    padding-left: 32px;
+    display: block;
+    transition: font-size 1s;
+}
+
+aside a.aside-item:hover {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 38px;
+    width: 210px;
+    margin-top: -1px;
+    margin-left: -1px;
+    padding-left: 24px;
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    z-index: 1102;
+    color: #35b558;
+    font-size: 13px;
+    font-weight: 500;
+    transition: font-size 1s;
+    border-right: 3px solid #fff;
+    background: #fff;
+    position: relative;
+}
+
+aside a.aside-last-item:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+aside a.aside-item:hover:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 20px;
+    background-color: #fff;
+    top: 0;
+    right: -10px;
+}
+
+.aside-links a {
+    height: 45px;
+    display: block;
+    width: 100%;
+    line-height: 45px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.aside-links a:hover {
+    color: #35b558;
+    background-color: #fafafa;
+    background-image: url(../img/aside/img-seeall_b965178.png);
+    background-repeat: no-repeat;
+    background-position: 160px center;
+    background-size: 40px 10px;
+}
+
+.aside-links i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+}
+
+.aside-links .icon-zylj {
+    background: url(../img/aside/icon-zylj_6ee6dac.png) no-repeat left center;
+    background-size: 15px 14px;
+}
+
+.aside-links .icon-zstx {
+    background: url(../img/aside/icon-zstx_a1ae096.png) no-repeat left center;
+    background-size: 15px 12.5px;
+}
+
+.aside-links .icon-xlkc {
+    background: url(../img/aside/icon-xlkc_2e47588.png) no-repeat left center;
+    background-size: 14px 14px;
+}
+
+.aside-links .icon-kcbq {
+    background: url(../img/aside/icon-kcbq_65534c2.png) no-repeat left center;
+    background-size: 15px 13px;
+}
+
+aside > dl > dd:hover .list-show {
+    display: block;
+}
+
+.list-show {
+    display: none;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    min-height: 417px;
+    min-width: 401px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 209px;
+    z-index: 1101;
+    list-style: none;
+    margin-left: -1px;
+    padding-bottom: 30px;
+    float: left;
+    width: 402px;
+    top: -1px;
+}
+
+.list-show dl {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.list-show dt a {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    height: 37px;
+    line-height: 45px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.list-show dd {
+    margin-left: -8px;
+    padding: 3px 0;
+}
+
+.list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
