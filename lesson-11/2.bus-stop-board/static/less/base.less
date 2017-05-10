@@ -1,40 +1,48 @@
+/*  页面基础参数设置  start  */
 @baseColor: #c73d3a;
 @nameColor: #3b5f46;
 @fontColor: #333;
 @font-size: 14px;
+/*  页面基础参数设置  end  */
+
+/*  margin，padding样式重置  */
 .m0-p0() {
   margin: 0;
   padding: 0;
 }
 
+/*  圆角  */
 .border-radius(@radius) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
   border-radius: @radius;
 }
 
+/*  阴影设置  */
 .box-shadow(@x:0,@y:0,@rang:10px,@deep:10px,@color:#eee) {
-  -moz-box-shadow: @x @y @rang @deep @color;
-  -webkit-box-shadow: @x @y @rang @deep @color;
   box-shadow: @x @y @rang @deep @color;
 }
 
+/*  盒模型设置  */
 .box-sizing() {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/*  伪类公共属性  */
 .content() {
   content: '';
   display: block;
 }
+/*  三角  */
 .cart() {
   width: 0;
   height: 0;
   display: block;
   border-top: 12px solid transparent;
-  border-left: 30px solid #ab2539;
+  border-left: 30px solid @baseColor;
   border-right: 0 solid transparent;
   border-bottom: 0 solid transparent;
+}
+
+/*  样式清楚  */
+.clear {
+  overflow: hidden;
 }

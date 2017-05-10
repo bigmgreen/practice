@@ -1,5 +1,6 @@
 @import "base";
 
+/*  基础样式  start  */
 html,
 body {
   .m0-p0;
@@ -32,12 +33,16 @@ article {
 }
 
 section {
-  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
 }
 
+/*  基础样式  end  */
+
+
+/*  站牌样式  start  */
 .board-title {
   text-align: center;
-  border-bottom: 1px solid #eee;
   line-height: 40px;
   font-size: @font-size * 1.5;
 }
@@ -45,7 +50,7 @@ section {
 .board-content {
   background-color: @nameColor;
   font-size: 0;
-  padding: 0 10px 10px;
+  padding: 5px 10px 20px;
   text-align: center;
 }
 
@@ -53,10 +58,32 @@ section {
   font-size: @font-size;
   color: #fff;
   display: inline-block;
-  width: 1em;
+  width: 1.3em;
   word-wrap: break-word;
   vertical-align: top;
   text-align: center;
+  position: relative;
+}
+.board-content .active:after {
+  .content;
+  position: absolute;
+  width: .8em;
+  height: 0.4em;
+  background-color: #fff;
+  bottom: -17px;
+  left: 4px;
+}
+.board-content .active:before {
+  .content;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  bottom: -12px;
+  left: 0;
 }
 
 .board-footer {
@@ -144,7 +171,4 @@ section {
   position: relative;
   top: 10px;
 }
-
-.clear {
-  overflow: hidden;
-}
+/*  站牌样式  end  */
