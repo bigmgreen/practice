@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="static/css/base.css"/>
+    <link rel="stylesheet" href="static/css/skin.css"/>
+    <link rel="stylesheet" href="static/css/footer.css"/>
+    <link rel="stylesheet" href="static/css/header.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
+</head>
+
+<body>
+<div id="container" class="container">
+    <!-- 头部开始 -->
+    <header>
+        <nav>
+            <a href="#">新闻</a>
+            <a href="#">hao123</a>
+            <a href="#">地图</a>
+            <a href="#">视频</a>
+            <a href="#">贴吧</a>
+            <a href="#">学术</a>
+            <div class="bdpfmenu-wrap">
+                <a href="#">zxover</a>
+                <!-- 设置浮动菜单开始 -->
+                <div class="bdpfmenu">
+                    <span class="cart"></span>
+                    <a href="#">我的VIP</a>
+                    <a href="#">个人中心</a>
+                    <a href="#">帐号设置</a>
+                    <a href="#">意见反馈</a>
+                    <a href="#">退出</a>
+                </div>
+                <!-- 设置浮动菜单结束 -->
+            </div>
+            <div class="bdpfmenu-wrap">
+                <a href="#">设置</a>
+                <!-- 设置浮动菜单开始 -->
+                <div class="bdpfmenu">
+                    <span class="cart"></span>
+                    <a href="#">搜索设置</a>
+                    <a href="#">高级搜索</a>
+                    <a href="#">关闭预测</a>
+                    <a href="#">搜索历史</a>
+                </div>
+                <!-- 设置浮动菜单结束 -->
+            </div>
+            <div class="right-menu-wrap">
+                <a class="more">更多产品</a>
+                <!-- 更多产品浮动菜单开始 -->
+                <div class="right-menu">
+                    <a class="more-hover">更多产品</a>
+                    <a href="#"><span class="bgi music-bgi"></span>音乐</a>
+                    <a href="#"><span class="bgi img-bgi"></span>图片</a>
+                    <a href="#"><span class="bgi know-bgi"></span>知道</a>
+                    <a href="#"><span class="bgi doc-bgi"></span>文库</a>
+                    <a href="#"><span class="bgi chart-bgi"></span>风云榜</a>
+                    <a href="#" class="last-right-menu-item">全部产品&gt;&gt;</a>
+                </div>
+                <!-- 更多产品浮动菜单结束 -->
+            </div>
+        </nav>
+        <div class="nav-left">
+            <div class="weather">
+                <a href="#">
+                    <span>北京:</span>
+                    <i class="weather-icon"></i>
+                    <span>14℃</span>
+                    <span><b>良</b></span>
+                    <span>68</span>
+                    <span>|</span>
+                </a>
+                <div class="weather-mod">
+                    <span class="cart"></span>
+                    <div class="weather-title">
+                            <span class="pull-left">
+                            <span>04月19日</span>
+                            <span>农历 三月廿三</span>
+                            <span class="lunar-sevenday"><a target="_blank" href="#">未来七天天气</a></span>
+                            </span>
+                        <a href="#" class="pull-right">设置</a>
+                    </div>
+                    <ul class="weather-body">
+                        <li>
+                            <a class="everyday-link" target="_blank" href="#">
+                                <p class="everyday-title" title="今天(周三)">今天(周三)</p>
+                                <img class="everyday-icon" src="./static/img/header/a2.jpg"/>
+                                <p class="everyday-temp" title="14℃">14℃</p>
+                                <p class="everyday-condition" title="阴转多云">阴转多云</p>
+                                <p class="everyday-wind" title="西北风微风">西北风微风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="everyday-link" target="_blank" href="#">
+                                <p class="everyday-title" title="明天(周四)">明天(周四)</p>
+                                <img class="everyday-icon" src="./static/img/header/a1.jpg"/>
+                                <p class="everyday-temp" title="22 ~ 11℃">22 ~ 11℃</p>
+                                <p class="everyday-condition" title="多云转晴">多云转晴</p>
+                                <p class="everyday-wind" title="微风">北风微风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="everyday-link" target="_blank" href="#">
+                                <p class="everyday-title" title="后天(周五)">后天(周五)</p>
+                                <img class="everyday-icon" src="./static/img/header/a0.jpg"/>
+                                <p class="everyday-temp" title="23 ~ 12℃">23 ~ 12℃</p>
+                                <p class="everyday-condition" title="晴">晴</p>
+                                <p class="everyday-wind" title="南风微风">南风微风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="everyday-link" target="_blank" href="#">
+                                <p class="everyday-title" title="周六">周六</p>
+                                <img class="everyday-icon" src="./static/img/header/a1.jpg"/>
+                                <p class="everyday-temp" title="28 ~ 13℃">28 ~ 13℃</p>
+                                <p class="everyday-condition" title="多云">多云</p>
+                                <p class="everyday-wind" title="南风3-4级">南风3-4级</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="everyday-link" target="_blank" href="#">
+                                <p class="everyday-title" title="周日">周日</p>
+                                <img class="everyday-icon" src="./static/img/header/a0.jpg"/>
+                                <p class="everyday-temp" title="24 ~ 12℃">24 ~ 12℃</p>
+                                <p class="everyday-condition" title="晴转多云">晴转多云</p>
+                                <p class="everyday-wind" title="南风微风">南风微风</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#">宝箱</a>
+            <a href="#" id="showSkin">换肤</a>
+            <div class="msg-box">
+                <a href="#">消息</a>
+                <div class="baidu-msg">
+                    <span class="cart"></span>
+                    <p class="no-msg-tip">您目前没有新消息</p>
+                    <div class="no-msg-btns">
+                        <span class="msg-btn">清空消息</span>
+                        <a href="#" class="msg-btn" target="_blank">消息设置</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 头部结束 -->
+    <!-- 主体开始 -->
+    <article>
+        <div class="baidu-logo"></div>
+        <!--    搜索框  start    -->
+        <div class="form-wrap">
+            <div id="searchWrap" class="">
+                <form action="/">
+                    <a href="#" class="icon-baidu"><img
+                            src="./static/img/index/logo_top_ca79a146.png"
+                            width="100" alt="logo"/></a>
+                    <div class="input">
+                        <input class="content" type="text" required/>
+                        <span class="soutu-btn"></span>
+                        <input class="submit" type="submit" value="百度一下"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--    搜索框  end    -->
+
+        <!--    个人设置版块  start    -->
+        <div id="main" class="main">
+            <!--    tab切换    -->
+            <ul class="tab-nav">
+                <li class="active" data-tab="#myFocus"><i class="my-icon"></i>我的关注</li>
+                <li data-tab="#myIntro">推荐</li>
+                <li data-tab="#myNav">导航</li>
+                <li data-tab="#myVideo">视频</li>
+                <li data-tab="#myBuy">购物</li>
+            </ul>
+            <div class="tab-content">
+                <!--    我的关注    -->
+                <div id="myFocus" class="tab-item active">
+                    <dl class="my-focus">
+                        <dt id="myFocusSwitch"><i class="my-cart"></i>我的导航<span>（17）</span></dt>
+                        <dd>
+                            <span>综合</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95496.png" alt="新浪" height="16" width="16"
+                                             class="nav-icon"/>新浪</a>
+                            <a href="#"><img src="./static/img/index/my-focus/6000.png?3" alt="歌词网" height="16"
+                                             width="16" class="nav-icon">歌词网</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="百度云" height="16" width="16"
+                                             class="nav-icon"/>百度云</a>
+                        </dd>
+                        <dd>
+                            <span>贴吧</span>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="百度云" height="16" width="16"
+                                             class="nav-icon"/>李毅吧</a>
+                            <a href="#" title="四川工程职业技术学院"><img src="./static/img/index/my-focus/2556.png?3"
+                                                                alt="四川工程职业技术学院吧" height="16" width="16"
+                                                                class="nav-icon"/>四川工程职...</a>
+                        </dd>
+                        <dd>
+                            <span>体育</span>
+                            <a href="#"><img src="./static/img/index/my-focus/10677.png" alt="直播吧" height="16"
+                                             width="16" class="nav-icon"/>直播吧</a>
+                            <a href="#"><img src="./static/img/index/my-focus/10677.png" alt="直播吧" height="16"
+                                             width="16" class="nav-icon"/>nba直播吧</a>
+                        </dd>
+                        <dd>
+                            <span>影视</span>
+                            <a href="#"><img src="./static/img/index/my-focus/6000.png?3" alt="浙江卫视直播" height="16"
+                                             width="16" class="nav-icon"/>浙江卫视直播</a>
+                            <a href="#"><img src="./static/img/index/my-focus/94836.png" alt="浙江卫视" height="16"
+                                             width="16" class="nav-icon"/>浙江卫视</a>
+                            <a href="#"><img src="./static/img/index/my-focus/95533.png" alt="乐视网" height="16"
+                                             width="16" class="nav-icon"/>乐视网</a>
+                        </dd>
+                        <dd>
+                            <span>未分类</span>
+                            <a href="#"><img src="./static/img/index/my-focus/81407.png" alt="铁路客服中心" height="16"
+                                             width="16" class="nav-icon"/>铁路客服中心</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7656.png" alt="网盘" height="16" width="16"
+                                             class="nav-icon"/>网盘</a>
+                        </dd>
+                        <dd>
+                            <span>游戏</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95577.png" alt="DNF官网" height="16"
+                                             width="16" class="nav-icon"/>DNF官网</a>
+                            <a href="#"><img src="./static/img/index/my-focus/95619.png" alt="3366小游戏" height="16"
+                                             width="16" class="nav-icon"/>3366小游戏</a>
+                            <a href="#"><img src="./static/img/index/my-focus/7276.png" alt="彩色砖块" height="16"
+                                             width="16" class="nav-icon"/>彩色砖块</a>
+                        </dd>
+                        <dd>
+                            <span>音乐</span>
+                            <a href="#"><img src="./static/img/index/my-focus/80647.png" alt="我99伴奏翻唱" height="16"
+                                             width="16" class="nav-icon"/>我99伴奏翻唱</a>
+                        </dd>
+                        <dd>
+                            <span>购物</span>
+                            <a href="#"><img src="./static/img/index/my-focus/95487.png" alt="淘宝网" height="16"
+                                             width="16" class="nav-icon"/>淘宝</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!--     我的推荐   -->
+                <div id="myIntro" class="tab-item">
+                    <div class="my-intro">
+                        <div class="tips-content">
+                            <p><span class="tips-title"><i class="tips-icon"></i>以下信息根据您的兴趣推荐</span></p>
+                            <div class="tips-list">
+                                <div data-content>
+                                    <div class="tips-item">
+                                        <img src="./static/img/index/my-intro/4.jpeg"
+                                             height="119" width="179"/>
+                                        <div class="tips-text">
+                                            <a href="#">24省份公务员联考今日举行 多地表态严查雷同作弊</a>
+                                            <div class="tips-from">
+                                                <a href="#">参考消息</a>
+                                                <span>04-22 00:13</span>
+                                                <span class="hot-point">热点</span>
+                                            </div>
+                                        </div>
+                                        <span class="tips-del"></span>
+                                    </div>
+                                    <div class="tips-item">
+                                        <img class="s-news-img" src="./static/img/index/my-intro/2.jpeg" height="119"
+                                             width="179"/>
+                                        <div class="tips-text">
+                                            <a href="#">被埋没的“武林高手”，李连杰单挑不是他对手，拒绝好莱坞辱华角色</a>
+                                            <div class="tips-from">
+                                                <a href="#"> 健康网 </a>
+                                                <span>04-20 15:47</span>
+                                                <span class="hot-point">热点</span>
+                                            </div>
+                                        </div>
+                                        <span class="tips-del"></span>
+                                    </div>
+                                    <div class="tips-item">
+                                        <img class="s-news-img" src="./static/img/index/my-intro/3.jpeg" height="119"
+                                             width="179"/>
+                                        <div class="tips-text">
+                                            <a href="#">台退将怒怼蔡当局：绝对反抗到底 军人不害怕牺牲</a>
+                                            <div class="tips-from">
+                                                <a href="#">参考消息</a>
+                                                <span>04-22 00:13</span>
+                                            </div>
+                                        </div>
+                                        <span class="tips-del"></span>
+                                    </div>
+                                    <div class="tips-item">
+                                        <img class="s-news-img" src="./static/img/index/my-intro/1.png" height="119"
+                                             width="179"/>
+                                        <div class="tips-text">
+                                            <a href="#">重磅！《特工皇妃楚乔传》先导片引全球粉丝狂欢</a>
+                                            <div class="tips-from">
+                                                <a href="#"> 中国娱乐网 </a>
+                                                <span>04-22 00:13</span>
+                                                <span class="hot-point">热点</span>
+                                            </div>
+                                        </div>
+                                        <span class="tips-del"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <dl class="live-hot">
+                            <dt>
+                                <a href="#">实时热点</a>
+                                <a href="#" class="pull-right hot-refresh-icon"><span></span>换一换</a>
+                            </dt>
+                            <dd>
+                                <a href="#">最重女减肥500斤<span class="new-identity"></span></a>
+                                <a href="#">冯小树被罚4.99亿<span class="new-identity"></span></a>
+                                <a href="#">情侣被甩客在高速<span class="new-identity"></span></a>
+                                <a href="#">毒跑道仍在使用<span class="new-identity"></span></a>
+                                <a href="#">女子被前男友凌辱</a>
+                                <a href="#">医院被曝存矮窗口</a>
+                                <a href="#">女子战胜白血病</a>
+                                <a href="#">野外捡19斤乌龟</a>
+                                <a href="#">郑州公园叫停尬舞</a>
+                                <a href="#">扮皮卡丘乞讨救女</a>
+                                <a href="#">王思聪吐槽鹿晗</a>
+                                <a href="#">捡到钻戒顺手扔了</a>
+                                <a href="#">孕妇被男友骗积蓄</a>
+                                <a href="#">刘德华坐轮椅宣传</a>
+                                <a href="#">54岁叶童秀性感</a>
+                                <a href="#">带学生ktv上课</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--     我的导航   -->
+                <div id="myNav" class="tab-item">
+                    <dl class="my-nav">
+                        <dt>猜你喜欢</dt>
+                        <dd class="no-mt">
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/9483.png?1"/>
+                                百度糯米
+                                <span>最高返利50.25%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95541.png"/>
+                                京东商城
+                                <span>最高返利80.00%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95780.png"/>
+                                1号店
+                                <span>最高返利75.60%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95537.png?99"/>
+                                苏宁易购
+                                <span>最高返利22.68%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95693.png"/>
+                                唯品会
+                                <span>最高返利7.00%</span>
+                            </a>
+                            <a href="#">
+                                <i class="icon-back">返</i>
+                                <img src="./static/img/index/my-nav/95517.png"/>
+                                当当网
+                                <span>最高返利75.00%</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="./static/img/index/my-nav/8850.png"/>爱康网</a>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/6000.png?3"/>csdn下载</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"
+                                             title="datetimepicker"/>datetime...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7617.png"
+                                             title="Apple - iTunes - 立刻下载 iTunes"/>Apple - iT...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"/>盘多多</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"
+                                             title="jQuery插件库"/>jQuery插...</a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png"
+                                             title="如何在linux系统中设置静态ip地址"/>如何在lin...</a>
+                            <a href="#"><img src="./static/img/index/my-nav/95541.png"/>装机大师</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png"/>百度云</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"/>PDF书</a>
+                            <a href="#"><img src="./static/img/index/my-nav/95570.png"/>腾讯视频</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png"/>star法则</a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/6000.png?3"/>github</a>
+                            <a href="#"><img src="./static/img/index/my-nav/6000.png?3"/>bootstrap</a>
+                            <a href="#"><img src="./static/img/index/my-nav/10677.png"/>直播吧</a>
+                            <a href="#"><img
+                                    src="./static/img/index/my-nav/8510.png"/>Google香港</a>
+                            <a href="#"><img src="./static/img/index/my-nav/7656.png"/>百度VIP</a>
+                            <a href="#"><img src="./static/img/index/my-nav/9321.png"/>微软商店</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!--     我的视频   -->
+                <div id="myVideo" class="tab-item">
+                    <div class="my-video">
+                        <div data-content>
+                            <div class="my-video-item">
+                                <a href="#">
+                                    <img class="img" width="195px" height="267px"
+                                         src="./static/img/index/my-video/1.jpg"/>
+                                    <a class="img-click movie" href="#" target="_blank"></a>
+                                    <i class="unsub"></i>
+                                    <i class="dustbin"></i>
+                                </a>
+                                <div class="my-video-info">
+                                    <span class="my-video-count">26集全</span>
+                                    <a href="#" class="my-video-name">米奇妙妙屋</a>
+                                    <div class="score">
+                                    <span class="score-star">
+                                        <span class="star-active" style="width:44.85px"></span>
+                                    </span>
+                                        <span>6.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-video-item">
+                                <a href="#">
+                                    <img class="img" width="195px" height="267px"
+                                         src="./static/img/index/my-video/2.jpg"/>
+                                    <a class="img-click tv" href="#" target="_blank"></a>
+                                    <i class="unsub"></i>
+                                    <i class="dustbin"></i>
+                                </a>
+                                <div class="my-video-info">
+                                    <span class="my-video-count">22集全</span>
+                                    <a href="#" class="my-video-name">越狱第四季</a>
+                                    <div class="score">
+                                    <span class="score-star">
+                                        <span class="star-active" style="width:51.35px"></span>
+                                    </span>
+                                        <span>7.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-video-item">
+                                <div class="my-video-item-sm">
+                                    <a href="#">
+                                        <img class="sm-img"
+                                             src="./static/img/index/my-video/3.jpg"/>
+                                        <i class="unsub"></i>
+                                        <i class="dustbin"></i>
+                                    </a>
+                                    <div class="my-video-info">
+                                        <span class="my-video-count">02:37</span>
+                                        <a class="my-video-name" href="#">SNH48陈音恋男粉丝 粉丝怒问责—娱乐猛回头</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img class="sm-img"
+                                             src="./static/img/index/my-video/4.jpg"/>
+                                        <i class="unsub"></i>
+                                        <i class="dustbin"></i>
+                                    </a>
+                                    <div class="my-video-info">
+                                        <span class="my-video-count">01:18</span>
+                                        <a class="my-video-name" href="#">印度货车失控冲进人群 造成至少44死伤</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-video-item">
+                                <div class="my-video-item-sm">
+                                    <a href="#">
+                                        <img class="sm-img"
+                                             src="./static/img/index/my-video/5.jpg"/>
+                                        <i class="unsub"></i>
+                                        <i class="dustbin"></i>
+                                    </a>
+                                    <div class="my-video-info">
+                                        <span class="my-video-count">01:28</span>
+                                        <a class="my-video-name" href="#">卡尔文森号F18战机失事 机师弹出舱逃生</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img class="sm-img"
+                                             src="./static/img/index/my-video/6.jpg"/>
+                                        <i class="unsub"></i>
+                                        <i class="dustbin"></i>
+                                    </a>
+                                    <div class="my-video-info">
+                                        <span class="my-video-count">01:39</span>
+                                        <a class="my-video-name" href="#">高能虐狗！情侣上演“瑜伽式求婚</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--     我的购物   -->
+                <div id="myBuy" class="tab-item">
+                    <div class="my-buy">
+                        <div data-content>
+                            <a href="#" class="my-buy-item">
+                                <img src="static/img/index/my-buy/8d5494eef01f3a29247e640a9025bc315d607cbb.jpg"/>
+                                <span class="my-buy-desc">花花公子 纯棉T恤男丝光棉2017春夏新装男士纯棉多</span>
+                                <span class="as-block price-info">
+                                <span class="price">
+                                    <span class="price-sign">¥</span>
+                                    <span>169.9</span>
+                                </span>
+                                <span class="or-price-text">169.9</span>
+                            </span>
+                                <span class="as-block">
+                                <span class="fan-text">-&nbsp;83.25</span>
+                                <span class="point">返现49%</span>
+                                <span class="mall">京东</span>
+                            </span>
+                            </a>
+                            <a href="#" class="my-buy-item">
+                                <img src="static/img/index/my-buy/8644ebf81a4c510f9937d3fa6959252dd52aa55a.jpg"/>
+                                <span class="my-buy-desc">【京东超市】内蒙古科尔沁 牛肉干 休闲零食 川香牛肉</span>
+                                <span class="as-block price-info">
+                                <span class="price">
+                                    <span class="price-sign">¥</span>
+                                    <span>29.9</span>
+                                </span>
+                                <span class="or-price-text">29.9</span>
+                            </span>
+                                <span class="as-block">
+                                <span class="fan-text">-&nbsp;6.27</span>
+                                <span class="point">返现21%</span>
+                                <span class="mall">京东</span>
+                            </span>
+                            </a>
+                            <a href="#" class="my-buy-item">
+                                <img src="static/img/index/my-buy/4afbfbedab64034fecb9afc3a6c379310b551dfa.jpg"/>
+                                <span class="my-buy-desc">摩氏M3 免煮黑咖啡 激情南美组合巴式+古式  2罐</span>
+                                <span class="as-block price-info">
+                                <span class="price">
+                                    <span class="price-sign">¥</span>
+                                    <span>56.8</span>
+                                </span>
+                                <span class="or-price-text">56.8</span>
+                            </span>
+                                <span class="as-block">
+                                <span class="fan-text">-&nbsp;23.85</span>
+                                <span class="point">返现42%</span>
+                                <span class="mall">京东</span>
+                            </span>
+                            </a>
+                            <a href="#" class="my-buy-item">
+                                <img src="static/img/index/my-buy/472309f790529822b89566fdddca7bcb0a46d46e.jpg"/>
+                                <span class="my-buy-desc">水果四记 黄桃罐头罐 源产地查询防伪 砀山特产 水果</span>
+                                <span class="as-block price-info">
+                                <span class="price">
+                                    <span class="price-sign">¥</span>
+                                    <span>44</span>
+                                </span>
+                                <span class="or-price-text">44</span>
+                            </span>
+                                <span class="as-block">
+                                <span class="fan-text">-&nbsp;6.16</span>
+                                <span class="point">返现14%</span>
+                                <span class="mall">京东</span>
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    个人设置版块  end    -->
+    </article>
+    <!-- 主体结束 -->
+    <!-- 底部开始 -->
+    <footer>
+        <div id="loadMore" class="s-more-bar">
+            <span class="load-text">滚动/点击查看更多</span>
+            <i class="rect"></i>
+        </div>
+        <div>
+            <a href="#">把百度设为主页</a>
+            <a href="#">关于百度</a>
+            <a href="#">About&nbsp&nbspBaidu</a>
+            <a href="#">百度推广</a>
+        </div>
+        <p>
+            ©2017&nbsp;Baidu&nbsp;
+            <a href="#">使用百度前必读</a>&nbsp;
+            <a href="#">意见反馈</a>&nbsp; 京ICP证030173号&nbsp;
+            <i class="c-icon c-icon-icrlogo"></i>&nbsp;
+            <a href="#" class="ml">京公网安备11000002000001号</a> &nbsp;
+            <i class="c-icon c-icon-jgwablogo"></i>
+        </p>
+    </footer>
+    <!-- 底部结束 -->
+</div>
+<!--    皮肤  start    -->
+<div id="skin" class="skin">
+    <div class="skin-wrap">
+        <div class="s-skin-header">
+            <ul class="s-skin-nav">
+                <li><span class="skinnav-nav-name">热门</span></li>
+                <li class="active"><span class="skinnav-nav-name">游戏</span></li>
+                <li><span class="skinnav-nav-name">卡通</span></li>
+                <li><span class="skinnav-nav-name">女神降临</span></li>
+                <li><span class="skinnav-nav-name">明星</span></li>
+                <li><span class="skinnav-nav-name">风景</span></li>
+                <li><span class="skinnav-nav-name">简约</span></li>
+                <li><span class="skinnav-nav-name">小清新</span></li>
+                <li>
+                    <div class="nav-vertial-border">|</div>
+                </li>
+                <li><span class="skinnav-nav-name">自定义</span></li>
+                <li><span class="skinnav-nav-name">最近使用</span></li>
+            </ul>
+            <div class="pull-right">
+                <div id="opacity" class="opacity">
+                    <span>背景透明度</span>
+                    <span id="opacityLine" class="opacity-line">
+                        <span id="opacitySlide" class="opacity-slide">
+                            <span id="opacityVal" class="opacity-val">80%</span>
+                        </span>
+                    </span>
+                    <b id="closeSkin"><sup></sup>不使用换肤</b>
+                </div>
+                <a id="skinClose" href="#" class="skin-close"><i class="direction-icon"></i>收起</a>
+            </div>
+        </div>
+    </div>
+    <div class="s-skin-body">
+        <div class="skin-wrap">
+            <ul class="skin-item">
+                <li><a href="#" class="active">冒险岛2</a></li>
+                <li><a href="#">守望先锋</a></li>
+                <li><a href="#">魔兽世界</a></li>
+                <li><a href="#">炉石传说</a></li>
+                <li><a href="#">风暴英雄</a></li>
+                <li><a href="#">暗黑破坏神Ⅲ</a></li>
+                <li><a href="#">星际争霸II</a></li>
+            </ul>
+            <div class="clear">
+                <div class="pull-left">
+                    <div id="skins" class="skins">
+                        <div class="skin-img skin-img-1">
+                            <img data-skin-img data-src="./static/img/skin/bg/847.jpg" width="195" height="119"
+                                 src="./static/img/skin/847.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-2">
+                            <img data-skin-img data-src="./static/img/skin/bg/850.jpg" width="97" height="59"
+                                 src="./static/img/skin/850.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-3">
+                            <img data-skin-img data-src="./static/img/skin/bg/853.jpg" width="97" height="59"
+                                 src="./static/img/skin/853.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-4">
+                            <img data-skin-img data-src="./static/img/skin/bg/854.jpg" width="97" height="59"
+                                 src="./static/img/skin/854.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-5">
+                            <img data-skin-img data-src="./static/img/skin/bg/856.jpg" width="97" height="59"
+                                 src="./static/img/skin/856.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-6">
+                            <img data-skin-img data-src="./static/img/skin/bg/851.jpg" width="97" height="59"
+                                 src="./static/img/skin/851.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-7">
+                            <img data-skin-img data-src="./static/img/skin/bg/855.jpg" width="195" height="119"
+                                 src="./static/img/skin/855.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-8">
+                            <img data-skin-img data-src="./static/img/skin/bg/857.jpg" width="97" height="59"
+                                 src="./static/img/skin/857.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-9">
+                            <img data-skin-img data-src="./static/img/skin/bg/848.jpg" width="97" height="59"
+                                 src="./static/img/skin/848.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-10">
+                            <img data-skin-img data-src="./static/img/skin/bg/849.jpg" width="97" height="59"
+                                 src="./static/img/skin/849.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-11">
+                            <img data-skin-img data-src="./static/img/skin/bg/852.jpg" width="97" height="59"
+                                 src="./static/img/skin/852.jpg"/>
+                        </div>
+                        <div class="skin-img skin-img-12">
+                            <img data-skin-img data-src="./static/img/skin/bg/858.jpg" width="97" height="59"
+                                 src="./static/img/skin/858.jpg"/>
+                        </div>
+                    </div>
+                    <span class="skin-turn">开启自动换肤</span>
+                </div>
+                <div class="pull-right">
+                    <div class="skin-preview-wrap">
+                        <img id="skinPreviewImg" class="skin-preview-img"/>
+                        <div id="skinPreview" class="skin-preview"></div>
+                    </div>
+                    <p class="preview-title">背景皮肤效果预览</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="skinBg" class="skin-bg"></div>
+<!--    皮肤  end    -->
+<!--    回到顶部  start    -->
+
+<div id="goTop" class="go-top">
+    <i class="go-top-icon"></i>
+    <span class="go-top-text">回到顶部</span>
+</div>
+
+<!--    回到顶部  end    -->
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/storage/storage.js"></script>
+<script src="static/lib/scale/scale.js"></script>
+<script src="static/lib/throttle/throttle.js"></script>
+<script src="static/js/index.js"></script>
+</body>
+
+</html>

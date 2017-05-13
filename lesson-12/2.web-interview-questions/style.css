@@ -1,0 +1,29 @@
+/*	 页面基本样式设置	*/
+html,
+body {
+    font-size: 14px;
+    font-family: 'microsoft YaHei';
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 800px;
+    min-height: 600px;
+    background-color: #f2f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+article {
+    width: 980px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ccc, 0 0 5px #ccc inset;
+    overflow: hidden;
+}
+
+article > ol {
+    padding: 0 4em 1em 5em;
+}
