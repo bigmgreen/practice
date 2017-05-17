@@ -1,0 +1,1 @@
+1.处理ql注入漏洞，写在了dbConnect.js中；

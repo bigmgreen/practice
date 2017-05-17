@@ -1,0 +1,79 @@
+/*   reset   start   */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'microsoft YaHei';
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: .16rem;
+    line-height: 1;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+p,
+li,
+ul,
+dd,
+dt,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    border: 0 none;
+    text-decoration: none;
+}
+
+/*   reset   end   */
+
+/*    左浮动  右浮动  start   */
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+/*    左浮动  右浮动  end   */
+
+/*   清除浮动   */
+.clear:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+}
