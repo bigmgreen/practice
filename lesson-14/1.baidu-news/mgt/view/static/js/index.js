@@ -87,6 +87,7 @@ $(function () {
                 pageNumber: this.currentPage
             }).done(function (data) {
 
+                $._token = data.token;
                 data.currentPage = that.currentPage;
                 data.totalPage = new Array(data.totalPage);
 
@@ -284,7 +285,10 @@ $(function () {
         });
 
         $('#delSave').click(function () {
-            $.post('/del', 'id=' + id).done(function (data) {
+            $.post('/del', {
+                id: id,
+                token: $._token
+            }).done(function (data) {
                 if (data === true) {
                     app.msgFn('删除成功');
                     app.delModal.modal('hide');
@@ -310,7 +314,10 @@ $(function () {
         });
 
         $('#onSave').click(function () {
-            $.post('/recovery', 'id=' + id).done(function (data) {
+            $.post('/recovery', {
+                id: id,
+                token: $._token
+            }).done(function (data) {
                 if (data === true) {
                     app.msgFn('恢复成功');
                     app.onModal.modal('hide');

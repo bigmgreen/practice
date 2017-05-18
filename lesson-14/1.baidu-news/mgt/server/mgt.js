@@ -6,6 +6,7 @@ var utils = require('../../api/utils/dbConnect')();
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
+var uuidV1 = require('uuid/v1');
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/../view')));
@@ -32,12 +33,22 @@ app.use('*', function (req, res, next) {
 });
 
 /**
+ * 防御csrf
+ */
+app.use(['/add', '/del', '/update', '/recovery'], function (req, res, next) {
+    if (req.body.token == req.session.uuid) {
+        next();
+    } else {
+        res.send('可疑操作，服务器拒绝响应！');
+    }
+});
+
+/**
  * 设置网站首页
  */
 app.get('/', function (req, res) {
     if (req.session.user) {
-        var cookie = 'session=' + req.session.user.password + '; HttpOnly';
-        res.header("Set-Cookie", cookie);
+        res.cookie('session', req.session.user.password, {path: '/', httpOnly: true});
         res.sendFile(path.join(__dirname, '/../view/admin.html'));
     } else {
         res.redirect('/login');
@@ -90,6 +101,10 @@ app.get('/queryData', function (req, res) {
     utils.getTotalByType({
         type: req.query.type
     }, function (num) {
+
+        var uuid = uuidV1();
+        req.session.uuid = uuid;
+
         var count = Math.ceil(num[0].count / 10);
         if (req.query.type == 0) {
             utils.getAll({
@@ -97,7 +112,8 @@ app.get('/queryData', function (req, res) {
             }, function (data) {
                 res.json({
                     list: data,
-                    totalPage: count
+                    totalPage: count,
+                    token: uuid
                 });
             });
         } else if (req.query.type == -1) {
@@ -106,7 +122,8 @@ app.get('/queryData', function (req, res) {
             }, function (data) {
                 res.json({
                     list: data,
-                    totalPage: count
+                    totalPage: count,
+                    token: uuid
                 });
             });
         } else {
@@ -116,7 +133,8 @@ app.get('/queryData', function (req, res) {
             }, function (data) {
                 res.json({
                     list: data,
-                    totalPage: count
+                    totalPage: count,
+                    token: uuid
                 });
             });
         }
