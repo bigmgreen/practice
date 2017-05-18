@@ -4,17 +4,40 @@ var express = require('express');
 var path = require('path');
 var utils = require('../../api/utils/dbConnect')();
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/../view')));
 app.use(bodyParser());
+app.use(cookieParser());
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 10 //过期时间设置(单位毫秒)
+    }
+}));
+
+/**
+ * 防御xss
+ */
+app.use('*', function (req, res, next) {
+    res.header("X-XSS-Protection", "1; mode=block");
+    res.header("X-Frame-Options", "deny");
+    res.header("X-Content-Type-Options", "nosniff");
+    res.header("Content-Security-Policy", "default-src 'self' 'unsafe-eval'");
+    next();
+});
 
 /**
  * 设置网站首页
  */
 app.get('/', function (req, res) {
-    var referer = req.headers.referer;
-    if (referer && referer.indexOf('/login')) {
+    if (req.session.user) {
+        var cookie = 'session=' + req.session.user.password + '; HttpOnly';
+        res.header("Set-Cookie", cookie);
         res.sendFile(path.join(__dirname, '/../view/admin.html'));
     } else {
         res.redirect('/login');
@@ -29,6 +52,14 @@ app.get('/login', function (req, res) {
 });
 
 /**
+ * 登出
+ */
+app.get('/logout', function (req, res) {
+    req.session.user = null;
+    res.redirect('/login');
+});
+
+/**
  * 登录控制
  */
 app.post('/login', function (req, res) {
@@ -39,8 +70,9 @@ app.post('/login', function (req, res) {
             utils.getUser({
                 userName: req.body.userName,
                 password: md5
-            }, function (data, fields) {
-                if (data.length > 0) {
+            }, function (user, fields) {
+                if (user.length > 0) {
+                    req.session.user = user[0];
                     res.json('ok');
                 } else {
                     res.json('no');

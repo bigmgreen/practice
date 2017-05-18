@@ -5,6 +5,16 @@ var utils = require('../../api/utils/dbConnect')();
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/../view')));
+/**
+ * 防御xss
+ */
+app.use('*', function(req, res, next){
+    res.header("X-XSS-Protection", "1; mode=block");
+    res.header("X-Frame-Options", "deny");
+    res.header("X-Content-Type-Options", "nosniff");
+    res.header("Content-Security-Policy", "default-src 'self' 'unsafe-eval'");
+    next();
+});
 
 /**
  * 设置网站根目录
@@ -37,7 +47,6 @@ app.get('/queryData', function (req, res) {
 
 /**
  * 启动服务
- * @type {http.Server}
  */
 var server = app.listen(3000, function () {
     var host = server.address().address;
