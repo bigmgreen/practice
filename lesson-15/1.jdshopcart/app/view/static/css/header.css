@@ -1,0 +1,59 @@
+.header {
+    border-bottom: 2px solid #e0e0e2;
+    height: 0.45rem;
+    line-height: .45rem;
+    box-sizing: border-box;
+    background-color: #f2f2f7;
+}
+
+.header .flex-item-2 span {
+    color: #555;
+    font-size: .16rem;
+    margin-left: .2rem;
+    padding-left: 0.1rem;
+    position: relative;
+    display: block;
+}
+
+.header .icon-location {
+    display: block;
+    background-image: url(../img/location.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    position: absolute;
+    width: 0.3rem;
+    height: 0.3rem;
+    top: 0.14rem;
+    left: -0.14rem;
+}
+
+.header .select {
+    background-color: #fff;
+    display: block;
+    width: .73rem;
+    height: .28rem;
+    margin: 0.08rem auto 0;
+    text-align: center;
+    line-height: .28rem;
+    box-shadow: 0 0 0.02rem 0.02rem #eee;
+}
+
+.header .direction-down {
+    display: inline-block;
+    width: .1rem;
+    height: .1rem;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(45deg);
+    transform-origin: 50%;
+    position: relative;
+    top: -.02rem;
+    right: -.03rem;
+}
+
+.header .flex-item-2 a {
+    color: #3992fd;
+    font-size: .16rem;
+    float: right;
+    margin-right: .2rem;
+}

@@ -31,14 +31,14 @@ app.get('/queryData', function (req, res) {
     if (req.query.type == 0) {
         utils.getAll({
             pageNumber: req.query.pageNumber
-        }, function (rows, fields) {
+        }, function (rows) {
             res.json(rows);
         });
     } else {
         utils.getNewsByType({
             type: req.query.type,
             pageNumber: req.query.pageNumber
-        }, function (rows, fields) {
+        }, function (rows) {
             res.json(rows);
         });
     }
