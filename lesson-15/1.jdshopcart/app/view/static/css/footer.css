@@ -1,8 +1,14 @@
+/*     底部样式    start     */
 .footer {
     border-top: 1px solid #e0e0e2;
     height: 0.5rem;
     box-sizing: border-box;
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: hsla(0,0%,100%,.95);
 }
 
 .btn-to-buy {
@@ -13,6 +19,7 @@
     line-height: 3;
     letter-spacing: 1px;
     display: block;
+    height: 100%;
 }
 
 .price-desc {
@@ -35,3 +42,4 @@
     color: #666;
     font-size: .1rem;
 }
+/*     底部样式    end     */

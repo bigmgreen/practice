@@ -1,0 +1,120 @@
+/*     你可能还想要   start     */
+.recommend-title {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.recommend-title:after {
+    content: '';
+    top: 50%;
+    left: 17.3%;
+    right: 17.3%;
+    z-index: 1;
+    height: 0;
+    display: block;
+    border-bottom: 1px solid #666;
+    position: absolute;
+}
+
+.recommend-title span {
+    padding: 0 10px 0 30px;
+    background: #e8e8ed url(../img/recommend.png) no-repeat 12px 0;
+    background-size: 11px;
+    position: relative;
+    z-index: 2;
+}
+
+/*     你可能还想要   end     */
+
+/*     推荐项   start */
+.recommend-box {
+    font-size: 0;
+    overflow: hidden;
+    padding-bottom: .7rem;
+}
+
+.recommend-item {
+    width: 2.05rem;
+    height: 2.94rem;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 7px;
+    background: #fff;
+    margin-top: 4px;
+    display: inline-block;
+}
+.recommend-item a {
+    display: block;
+}
+.recommend-item:nth-child(2n) {
+    float: right;
+}
+
+.recommend-item .cover {
+    position: relative;
+    padding-top: 100%;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.recommend-item .cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.recommend-item .desc {
+    padding: 0 10px;
+    margin: 5px 0;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.recommend-item .flex-wrap {
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 36px;
+}
+
+.recommend-item .price {
+    padding-left: 10px;
+    font-size: 10px;
+    color: #e4393c;
+    display: block;
+}
+
+.recommend-item .price em {
+    font-size: 14px;
+    font-style: normal;
+}
+.recommend-item .buy{
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background: #f2f2f7 url(../img/cart.png) no-repeat;
+    background-size: 15px;
+    background-position: 7px 8px;
+}
+/*     推荐项   end */

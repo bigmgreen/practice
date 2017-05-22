@@ -1,3 +1,4 @@
+/*   头部样式   start   */
 .header {
     border-bottom: 2px solid #e0e0e2;
     height: 0.45rem;
@@ -8,7 +9,7 @@
 
 .header .flex-item-2 span {
     color: #555;
-    font-size: .16rem;
+    font-size: .14rem;
     margin-left: .2rem;
     padding-left: 0.1rem;
     position: relative;
@@ -27,15 +28,16 @@
     left: -0.14rem;
 }
 
-.header .select {
+.header .flex-item-2 .select {
     background-color: #fff;
-    display: block;
-    width: .73rem;
+    display: inline-block;
     height: .28rem;
-    margin: 0.08rem auto 0;
+    padding-right: .1rem;
+    margin-top: 0.08rem;
     text-align: center;
     line-height: .28rem;
     box-shadow: 0 0 0.02rem 0.02rem #eee;
+    border-radius: 2px;
 }
 
 .header .direction-down {
@@ -53,7 +55,9 @@
 
 .header .flex-item-2 a {
     color: #3992fd;
-    font-size: .16rem;
+    font-size: .14rem;
     float: right;
-    margin-right: .2rem;
+    margin-right: .1rem;
 }
+
+/*   头部样式   end   */
