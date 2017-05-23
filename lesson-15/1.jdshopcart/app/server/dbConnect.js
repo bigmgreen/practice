@@ -7,7 +7,7 @@ var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'jd_shopcart'
+    database: 'jd_shop_cart'
 });
 
 //每页的容量
