@@ -51,3 +51,16 @@ $(function () {
         }
     }));
 });
+
+var app = angular.module('shopCart', []);
+
+app.controller('shopCartController', function ($scope) {
+    $scope.recommendList = [
+        {
+            url: './static/img/58f709adN45511018.jpg'
+            , desc: '小米6 全网通 6GB+64GB 亮黑色 移动联通电信4G手机 双卡双待'
+            , price: [2499, '00']
+            , id: 1
+        }
+    ];
+});

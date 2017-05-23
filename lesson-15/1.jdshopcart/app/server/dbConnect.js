@@ -7,7 +7,7 @@ var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'news_list'
+    database: 'jd_shopcart'
 });
 
 //每页的容量
@@ -61,11 +61,8 @@ module.exports = function () {
          * @param param
          * @param callback
          */
-        getAll: function (param, callback) {
-            var num = !isNaN(param.pageNumber) ? param.pageNumber : 0;
-
-            var sql = 'SELECT * FROM news_list WHERE status = 0 order by id desc LIMIT '
-                + mysql.format(num * PAGE_SIZE) + ',' + PAGE_SIZE;
+        getAll: function (callback) {
+            var sql = 'SELECT * FROM recommend  order by id desc';
             excute(sql, callback);
         },
         /**

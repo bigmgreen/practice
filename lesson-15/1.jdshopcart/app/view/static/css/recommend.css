@@ -39,8 +39,8 @@
 }
 
 .recommend-item {
-    width: 2.05rem;
-    height: 2.94rem;
+    width: 49.5%;
+    float: left;
     position: relative;
     box-sizing: border-box;
     padding-bottom: 7px;

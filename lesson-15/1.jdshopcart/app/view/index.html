@@ -6,16 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>京东-购物车</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./favicon.ico?1" type="image/x-icon"/>
     <link rel="stylesheet" href="static/css/base.css"/>
     <link rel="stylesheet" href="static/css/header.css"/>
     <link rel="stylesheet" href="static/css/footer.css"/>
     <link rel="stylesheet" href="static/css/recommend.css"/>
     <link rel="stylesheet" href="static/css/index.css"/>
 </head>
-<body ng-app>
+<body ng-app="shopCart">
 <!--     主体内容区域  start  -->
-<main id="main" class="main">
+<main id="main" class="main" ng-controller="shopCartController">
     <!--     页面头部  start -->
     <header class="header">
         <div class="flex-box">
@@ -23,7 +23,7 @@
                 <span><i class="icon-location"></i>通州区永顺镇</span>
             </div>
             <div class="flex-item-2 text-center">
-                <span class="select">全部商品<i class="direction-down"></i></span>
+                <span class="select">全部商品<i class="direction direction-down"></i></span>
             </div>
             <div class="flex-item-2">
                 <a href="#">编辑</a>
@@ -32,15 +32,89 @@
     </header>
     <!--     页面头部  end -->
 
+    <div class="cart-list">
+        <section class="cart-list-item">
+            <header class="flex-box">
+                <label class="checkbox">
+                    <input type="checkbox"/>
+                    <i class="checkbox-status"></i>
+                </label>
+                <div class="flex-item-4">
+                    <i class="icon-shop"></i>
+                    <span>宜东国际数码专营店</span>
+                </div>
+                <div class="flex-item-1">
+                    <a href="#">优惠券</a>
+                </div>
+            </header>
+            <p class="cart-desc">商品满99元（20kg内）免运费<i class="icon-notice"></i></p>
+            <div class="cart-info flex-box">
+                <div class="flex-item-1">
+                    <label class="checkbox">
+                        <input type="checkbox"/>
+                        <i class="checkbox-status"></i>
+                    </label>
+                    <img class="image" width="80" height="80" alt="" src="./static/img/591d5fd7N0166a01e.jpg">
+                </div>
+                <div class="flex-item-2">
+                    <h3 class="cart-info-name">三星 GALAXY S8+（Plus）移动联通双4G 防水手机 幻紫灰 64GB 标配</h3>
+                    <p class="sku">规格：幻紫灰，64GB 标配</p>
+                    <p class="price">¥ <em class="int">5888</em>.00</p>
+                    <div class="num-and-more">
+                        <div class="num-wrap">
+                            <span class="minus disabled"></span>
+                            <div class="input-wrap"><input
+                                    class="num"
+                                    type="number"
+                                    value="1"
+                                    data-max="200"></div>
+                            <span class="plus"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <ul class="additional-area">
+                    <li class="tips">赠品</li>
+                    <li>
+                        <div class="des">指环扣 赠品 颜色随机赠送</div>
+                        <span class="num">x1</span>
+                        <i class="direction direction-right"></i>
+                    </li>
+                    <li>
+                        <div class="des">Xiaomi/小米 小米蓝牙耳机青春版耳塞入耳式 挂耳式无线耳机 白色</div>
+                        <span class="num">x1</span>
+                        <i class="direction direction-right"></i>
+                    </li>
+                    <li>
+                        <div class="des"> 香港英标 转换插头 转换器 通用转接头 赠品请勿单独购买</div>
+                        <span class="num">x1</span>
+                        <i class="direction direction-right"></i>
+                    </li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+
     <!--     你可能还想要  start   -->
     <article class="recommend">
         <header>
             <h3 class="recommend-title"><span>你可能还想要</span></h3>
         </header>
         <ul class="recommend-box">
+            <li class="recommend-item" ng-repeat="item in recommendList">
+                <a href="#">
+                    <span class="cover"><img ng-src="{{item.url}}"></span>
+                    <p class="desc">{{item.desc}}</p>
+                    <span class="flex-wrap">
+                        <span class="price">¥ <em>{{item.price[0]}}</em>.{{item.price[1]}}</span>
+                        <i class="buy" data-id="{{item.id}}"></i>
+                    </span>
+                </a>
+            </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t5215/252/15502760/100416/cb06f1da/58f709adN45511018.jpg"></span>
+                    <span class="cover"><img src="./static/img/58f709adN45511018.jpg"></span>
                     <p class="desc">小米6 全网通 6GB+64GB 亮黑色 移动联通电信4G手机 双卡双待</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>2499</em>.00</span>
@@ -50,7 +124,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t3181/266/794119355/591238/9383376b/57bebb6eN49eaac79.jpg"></span>
+                    <span class="cover"><img src="./static/img/57bebb6eN49eaac79.jpg"></span>
                     <p class="desc">全球通史</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>34</em>.20</span>
@@ -60,7 +134,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t5461/336/1560852029/195111/4971f031/5911be7cN4d90fc84.jpg"></span>
+                    <span class="cover"><img src="./static/img/5911be7cN4d90fc84.jpg"></span>
                     <p class="desc">锤子 坚果Pro 64GB 碳黑色 全网通 移动联通电信4G手机 双卡双待</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>1799</em>.00</span>
@@ -70,7 +144,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t2695/180/440517970/150390/80bf4470/57149d08Nbaa23b9a.jpg"></span>
+                    <span class="cover"><img src="./static/img/57149d08Nbaa23b9a.jpg"></span>
                     <p class="desc">施维茨十字双肩包韩版背包15.6英寸电脑包书包男高中大学生包 黑色</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>168</em>.00</span>
@@ -80,7 +154,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t4525/1/1396461338/178605/36099c96/5911664fN34e9292b.jpg"></span>
+                    <span class="cover"><img src="./static/img/5911664fN34e9292b.jpg"></span>
                     <p class="desc">酷派（Coolpad）酷玩6 柔光金6GB+64GB 移动联通电信4G手机 双卡双待</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>1499</em>.00</span>
@@ -90,7 +164,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t4876/146/2135471854/355345/e6454212/58f88ca6Nd1026210.jpg"></span>
+                    <span class="cover"><img src="./static/img/58f88ca6Nd1026210.jpg"></span>
                     <p class="desc">裂狼（LIELANG）韩版双肩背包男女时尚防泼水电脑包皮质高中学生书包潮 黑色-USB充电款</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>158</em>.00</span>
@@ -100,7 +174,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t4333/208/365266204/337840/e9e7bd9a/58b3f51aN10566aa1.jpg"></span>
+                    <span class="cover"><img src="./static/img/58b3f51aN10566aa1.jpg"></span>
                     <p class="desc">华为 HUAWEI P10 全网通 4GB+64GB 曜石黑 移动联通电信4G手机 双卡双待</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>3788</em>.00</span>
@@ -110,7 +184,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t2728/143/4034596011/323685/2761b4b8/57a94e37Nf75039e8.jpg"></span>
+                    <span class="cover"><img src="./static/img/57a94e37Nf75039e8.jpg"></span>
                     <p class="desc">施维茨十字双肩包韩版背包15.6英寸电脑包书包男学生 黑色</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>168</em>.00</span>
@@ -120,8 +194,8 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t4384/131/3331372937/65059/d90a895d/58df43e5N28134072.jpg"></span>
-                    <p class="desc">SAMSUNG 三星 Galaxy S8  5.8寸曲面屏 面部识别虹膜 智能手机 枫叶金 64G 港版（预售）</p>
+                    <span class="cover"><img src="./static/img/58df43e5N28134072.jpg"></span>
+                    <p class="desc">SAMSUNG 三星 Galaxy S8 5.8寸曲面屏 面部识别虹膜 智能手机 枫叶金 64G 港版（预售）</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>6999</em>.00</span>
                         <i class="buy"></i>
@@ -130,7 +204,7 @@
             </li>
             <li class="recommend-item">
                 <a href="#">
-                    <span class="cover"><img src="//img14.360buyimg.com/n7/jfs/t1867/171/847897355/242695/e4f8f55f/56302509N3ca12c63.jpg"></span>
+                    <span class="cover"><img src="./static/img/56302509N3ca12c63.jpg"></span>
                     <p class="desc">世界简史(京东定制）</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>26</em>.50</span>

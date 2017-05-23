@@ -41,20 +41,11 @@
 }
 
 .header .direction-down {
-    display: inline-block;
-    width: .1rem;
-    height: .1rem;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
     transform: rotate(45deg);
-    transform-origin: 50%;
-    position: relative;
-    top: -.02rem;
-    right: -.03rem;
 }
 
 .header .flex-item-2 a {
-    color: #3992fd;
+    color: #3985ff;
     font-size: .14rem;
     float: right;
     margin-right: .1rem;

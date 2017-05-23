@@ -1,18 +1,17 @@
 'use strict';
 var express = require('express');
 var path = require('path');
-var utils = require('../../api/utils/dbConnect')();
+var utils = require('./dbConnect')();
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/../view')));
 /**
  * 防御xss
  */
-app.use('*', function(req, res, next){
+app.use('*', function (req, res, next) {
     res.header("X-XSS-Protection", "1; mode=block");
     res.header("X-Frame-Options", "deny");
     res.header("X-Content-Type-Options", "nosniff");
-    res.header("Content-Security-Policy", "default-src 'self' 'unsafe-eval'");
     next();
 });
 
@@ -28,20 +27,9 @@ app.get('/', function (req, res) {
  */
 app.get('/queryData', function (req, res) {
 
-    if (req.query.type == 0) {
-        utils.getAll({
-            pageNumber: req.query.pageNumber
-        }, function (rows) {
-            res.json(rows);
-        });
-    } else {
-        utils.getNewsByType({
-            type: req.query.type,
-            pageNumber: req.query.pageNumber
-        }, function (rows) {
-            res.json(rows);
-        });
-    }
+    utils.getAll(function (rows) {
+        res.json(rows);
+    });
 
 });
 

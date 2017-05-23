@@ -249,7 +249,7 @@ sub {
     border-radius: 50%;
     width: .16rem;
     height: .16rem;
-    border: 1px solid #333;
+    border: 1px solid #999;
     position: relative;
     margin: 0 auto 0.06rem;
 }
@@ -272,3 +272,16 @@ sub {
 }
 
 /*   多选组件   end  */
+
+/*   小箭头   */
+.direction {
+    display: inline-block;
+    width: .1rem;
+    height: .1rem;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform-origin: 50%;
+    position: relative;
+    top: -.02rem;
+    right: -.03rem;
+}
