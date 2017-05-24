@@ -40,26 +40,27 @@
                     <i class="checkbox-status"></i>
                 </label>
                 <div class="flex-item-4">
-                    <i class="icon-shop"></i>
+                    <i class="icon-shop" ng-if="item.shopId == 0"></i>
+                    <i class="icon-shop jd" ng-if="item.shopId == 1"></i>
                     <span>{{item.shopName}}</span>
                 </div>
                 <div class="flex-item-1">
-                    <a href="#">优惠券</a>
+                    <a href="#">{{item.shopActive}}</a>
                 </div>
             </header>
             <p class="cart-desc" ng-if="item.desc">{{item.desc}}<i class="icon-notice"></i></p>
-            <div ng-repeat="commodity in item.item">
+            <div ng-repeat="commodity in item.item" class="cart-info-wrap">
                 <div class="cart-info flex-box">
                     <div class="flex-item-1">
                         <label class="checkbox">
                             <input type="checkbox" data-id="{{commodity.id}}"/>
                             <i class="checkbox-status"></i>
                         </label>
-                        <img class="image" width="80" height="80" alt="" src="{{commodity.imgUrl}}">
+                        <img class="image" width="80" height="80" alt="" ng-src="{{commodity.imgUrl}}">
                     </div>
                     <div class="flex-item-2">
                         <h3 class="cart-info-name">{{commodity.name}}</h3>
-                        <p class="sku">规格：幻紫灰，64GB 标配</p>
+                        <p class="sku">规格：{{commodity.specifications.join(',')}}</p>
                         <p class="price">¥ <em class="int">{{commodity.price[0]}}</em>.{{commodity.price[1]}}</p>
                         <div class="num-and-more">
                             <div class="num-wrap">
@@ -96,8 +97,8 @@
         <ul class="recommend-box">
             <li class="recommend-item" ng-repeat="item in recommendList">
                 <a href="#">
-                    <span class="cover"><img ng-src="{{item.url}}"></span>
-                    <p class="desc">{{item.desc}}</p>
+                    <span class="cover"><img ng-src="{{item.imgUrl}}"></span>
+                    <p class="desc">{{item.name}}</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>{{item.price[0]}}</em>.{{item.price[1]}}</span>
                         <i class="buy" data-id="{{item.id}}"></i>

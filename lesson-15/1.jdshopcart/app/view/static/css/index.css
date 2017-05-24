@@ -51,6 +51,9 @@
     background-position: 0 0;
     float: left;
 }
+.cart-list-item .icon-shop.jd {
+    background-position: -20px 2px;
+}
 
 .cart-list-item .cart-desc {
     min-height: 45px;
@@ -137,9 +140,12 @@
 /*   页面主体样式     end   */
 
 /*   商品信息   start   */
+.cart-info-wrap{
+    border-bottom: 1px solid #ddd;
+}
 .cart-info {
     position: relative;
-    padding: 10px 10px 15px 0;
+    padding: 15px 10px 15px 0;
 }
 
 .cart-info .checkbox {
@@ -173,8 +179,9 @@
     font-size: 12px;
     color: #666;
     margin: 7px 0;
-    padding: 6px 25px 6px 5px;
+    padding: 9px 25px 9px 5px;
     border-radius: 2px;
+    width: 275px;
 }
 
 .cart-info .sku:after{
