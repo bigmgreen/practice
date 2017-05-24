@@ -23,7 +23,7 @@
                 <span><i class="icon-location"></i>通州区永顺镇</span>
             </div>
             <div class="flex-item-2 text-center">
-                <span ng-click="isShow=true" class="select">全部商品
+                <span ng-click="isShow=true" class="select">{{selectText}}
                     <i class="direction direction-down"></i></span>
             </div>
             <div class="flex-item-2">
@@ -119,11 +119,11 @@
     <div class="layer-select" ng-show="isShow">
         <ul>
             <li ng-click="isShow=false" class="layer-select-header">商品筛选</li>
-            <li ng-click="queryShopCart(0)" class="select"><i class="icon-select"></i>全部商品</li>
-            <li ng-click="queryShopCart(1)"><i class="icon-select"></i>降价商品</li>
-            <li ng-click="queryShopCart(2)"><i class="icon-select"></i>促销优惠商品</li>
-            <li ng-click="queryShopCart(3)"><i class="icon-select"></i>库存紧张商品</li>
-            <li ng-click="queryShopCart(4)"><i class="icon-select"></i>京东超市商品</li>
+            <li class="{{selected[0]}}" ng-click="queryShopCart(0, '全部商品')"><i class="icon-select"></i>全部商品</li>
+            <li class="{{selected[1]}}" ng-click="queryShopCart(1,'降价商品')"><i class="icon-select"></i>降价商品</li>
+            <li class="{{selected[2]}}" ng-click="queryShopCart(2,'促销优惠商品')"><i class="icon-select"></i>促销优惠商品</li>
+            <li class="{{selected[3]}}" ng-click="queryShopCart(3,'库存紧张商品')"><i class="icon-select"></i>库存紧张商品</li>
+            <li class="{{selected[4]}}" ng-click="queryShopCart(4,'京东超市商品')"><i class="icon-select"></i>京东超市商品</li>
         </ul>
     </div>
     <!--     筛选浮层   end -->

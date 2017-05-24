@@ -45,15 +45,23 @@ var app = angular.module('shopCart', []);
 app.controller('shopCartController', function ($scope, $http) {
     $scope.recommendList = [];
     $scope.shopCart = [];
+    $scope.selectText = '全部商品';
+    $scope.selected = ['selected'];
     $http.get('/queryData').success(function (data) {
         $scope.shopCart = data.shopCart;
         $scope.recommendList = data.recommendList;
         $scope.isShow = false;
     });
 
-    $scope.queryShopCart = function (type) {
+    $scope.queryShopCart = function (type, text) {
         $scope.isShow = false;
-        $http.get('/queryShopCart', {params:{type: type}}).success(function (data) {
+        $scope.selectText = text;
+
+        var arr = new Array(type + 1);
+        arr[type] = 'selected';
+        $scope.selected = arr;
+
+        $http.get('/queryShopCart', {params: {type: type}}).success(function (data) {
             $scope.shopCart = data;
         });
     }

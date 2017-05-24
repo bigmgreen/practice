@@ -38,6 +38,7 @@
     line-height: .28rem;
     box-shadow: 0 0 0.02rem 0.02rem #eee;
     border-radius: 2px;
+    white-space: nowrap;
 }
 
 .header .direction-down {

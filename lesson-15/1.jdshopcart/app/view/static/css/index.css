@@ -472,8 +472,7 @@
     background-size: 60px 40px;
 }
 
-.layer-select li.selected
-.icon-select:after {
+.layer-select li.selected .icon-select:after {
     background-position: 0 -20px;
 }
 .layer-select li:before {
