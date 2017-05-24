@@ -1,4 +1,5 @@
-window.goodsData = [
+var data = {};
+data.goodsData = [
     {
         shopName: '宜东国际数码专营店',
         desc: null,
@@ -7,6 +8,7 @@ window.goodsData = [
         item: [
             {
                 id: 0,
+                type:1,
                 imgUrl: './static/img/591d5fd7N0166a01e.jpg',
                 name: '三星 GALAXY S8+（Plus） 防水手机 幻紫灰 4GB+64GB 移动联通双4G  标配',
                 count: 1,
@@ -91,7 +93,8 @@ window.goodsData = [
         item: [
             {
                 id: 1,
-                imgUrl: '//img10.360buyimg.com/n4/jfs/t2596/200/2630677961/204746/f3d1d8d6/576b91e8N24aa54ff.jpg',
+                type:1,
+                imgUrl: './static/img/56d9308fNe833520a.jpg',
                 name: '美的（Midea）电烤箱家用多功能 迷你小烤箱T1-L101B 10L',
                 count: 1,
                 price: [108, '00'],
@@ -141,7 +144,8 @@ window.goodsData = [
             },
             {
                 id: 2,
-                imgUrl: '//img10.360buyimg.com/n4/jfs/t4333/208/365266204/337840/e9e7bd9a/58b3f51aN10566aa1.jpg',
+                type:2,
+                imgUrl: './static/img/58b3f51aN10566aa1.jpg',
                 name: '华为 HUAWEI P10 全网通 4GB+64GB 曜石黑 移动联通电信4G手机 双卡双待',
                 count: 1,
                 price: [3788, '00'],
@@ -230,7 +234,8 @@ window.goodsData = [
         item: [
             {
                 id: 3,
-                imgUrl: '//img10.360buyimg.com/n4/jfs/t3235/12/3373170571/210701/7019d84c/57f1c0abNb0c93405.jpg',
+                type:2,
+                imgUrl: './static/img/57f1c0abNb0c93405.jpg',
                 name: '皮匠传奇单肩包男迷你包男士单肩斜跨包真皮小包包软牛皮休闲男包小背包腰包时尚斜挎包 0900604-1小号',
                 count: 1,
                 price: [198, '00'],
@@ -277,7 +282,8 @@ window.goodsData = [
         item: [
             {
                 id: 4,
-                imgUrl: '//img10.360buyimg.com/n4/jfs/t3871/241/257570683/89168/b1c702c0/584764a5N381cc7d5.jpg',
+                type:3,
+                imgUrl: './static/img/584764a5N381cc7d5.jpg',
                 name: '卢比亚单肩包 男士迷你小包真皮休闲背包潮流斜挎包 黑色小号',
                 count: 1,
                 price: [197, '00'],
@@ -322,7 +328,8 @@ window.goodsData = [
         item: [
             {
                 id: 5,
-                imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t1978/310/1879133659/392716/e4856f2d/5681fb80N325e25b0.jpg!q80.jpg.webp',
+                type:4,
+                imgUrl: './static/img/5681fb80N325e25b0.jpg',
                 name: '包邮 人性的弱点 人性的优点 戴尔卡耐基全集 口才训练 成功学 励志书籍',
                 count: 1,
                 price: [36, '80']
@@ -331,48 +338,49 @@ window.goodsData = [
     }
 ];
 
-window.recommendList = [
+data.recommendList = [
     {
         shopId: 0,
         id: 0,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t5884/14/125627182/318573/d660b105/591d5fd7N0166a01e.jpg!q80.jpg.webp',
+        imgUrl: './static/img/591d5fd7N0166a01e.jpg',
         name: '三星 GALAXY S8+（Plus） 防水手机 幻紫灰 4GB+64GB 移动联通双4G  标配',
         price: [6088, '00']
     },
     {
         shopId: 1,
         id: 1,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t2293/344/1738912349/345974/b8a332b2/56d9308fNe833520a.jpg!q80.jpg.webp',
+        imgUrl: './static/img/56d9308fNe833520a.jpg',
         name: '美的（Midea）电烤箱家用多功能 迷你小烤箱T1-L101B 10L',
         price: [108, '00']
     },
     {
         shopId: 1,
         id: 2,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t4333/208/365266204/337840/e9e7bd9a/58b3f51aN10566aa1.jpg!q80.jpg.webp',
+        imgUrl: './static/img/58b3f51aN10566aa1.jpg',
         name: '华为 HUAWEI P10 全网通 4GB+64GB 曜石黑 移动联通电信4G手机 双卡双待',
         price: [3788, '00']
     },
     {
         shopId: 2,
         id: 3,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t3235/12/3373170571/210701/7019d84c/57f1c0abNb0c93405.jpg!q80.jpg.webp',
+        imgUrl: './static/img/57f1c0abNb0c93405.jpg',
         name: '皮匠传奇单肩包男迷你包男士单肩斜跨包真皮小包包软牛皮休闲男包小背包腰包时尚斜挎包 0900604-1小号',
         price: [198, '00']
     },
     {
         shopId: 3,
         id: 4,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t3871/241/257570683/89168/b1c702c0/584764a5N381cc7d5.jpg!q80.jpg.webp',
+        imgUrl: './static/img/584764a5N381cc7d5.jpg',
         name: '卢比亚单肩包 男士迷你小包真皮休闲背包潮流斜挎包 黑色小号',
         price: [197, '00']
     },
     {
         shopId: 4,
         id: 5,
-        imgUrl: '//m.360buyimg.com/mobilecms/s750x750_jfs/t1978/310/1879133659/392716/e4856f2d/5681fb80N325e25b0.jpg!q80.jpg.webp',
+        imgUrl: './static/img/5681fb80N325e25b0.jpg',
         name: '包邮 人性的弱点 人性的优点 戴尔卡耐基全集 口才训练 成功学 励志书籍',
         count: 1,
         price: [36, '80']
     }
 ];
+module.exports = data;

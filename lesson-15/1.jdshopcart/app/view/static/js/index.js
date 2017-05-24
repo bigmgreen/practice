@@ -43,12 +43,18 @@ $(function () {
 var app = angular.module('shopCart', []);
 
 app.controller('shopCartController', function ($scope, $http) {
-    $scope.recommendList = recommendList;
-    $scope.goods = goodsData;
-    // $http.get('/queryData').success(function (data) {
-    //     data.forEach(function (item, index) {
-    //         data[index]['price'] = item['price'].toFixed(2).split('.');
-    //     });
-    //     $scope.recommendList = goodsData;
-    // });
+    $scope.recommendList = [];
+    $scope.shopCart = [];
+    $http.get('/queryData').success(function (data) {
+        $scope.shopCart = data.shopCart;
+        $scope.recommendList = data.recommendList;
+        $scope.isShow = false;
+    });
+
+    $scope.queryShopCart = function (type) {
+        $scope.isShow = false;
+        $http.get('/queryShopCart', {params:{type: type}}).success(function (data) {
+            $scope.shopCart = data;
+        });
+    }
 });

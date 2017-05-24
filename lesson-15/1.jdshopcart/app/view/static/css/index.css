@@ -51,6 +51,7 @@
     background-position: 0 0;
     float: left;
 }
+
 .cart-list-item .icon-shop.jd {
     background-position: -20px 2px;
 }
@@ -140,9 +141,10 @@
 /*   页面主体样式     end   */
 
 /*   商品信息   start   */
-.cart-info-wrap{
+.cart-info-wrap {
     border-bottom: 1px solid #ddd;
 }
+
 .cart-info {
     position: relative;
     padding: 15px 10px 15px 0;
@@ -167,10 +169,11 @@
     line-height: 1.2;
 }
 
-.cart-info .flex-item-2{
+.cart-info .flex-item-2 {
     padding-left: 10px;
 }
-.cart-info .sku{
+
+.cart-info .sku {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -184,7 +187,7 @@
     width: 275px;
 }
 
-.cart-info .sku:after{
+.cart-info .sku:after {
     content: "";
     display: block;
     width: 8px;
@@ -200,7 +203,8 @@
     right: 6px;
     margin-top: -7px;
 }
-.cart-info .sku:before{
+
+.cart-info .sku:before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -216,14 +220,17 @@
     -webkit-transform-origin: 0 0;
     border-radius: 4px;
 }
-.cart-info .price{
+
+.cart-info .price {
     color: #e4393c;
     font-size: 10px;
 }
-.cart-info .price em{
+
+.cart-info .price em {
     font-size: 14px;
     font-style: normal;
 }
+
 /*   商品信息   end   */
 
 /*   商品个数计算  start   */
@@ -231,7 +238,8 @@
     margin-top: 5px;
     overflow: hidden;
 }
-.num-wrap{
+
+.num-wrap {
     position: relative;
     display: block;
     width: 100px;
@@ -274,6 +282,7 @@
     float: left;
     position: relative;
 }
+
 .num-wrap .num {
     -webkit-appearance: none;
     border-radius: 0;
@@ -287,6 +296,7 @@
     text-align: center;
     border: none;
 }
+
 .num-wrap .input-wrap:before {
     z-index: 1;
     border-right: 1px solid #ccc;
@@ -300,6 +310,7 @@
     bottom: -100%;
     left: -100%;
 }
+
 .num-wrap .input-wrap:after {
     border-right: 1px solid #ccc;
     -webkit-transform: scaleX(.5);
@@ -312,9 +323,11 @@
     bottom: -100%;
     right: -100%;
 }
+
 .num-wrap .plus {
     float: right;
 }
+
 .num-wrap .plus:before {
     width: 2px;
     height: 16px;
@@ -336,4 +349,143 @@
     bottom: -90%;
     right: -100%;
 }
+
 /*   商品个数计算  end   */
+/*   空数据显示   start   */
+.cart-empty {
+    margin: 50px 0 20px;
+    text-align: center;
+    color: #666;
+}
+
+.cart-empty img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border: 0 none;
+    vertical-align: top;
+}
+
+.cart-empty p {
+    line-height: 1.5;
+}
+
+/*   空数据显示   end   */
+
+/*   筛选浮层    start  */
+.layer-select {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    font-size: 12px;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.layer-select ul {
+    position: relative;
+    width: 80%;
+    margin: 40% auto 0;
+    background: rgba(0, 0, 0, .8);
+    border-radius: 3px;
+}
+
+.layer-select li {
+    position: relative;
+    padding: 15px 0 15px 25px;
+    margin: 0 10px;
+    color: #fff;
+}
+
+.layer-select li.layer-select-header {
+    position: relative;
+    padding: 0;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0;
+}
+
+.layer-select li.layer-select-header:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/close.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 25px 5px;
+}
+
+.icon-select {
+    z-index: 1;
+    left: 0;
+    width: 42px;
+    height: 43px;
+    font-style: normal;
+}
+
+.layer-select .icon-select {
+    width: 34px;
+}
+
+.layer-select .icon-select:after {
+    top: 14px;
+    margin-left: -18px;
+    background: url(../img/radio.png) no-repeat 0 0;
+    background-size: 20px 40px;
+}
+
+.icon-select:after {
+    left: 50%;
+    content: "\20";
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+}
+
+.layer-select .icon-select:after {
+    top: 14px;
+    margin-left: -18px;
+    background: url(../img/radio.png) no-repeat 0 0;
+    background-size: 20px 40px;
+}
+
+.icon-select, .icon-select:after {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.icon-select:after {
+    background: url(../img/shopcart_v2.png);
+    background-size: 60px 40px;
+}
+
+.layer-select li.selected
+.icon-select:after {
+    background-position: 0 -20px;
+}
+.layer-select li:before {
+    content: "";
+    height: 0;
+    display: block;
+    border-bottom: 1px solid #474747;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-transform: scaleY(.5);
+    -webkit-transform-origin: 50% 0;
+}
+/*   筛选浮层    end  */

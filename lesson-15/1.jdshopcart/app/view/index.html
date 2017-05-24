@@ -23,7 +23,8 @@
                 <span><i class="icon-location"></i>通州区永顺镇</span>
             </div>
             <div class="flex-item-2 text-center">
-                <span class="select">全部商品<i class="direction direction-down"></i></span>
+                <span ng-click="isShow=true" class="select">全部商品
+                    <i class="direction direction-down"></i></span>
             </div>
             <div class="flex-item-2">
                 <a href="#">编辑</a>
@@ -33,7 +34,7 @@
     <!--     页面头部  end -->
 
     <div class="cart-list">
-        <section class="cart-list-item" ng-repeat="item in goods">
+        <section class="cart-list-item" ng-repeat="item in shopCart">
             <header class="flex-box">
                 <label class="checkbox">
                     <input type="checkbox" data-shop-id="{{item.shopId}}"/>
@@ -89,6 +90,11 @@
         </section>
     </div>
 
+    <div class="cart-empty" ng-if="shopCart == null">
+        <img src="./static/img/addr_empty.png">
+        <p>购物车暂无商品<br>快去挑选商品吧~~</p>
+    </div>
+
     <!--     你可能还想要  start   -->
     <article class="recommend">
         <header>
@@ -96,18 +102,31 @@
         </header>
         <ul class="recommend-box">
             <li class="recommend-item" ng-repeat="item in recommendList">
-                <a href="#">
+                <a href="javascript:void(0);">
                     <span class="cover"><img ng-src="{{item.imgUrl}}"></span>
                     <p class="desc">{{item.name}}</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>{{item.price[0]}}</em>.{{item.price[1]}}</span>
-                        <i class="buy" data-id="{{item.id}}"></i>
+                        <i class="buy" data-shop-id="{{item.shopId}}" data-id="{{item.id}}"></i>
                     </span>
                 </a>
             </li>
         </ul>
     </article>
     <!--     你可能还想要  end   -->
+
+    <!--     筛选浮层   start -->
+    <div class="layer-select" ng-show="isShow">
+        <ul>
+            <li ng-click="isShow=false" class="layer-select-header">商品筛选</li>
+            <li ng-click="queryShopCart(0)" class="select"><i class="icon-select"></i>全部商品</li>
+            <li ng-click="queryShopCart(1)"><i class="icon-select"></i>降价商品</li>
+            <li ng-click="queryShopCart(2)"><i class="icon-select"></i>促销优惠商品</li>
+            <li ng-click="queryShopCart(3)"><i class="icon-select"></i>库存紧张商品</li>
+            <li ng-click="queryShopCart(4)"><i class="icon-select"></i>京东超市商品</li>
+        </ul>
+    </div>
+    <!--     筛选浮层   end -->
 </main>
 <!--     主体内容区域  end  -->
 
@@ -139,7 +158,6 @@
 <script src="static/lib/jquery/jquery.min.js"></script>
 <script src="static/lib/throttle/throttle.js"></script>
 <script src="static/lib/storage/storage.js"></script>
-<script src="static/js/data.js"></script>
 <script src="static/js/index.js"></script>
 </body>
 </html>

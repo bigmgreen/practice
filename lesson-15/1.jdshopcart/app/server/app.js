@@ -1,7 +1,9 @@
 'use strict';
 var express = require('express');
 var path = require('path');
-var utils = require('./dbConnect')();
+var data = require('./data');
+var goodsData = data.goodsData;
+var recommendList = data.recommendList;
 
 var app = express();
 app.use(express.static(path.join(__dirname, '/../view')));
@@ -26,11 +28,37 @@ app.get('/', function (req, res) {
  * 数据查询接口
  */
 app.get('/queryData', function (req, res) {
+    res.json({
+        shopCart: null,
+        recommendList: recommendList
+    });
+});
 
-    utils.getAll(function (rows) {
-        res.json(rows);
+/**
+ * 根据类别查询接口
+ */
+app.get('/queryShopCart', function (req, res) {
+
+    var data = [];
+    var type = req.query.type;
+    var _goodsData = JSON.parse(JSON.stringify(goodsData));
+
+    _goodsData.forEach(function (item) {
+        var mark = [];
+        item.item.forEach(function (_item) {
+            if (_item.type == type) {
+                mark.push(_item);
+            }
+        });
+
+        if (mark.length>0) {
+            item.item = mark;
+            data.push(item);
+        }
+
     });
 
+    res.json(data);
 });
 
 /**

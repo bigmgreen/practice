@@ -9,6 +9,7 @@
     bottom: 0;
     width: 100%;
     background: hsla(0,0%,100%,.95);
+    z-index: 5;
 }
 
 .btn-to-buy {
