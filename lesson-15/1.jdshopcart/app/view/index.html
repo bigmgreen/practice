@@ -90,7 +90,7 @@
         </section>
     </div>
 
-    <div class="cart-empty" ng-if="shopCart == null">
+    <div class="cart-empty" ng-if="(shopCart == null) || (shopCart.length == 0)">
         <img src="./static/img/addr_empty.png">
         <p>购物车暂无商品<br>快去挑选商品吧~~</p>
     </div>
@@ -107,7 +107,7 @@
                     <p class="desc">{{item.name}}</p>
                     <span class="flex-wrap">
                         <span class="price">¥ <em>{{item.price[0]}}</em>.{{item.price[1]}}</span>
-                        <i class="buy" data-shop-id="{{item.shopId}}" data-id="{{item.id}}"></i>
+                        <i class="buy" ng-click="showAddCart(item.shopId, item.id)"></i>
                     </span>
                 </a>
             </li>
@@ -129,51 +129,56 @@
     <!--     筛选浮层   end -->
 
     <!--     加入购物车浮层   start   -->
-    <div class="add-cart">
+    <div class="add-cart" ng-show="isShowAddCart">
         <div class="add-cart-main">
             <div class="add-cart-header">
-                <img alt="商品图"
-                     src="//img14.360buyimg.com/n1/jfs/t4384/131/3331372937/65059/d90a895d/58df43e5N28134072.jpg">
-                <p class="price">¥ <em>5999</em>.00</p>
-                <p class="prop"><span>已选</span> 枫叶金, 64G 港版 1个</p>
-                <i class="close"></i>
+                <img alt="商品图" ng-src="{{addCartInfo.imgUrl}}">
+                <p class="price">¥ <em>{{addCartInfo.price[0]}}</em>.{{addCartInfo.price[1]}}</p>
+                <p class="prop"><span>已选</span> {{addCartInfo.specifications.join(',')}}</p>
+                <i class="close" ng-click="closeCart()"></i>
             </div>
             <div class="add-cart-body">
-                <div>
-                    <div class="sku-kind">颜色</div>
-                    <div class="sku-choose" id="sku1">
-                        <span class="choice active">枫叶金</span>
-                        <span class="choice">珊瑚蓝</span>
-                        <span class="choice">幻紫灰</span>
-                        <span class="choice">星夜黑</span>
+                <div ng-if="addCartInfo.sku.color">
+                    <div class="sku-kind">{{addCartInfo.sku.color.name}}</div>
+                    <div class="sku-choose">
+                        <span ng-click="itemSelect('skuItemColorSelected', $index)"
+                              class="choice {{skuItemColorSelected[$index]}}"
+                              ng-repeat="sku_choose in addCartInfo.sku.color.list"
+                        >{{sku_choose.name}}</span>
                     </div>
-                    <div class="sku-kind">版本</div>
-                    <div class="sku-choose" id="sku2">
-                        <span class="choice active">64G 港版</span>
-                        <span class="choice">64G 国际版</span>
-                        <span class="choice">64G 亚太版</span>
+                </div>
+                <div ng-if="addCartInfo.sku.version">
+                    <div class="sku-kind">{{addCartInfo.sku.version.name}}</div>
+                    <div class="sku-choose">
+                        <span ng-click="itemSelect('skuItemVersionSelected', $index)"
+                              class="choice {{skuItemVersionSelected[$index]}}"
+                              ng-repeat="sku_choose in addCartInfo.sku.version.list"
+                        >{{sku_choose.name}}</span>
                     </div>
                 </div>
                 <div class="count-choose">
                     <div class="num-and-more pull-right">
                         <div class="num-wrap">
-                            <span class="minus disabled"></span>
+                            <span ng-click="calculation('addCartInfo', -1)" class="minus {{disabled_1}}"></span>
                             <div class="input-wrap"><input
                                     class="num"
                                     type="number"
-                                    value="1"
+                                    ng-model="addCartInfo.count"
                                     data-max="200"></div>
-                            <span class="plus"></span>
+                            <span ng-click="calculation('addCartInfo', 1)" class="plus {{disabled_9999}}"></span>
                         </div>
                     </div>
                     <p class="count">数量</p>
                 </div>
             </div>
 
-            <div class="add-cart-btn">加入购物车</div>
+            <div class="add-cart-btn" ng-click="addCart()">加入购物车</div>
         </div>
     </div>
     <!--     加入购物车浮层   end   -->
+
+    <!--  添加成功  -->
+    <span ng-show="isTipShow" class="sku-tip">添加成功</span>
 </main>
 <!--     主体内容区域  end  -->
 
@@ -200,6 +205,7 @@
 
 <!--     回到顶部  -->
 <div id="goTop" class="go-top-trigger"></div>
+
 
 <script src="static/lib/angular/angular.min.js"></script>
 <script src="static/lib/jquery/jquery.min.js"></script>

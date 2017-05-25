@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "app-hot": "supervisor app/server/app.js",
-    "mgt-hot": "supervisor mgt/server/mgt.js",
-    "app": "node app/server/app.js",
-    "mgt": "node mgt/server/mgt.js"
+    "app": "node app/server/app.js"
   },
   "author": "",
   "license": "ISC",
