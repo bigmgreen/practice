@@ -475,6 +475,7 @@
 .layer-select li.selected .icon-select:after {
     background-position: 0 -20px;
 }
+
 .layer-select li:before {
     content: "";
     height: 0;
@@ -487,4 +488,168 @@
     -webkit-transform: scaleY(.5);
     -webkit-transform-origin: 50% 0;
 }
+
 /*   筛选浮层    end  */
+
+/*   加入购物车浮层   start   */
+.add-cart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 301;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.add-cart-main {
+    position: absolute;
+    -webkit-transform: translate3d(0, 420px, 0);
+    transform: translate3d(0, 420px, 0);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(0, 0, .25, 1);
+    transition: -webkit-transform .2s cubic-bezier(0, 0, .25, 1);
+    transition: transform .2s cubic-bezier(0, 0, .25, 1);
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    -webkit-transform: translateZ(0);
+}
+
+.add-cart-header {
+    height: 70px;
+    line-height: 1.5;
+    padding: 0 0 10px 110px;
+    background-color: #fff;
+    position: relative;
+    color: #333;
+    border: 0 none;
+    box-sizing: content-box;
+}
+
+.add-cart-header img {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    border-radius: 7px;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+}
+
+.add-cart-header .price {
+    height: 40px;
+    line-height: 40px;
+    color: #e4393c;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.add-cart-header em {
+    font-size: 16px;
+}
+
+.add-cart-header .prop {
+    word-break: break-all;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4em;
+    padding-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.add-cart-header span {
+    color: #999;
+}
+
+.add-cart-header .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.add-cart-header .close:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    background: url(../img/close2.png) no-repeat 1px 1px;
+    background-size: 15px;
+}
+
+.add-cart-body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 320px;
+}
+
+.add-cart-body .sku-kind {
+    font-size: 12px;
+    color: #333;
+    margin: 0 10px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.add-cart-body .sku-choose {
+    font-size: 12px;
+    overflow: hidden;
+    margin-bottom: -5px;
+}
+
+.add-cart-body .sku-choose .choice {
+    display: inline-block;
+    padding: 0 15px;
+    min-width: 20px;
+    max-width: 270px;
+    overflow: hidden;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    color: #333;
+    background-color: #f3f2f8;
+}
+
+.add-cart-body .sku-choose .choice.active {
+    background-color: #e4393c;
+    color: #fff;
+}
+
+.add-cart-body .count-choose {
+    padding: 10px 10px 15px;
+    font-size: 12px;
+    margin-bottom: 90px;
+}
+
+.add-cart-body .count-choose .count {
+    color: #333;
+    height: 31px;
+    line-height: 31px;
+}
+
+.add-cart-btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #e4393c;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+/*   加入购物车浮层   end   */

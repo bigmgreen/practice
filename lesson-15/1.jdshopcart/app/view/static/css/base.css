@@ -54,11 +54,16 @@ a:link,
 a:visited {
     border: 0 none;
     text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 sub {
     vertical-align: middle;
+}
+
+i,
+em {
+    font-style: normal
 }
 
 /*   reset   end   */
@@ -103,7 +108,7 @@ sub {
     bottom: 132px;
     position: fixed;
 
-    background: rgba(0,0,0,.7) url(../img/top.png) no-repeat;
+    background: rgba(0, 0, 0, .7) url(../img/top.png) no-repeat;
     background-size: 25px;
     background-position: 50%;
 }
