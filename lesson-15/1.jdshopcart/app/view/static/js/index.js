@@ -61,6 +61,10 @@ app.controller('shopCartController', function ($scope, $http) {
     $scope.skuItemColorSelected = [' active '];
     //版本选中状态
     $scope.skuItemVersionSelected = [' active '];
+    //tip文本
+    $scope.cartMessage = '添加成功';
+    //总价格
+    $scope.totalPrice = 0;
 
     /**
      * 初始化页面数据
@@ -93,23 +97,50 @@ app.controller('shopCartController', function ($scope, $http) {
      * 显示添加购物车面板
      * @param shopId 店铺id
      * @param id 商品id
+     * @param isUpdate 是否是编辑操作
      */
-    $scope.showAddCart = function (shopId, id) {
-        $scope.isShowAddCart = true;
-        $http.get('/queryAddCart', {params: {shopId: shopId, id: id}}).success(function (data) {
-            $scope.addCartInfo = data;
-        });
+    $scope.showAddCart = function (shopId, id, isUpdate) {
+
+        if (isUpdate) {
+            $http.get('/queryUpdateCart', {params: {shopId: shopId, id: id}}).success(function (data) {
+                $scope.addCartInfo = data;
+                $scope.itemSelect('skuItemColorSelected', data.sku.color.select);
+                $scope.itemSelect('skuItemVersionSelected', data.sku.version.select);
+                $scope.isShowAddCart = true;
+                $scope.isUpdate = true;
+            });
+        } else {
+            $http.get('/queryAddCart', {params: {shopId: shopId, id: id}}).success(function (data) {
+                $scope.addCartInfo = data;
+                $scope.isShowAddCart = true;
+                $scope.isUpdate = false;
+            });
+        }
+
     };
 
     /**
      * 添加到购物车的操作
-     * @param shopId 店铺id
-     * @param id 商品id
      */
     $scope.addCart = function () {
 
-        $http.post('/addCartInfo', $scope.addCartInfo).success(function (data) {
-            if (data) {
+        var url = '';
+        if ($scope.isUpdate) {
+            url = 'updateCartInfo';
+            $scope.cartMessage = '编辑成功';
+        } else {
+            url = '/addCartInfo';
+            $scope.cartMessage = '添加成功';
+        }
+
+        $http.post(url, $scope.addCartInfo).success(function (data) {
+            if (data.isOk == 1) {
+
+                $scope.shopCart = data.info;
+                $scope.totalPrice = 0;
+                $scope.isCheck = false;
+                // $scope.checkAll(false);
+
                 $scope.isTipShow = true;
                 setTimeout(function () {
                     $scope.$apply(function () {
@@ -130,8 +161,7 @@ app.controller('shopCartController', function ($scope, $http) {
      * @param num 累加尺度
      */
     $scope.calculation = function (attrName, num) {
-        var count = $scope[attrName].count;
-        // var _price = $scope.addCartInfo.price.join('.') / $scope[attrName].count;
+        count = $scope[attrName].count;
         if (num == 1) {
             if (count < 9999 && $scope.disabled_9999 == '') {
                 $scope[attrName].count += num;
@@ -155,8 +185,49 @@ app.controller('shopCartController', function ($scope, $http) {
                 }
             }
         }
+    };
 
-        // $scope.addCartInfo.price = (_price * $scope[attrName].count).toFixed(2).split('.');
+    /**
+     * 购物车商品加减
+     * @param index 序号
+     * @param _index 序号
+     * @param check 是否选择
+     * @param num 累加尺度
+     */
+    $scope.calculationCart = function (index, _index, check, num) {
+        var shopCart = $scope.shopCart;
+        var info = shopCart[index].item[_index];
+        count = info.count;
+
+        var _price = $scope.addCartInfo.price.join('.');
+        if (num == 1) {
+            if (count < 9999) {
+                info.count += num;
+                if(check) {
+                    $scope.totalPrice = (parseFloat($scope.totalPrice) + _price * (info.count - 1)).toFixed(2);
+                }
+            }
+        } else if (num == -1) {
+            if (count > 1) {
+                info.count += num;
+                if (check) {
+                    $scope.totalPrice = (parseFloat($scope.totalPrice) - _price * (info.count - 1)).toFixed(2);
+                }
+            }
+        }
+
+        $http.post('/updateCartCount', {shopId: info.shopId, id: info.id, count: info.count})
+            .success(function (data) {
+                if (data) {
+                    $scope.cartMessage = '编辑成功';
+                    $scope.isTipShow = true;
+                    setTimeout(function () {
+                        $scope.$apply(function () {
+                            $scope.isTipShow = false;
+                        });
+                    }, 1000);
+                }
+            });
     };
 
     /**
@@ -208,9 +279,78 @@ app.controller('shopCartController', function ($scope, $http) {
         var info = $scope.addCartInfo;
         var sku = info.sku;
         info.specifications[0] = sku.color.list[0].name;
-        info.specifications[1] = sku.version.list[0].name;
+        if (sku.version) {
+            info.specifications[1] = sku.version.list[0].name;
+        }
         $scope.addCartInfo.count = 1;
         $scope.disabled_1 = 'disabled';
         $scope.disabled_9999 = '';
     };
+
+    /**
+     * 全选操作
+     */
+    $scope.checkAll = function (type,event) {
+
+        var input = angular.element('[data-class]');
+        var subInput = angular.element('[data-sub-class]');
+        var isCheck = event.target.checked;
+
+        input.map(function (index, item) {
+            item.checked = isCheck;
+        });
+        subInput.map(function (index,item) {
+            item.checked = isCheck;
+        });
+
+        if (isCheck) {
+            $scope.totalPrice = 0;
+            $scope.shopCart.forEach(function (item) {
+                item.item.forEach(function (_item) {
+                    var num = parseFloat(_item.price.join('.'));
+                    $scope.totalPrice = (parseFloat($scope.totalPrice) + num * _item.count).toFixed(2);
+                });
+            });
+        } else {
+            $scope.totalPrice = 0;
+        }
+    };
+
+    /**
+     * 计算价格
+     */
+    $scope.sum = function (check, item) {
+
+        item.item.forEach(function (_item) {
+            var num = parseFloat(_item.price.join('.'));
+            if (check) {
+                $scope.totalPrice = (parseFloat($scope.totalPrice) + num * _item.count).toFixed(2);
+            } else {
+                $scope.totalPrice = (parseFloat($scope.totalPrice) - num * _item.count).toFixed(2);
+                $scope.isCheck = false;
+            }
+        });
+    };
+
+    /**
+     * 计算价格
+     */
+    $scope.subSum = function (check, price, count, parent) {
+
+        var num = parseFloat(price.join('.'));
+        var temp = parseFloat($scope.totalPrice);
+
+        if (check) {
+            $scope.totalPrice = (temp + num * count).toFixed(2);
+            parent.checkedSub=true;
+        } else {
+            $scope.totalPrice = (temp - num * count).toFixed(2);
+            $scope.isCheck = false;
+        }
+    }
 });
+
+
+function log(str) {
+    console.log(str);
+}

@@ -37,7 +37,8 @@
         <section class="cart-list-item" ng-repeat="item in shopCart">
             <header class="flex-box">
                 <label class="checkbox">
-                    <input type="checkbox" data-shop-id="{{item.shopId}}"/>
+                    <input type="checkbox" data-class
+                           ng-click="sum(checkedSub, item)"/>
                     <i class="checkbox-status"></i>
                 </label>
                 <div class="flex-item-4">
@@ -54,29 +55,29 @@
                 <div class="cart-info flex-box">
                     <div class="flex-item-1">
                         <label class="checkbox">
-                            <input type="checkbox" data-id="{{commodity.id}}"/>
+                            <input type="checkbox" data-sub-class
+                                   ng-click="subSum(check, commodity.price, commodity.count, $parent)"/>
                             <i class="checkbox-status"></i>
                         </label>
                         <img class="image" width="80" height="80" alt="" ng-src="{{commodity.imgUrl}}">
                     </div>
                     <div class="flex-item-2">
                         <h3 class="cart-info-name">{{commodity.name}}</h3>
-                        <p class="sku">规格：{{commodity.specifications.join(',')}}</p>
+                        <p class="sku" ng-click="showAddCart(item.shopId, commodity.id, true)">规格：{{commodity.specifications.join(',')}}</p>
                         <p class="price">¥ <em class="int">{{commodity.price[0]}}</em>.{{commodity.price[1]}}</p>
                         <div class="num-and-more">
                             <div class="num-wrap">
-                                <span class="minus disabled"></span>
+                                <span ng-click="calculationCart($parent.$index, $index, check, -1)" class="minus"></span>
                                 <div class="input-wrap"><input
                                         class="num"
                                         type="number"
-                                        value="{{commodity.count}}"
-                                        data-max="200"></div>
-                                <span class="plus"></span>
+                                        ng-model="commodity.count"></div>
+                                <span ng-click="calculationCart($parent.$index, $index, check, 1)" class="plus"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer>
+                <footer ng-if="commodity.additional.length > 0">
                     <ul class="additional-area">
                         <li class="tips">赠品</li>
                         <li ng-repeat="add in commodity.additional">
@@ -163,8 +164,7 @@
                             <div class="input-wrap"><input
                                     class="num"
                                     type="number"
-                                    ng-model="addCartInfo.count"
-                                    data-max="200"></div>
+                                    ng-model="addCartInfo.count"></div>
                             <span ng-click="calculation('addCartInfo', 1)" class="plus {{disabled_9999}}"></span>
                         </div>
                     </div>
@@ -178,37 +178,37 @@
     <!--     加入购物车浮层   end   -->
 
     <!--  添加成功  -->
-    <span ng-show="isTipShow" class="sku-tip">添加成功</span>
+    <span ng-show="isTipShow" class="sku-tip">{{cartMessage}}</span>
+
+    <!--     页面尾部  start -->
+    <footer class="footer">
+        <div class="flex-box">
+            <div class="flex-item-1">
+                <label class="checkbox">
+                    <input type="checkbox" ng-click="checkAll('all',$event)"/>
+                    <i class="checkbox-status"></i>
+                    <span>全选</span>
+                </label>
+            </div>
+            <div class="flex-item-2 price-desc">
+                <b>总计：<span>￥<span>{{totalPrice}}</span></span></b>
+                <span>(不含运费，已优惠¥0.00)</span>
+            </div>
+            <div class="flex-item-1">
+                <a href="#" class="btn-to-buy"><b>去结算</b><sub>(0件)</sub></a>
+            </div>
+        </div>
+    </footer>
+    <!--     页面尾部  end -->
 </main>
 <!--     主体内容区域  end  -->
-
-<!--     页面尾部  start -->
-<footer class="footer">
-    <div class="flex-box">
-        <div class="flex-item-1">
-            <label class="checkbox">
-                <input type="checkbox"/>
-                <i class="checkbox-status"></i>
-                <span>全选</span>
-            </label>
-        </div>
-        <div class="flex-item-2 price-desc">
-            <b>总计：<span>￥0.00</span></b>
-            <span>(不含运费，已优惠¥0.00)</span>
-        </div>
-        <div class="flex-item-1">
-            <a href="#" class="btn-to-buy"><b>去结算</b><sub>(0件)</sub></a>
-        </div>
-    </div>
-</footer>
-<!--     页面尾部  end -->
 
 <!--     回到顶部  -->
 <div id="goTop" class="go-top-trigger"></div>
 
 
-<script src="static/lib/angular/angular.min.js"></script>
 <script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/angular/angular.min.js"></script>
 <script src="static/lib/throttle/throttle.js"></script>
 <script src="static/lib/storage/storage.js"></script>
 <script src="static/js/index.js"></script>
