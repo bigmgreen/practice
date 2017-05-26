@@ -8,7 +8,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: hsla(0,0%,100%,.95);
+    background: hsla(0, 0%, 100%, .95);
     z-index: 5;
 }
 
@@ -43,4 +43,37 @@
     color: #666;
     font-size: .1rem;
 }
+
+.footer-btn-wrap {
+    padding: 10px;
+    text-align: right;
+}
+.footer-btn {
+    display: inline-block;
+    margin-left: 5px;
+    width: 69px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background: #666;
+    border-radius: 2px;
+}
+
+.footer-btn.btn-share {
+    background: #3884ff;
+    color: #fff;
+}
+
+.footer-btn.btn-move {
+    background: #666;
+    color: #fff;
+}
+
+.footer-btn.btn-del {
+    background: #f19325;
+    color: #fff;
+}
+
 /*     底部样式    end     */

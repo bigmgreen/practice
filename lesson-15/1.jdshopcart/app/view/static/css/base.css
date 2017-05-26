@@ -291,3 +291,71 @@ em {
     top: -.02rem;
     right: -.03rem;
 }
+
+/*   删除弹框   start   */
+.mod-alert-mask {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 898;
+}
+
+.mod-alert {
+    display: block;
+    width: 210px;
+    padding: 15px;
+    box-sizing: content-box;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    z-index: 899;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.mod-alert .icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../img/icon.png) no-repeat;
+    background-size: 50px 200px;
+}
+.mod-alert p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.mod-alert .btn-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 15px -5px 0;
+}
+.mod-alert .btn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #f3f3f3;
+    color: #333;
+    font-size: 12px;
+    border-radius: 3px;
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
+}
+.mod-alert .btn-1 {
+    background: #3985ff;
+    color: #fff;
+}
+/*   删除弹框   end   */

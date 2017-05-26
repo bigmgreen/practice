@@ -28,6 +28,10 @@
     left: -0.14rem;
 }
 
+.header .flex-item-2 .select.disabled {
+    opacity: .5;
+}
+
 .header .flex-item-2 .select {
     background-color: #fff;
     display: inline-block;
