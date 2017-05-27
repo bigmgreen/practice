@@ -45,15 +45,15 @@
 }
 
 .footer-btn-wrap {
-    padding: 10px;
+    padding: 0.1rem;
     text-align: right;
 }
 .footer-btn {
     display: inline-block;
-    margin-left: 5px;
-    width: 69px;
-    height: 30px;
-    line-height: 30px;
+    margin-left: 0.05rem;
+    width: 0.69rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     text-align: center;
     color: #fff;
     font-size: 12px;
@@ -73,6 +73,11 @@
 
 .footer-btn.btn-del {
     background: #f19325;
+    color: #fff;
+}
+
+.footer-btn-buy {
+    background: #e4393c;
     color: #fff;
 }
 

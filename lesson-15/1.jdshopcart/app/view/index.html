@@ -33,6 +33,7 @@
     </header>
     <!--     页面头部  end -->
 
+    <!--    购物车内容  start    -->
     <div class="cart-list">
         <section class="cart-list-item" ng-repeat="item in shopCart">
             <header class="flex-box">
@@ -55,7 +56,7 @@
                 <div class="cart-info flex-box">
                     <div class="flex-item-1">
                         <label class="checkbox">
-                            <input type="checkbox" data-sub-class
+                            <input type="checkbox" data-sub-class value="{{commodity.id}}"
                                    ng-click="subSum(commodity.price, commodity.count, $event)"/>
                             <i class="checkbox-status"></i>
                         </label>
@@ -98,6 +99,7 @@
         <img src="./static/img/addr_empty.png">
         <p>购物车暂无商品<br>快去挑选商品吧~~</p>
     </div>
+    <!--    购物车内容  end    -->
 
     <!--     你可能还想要  start   -->
     <article class="recommend">
@@ -198,12 +200,12 @@
                 <span>(不含运费，已优惠¥0.00)</span>
             </div>
             <div ng-show="isSelectQueryEnable" class="flex-item-1">
-                <a href="#" class="btn-to-buy"><b>去结算</b><sub>(0件)</sub></a>
+                <a href="#" class="btn-to-buy" id="btnToBuy"><b>去结算</b><sub>({{selectGoodsTotal}}件)</sub></a>
             </div>
             <div ng-show="!isSelectQueryEnable" class="flex-item-2 footer-btn-wrap">
                 <a href="javascript:;" class="footer-btn btn-share">分享</a>
                 <a href="javascript:;" class="footer-btn btn-move">移至收藏</a>
-                <a href="javascript:;" ng-click="del()" class="footer-btn btn-del">删除</a>
+                <a href="javascript:;" ng-click="delShow()" class="footer-btn btn-del">删除</a>
             </div>
         </div>
     </footer>
@@ -213,13 +215,14 @@
     <div ng-show="isDelShow" class="mod-alert-mask">
         <div class="mod-alert">
             <i class="icon"></i>
-            <p> 是否确认将已选中的1件商品删除？</p>
+            <p> 是否确认将已选中的{{selectCount}}件商品删除？</p>
             <div class="btn-wrap">
-                <a href="javascript:;" class="btn btn-1" attr-tag="ok">确认</a>
-                <a href="javascript:;" class="btn">取消</a>
+                <a href="javascript:;" class="btn btn-1" ng-click="del()">确认</a>
+                <a href="javascript:;" ng-click="isDelShow=false" class="btn">取消</a>
             </div>
         </div>
     </div>
+    <div ng-show="isDelEmptyShow" class="mod-alert "><i class="icon"></i><p>购物车空空如也</p></div>
     <div ng-show="isDelNullShow" class="mod-alert "><i class="icon"></i><p>请选择要删除的商品</p></div>
     <!--     删除弹框   end   -->
 </main>

@@ -3,10 +3,13 @@ var express = require('express');
 var path = require('path');
 var data = require('./data');
 var bodyParser = require('body-parser');
-var uuidV1 = require('uuid/v1');
 var goodsData = data.goodsData;
 var recommendList = data.recommendList;
 var cartData = [];
+var utils = require('./utils')(goodsData, recommendList, cartData);
+var query = utils.query;
+var save = utils.save;
+var del = utils.del;
 
 var app = express();
 app.use(bodyParser());
@@ -107,6 +110,16 @@ app.post('/updateCartInfo', function (req, res) {
 });
 
 /**
+ * 删除购物车操作
+ */
+app.post('/del', function (req, res) {
+    res.json({
+        isOk: 1,
+        info: del(req.body.ids, cartData)
+    });
+});
+
+/**
  * 更新商品数量
  */
 app.post('/updateCartCount', function (req, res) {
@@ -134,79 +147,3 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
     console.log("应用实例，访问地址为 http://%s:%s", host, port);
 });
-
-/**
- * 查询商品信息
- * @param shopId 店铺id
- * @param id 商品id
- * @param data 数据源
- */
-function query(shopId, id, data) {
-    var _data = JSON.parse(JSON.stringify(data));
-    var temp = null;
-    _data.forEach(function (item) {
-        if (item.shopId == shopId) {
-            item.item.forEach(function (_item) {
-                if (_item.id == id) {
-                    _item.shopId = shopId;
-                    temp = _item;
-                }
-            });
-        }
-    });
-    return temp;
-}
-
-/**
- * 更新或者编辑商品信息
- * @param shopId 店铺id
- * @param id 商品id
- * @param data 数据源
- * @param goods 新数据
- * @param isUpdate 操作类型
- */
-function save(shopId, id, data, goods, isUpdate) {
-    goodsData.forEach(function (item) {
-        if (item.shopId == shopId) {
-            var isFind = false;
-            data.forEach(function (cart) {
-                if (cart.shopId == shopId) {
-                    cart.item.forEach(function (_item, index) {
-                        if (_item.id == id) {
-
-                            if (isUpdate) {
-                                cart.item[index] = goods;
-                            } else {
-                                var isColorSame = (_item.specifications[0] == goods.specifications[0]);
-                                var isVersionSame = (_item.specifications[1] == goods.specifications[1]);
-                                if (isColorSame && isVersionSame) {
-                                    cart.item[index].count += goods.count;
-                                } else {
-                                    goods.id = uuidV1();
-                                    cart.item.push(goods);
-                                }
-                            }
-
-                        }
-                    });
-                    isFind = true;
-                }
-            });
-
-            if (!isFind) {
-                var tempItem = JSON.parse(JSON.stringify(item));
-                tempItem.item = [];
-                item.item.forEach(function (_item) {
-                    if (_item.id == id) {
-                        tempItem.item.push(goods);
-                    }
-                });
-                data.push(tempItem);
-            }
-        }
-    });
-
-    return data;
-}
-
-

@@ -14,3 +14,11 @@ function throttle(fn, interval) {
         }, interval);
     };
 }
+
+/**
+ * 控制台打印简化函数
+ * @param msg 要打印的值
+ */
+function log(msg) {
+    console.log(msg);
+}

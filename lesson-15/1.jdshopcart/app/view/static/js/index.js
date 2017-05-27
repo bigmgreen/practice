@@ -24,20 +24,6 @@ $(function () {
         });
     })();
 
-
-    // /**
-    //  * ajax的基本设置
-    //  */
-    // $.ajaxSetup({
-    //     beforeSend: function () {
-    //         $('body').append('<div class="spinner"></div>');
-    //     },
-    //     complete: function () {
-    //         setTimeout(function () {
-    //             $('.spinner').remove();
-    //         }, 500);
-    //     }
-    // });
 });
 
 var app = angular.module('shopCart', []);
@@ -67,6 +53,16 @@ app.controller('shopCartController', function ($scope, $http) {
     $scope.totalPrice = 0;
     //筛选是否可用
     $scope.isSelectQueryEnable = true;
+    //是否显示删除弹窗
+    $scope.isDelShow = false;
+    //购物车空空如也
+    $scope.isDelEmptyShow = false;
+    //是否显示没有选择弹窗
+    $scope.isDelNullShow = false;
+    //需要删除的id数组
+    $scope.values = [];
+    //当前选中商品总数
+    $scope.selectGoodsTotal = 0;
 
     /**
      * 初始化页面数据
@@ -140,8 +136,10 @@ app.controller('shopCartController', function ($scope, $http) {
 
                 $scope.shopCart = data.info;
                 $scope.totalPrice = 0;
-                $scope.isCheck = false;
-                $scope.checkAll(false, false);
+                $('[type="checkbox"]').map(function (index, item) {
+                    $(item).data('checked', false);
+                    item.checked = false;
+                });
 
                 $scope.isTipShow = true;
                 setTimeout(function () {
@@ -150,11 +148,11 @@ app.controller('shopCartController', function ($scope, $http) {
                     });
                 }, 1000);
                 $scope.closeCart();
+                $scope._switchStatus();
             } else {
                 alert('内部错误，请稍候重试！')
             }
         });
-
     };
 
     /**
@@ -206,6 +204,7 @@ app.controller('shopCartController', function ($scope, $http) {
         if (num == 1) {
             if (count < 9999) {
                 info.count += num;
+                calculate();
                 if (check) {
                     $scope.totalPrice = (parseFloat($scope.totalPrice) + parseFloat(_price)).toFixed(2);
                 }
@@ -213,24 +212,32 @@ app.controller('shopCartController', function ($scope, $http) {
         } else if (num == -1) {
             if (count > 1) {
                 info.count += num;
+                calculate();
                 if (check) {
                     $scope.totalPrice = (parseFloat($scope.totalPrice) - parseFloat(_price)).toFixed(2);
                 }
             }
         }
 
-        $http.post('/updateCartCount', {shopId: info.shopId, id: info.id, count: info.count})
-            .success(function (data) {
-                if (data) {
-                    $scope.cartMessage = '编辑成功';
-                    $scope.isTipShow = true;
-                    setTimeout(function () {
-                        $scope.$apply(function () {
-                            $scope.isTipShow = false;
-                        });
-                    }, 1000);
-                }
-            });
+        $(event.target).parents('.cart-info').find('[data-sub-class]').data('count', info.count);
+
+        function calculate() {
+            $http.post('/updateCartCount', {shopId: info.shopId, id: info.id, count: info.count})
+                .success(function (data) {
+                        if (data) {
+                            $scope.cartMessage = '编辑成功';
+                            $scope.isTipShow = true;
+                            setTimeout(function () {
+                                $scope.$apply(function () {
+                                    $scope.isTipShow = false;
+                                });
+                            }, 1000);
+                        }
+                    }
+                );
+        }
+
+        $scope._switchStatus();
     };
 
     /**
@@ -297,7 +304,7 @@ app.controller('shopCartController', function ($scope, $http) {
 
         var input = angular.element('[data-class]');
         var subInput = angular.element('[data-sub-class]');
-        var isCheck = event && event.target.checked;
+        var isCheck = event.target.checked;
 
         input.map(function (index, item) {
             item.checked = isCheck;
@@ -316,8 +323,10 @@ app.controller('shopCartController', function ($scope, $http) {
             });
         } else {
             $scope.totalPrice = 0;
-            angular.element('#checkAll')[0].checked = isCheck;
+            $('#checkAll')[0].checked = isCheck;
         }
+
+        $scope._switchStatus();
     };
 
     /**
@@ -351,6 +360,7 @@ app.controller('shopCartController', function ($scope, $http) {
                 angular.element('#checkAll')[0].checked = isCheck;
             }
         });
+        $scope._switchStatus();
     };
 
     /**
@@ -389,6 +399,7 @@ app.controller('shopCartController', function ($scope, $http) {
             angular.element('#checkAll')[0].checked = isCheck;
             superInput[0].checked = isCheck;
         }
+        $scope._switchStatus();
     };
 
     /**
@@ -428,20 +439,98 @@ app.controller('shopCartController', function ($scope, $http) {
         }
     };
 
-    //是否显示删除弹窗
-    $scope.isDelShow = false;
-    //是否显示没有选择弹窗
-    $scope.isDelNullShow = false;
+    /**
+     * 删除显示
+     */
+    $scope.delShow = function () {
+
+        var isChecked = false;
+        var inputs = $('[data-sub-class]');
+        var values = [];
+
+        function delayClear(attrName) {
+            setTimeout(function () {
+                $scope.$apply(function () {
+                    $scope[attrName] = false;
+                });
+            }, 1000);
+        }
+
+        $scope.selectCount = 0;
+        if (inputs.length > 0) {
+            inputs.map(function (index, item) {
+                if (item.checked) {
+                    $scope.selectCount++;
+                    isChecked = true;
+                    values.push(item.value);
+                }
+            });
+        } else {
+            $scope.isDelEmptyShow = true;
+            delayClear('isDelEmptyShow');
+            return;
+        }
+
+        if (isChecked) {
+            $scope.isDelShow = true;
+            $scope.values = values;
+        } else {
+            $scope.isDelNullShow = true;
+            delayClear('isDelNullShow');
+        }
+
+    };
 
     /**
-     * 删除
+     * 删除操作
      */
     $scope.del = function () {
-        //TODO 删除相关
+        $scope.isDelShow = false;
+        $http.post('/del', {ids: $scope.values})
+            .success(function (data) {
+                if (data.isOk == 1) {
+
+                    $scope.shopCart = data.info;
+                    $scope.totalPrice = 0;
+                    $('[type="checkbox"]').map(function (index, item) {
+                        $(item).data('checked', false);
+                        item.checked = false;
+                    });
+
+                    $scope.cartMessage = '添加成功';
+                    $scope.isTipShow = true;
+                    setTimeout(function () {
+                        $scope.$apply(function () {
+                            $scope.isTipShow = false;
+                        });
+                    }, 1000);
+
+                    $scope._switchStatus();
+                } else {
+                    alert('内部错误，请稍候重试！')
+                }
+            });
     }
+
+    /**
+     * 转换购买按钮状态
+     * @private
+     */
+    $scope._switchStatus = function () {
+        var count = 0;
+        var isChecked = false;
+        $('[data-sub-class]').map(function (index, item) {
+            if (item.checked) {
+                isChecked = true;
+                count += parseInt($(item).data('count')) || 1;
+            }
+        });
+        $scope.selectGoodsTotal = count;
+
+        if (isChecked) {
+            $('#btnToBuy').addClass('footer-btn-buy');
+        } else {
+            $('#btnToBuy').removeClass('footer-btn-buy');
+        }
+    };
 });
-
-
-function log(str) {
-    console.log(str);
-}

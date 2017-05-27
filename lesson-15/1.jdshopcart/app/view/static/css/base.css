@@ -99,17 +99,17 @@ em {
 .go-top-trigger {
     display: block;
     right: 0;
-    width: 40px;
-    height: 40px;
+    width: 0.4rem;
+    height: 0.4rem;
     font-size: 0;
     text-indent: -9999em;
     overflow: hidden;
     border-radius: 3px 0 0 3px;
-    bottom: 132px;
+    bottom: 1.32rem;
     position: fixed;
 
     background: rgba(0, 0, 0, .7) url(../img/top.png) no-repeat;
-    background-size: 25px;
+    background-size: 0.25rem;
     background-position: 50%;
 }
 
@@ -308,8 +308,8 @@ em {
 
 .mod-alert {
     display: block;
-    width: 210px;
-    padding: 15px;
+    width: 2.1rem;
+    padding: 0.15rem;
     box-sizing: content-box;
     background: rgba(0,0,0,.8);
     color: #fff;
@@ -325,34 +325,34 @@ em {
 }
 .mod-alert .icon {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 0.5rem;
+    height: 0.5rem;
     margin: 0 auto;
     background: url(../img/icon.png) no-repeat;
-    background-size: 50px 200px;
+    background-size: 0.5rem 2.0rem;
 }
 .mod-alert p {
     font-size: 14px;
-    margin: 10px 0;
+    margin: 0.1rem 0;
     line-height: 1.5;
 }
 .mod-alert .btn-wrap {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
-    margin: 15px -5px 0;
+    margin: 0.15rem -0.05rem 0;
 }
 .mod-alert .btn {
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
+    width: 1.0rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     background: #f3f3f3;
     color: #333;
     font-size: 12px;
     border-radius: 3px;
     flex: 1;
     text-align: center;
-    margin: 0 5px;
+    margin: 0 0.05rem;
 }
 .mod-alert .btn-1 {
     background: #3985ff;
