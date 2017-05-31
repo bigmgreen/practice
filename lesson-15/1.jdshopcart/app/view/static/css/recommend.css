@@ -2,7 +2,7 @@
 .recommend-title {
     position: relative;
     height: 40px;
-    line-height: 40px;
+    line-height: 0.4rem;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -22,9 +22,9 @@
 }
 
 .recommend-title span {
-    padding: 0 10px 0 30px;
-    background: #e8e8ed url(../img/recommend.png) no-repeat 12px 0;
-    background-size: 11px;
+    padding: 0 0.1rem 0 0.3rem;
+    background: #e8e8ed url(../img/recommend.png) no-repeat 0.12rem 0;
+    background-size: 0.11rem;
     position: relative;
     z-index: 2;
 }
@@ -43,9 +43,9 @@
     float: left;
     position: relative;
     box-sizing: border-box;
-    padding-bottom: 7px;
+    padding-bottom: 0.07rem;
     background: #fff;
-    margin-top: 4px;
+    margin-top: 0.04rem;
     display: inline-block;
 }
 .recommend-item a {
@@ -73,8 +73,8 @@
 }
 
 .recommend-item .desc {
-    padding: 0 10px;
-    margin: 5px 0;
+    padding: 0 0.1rem;
+    margin: 0.05rem 0;
     font-size: 12px;
     color: #333;
     line-height: 1.5em;
@@ -91,11 +91,11 @@
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
-    height: 36px;
+    height: 0.36rem;
 }
 
 .recommend-item .price {
-    padding-left: 10px;
+    padding-left: 0.1rem;
     font-size: 10px;
     color: #e4393c;
     display: block;
@@ -108,13 +108,13 @@
 .recommend-item .buy{
     position: absolute;
     display: block;
-    bottom: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
+    bottom: 0.1rem;
+    right: 0.1rem;
+    width: 0.3rem;
+    height: 0.3rem;
     border-radius: 3px;
     background: #f2f2f7 url(../img/cart.png) no-repeat;
-    background-size: 15px;
-    background-position: 7px 8px;
+    background-size: 0.15rem;
+    background-position: 0.07rem 0.08rem;
 }
 /*     推荐项   end */

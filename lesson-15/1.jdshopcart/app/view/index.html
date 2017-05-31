@@ -23,22 +23,23 @@
                 <span><i class="icon-location"></i>通州区永顺镇</span>
             </div>
             <div class="flex-item-2 text-center">
-                <span ng-click="isShow=true" class="select">{{selectText}}
+                <span id="selectQuery" ng-click="showQuery()" class="select">{{selectText}}
                     <i class="direction direction-down"></i></span>
             </div>
             <div class="flex-item-2">
-                <a href="#">编辑</a>
+                <a href="#" ng-click="update(true, $event)">编辑</a>
             </div>
         </div>
     </header>
     <!--     页面头部  end -->
 
+    <!--    购物车内容  start    -->
     <div class="cart-list">
         <section class="cart-list-item" ng-repeat="item in shopCart">
             <header class="flex-box">
                 <label class="checkbox">
                     <input type="checkbox" data-class
-                           ng-click="sum(checkedSub, item)"/>
+                           ng-click="sum(item, $event)"/>
                     <i class="checkbox-status"></i>
                 </label>
                 <div class="flex-item-4">
@@ -55,24 +56,27 @@
                 <div class="cart-info flex-box">
                     <div class="flex-item-1">
                         <label class="checkbox">
-                            <input type="checkbox" data-sub-class
-                                   ng-click="subSum(check, commodity.price, commodity.count, $parent)"/>
+                            <input type="checkbox" data-sub-class value="{{commodity.id}}"
+                                   ng-click="subSum(commodity.price, commodity.count, $event)"/>
                             <i class="checkbox-status"></i>
                         </label>
                         <img class="image" width="80" height="80" alt="" ng-src="{{commodity.imgUrl}}">
                     </div>
                     <div class="flex-item-2">
                         <h3 class="cart-info-name">{{commodity.name}}</h3>
-                        <p class="sku" ng-click="showAddCart(item.shopId, commodity.id, true)">规格：{{commodity.specifications.join(',')}}</p>
+                        <p class="sku" ng-click="showAddCart(item.shopId, commodity.id, true)">
+                            规格：{{commodity.specifications.join(',')}}</p>
                         <p class="price">¥ <em class="int">{{commodity.price[0]}}</em>.{{commodity.price[1]}}</p>
                         <div class="num-and-more">
                             <div class="num-wrap">
-                                <span ng-click="calculationCart($parent.$index, $index, check, -1)" class="minus"></span>
+                                <span ng-click="calculationCart($parent.$index, $index, -1, $event)"
+                                      class="minus"></span>
                                 <div class="input-wrap"><input
                                         class="num"
                                         type="number"
                                         ng-model="commodity.count"></div>
-                                <span ng-click="calculationCart($parent.$index, $index, check, 1)" class="plus"></span>
+                                <span ng-click="calculationCart($parent.$index, $index, 1, $event)"
+                                      class="plus"></span>
                             </div>
                         </div>
                     </div>
@@ -95,6 +99,7 @@
         <img src="./static/img/addr_empty.png">
         <p>购物车暂无商品<br>快去挑选商品吧~~</p>
     </div>
+    <!--    购物车内容  end    -->
 
     <!--     你可能还想要  start   -->
     <article class="recommend">
@@ -185,21 +190,41 @@
         <div class="flex-box">
             <div class="flex-item-1">
                 <label class="checkbox">
-                    <input type="checkbox" ng-click="checkAll('all',$event)"/>
+                    <input type="checkbox" id="checkAll" ng-click="checkAll('all',$event)"/>
                     <i class="checkbox-status"></i>
                     <span>全选</span>
                 </label>
             </div>
-            <div class="flex-item-2 price-desc">
+            <div ng-show="isSelectQueryEnable" class="flex-item-2 price-desc">
                 <b>总计：<span>￥<span>{{totalPrice}}</span></span></b>
                 <span>(不含运费，已优惠¥0.00)</span>
             </div>
-            <div class="flex-item-1">
-                <a href="#" class="btn-to-buy"><b>去结算</b><sub>(0件)</sub></a>
+            <div ng-show="isSelectQueryEnable" class="flex-item-1">
+                <a href="#" class="btn-to-buy" id="btnToBuy"><b>去结算</b><sub>({{selectGoodsTotal}}件)</sub></a>
+            </div>
+            <div ng-show="!isSelectQueryEnable" class="flex-item-2 footer-btn-wrap">
+                <a href="javascript:;" class="footer-btn btn-share">分享</a>
+                <a href="javascript:;" class="footer-btn btn-move">移至收藏</a>
+                <a href="javascript:;" ng-click="delShow()" class="footer-btn btn-del">删除</a>
             </div>
         </div>
     </footer>
     <!--     页面尾部  end -->
+
+    <!--     删除弹框   start   -->
+    <div ng-show="isDelShow" class="mod-alert-mask">
+        <div class="mod-alert">
+            <i class="icon"></i>
+            <p> 是否确认将已选中的{{selectCount}}件商品删除？</p>
+            <div class="btn-wrap">
+                <a href="javascript:;" class="btn btn-1" ng-click="del()">确认</a>
+                <a href="javascript:;" ng-click="isDelShow=false" class="btn">取消</a>
+            </div>
+        </div>
+    </div>
+    <div ng-show="isDelEmptyShow" class="mod-alert "><i class="icon"></i><p>购物车空空如也</p></div>
+    <div ng-show="isDelNullShow" class="mod-alert "><i class="icon"></i><p>请选择要删除的商品</p></div>
+    <!--     删除弹框   end   -->
 </main>
 <!--     主体内容区域  end  -->
 

@@ -1,21 +1,19 @@
 /*   页面主体样式     start   */
-.main {
-}
 
 .cart-list-item {
     background-color: #fff;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 0.15rem;
     overflow: hidden;
 }
 
 .cart-list-item .checkbox {
-    margin-right: 20px;
+    margin-right: 0.2rem;
 }
 
 .cart-list-item header {
-    min-height: 45px;
-    padding: 7.5px 0;
+    min-height: 0.45rem;
+    padding: 0.075rem 0;
     box-sizing: border-box;
     border-bottom: 1px solid #ddd;
 }
@@ -24,15 +22,15 @@
     box-sizing: border-box;
     display: block;
     font-size: 14px;
-    padding-right: 10px;
-    line-height: 30px;
+    padding-right: 0.1rem;
+    line-height: 0.3rem;
     width: 100%;
 }
 
 .cart-list-item header a {
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 0.3rem;
+    line-height: 0.3rem;
     z-index: 1;
     position: relative;
     font-size: 12px;
@@ -42,23 +40,23 @@
 }
 
 .cart-list-item .icon-shop {
-    width: 16px;
-    height: 15px;
-    margin-right: 5px;
-    margin-top: 8px;
+    width: 0.16rem;
+    height: 0.15rem;
+    margin-right: 0.05rem;
+    margin-top: 0.08rem;
     background: url(../img/shopcart_icon.png) no-repeat;
-    background-size: 35px auto;
+    background-size: 0.35rem auto;
     background-position: 0 0;
     float: left;
 }
 
 .cart-list-item .icon-shop.jd {
-    background-position: -20px 2px;
+    background-position: -0.2rem 0.02rem;
 }
 
 .cart-list-item .cart-desc {
-    min-height: 45px;
-    padding: 10px;
+    min-height: 0.45rem;
+    padding: 0.1rem;
     font-size: 12px;
     line-height: 2;
     color: #666;
@@ -69,25 +67,25 @@
 .cart-list-item .icon-notice {
     display: inline-block;
     vertical-align: middle;
-    margin-top: -2px;
-    margin-left: 5px;
-    width: 12px;
-    height: 12px;
+    margin-top: -0.02rem;
+    margin-left: 0.05rem;
+    width: 0.12rem;
+    height: 0.12rem;
     background: url(../img/notice.png) no-repeat;
-    background-size: 12px auto;
+    background-size: 0.12rem auto;
 }
 
 .additional-area {
-    margin: 0 10px 10px 35px;
+    margin: 0 0.1rem 0.1rem 0.35rem;
     font-size: 12px;
     color: #666;
     position: relative;
-    padding-left: 45px;
+    padding-left: 0.45rem;
     background-color: #fff9f9;
 }
 
 .additional-area li {
-    padding: 7px 52px 7px 0;
+    padding: 0.07rem 0.52rem 0.07rem 0;
     position: relative;
 }
 
@@ -99,25 +97,25 @@
 
 .additional-area .num {
     position: absolute;
-    top: 7px;
-    right: 23px;
+    top: 0.07rem;
+    right: 0.23rem;
 }
 
 .additional-area .direction-right {
     position: absolute;
     transform: rotate(-45deg) scale(.8);
-    top: 8px;
-    right: 10px;
+    top: 0.08rem;
+    right: 0.1rem;
 }
 
 .additional-area li.tips {
     padding: 0;
     position: absolute;
-    left: 10px;
-    top: 6px;
-    width: 24px;
-    height: 13px;
-    line-height: 13px;
+    left: 0.1rem;
+    top: 0.06rem;
+    width: 0.24rem;
+    height: 0.13rem;
+    line-height: 0.13rem;
     text-align: center;
     font-size: 10px;
     color: #e4393c;
@@ -128,7 +126,7 @@
     display: block;
     border: 1px solid #e4393c;
     position: absolute;
-    top: 2px;
+    top: 0.02rem;
     left: 0;
     pointer-events: none;
     bottom: -100%;
@@ -147,17 +145,17 @@
 
 .cart-info {
     position: relative;
-    padding: 15px 10px 15px 0;
+    padding: 0.15rem 0.1rem 0.15rem 0;
 }
 
 .cart-info .checkbox {
     position: relative;
-    top: 18px;
+    top: 0.18rem;
     float: left;
 }
 
 .cart-info-name {
-    height: 36px;
+    height: 0.36rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -170,7 +168,7 @@
 }
 
 .cart-info .flex-item-2 {
-    padding-left: 10px;
+    padding-left: 0.1rem;
 }
 
 .cart-info .sku {
@@ -181,17 +179,17 @@
     background-color: #fff;
     font-size: 12px;
     color: #666;
-    margin: 7px 0;
-    padding: 9px 25px 9px 5px;
+    margin: 0.07rem 0;
+    padding: 0.09rem 0.25rem 0.09rem 0.05rem;
     border-radius: 2px;
-    width: 275px;
+    width: 2.75rem;
 }
 
 .cart-info .sku:after {
     content: "";
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 0.08rem;
+    height: 0.08rem;
     border-top: 1px solid #666;
     border-left: 1px solid #666;
     -webkit-transform-origin: 50%;
@@ -200,8 +198,8 @@
     transform: rotate(-135deg);
     position: absolute;
     top: 50%;
-    right: 6px;
-    margin-top: -7px;
+    right: 0.06rem;
+    margin-top: -0.07rem;
 }
 
 .cart-info .sku:before {
@@ -235,14 +233,14 @@
 
 /*   商品个数计算  start   */
 .num-and-more {
-    margin-top: 5px;
+    margin-top: 0.05rem;
     overflow: hidden;
 }
 
 .num-wrap {
     position: relative;
     display: block;
-    width: 100px;
+    width: 1.0rem;
     border-radius: 3px;
     overflow: hidden;
 }
@@ -251,9 +249,9 @@
 .num-wrap span {
     position: relative;
     float: left;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 0.3rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     text-align: center;
     background-color: #fff;
 }
@@ -266,9 +264,9 @@
     top: 50%;
     content: "\20";
     display: block;
-    width: 16px;
-    height: 2px;
-    margin: -1px 0 0 -8px;
+    width: 0.16rem;
+    height: 0.02rem;
+    margin: -0.01rem 0 0 -0.08rem;
     background: #666;
     border-radius: 1px;
 }
@@ -286,8 +284,8 @@
 .num-wrap .num {
     -webkit-appearance: none;
     border-radius: 0;
-    width: 40px;
-    height: 30px;
+    width: 0.4rem;
+    height: 0.3rem;
     line-height: normal;
     border-left: 0;
     border-right: 0;
@@ -298,7 +296,7 @@
 }
 
 .num-wrap .input-wrap:before {
-    z-index: -1;
+    z-index: 1;
     border-right: 1px solid #ccc;
     -webkit-transform: scaleX(.5);
     -webkit-transform-origin: 0 0;
@@ -308,7 +306,8 @@
     content: "";
     display: block;
     bottom: -100%;
-    left: -100%;
+    left: 10%;
+    width: 0.005rem;
 }
 
 .num-wrap .input-wrap:after {
@@ -329,9 +328,9 @@
 }
 
 .num-wrap .plus:before {
-    width: 2px;
-    height: 16px;
-    margin: -8px 0 0 -1px;
+    width: 0.02rem;
+    height: 0.16rem;
+    margin: -0.08rem 0 0 -0.01rem;
     border-radius: 1px;
 }
 
@@ -353,16 +352,16 @@
 /*   商品个数计算  end   */
 /*   空数据显示   start   */
 .cart-empty {
-    margin: 50px 0 20px;
+    margin: 0.5rem 0 0.2rem;
     text-align: center;
     color: #666;
 }
 
 .cart-empty img {
     display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 10px;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0 auto 0.1rem;
     border: 0 none;
     vertical-align: top;
 }
@@ -394,21 +393,21 @@
     width: 80%;
     margin: 40% auto 0;
     background: rgba(0, 0, 0, .8);
-    border-radius: 3px;
+    border-radius: 0.03rem;
 }
 
 .layer-select li {
     position: relative;
-    padding: 15px 0 15px 25px;
-    margin: 0 10px;
+    padding: 0.15rem 0 0.15rem 0.25rem;
+    margin: 0 0.1rem;
     color: #fff;
 }
 
 .layer-select li.layer-select-header {
     position: relative;
     padding: 0;
-    height: 48px;
-    line-height: 48px;
+    height: 0.48rem;
+    line-height: 0.48rem;
     text-align: center;
     margin: 0;
 }
@@ -419,46 +418,46 @@
     right: 0;
     top: 0;
     display: block;
-    width: 45px;
-    height: 45px;
+    width: 0.45rem;
+    height: 0.45rem;
     background-image: url(../img/close.png);
-    background-size: 15px;
+    background-size: 0.15rem;
     background-repeat: no-repeat;
-    background-position: 25px 5px;
+    background-position: 0.25rem 0.05rem;
 }
 
 .icon-select {
     z-index: 1;
     left: 0;
-    width: 42px;
-    height: 43px;
+    width: 0.42rem;
+    height: 0.43rem;
     font-style: normal;
 }
 
 .layer-select .icon-select {
-    width: 34px;
+    width: 0.34rem;
 }
 
 .layer-select .icon-select:after {
-    top: 14px;
-    margin-left: -18px;
+    top: 0.14rem;
+    margin-left: -0.18rem;
     background: url(../img/radio.png) no-repeat 0 0;
-    background-size: 20px 40px;
+    background-size: 0.2rem 0.4rem;
 }
 
 .icon-select:after {
     left: 50%;
     content: "\20";
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
+    width: 0.2rem;
+    height: 0.2rem;
+    margin-left: -0.1rem;
 }
 
 .layer-select .icon-select:after {
-    top: 14px;
-    margin-left: -18px;
+    top: 0.14rem;
+    margin-left: -0.18rem;
     background: url(../img/radio.png) no-repeat 0 0;
-    background-size: 20px 40px;
+    background-size: 0.2rem 0.4rem;
 }
 
 .icon-select, .icon-select:after {
@@ -469,11 +468,11 @@
 
 .icon-select:after {
     background: url(../img/shopcart_v2.png);
-    background-size: 60px 40px;
+    background-size: 0.6rem 0.4rem;
 }
 
 .layer-select li.selected .icon-select:after {
-    background-position: 0 -20px;
+    background-position: 0 -0.2rem;
 }
 
 .layer-select li:before {
@@ -504,8 +503,8 @@
 
 .add-cart-main {
     position: absolute;
-    -webkit-transform: translate3d(0, 420px, 0);
-    transform: translate3d(0, 420px, 0);
+    -webkit-transform: translate3d(0, 4.2rem, 0);
+    transform: translate3d(0, 4.2rem, 0);
     -webkit-transition: -webkit-transform .2s cubic-bezier(0, 0, .25, 1);
     transition: -webkit-transform .2s cubic-bezier(0, 0, .25, 1);
     transition: transform .2s cubic-bezier(0, 0, .25, 1);
@@ -517,9 +516,9 @@
 }
 
 .add-cart-header {
-    height: 70px;
+    height: 0.7rem;
     line-height: 1.5;
-    padding: 0 0 10px 110px;
+    padding: 0 0 0.1rem 1.1rem;
     background-color: #fff;
     position: relative;
     color: #333;
@@ -529,17 +528,17 @@
 
 .add-cart-header img {
     position: absolute;
-    left: 10px;
-    top: -20px;
+    left: 0.1rem;
+    top: -0.2rem;
     border-radius: 7px;
-    width: 90px;
-    height: 90px;
+    width: 0.9rem;
+    height: 0.9rem;
     background-color: #fff;
 }
 
 .add-cart-header .price {
-    height: 40px;
-    line-height: 40px;
+    height: 0.4rem;
+    line-height: 0.4rem;
     color: #e4393c;
     font-size: 10px;
     font-weight: 700;
@@ -554,7 +553,7 @@
     font-size: 12px;
     color: #333;
     line-height: 1.4em;
-    padding-right: 10px;
+    padding-right: 0.1rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -570,53 +569,53 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 40px;
-    height: 40px;
+    width: 0.4rem;
+    height: 0.4rem;
 }
 
 .add-cart-header .close:after {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 17px;
-    height: 17px;
-    background: url(../img/close2.png) no-repeat 1px 1px;
-    background-size: 15px;
+    top: 0.1rem;
+    right: 0.1rem;
+    width: 0.17rem;
+    height: 0.17rem;
+    background: url(../img/close2.png) no-repeat 0.01rem 0.01rem;
+    background-size: 0.15rem;
 }
 
 .add-cart-body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    height: 320px;
+    height: 3.2rem;
 }
 
 .add-cart-body .sku-kind {
     font-size: 12px;
     color: #333;
-    margin: 0 10px;
-    height: 33px;
-    line-height: 33px;
+    margin: 0 0.1rem;
+    height: 0.33rem;
+    line-height: 0.33rem;
 }
 
 .add-cart-body .sku-choose {
     font-size: 12px;
     overflow: hidden;
-    margin-bottom: -5px;
+    margin-bottom: -0.05rem;
 }
 
 .add-cart-body .sku-choose .choice {
     display: inline-block;
-    padding: 0 15px;
-    min-width: 20px;
-    max-width: 270px;
+    padding: 0 0.15rem;
+    min-width: 0.2rem;
+    max-width: 2.7rem;
     overflow: hidden;
-    height: 25px;
-    line-height: 25px;
+    height: 0.25rem;
+    line-height: 0.25rem;
     float: left;
     text-align: center;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 0.1rem;
+    margin-bottom: 0.1rem;
     border-radius: 3px;
     color: #333;
     background-color: #f3f2f8;
@@ -628,15 +627,15 @@
 }
 
 .add-cart-body .count-choose {
-    padding: 10px 10px 15px;
+    padding: 0.1rem 0.1rem 0.15rem;
     font-size: 12px;
-    margin-bottom: 90px;
+    margin-bottom: 0.9rem;
 }
 
 .add-cart-body .count-choose .count {
     color: #333;
-    height: 31px;
-    line-height: 31px;
+    height: 0.31rem;
+    line-height: 0.31rem;
 }
 
 .add-cart-btn {
@@ -644,8 +643,8 @@
     position: absolute;
     bottom: 0;
     background-color: #e4393c;
-    height: 50px;
-    line-height: 50px;
+    height: 0.5rem;
+    line-height: 0.5rem;
     color: #fff;
     font-size: 16px;
     text-align: center;
@@ -658,18 +657,19 @@
 
 .sku-tip {
     display: block;
-    padding: 5px 10px;
+    padding: 0.05rem 0.1rem;
     font-size: 14px;
     line-height: 1.5;
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     color: #fff;
     text-align: center;
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 999;
-    margin-left: -28px;
+    margin-left: -0.28rem;
     border-radius: 4px;
-    box-shadow: 0 0 3px 3px hsla(0,0%,59%,.7);
+    box-shadow: 0 0 0.03rem 0.03rem hsla(0, 0%, 59%, .7);
 }
+
 /*   添加成功   end   */
