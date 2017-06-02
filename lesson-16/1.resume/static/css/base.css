@@ -85,6 +85,11 @@ em {
     text-align: center;
 }
 
+/*   块居中   */
+.block-center {
+    margin: 0 auto;
+}
+
 /*   清除浮动   */
 .clear:after {
     content: '';
@@ -101,6 +106,11 @@ em {
 .flex-box {
     display: flex;
     height: inherit;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
 }
 
 .flex-item-1 {

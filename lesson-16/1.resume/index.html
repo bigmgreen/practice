@@ -6,50 +6,108 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>个人简历</title>
-    <link rel="stylesheet" href="./static/css/animate.min.css">
-    <link rel="stylesheet" href="./static/lib/fullpage/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="./static/lib/font/iconfont.css"/>
+    <link rel="stylesheet" href="./static/css/animate.min.css"/>
+    <link rel="stylesheet" href="./static/lib/fullpage/jquery.fullpage.min.css"/>
     <link rel="stylesheet" href="./static/css/base.css"/>
     <link rel="stylesheet" href="./static/css/index.css"/>
 </head>
 <body>
 <header>
-    <a href="#" class="logo"><img src="./static/img/logo.jpeg" alt="我的头像"/></a>
+    <a href="#"
+       class="logo"><img
+            class="animated bounceIn"
+            data-animate="bounceIn"
+            src="./static/img/logo.jpeg" alt="我的头像"/></a>
 </header>
-<div id="fullpage">
-    <div class="section active">
-        <div class="flex-box">
-            <div class="flex-item-1">
-                <img src="./static/img/user.jpg" alt="大青山的头像">
-                <p>要得到某样东西,最可靠的办法是让自己配得上它</p>
-                <p>web前端工程师</p>
-                <p>bigmgreen@163.com</p>
+<div id="fullPage">
+    <div class="section">
+        <div class="flex-box flex-center">
+            <div class="flex-item-1 text-center">
+                <img class="user-img animated"
+                     data-init="swing"
+                     data-animate="bounce"
+                     src="./static/img/user.jpg"
+                     alt="大青山的头像">
+                <p data-init="fadeInLeftBig"
+                   data-animate
+                   class="animated">要得到某样东西,最可靠的办法是让自己配得上它</p>
+                <p data-init="fadeInRightBig"
+                   data-animate
+                   class="animated">web前端工程师</p>
+                <p data-init="fadeInRightBig"
+                   data-animate
+                   class="animated">bigmgreen@163.com</p>
             </div>
         </div>
     </div>
     <div class="section">
-        <div class="flex-box">
-            <div class="flex-item-1">
-                <p>男 大专 2014年毕业 北京</p>
-                <ul>
-                    <li>软件工程专业，毕业后从事Java web开发（2014）</li>
-                    <li>应公司需要开始自学前端，并应用到工作中（2014-2015）</li>
-                    <li>正式进入前端领域，来到北京发展（2015-2016）</li>
-                    <li>致力于打造自动化，高效，简洁，轻量级前端工作栈（至今）</li>
+        <div class="flex-box flex-center">
+            <div class="flex-item-1 text-center">
+                <ul class="about-title">
+                    <li class="animated"
+                        data-init="zoomIn"
+                        data-animate
+                    ><i class="iconfont icon-nan"></i><span>男</span></li>
+                    <li class="animated"
+                        data-init="zoomInDown"
+                        data-animate
+                    ><i class="iconfont icon-zhuan"></i><span>大专</span></li>
+                    <li class="animated"
+                        data-init="zoomInLeft"
+                        data-animate
+                    ><i class="iconfont icon-biye"></i><span>2014年毕业</span></li>
+                    <li class="animated"
+                        data-init="zoomInRight"
+                        data-animate
+                    ><i class="iconfont icon-quyu"></i><span>北京</span></li>
+                </ul>
+                <ul class="about">
+                    <li class="animated"
+                        data-init="lightSpeedIn"
+                        data-animate>致力于打造自动化，高效，简洁，轻量级前端工作栈（至今）
+                    </li>
+                    <li class="animated"
+                        data-init="fadeInLeftBig"
+                        data-animate>正式进入前端领域，来到北京发展（2015-2016）
+                    </li>
+                    <li class="animated"
+                        data-init="lightSpeedIn"
+                        data-animate>应公司需要开始自学前端，并应用到工作中（2014-2015）
+                    </li>
+                    <li class="animated"
+                        data-init="fadeInLeftBig"
+                        data-animate>软件工程专业，毕业后从事Java web开发（2014）
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="section">
-        <div class="flex-box">
+        <div class="flex-box flex-center">
             <div class="flex-item-1">
                 <h3>我的经历</h3>
                 <dl>
-                    <dt>北京亿企通</dt>
-                    <dd>2014年5月~2014年11月</dd>
-                    <dd>java,jquery,bootstrap</dd>
-                    <dd>负责html转jsp，通过ajax获取后台数据</dd>
-                    <dd>使用java编写mvc结构中的c层以及页面交互设计</dd>
-                    <dd>一边工作一边开始学习前端相关知识</dd>
+                    <dt>中科柏诚</dt>
+                    <dd>2017年1月~至今</dd>
+                    <dd>Linux,nginx,java,mysql,es6,node</dd>
+                    <dd>静态页面开发</dd>
+                    <dd>使用springMVC和node进行rest开发</dd>
+                    <dd>模块化，自动化</dd>
+                    <dd>性能调优，代码优化和代码review</dd>
+                    <dd>疑难问题解决</dd>
+                </dl>
+                <dl>
+                    <dt>中科柏诚</dt>
+                    <dd>2016年1月~2016年12月</dd>
+                    <dd>react,node,webpack,springMVC,mybatis,nginx</dd>
+                    <dd>前后端分离</dd>
+                    <dd>静态页面开发</dd>
+                    <dd>js组件开发，页面动画效果实现</dd>
+                    <dd>性能调优，代码优化和代码review</dd>
+                    <dd>疑难问题解决</dd>
+                    <dd>密切关注行业新动向，并把适合的技术应用到项目中</dd>
+                    <dd>培训新人</dd>
                 </dl>
                 <dl>
                     <dt>中科柏诚</dt>
@@ -62,82 +120,132 @@
                     <dd>开始接触前端工程化</dd>
                 </dl>
                 <dl>
-                    <dt>中科柏诚</dt>
-                    <dd>2016年1月~2016年12月</dd>
-                    <dd>react,node,webpack,springMVC,mybatis,nginx</dd>
-                    <dd>前后端分离</dd>
-                    <dd>静态页面开发</dd>
-                    <dd>js组件开发，页面动画效果实现</dd>
-                    <dd>性能调优，代码优化和代码review</dd>
-                    <dd>疑难问题解决</dd>
-                    <dd>密切关注行业新动向，并把适合的技术应用到项目中 </dd>
-                    <dd>培训新人</dd>
-                </dl>
-                <dl>
-                    <dt>中科柏诚</dt>
-                    <dd>2017年1月~至今</dd>
-                    <dd>Linux,nginx,java,mysql,es6,node</dd>
-                    <dd>静态页面开发</dd>
-                    <dd>使用springMVC和node进行rest开发</dd>
-                    <dd>模块化，自动化</dd>
-                    <dd>性能调优，代码优化和代码review</dd>
-                    <dd>疑难问题解决</dd>
+                    <dt>北京亿企通</dt>
+                    <dd>2014年5月~2014年11月</dd>
+                    <dd>java,jquery,bootstrap</dd>
+                    <dd>负责html转jsp，通过ajax获取后台数据</dd>
+                    <dd>使用java编写mvc结构中的c层以及页面交互设计</dd>
+                    <dd>一边工作一边开始学习前端相关知识</dd>
                 </dl>
             </div>
         </div>
     </div>
     <div class="section">
         <dl>
-            <dt>p2p平台产品研发-前后端分离</dt>
-            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+            <dt>react重构公司产品-前后端分离</dt>
+            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目</dd>
+            <dd>负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定</dd>
         </dl>
         <dl>
             <dt>民金所</dt>
-            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+            <dd>民金所，全称北京民金所金融信息服务有限公司，是泛海控股旗下民生金服板块的互联网财富管理平台，注册资本10亿元人民币，总部位于北京东长安街民生金融中心</dd>
+            <dd>负责全站前端开发</dd>
         </dl>
         <dl>
-            <dt>贵州天安财险</dt>
-            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+            <dt>天安金交中心</dt>
+            <dd>天安金交中心，全称“天安（贵州省）互联网金融资产交易中心股份有限公司”，是天安财产保险股份有限公司的战略合作伙伴。2015年11月在贵州省人民政府的大力支持下注册成立，注册资本金1亿元</dd>
+            <dd>负责全站前端开发</dd>
         </dl>
     </div>
-    <div class="section">
-        <ul>
-            <li>JavaScript</li>
-            <li>css3</li>
-            <li>html5</li>
-            <li>jQuery</li>
-            <li>bootstrap</li>
-            <li>Java</li>
-            <li>angular</li>
-            <li>react</li>
-            <li>vue</li>
-            <li>webpack</li>
-            <li>gulp</li>
-            <li>less</li>
-            <li>node</li>
-            <li>express</li>
-        </ul>
+    <div class="section active">
+        <div class="flex-box flex-center">
+            <div class="flex-item-1 text-center">
+                <ul class="skills">
+                    <li title="JavaScript" data-init="rotateIn" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-javascript"></i></li>
+                    <li title="css3" data-init="rotateInDownLeft" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-css3"></i></li>
+                    <li title="html5" data-init="rotateInDownRight" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-html5"></i></li>
+                    <li title="jQuery" data-init="rotateInUpLeft" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-jquery"></i></li>
+                    <li title="bootstrap" data-init="rotateInUpRight" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-bootstrap"></i></li>
+                    <li title="Java" data-init="rollIn" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-java"></i></li>
+                    <li title="angular" data-init="zoomIn" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-socialangular"></i></li>
+                    <li title="react" data-init="zoomInDown" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-download_react-native"></i></li>
+                    <li title="vue" data-init="zoomInLeft" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-vuejs"></i></li>
+                    <li title="webpack" data-init="zoomInRight" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-Webpack"></i></li>
+                    <li title="gulp" data-init="zoomInUp" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-gulpwhitetext"></i></li>
+                    <li title="less" data-init="fadeInUpBig" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-less"></i></li>
+                    <li title="node" data-init="fadeInRightBig" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-node"></i></li>
+                    <li title="express" data-init="fadeInLeft" data-animate="bounce" class="animated">
+                        <i class="iconfont icon-letter-e"></i></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="section">
-        <div class="flex-box">
-            <div class="flex-item-1">
-                <h3>社交</h3>
-                <ul>
-                    <li>兴趣遍地都是，专注和持之以恒才是真正稀缺的-《暗时间》</li>
-                    <li>当你想在你的代码中找到一个错误时，这很难；当你认为你的代码是不会有错误时，这就更难了-《代码大全》</li>
-                    <li>动态太难实现了，我们假装成静态吧（但是实际上并不是！）-《你不知道的JavaScript（上）》</li>
-                    <li>小孩子才分对错，大人只看利弊-《后会无期》</li>
+        <div class="flex-box flex-center">
+            <div class="flex-item-1 text-center">
+                <h3 class="title">社交</h3>
+                <ul class="sentence">
+                    <li class="animated"
+                        data-animate
+                        data-init="fadeInLeftBig"
+                    >兴趣遍地都是，专注和持之以恒才是真正稀缺的 -《暗时间》
+                    </li>
+                    <li class="animated"
+                        data-animate
+                        data-init="fadeInRightBig"
+                    >当你想在你的代码中找到一个错误时，这很难；当你认为你的代码是不会有错误时，这就更难了-《代码大全》
+                    </li>
+                    <li class="animated"
+                        data-animate
+                        data-init="fadeInLeftBig"
+                    >动态太难实现了，我们假装成静态吧（但是实际上并不是！）-《你不知道的JavaScript（上）》
+                    </li>
+                    <li class="animated"
+                        data-animate
+                        data-init="fadeInRightBig"
+                    >小孩子才分对错，大人只看利弊 -《后会无期》
+                    </li>
                 </ul>
-                <p>如果您需要我提供服务，请通过联系我《bigmgreen@163.com》，谢谢！</p>
-                <ul>
-                    <li>个人站</li>
-                    <li>github</li>
-                    <li>div.io</li>
-                    <li>简书</li>
-                    <li>知乎</li>
-                    <li>SegmentFault</li>
-                    <li>掘金</li>
-                    <li>微信</li>
+                <p class="text-tip animated"
+                   data-init="fadeInDownBig"
+                   data-animate
+                >如果您需要我提供服务，请通过联系我《bigmgreen@163.com》，谢谢！</p>
+                <ul class="link">
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-iconperson"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-github"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-d"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-jian"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-matuwang-zhihufangxingdianji"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-iconsf"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-juejin"></i></a></li>
+                    <li><a href="#"><i
+                            data-init="shake"
+                            data-animate="bounceIn"
+                            class="animated iconfont icon-weixin"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -150,12 +258,40 @@
 <script src="static/lib/fullpage/jquery.fullpage.min.js"></script>
 <script>
     $(function () {
-        $('#fullpage').fullpage({
+        $('#fullPage').fullpage({
             sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#a29971', '#87b0a5', '#4d5e8f'],
-            scrollingSpeed: 500,
+            scrollingSpeed: 300,
             navigation: true,
             navigationPosition: 'right',
+            onLeave: function (index, nextIndex, direction) {
+                $(this).find('[data-animate]').map(function () {
+                    console.log(this)
+                    $(this).removeClass($(this).data('init'));
+                });
+
+                var relate = null;
+                if (direction == 'down') {
+                    relate = $(this).next();
+                } else {
+                    relate = $(this).prev();
+                }
+
+                relate.find('[data-animate]').map(function () {
+                    $(this).addClass($(this).data('init'));
+                });
+            }
         });
+
+        $('[data-animate]').hover(function () {
+            $(this).removeClass($(this).data('init')).addClass($(this).data('animate'));
+        }, function () {
+            $(this).removeClass($(this).data('animate'));
+        });
+
+        $('.section').first().find('[data-animate]').map(function () {
+            $(this).addClass($(this).data('init'));
+        });
+
     });
 </script>
 </body>

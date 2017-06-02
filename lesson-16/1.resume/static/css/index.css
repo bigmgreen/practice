@@ -14,3 +14,131 @@
     display: block;
     width: 100%;
 }
+
+.user-img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 10px solid hsla(108, 62%, 96%, 0.3);
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/*   关于我   start   */
+.about {
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about li {
+    list-style: square;
+    white-space: nowrap;
+    line-height: 2;
+}
+.about-title {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    display: flex;
+    width: 30%;
+    margin: 20px auto;
+}
+.about-title li {
+    flex: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+.about-title .iconfont {
+    font-size: 30px;
+    display: block;
+}
+/*   关于我   end   */
+
+/*   技能  start   */
+
+.skills{
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+}
+.skills li:nth-child(4n+4) {
+    margin-right: 0 !important;
+}
+.skills li {
+    display: inline-block;
+    width: 174px;
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.skills .iconfont {
+    font-size: 60px;
+    display: block;
+}
+.skills .iconfont.icon-css3,
+.skills .iconfont.icon-bootstrap {
+    font-size: 30px;
+    padding: 20px 0;
+}
+/*   技能  end   */
+
+/*   联系我   start   */
+p,
+li,
+.title {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.sentence {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sentence li {
+    white-space: nowrap;
+    line-height: 2;
+    list-style: square;
+}
+
+.text-tip {
+    color: rgba(255, 255, 255, 0.4) !important;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.link {
+    margin-top: 20px;
+    font-size: 0;
+}
+
+.link li {
+    display: inline-block;
+}
+
+.link a {
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+}
+
+.link .iconfont {
+    font-size: 30px !important;
+    display: inline-block;
+}
+
+/*   联系我   end   */
