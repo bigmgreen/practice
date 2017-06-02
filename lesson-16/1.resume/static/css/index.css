@@ -1,0 +1,16 @@
+.logo {
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+}

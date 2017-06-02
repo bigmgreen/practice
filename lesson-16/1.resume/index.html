@@ -1,23 +1,4 @@
 <!doctype html>
-
-<!--
-
-    你想知道如何使用impress.js？
-
-    你已经开始了最初又及其重要的一步 —— 你正在阅读这份代码。
-    这就是 impress.js 展示的构成方式 —— 使用HTML和CSS。
-
-    相信我，你必须使用精确的使用HTML和CSS来高效的使用impress.js。
-    更重要的是，你得有艺术细胞，因为在impress.js展示中，我们没有准备默认的css样式和模板。
-
-    你得用你聪明的大脑和勤劳的双手来规划和构筑这个东西。
-
-    那么……
-
-    你还是想知道如何使用impress.js么？
-
--->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -25,302 +6,157 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>个人简历</title>
+    <link rel="stylesheet" href="./static/css/animate.min.css">
+    <link rel="stylesheet" href="./static/lib/fullpage/jquery.fullpage.min.css">
     <link rel="stylesheet" href="./static/css/base.css"/>
     <link rel="stylesheet" href="./static/css/index.css"/>
 </head>
-
-<!--
-
-    Body元素往往会被impress.js设置一些特殊的class，这个可以很方便的判断当前的浏览器是不是支持
-    我们所需的css或脚本。
-
-    一个非常有用的class名称是 `impress-not-supported`。这个class意味着这个浏览器不支持impress.js
-    所要求的特性，所以你可以用这个类来显示一些回调的信息。
-    事实上倒也不是一定要手动的加上这个class，因为impress.js检测到以后会自动加上的，不过万一你的
-    浏览器连JavaScript都不能执行，还是预先加上比较保险。
-
-    当impress.js检测到你的浏览器足以运行，这个class名就会被移除。
-
-    事实上boday的类名也会根据当前的演示场景改变，我们会在后面说到，就在"hint"的内容里。
-
--->
 <body>
-
-<!--
-
-    现在我们开始接触impress.js的核心了。
-
-    我们得把所有的演示步骤包裹起来，在这个舞台里impress.js的魔法才可以施展。
-    倒不一定是个`<div>`标签，只不过`id`一定得是`impress`。
-
-    可能现在还用不到，不过我还是要给你说一些可以用在这个舞台上的选项。
-
-    用类似`data-transition-duration="2000"`这样的属性来改变切换场景的速度，默认的话，是1000（也就是1秒）。
-
-    也可以设置`data-perspective="500"`来改变透视的深度，默认是1000。如果设置为0的话，美丽的3D效果
-    就离我们远去了。
-    这个事情还是颇为复杂的，你可以参考下面的地址了解更多（还是英文的）：
-    https://developer.mozilla.org/en/CSS/perspective
-
-    不过就像我刚刚所说的那样，你现在应该还用不着这些设置 —— 默认的就很好了。
-
--->
-<div id="impress">
-
-    <!--
-
-        接下来就要发生一些有趣的事情了。
-
-        所有在`#impress`中并且有`step`类名的元素都是一个场景。这些个场景会被impress.js定位、
-        旋转和缩放，我们的‘镜头’会一一的展示它们。
-
-        位置信息也是通过data属性设置的。
-
-        在下面这个场景里，我们给它设置了`data-x="-1000"`和`data-y="-1500`的属性。
-        这意味着这个元素的**中心**（是的，确实是中心）在整个幻灯片的(-1000px, -1500px)处。
-
-        这个场景没有旋转和缩放。
-
-    -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>你是不是觉得传统的幻灯片都 <b>弱爆了</b> ？</q>
+<header>
+    <a href="#" class="logo"><img src="./static/img/logo.jpeg" alt="我的头像"/></a>
+</header>
+<div id="fullpage">
+    <div class="section active">
+        <div class="flex-box">
+            <div class="flex-item-1">
+                <img src="./static/img/user.jpg" alt="大青山的头像">
+                <p>要得到某样东西,最可靠的办法是让自己配得上它</p>
+                <p>web前端工程师</p>
+                <p>bigmgreen@163.com</p>
+            </div>
+        </div>
     </div>
-
-    <!--
-        `id`属性仅仅是用来表示场景的URL的，事实上也不是必须的东西。
-        即使你没有给它定义，你依然可以使用`step-N`来找到这一幕。
-
-        比如说下面这个场景就可以叫做`step-2`。
-
-        这个URL的锚部分就应该是`#/step-2`。
-
-        你也可以在一个链接里使用`#step-2`，这可以直接定位到这个场景。
-
-        请注意，`#/step-2`虽然在链接中也可以使用，但是并不是推荐的，使用`#step-2`可以在
-        更广泛的情况是使用（比如impress.js压根儿没起作用的时候）。
-
-    -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>你有没有想过，在 <strong>现代浏览器</strong> 光辉下，我们可以不再受限于 <strong>老旧浏览器的残忍压迫</strong> ？</q>
+    <div class="section">
+        <div class="flex-box">
+            <div class="flex-item-1">
+                <p>男 大专 2014年毕业 北京</p>
+                <ul>
+                    <li>软件工程专业，毕业后从事Java web开发（2014）</li>
+                    <li>应公司需要开始自学前端，并应用到工作中（2014-2015）</li>
+                    <li>正式进入前端领域，来到北京发展（2015-2016）</li>
+                    <li>致力于打造自动化，高效，简洁，轻量级前端工作栈（至今）</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>你难道不想使用 <strong>华丽的舞台效果</strong> 来 <strong>震惊你的观众</strong> 吗？</q>
+    <div class="section">
+        <div class="flex-box">
+            <div class="flex-item-1">
+                <h3>我的经历</h3>
+                <dl>
+                    <dt>北京亿企通</dt>
+                    <dd>2014年5月~2014年11月</dd>
+                    <dd>java,jquery,bootstrap</dd>
+                    <dd>负责html转jsp，通过ajax获取后台数据</dd>
+                    <dd>使用java编写mvc结构中的c层以及页面交互设计</dd>
+                    <dd>一边工作一边开始学习前端相关知识</dd>
+                </dl>
+                <dl>
+                    <dt>中科柏诚</dt>
+                    <dd>2014年11月~2015年12月</dd>
+                    <dd>html5,css3,javascript,jquery,bootstrap等</dd>
+                    <dd>静态页面开发</dd>
+                    <dd>页面动画效果实现</dd>
+                    <dd>jQuery插件开发</dd>
+                    <dd>前端代码优化</dd>
+                    <dd>开始接触前端工程化</dd>
+                </dl>
+                <dl>
+                    <dt>中科柏诚</dt>
+                    <dd>2016年1月~2016年12月</dd>
+                    <dd>react,node,webpack,springMVC,mybatis,nginx</dd>
+                    <dd>前后端分离</dd>
+                    <dd>静态页面开发</dd>
+                    <dd>js组件开发，页面动画效果实现</dd>
+                    <dd>性能调优，代码优化和代码review</dd>
+                    <dd>疑难问题解决</dd>
+                    <dd>密切关注行业新动向，并把适合的技术应用到项目中 </dd>
+                    <dd>培训新人</dd>
+                </dl>
+                <dl>
+                    <dt>中科柏诚</dt>
+                    <dd>2017年1月~至今</dd>
+                    <dd>Linux,nginx,java,mysql,es6,node</dd>
+                    <dd>静态页面开发</dd>
+                    <dd>使用springMVC和node进行rest开发</dd>
+                    <dd>模块化，自动化</dd>
+                    <dd>性能调优，代码优化和代码review</dd>
+                    <dd>疑难问题解决</dd>
+                </dl>
+            </div>
+        </div>
     </div>
-
-    <!--
-
-        这是一个缩放的效果。
-
-        同样的，我们又使用了`data-`属性，这一次我们写了一个`data-scale="4"`，这样一来，
-        这个元素就会被放大成原来的4倍。
-        如果从这个场景退出，它会被还原原来的大小（缩小4倍）。
-
-    -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">那么，您应该尝试一下</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup>美式的小幽默，无视</span>
+    <div class="section">
+        <dl>
+            <dt>p2p平台产品研发-前后端分离</dt>
+            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+        </dl>
+        <dl>
+            <dt>民金所</dt>
+            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+        </dl>
+        <dl>
+            <dt>贵州天安财险</dt>
+            <dd>本项目是一个基于react+webpack+es6+node+jquery+bootstrap+springMVC+nginx工作栈的组件化的多页面前后端分离项目，主要负责前端系统架构，自动化工作流程设计，网络性能优化，组件开发，技术整合，开发文档编写，前后端数据格式设计、传输，测试服务器搭建，代码规范制定，开发进度把控，协调人员进行顺利开发</dd>
+        </dl>
     </div>
-
-    <!--
-
-        这个场景使用了旋转。
-
-        写法你一定猜到了，我们使用了`data-rotate="90"`属性，这就意味着这这个场景会被
-        顺时针旋转90度。
-
-    -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>它是一个 <strong>演示工具</strong> <br/>
-            受<a href="http://prezi.com">prezi.com</a>启发 <br/>
-            基于现代浏览器中 <strong>强大的CSS3特效</strong> 开发而成</p>
+    <div class="section">
+        <ul>
+            <li>JavaScript</li>
+            <li>css3</li>
+            <li>html5</li>
+            <li>jQuery</li>
+            <li>bootstrap</li>
+            <li>Java</li>
+            <li>angular</li>
+            <li>react</li>
+            <li>vue</li>
+            <li>webpack</li>
+            <li>gulp</li>
+            <li>less</li>
+            <li>node</li>
+            <li>express</li>
+        </ul>
     </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>它可以具象化您 <big style="font-size:larger">伟大</big> </p>
+    <div class="section">
+        <div class="flex-box">
+            <div class="flex-item-1">
+                <h3>社交</h3>
+                <ul>
+                    <li>兴趣遍地都是，专注和持之以恒才是真正稀缺的-《暗时间》</li>
+                    <li>当你想在你的代码中找到一个错误时，这很难；当你认为你的代码是不会有错误时，这就更难了-《代码大全》</li>
+                    <li>动态太难实现了，我们假装成静态吧（但是实际上并不是！）-《你不知道的JavaScript（上）》</li>
+                    <li>小孩子才分对错，大人只看利弊-《后会无期》</li>
+                </ul>
+                <p>如果您需要我提供服务，请通过联系我《bigmgreen@163.com》，谢谢！</p>
+                <ul>
+                    <li>个人站</li>
+                    <li>github</li>
+                    <li>div.io</li>
+                    <li>简书</li>
+                    <li>知乎</li>
+                    <li>SegmentFault</li>
+                    <li>掘金</li>
+                    <li>微信</li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <!--
-
-        现在事情变得更欢乐了，我们开始进入三维的世界！
-
-        除了`data-x`和`data-y`以外，我们还可以定义第三个坐标，就是`data-z`。
-        我们在下一个例子上加上了`data-z="-3000"`，意味着这个场景离我们有3000px那么远。
-
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>或者 <span style="font-size:smaller">细致</span> 的 <span class="thoughts">想法</span></p>
-    </div>
-
-    <!--
-
-        下面这个场景并没有展示新的data属性，但是你应该可以看到这里面有些字是动的。
-        这些是非常基础的CSS transition动画，当这个场景开始后，我们就让它们开始播放。
-
-        在演示刚开始的时候，所有的step元素都有一个`future`类，也就是说它们还没有开始上演。
-
-        当舞台进入某个场景，这个场景被贴上了`present`的类标签，这就是动画的秘密——
-        字符在`present`类里面发生动画。
-
-        当场景完毕，`present`类就被移除了，写上一个`past`的类。
-
-        简而言之，每个场景都会具有`future`、`present`、`past`中某一个的类，只有当前
-        播放的step元素具有`present`类属性。
-
-    -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>它在一个无线大的画布上，展示了 <b class="positioning">定位</b> , <b class="rotating">旋转</b> 和 <b class="scaling">缩放</b> 的特效</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p><b class="imagination">心</b>有多大，<b>舞台</b>就有多大</p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>想知道更多吗？</p>
-        <q><a href="http://github.com/bartaz/impress.js">查看源码吧</a>, 兄台!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>哦，还有一件事情……</p>
-    </div>
-
-    <!--
-
-        最后我们演示一下impress.js强大的灵活性。
-
-        你不仅仅可以再3D空间中定位一个物体，同样的也能在3D中旋转一个物体！
-        所以我们这里沿着X轴旋转-40度（逆时针旋转40度），沿着Y轴旋转10度（顺时针）。
-
-        当然你也可以沿着z轴旋转`data-rotate-z`——我想你猜到了，这和`data-rotate`是一个效果。
-
-    -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">你</span> <span class="you">有没有</span> <span class="noticed">注意到</span> <span class="its">它</span> <span class="in">是</span> <b>3D<sup>*</sup></b>的？</p>
-        <span class="footnote">* prezi可没这能力</span>
-    </div>
-
-    <!--
-
-        我们最后来整理一下所有的属性：
-
-        * `data-x`, `data-y`, `data-z` —— 它们定义了元素中心在画布的位置，默认是0；
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` —— 它们定义了元素
-            沿着指定轴旋转的角度，默认是0；`data-rotate` 和 `data-rotate-z`是一回事；
-        * `data-scale` —— 定义了元素缩放的比率，默认是1；
-
-        这些值会被impress.js读取并写入CSS的transformation变化，你可以在下面网址查看更多信息：
-        https://developer.mozilla.org/en/CSS/transform
-
-    -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
-
 </div>
 
-<!--
-
-    Hint其实和impress.js没有半点关系。
-
-    不过它演示一种创造性的使用impress.js的方法。
-
-    当某一个场景显示的时候，它会获得`active`类属性（译注：确实，除了上面的present以外还有一个active），
-    同时body元素会有一个`impress-on-ID`（ID就是当前显示的场景的id）的类...
-    听起来很让人迷惑，举个栗子，当我们的第一张幻灯片显示的时候，它的id是`bored`，那么我们的body
-    就有一个叫做`impress-on-bored`的类名。
-
-    我们就是用这个类来显示下面的Hint，查看一下CSS文件，我们延时的显示了操作方法。
-
-    ...
-
-    当然这里面还有一些JavaScript的代码…… 孩子，千万不要再家里模仿这样的做法：）
-    我们只是为了演示对应触摸设备的提示而随便写写的，你应该把这代码写到一个独立的JS文件里，
-    而且这个演示也应该放在HTML里的某个地方，而不是写死在代码里。
-
-    不过我只是随口说所;)
-
--->
-<div class="hint">
-    <p>使用空格或者方向键来移动</p>
-</div>
+<script src="static/lib/jquery/jquery.min.js"></script>
+<script src="static/lib/jquery/jquery.easings.min.js"></script>
+<script src="static/lib/fullpage/scrolloverflow.min.js"></script>
+<script src="static/lib/fullpage/jquery.fullpage.min.js"></script>
 <script>
-    if ("ontouchstart" in document.documentElement) {
-        document.querySelector(".hint").innerHTML = "<p>向左或向右拖动屏幕来移动</p>";
-    }
+    $(function () {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#a29971', '#87b0a5', '#4d5e8f'],
+            scrollingSpeed: 500,
+            navigation: true,
+            navigationPosition: 'right',
+        });
+    });
 </script>
-
-<!--
-
-    最后，但远远不是结束。
-
-    为了让上述的动作顺利进行，我们必须在页面里包含impress.js这个文件。
-    建议你使用一个压缩过的文件。
-
-    我这里包含了一个未压缩的版本，这样可以增加可读性（译注：我用了压缩过的，为了节省流量……）
-
-    你同时还需要使用`impress().init()`函数来初始化impress.js，你应该在最后调用这个函数。
-    并不仅仅因为这是个好习惯，而且这样会保证当页面加载完成后执行。
-    当然你可以使用“DOM ready”事件，但是我比较懒;)
-
--->
-<script src="./static/js/impress.js"></script>
-<script>impress().init();</script>
-
-<!--
-
-    `impress()` 函数给了你一个控制演示API的方法。
-
-    把结果放在一个变量里：
-
-        var api = impress();
-
-    这样你就可以使用几个可以使用的方法：
-
-        `api.init()` - 初始化演示；
-        `api.next()` - 播放下一个幻灯片；
-        `api.prev()` - 回到上一个幻灯片；
-        `api.goto( idx | id | element, [duration] )` - 通过知道那个id或者DOM播放指定的幻灯片
-                可以指定转换时间（单位毫秒），当然时间可以是缺省的。
-
-    你可以随时再次调用`impress()`来再一次获得这个API，类似`impress().next()`当然也是可以的。
-    不用担心，这不会再一次的初始化impress。
-
--->
-
 </body>
-</html>
-
-<!--
-
-    OK，现在你或多或少的了解impress.js了，但是在你开始之前……
-
-    你从GitHub上复制了代码（译注：或者你从我博客上复制了代码)？
-
-    你已经在编辑器里打开了它？
-
-    雅美蝶！
-
-    这不是你创造你的演示的正确方法，这只是个代码，你的想法才是好的演示的根本。
-
-    所以，如果你想做个好演示，取来一张纸一支笔，然后关了你的电脑。
-
-    描、绘、写，现在纸上进行一场头脑风暴，试着做一个思维导图，这个才能帮助你怎样更好的
-    创建impress.js的作品。
-
-    当你在纸上完成了工程，再回到impress.js吧，一开始就用它毫无意义，只是浪费时间而已。
-
-    如果你觉得我在胡扯，去看看一本叫做"Presentation Zen"（中译《演说之禅》，貌似还没有中文版）
-    的书吧，这本书能给你更多更好的创建演示的方法和知识。
-
-    请虚心接受我的意见，“因为你都不知道该说些什么，impress.js更加不知道”。
-
--->
-
-<!--
-
-    这里是作者的一些碎碎念，就不翻啦~
-    欢迎各位留下宝贵意见大家相互交流[http://eyehere.net/impress-js-course-chinese]
-
--->
 
