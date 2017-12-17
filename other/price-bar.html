@@ -1,10 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>价格区间css实现</title>
+    <style>
+        .wrap {
+            width: 600px;
+            height: 500px;
+            margin: 30px auto;
+            background-color: rgba(255, 0, 0, 0.4);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bar {
+            height: 20px;
+            width: 400px;
+            border-radius: 10px;
+            background-color: rgba(30, 33, 30, 0.3);
+            position: relative;
+        }
+
+        .bar .left,
+        .bar .right {
+            position: absolute;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #ffcc3d;
+            min-width: 20px;
+        }
+
+        .bar .left:after,
+        .bar .right:after {
+            content: '';
+            display: block;
+            position: absolute !important;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: rgba(97, 255, 135, 0.5);
+        }
+
+        .bar .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .bar .right {
+            right: 0;
+            text-align: left;
+        }
+
+        .bar .right:after,
+        .bar .left:after,
+        .bar .left span,
+        .bar .right span {
+            position: relative;
+            top: -25px;
+        }
+        .bar .right:after,
+        .bar .left:after {
+            top: -3px;
+        }
+        .bar .right:after,
+        .bar .right span {
+            left: -4px;
+        }
+
+        .bar .left:after,
+        .bar .left span {
+            right: -4px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="wrap">
+    <div class="bar">
+        <i class="left" style="width: 0%;"><span>50w</span></i>
+        <i class="right" style="width: 0%;"><span>60w</span></i>
+    </div>
+</div>
 </body>
 </html>
