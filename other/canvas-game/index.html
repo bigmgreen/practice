@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>换色小游戏~</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        div {
+            height: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            margin-top: 2rem;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        li:active {
+            opacity: .7;
+        }
+
+        li:nth-child(1) {
+            background-color: rgb(177, 85, 85);
+        }
+
+        li:nth-child(2) {
+            background-color: rgb(59, 182, 131);
+        }
+
+        li:nth-child(3) {
+            background-color: rgb(95, 24, 228);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas width="300" height="300" id="picture"></canvas>
+        <ul>
+            <li data-color="177,85,85"></li>
+            <li data-color="59,182,131"></li>
+            <li data-color="95,24,228"></li>
+        </ul>
+    </div>
+    <script>
+        var l = console.log;
+        var _canvas = document.getElementById('picture');
+        var ctx = _canvas.getContext('2d');
+        var imgData = null;
+        var __imgData = null;
+
+
+        var _img = document.createElement('img');
+        _img.src = './img/logo_topbar.png';
+
+        _img.onload = function (e) {
+            var img = e.target;
+            var w = img.width;
+            var h = img.height;
+            ctx.drawImage(img, 0, 0, w, h);
+            imgData = ctx.getImageData(0, 0, w, h);
+            __imgData = imgData.data;
+        }
+
+        document.querySelector('div').addEventListener('click', function (e) {
+            var c = e.target.dataset.color.split(',');
+            var r = c[0];
+            var g = c[1];
+            var b = c[2];
+            for (var i = 0, len = __imgData.length; i < len; i += 4) {
+                var color = Math.floor((r + g + b) / 3);
+                __imgData[i] = r;
+                __imgData[i + 1] = g;
+                __imgData[i + 2] = b;
+            }
+            imgData.data = __imgData;
+            ctx.putImageData(imgData, 0, 0);
+
+            var image = new Image();
+            image.src = _canvas.toDataURL();
+            document.body.appendChild(image);
+        });
+    </script>
+</body>
+
+</html>
