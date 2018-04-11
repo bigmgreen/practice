@@ -84,6 +84,11 @@
         }
 
         document.querySelector('div').addEventListener('click', function (e) {
+
+            if (e.target.nodeName.toLowerCase() != 'li') {
+                return;
+            }
+
             var c = e.target.dataset.color.split(',');
             var r = c[0];
             var g = c[1];
@@ -97,9 +102,9 @@
             imgData.data = __imgData;
             ctx.putImageData(imgData, 0, 0);
 
-            var image = new Image();
-            image.src = _canvas.toDataURL();
-            document.body.appendChild(image);
+            // var image = new Image();
+            // image.src = _canvas.toDataURL();
+            // document.body.appendChild(image);
         });
     </script>
 </body>
