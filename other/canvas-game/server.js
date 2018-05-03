@@ -1,36 +1,13 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const app = express();
+const l = console.log;
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.use(express.static('app'));
+app.use(express.static('test'));
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
+const server = app.listen(3000, ()=> {
+    const host = server.address().address || 'localhost';
+    const port = server.address().port;
 
-    if (req.url == '/img/logo_topbar.png') {
-        res.setHeader('Content-Type', 'image/png');
-
-        fs.readFile('img/logo_topbar.png', (err, data) => {
-            if (err) {
-                res.end(JSON.stringify(err));
-                return;
-            }
-            res.end(data);
-        });
-    } else {
-        res.setHeader('Content-Type', 'text/html');
-
-        fs.readFile('index.html', 'utf8', (err, data) => {
-            if (err) {
-                res.end(JSON.stringify(err));
-                return;
-            }
-            res.end(data);
-        });
-    }
-
-});
-
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    l(`http://${host}:${port}`);
 });

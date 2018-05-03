@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>h5填色小游戏</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #boxRender{
+
+            position: relative;
+            width: 1000px;
+            margin: auto;
+            border: 1px solid #e6eaee;
+            margin-top: 25px;
+        }
+        .tool{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+        }
+        .colorSelect{
+            width: 500px;
+            height: 500px;
+            float: left;
+            box-sizing: border-box;
+            padding-top: 50px;
+        }
+        .colorSelect .item{
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .imgShowRow{
+            width: 1000px;
+            margin: auto;
+            margin-top: 20px;
+            height: 100px;
+        }
+        .imgShowRow .item{
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #e6eaee;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            margin-left: 32px;
+            margin-right: 32px;
+        }
+        .imgShowRow .item:hover .toolBox{
+            top: 0%;
+            transition: all 0.25s linear;
+        }
+        .imgShowRow .item .toolBox{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            background-color: rgba(0,0,0,0.4);
+            top: 100%;
+            left: 0;
+            transition: all 0.25s linear;
+            cursor: pointer;
+
+        }
+        #nowSelectColor{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left:-100px;
+            top: 0;
+            background-color: #000000;
+            border: 1px solid #e6eaee;
+        }
+    </style>
+    <script src="HGame.js"></script>
+</head>
+<body>
+<div id="boxRender">
+    <div id="nowSelectColor">
+
+    </div>
+<div id="colorSelect" class="colorSelect">
+
+</div>
+</div>
+<div class="imgShowRow">
+    <div onclick="changeDraw(0)" style=" background-image: url(exp/A.png);" class="item">
+        <div class="toolBox">汽车</div>
+    </div>
+    <div onclick="changeDraw(1)" style=" background-image: url(exp/B.png);" class="item">
+        <div class="toolBox">蘑菇</div>
+    </div>
+    <div onclick="changeDraw(2)" style=" background-image: url(exp/C.png);" class="item">
+        <div class="toolBox">飞机</div>
+    </div>
+    <div onclick="changeDraw(3)" style=" background-image: url(exp/D.png);" class="item">
+        <div class="toolBox">气球</div>
+    </div>
+    <div onclick="changeDraw(4)" style=" background-image: url(exp/E.png);" class="item">
+        <div class="toolBox">小鸭</div>
+    </div>
+    <div onclick="changeDraw(5)" style=" background-image: url(exp/F.png);" class="item">
+        <div class="toolBox">皮球</div>
+    </div>
+</div>
+
+<script src="data.js" ></script>
+<script type="text/javascript">
+    var canvas = new HGAME.canvas();
+    var testBox=document.getElementById('boxRender');
+    testBox.appendChild(canvas.dom);
+    var animate=new HGAME.animate({
+        action:function(){
+            canvas.render();
+        }
+    });
+    var colorObj={
+        r:0,
+        g:0,
+        b:0
+    };
+    function initColor(){
+        var div=null;
+        var initColor=document.getElementById("colorSelect");
+        for(var r=0;r<255;r+=65){
+            for(var b=0;b<255;b+=65){
+                    for(var g=0;g<255;g+=65){
+                    div=document.createElement("div");
+                    div.setAttribute("class","item");
+                        div.setAttribute("data-r",r);
+                        div.setAttribute("data-g",g);
+                        div.setAttribute("data-b",b);
+                    div.style.backgroundColor="rgba("+r+","+g+","+b+","+"1)";
+                    initColor.appendChild(div);
+                    div.onclick=function(){
+                        document.getElementById("nowSelectColor").style.backgroundColor="rgba("+this.getAttribute("data-r")+","+this.getAttribute("data-g")+","+this.getAttribute("data-b")+","+"1)";
+                        colorObj.r=this.getAttribute("data-r");
+                        colorObj.g=this.getAttribute("data-g");
+                        colorObj.b=this.getAttribute("data-b");
+                    }
+                }
+            }
+        }
+    }
+    initColor();
+    /*创建img数据*/
+    function changeImgColor(img,r,g,b){
+        var c=document.createElement("canvas");
+        var txt= c.getContext("2d");
+        c.width=img.width;
+        c.height=img.height;
+        txt.drawImage(img,0,0);
+        var data=txt.getImageData(0,0, c.width, c.height);
+        for(var q=0;q<data.data.length;q+=4){
+            if(data.data[q+3]>100){
+                data.data[q]=r;
+                data.data[q+1]=g;
+                data.data[q+2]=b;
+            }
+        }
+        txt.putImageData(data,0,0);
+        return c;
+    }
+    var div=document.createElement("div");
+
+    function changeDraw(num){
+        /*加载数据*/
+        var source=new HGAME.source({
+            loadCall:function(num,allNum){
+                div.innerHTML="加载资源"+num+"/"+allNum;
+                div.setAttribute("class","tool");
+                testBox.appendChild(div);
+            },
+            loaded:function(){
+                testBox.removeChild(div);
+                var img=new HGAME.Object2D({
+                    img:this.data[0],
+                    w:500,
+                    h:500,
+                    x:0,
+                    y:0
+                });
+                canvas.child=new Array();
+                canvas.add(img);
+
+                var THIS = this;
+                img.child=new Array();
+                each(this.data,function(intX){
+                    if(intX>=1){
+                        img.add(new HGAME.Object2D({
+                            x:whxyInfo[num][intX-1].x,
+                            y:whxyInfo[num][intX-1].y,
+                            w:whxyInfo[num][intX-1].w,
+                            h:whxyInfo[num][intX-1].h,
+                            img:THIS.data[intX],
+                            isClick:true,
+                            clickFun:function(){
+                                if(typeof this.bufferImg=="undefined"){
+                                    this.bufferImg=this.img;
+                                    this.img=changeImgColor(this.bufferImg,colorObj.r,colorObj.g,colorObj.b);
+                                }else{
+                                    this.img=changeImgColor(this.bufferImg,colorObj.r,colorObj.g,colorObj.b);
+                                }
+                            }
+                        }));
+                    }
+                });
+                animate.stop();
+                animate.run();
+            },
+            data:data[num]
+        });
+
+    }
+    changeDraw(0);
+    //
+</script>
+</body>
+</html>
